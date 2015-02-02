@@ -137,7 +137,7 @@ Figure\,\ref{fig:coordinate_system} in this thesis.]{Gumerov2004}
 %
 \begin{gather}
     Y_n^m(\theta,\phi) = (-1)^m \sqrt{\frac{(2n+1)(n-|m|)!}{4\PI(n+|m|)!}}
-    P_n^{|m|}(\sin\theta) \E^{im\phi} \qc
+    P_n^{|m|}(\sin\theta) \E^{\I m\phi} \qc
     \label{eq:Y} \\
     n = 0,1,2,... \;\;\;\;\;\; m = -n,...,n
     \notag
@@ -195,7 +195,7 @@ The following functions build a basis in $\R^2$ for a circular secondary source
 distribution\autocite{Williams1999}
 %
 \begin{equation}
-    \Phi_m(\phi) = \E^{im\phi} \qp
+    \Phi_m(\phi) = \E^{\I m\phi} \qp
     \label{eq:circular_harmonics}
 \end{equation}
 %
@@ -224,7 +224,7 @@ the source model, $\phi_\text{s}$ its directional dependency, and $\breve{G}_m$
 the circular expansion coefficients for a secondary line source with
 %
 \begin{equation}
-    \breve{G}_m(0,\omega) = -\frac{i}{4} \H{m}{2}\left(\omegac R_0\right) \qc
+    \breve{G}_m(0,\omega) = -\frac{\I}{4} \H{m}{2}\left(\omegac R_0\right) \qc
     \label{eq:G_circular}
 \end{equation}
 %
@@ -239,7 +239,7 @@ The basis functions for a planar secondary source distribution
 located on the $xz$-plane in $\R^3$ are given as
 %
 \begin{equation}
-    \Lambda(k_x,k_z,x,z) = \E^{-i(k_x x + k_z z)} \qc
+    \Lambda(k_x,k_z,x,z) = \E^{-\I(k_x x + k_z z)} \qc
     \label{eq:planar_harmonics}
 \end{equation}
 %
@@ -259,7 +259,7 @@ convolution along the plane as\autocite[][(3.65)]{Ahrens2012}
 \begin{equation}
     D_\text{planar}(x_0,\omega) = \frac{1}{4\PI^2} \iint_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{s},k_z,\omega)}{\breve{G}(k_x,0,k_z,\omega)}
-    \Lambda(k_x,x_0,k_z,z_0) \, dk_x dk_z \qc
+    \Lambda(k_x,x_0,k_z,z_0) \, \D k_x \D k_z \qc
     \label{eq:D_planar}
 \end{equation}
 %
@@ -268,7 +268,7 @@ source model, $y_\text{s}$ its positional dependency, and $\breve{G}$ the planar
 expansion coefficients of a secondary point source with\autocite[][(65)]{Schultz2014}
 %
 \begin{equation}
-    \breve{G}(k_x,0,k_z,\omega) = -\frac{i}{2}
+    \breve{G}(k_x,0,k_z,\omega) = -\frac{\I}{2}
     \frac{1}{\sqrt{(\omegac)^2-k_x^2-k_z^2}}
     \qc
     \label{G_planar}
@@ -290,7 +290,7 @@ The basis functions for a linear secondary source distribution
 located on the $x$-axis are given as
 %
 \begin{equation}
-    \chi(k_x,x) = \E^{-ik_x x} \qp
+    \chi(k_x,x) = \E^{-\I k_x x} \qp
     \label{eq:linear_harmonics}
 \end{equation}
 %
@@ -308,7 +308,7 @@ as\autocite[Compare (3.73) in][]{Ahrens2012}
 \begin{equation}
     D_\text{linear}(x_0,\omega) = \frac{1}{2\PI} \int_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{s},\omega)}{\breve{G}(k_x,0,\omega)}
-    \chi(k_x,x_0) \, dk_x \qc
+    \chi(k_x,x_0) \, \D k_x \qc
     \label{eq:D_linear}
 \end{equation}
 %
@@ -317,7 +317,7 @@ source model, $y_\text{s}$, $z_\text{s}$ its positional dependency,
 and $\breve{G}$ the linear expansion coefficients of a secondary line source with
 %
 \begin{equation}
-    \breve{G}(k_x,0,\omega) = -\frac{i}{2} \frac{1}{\sqrt{(\omegac)^2-k_x^2}}
+    \breve{G}(k_x,0,\omega) = -\frac{\I}{2} \frac{1}{\sqrt{(\omegac)^2-k_x^2}}
     \qc
     \label{eq:G_linear}
 \end{equation}
@@ -414,7 +414,7 @@ secondary sources into~\eqref{eq:D_wfs} as
 %
 \begin{equation}
     P(\x,\omega) \approx \oint_{\partial V} \!\!  G(\x|\x_0,\omega) \,
-    \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\omega)}_{D(\x_0,\omega)} \; d
+    \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\omega)}_{D(\x_0,\omega)} \; \D
     A(\x_0) \qp
     \label{eq:P_wfs}
 \end{equation}
@@ -514,7 +514,7 @@ as\autocite[][(3.77)]{Ahrens2012}
 \begin{equation}
     D_{\text{linear},\twohalfD}(x_0,\omega) = \frac{1}{2\PI} \int_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{ref},0,\omega)}
-    {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \, dk_x \qp
+    {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \, \D k_x \qp
     \label{eq:D_linear_25D}
 \end{equation}
 %
@@ -523,15 +523,15 @@ A driving function for the \twohalfD situation in the context of \ac{WFS}
 and arbitrary \twoD geometries of the secondary source distribution
 can be achieved by applying the
 far-field approximation\autocite[][(4.23)]{Williams1999}
-$\H{0}{2}(\zeta) \approx \sqrt{\frac{2i}{\PI \zeta}}
-\E^{-i\zeta}$ for $\zeta \gg 1$ to the \twoD Green's function.
+$\H{0}{2}(\zeta) \approx \sqrt{\frac{2\I}{\PI \zeta}}
+\E^{-\I\zeta}$ for $\zeta \gg 1$ to the \twoD Green's function.
 Using this the
 following relationship between the \twoD and \threeD
 Green's functions can be established.
 %
 \begin{multline} 
     \underbrace{
-    -\frac{i}{4} \;\H{0}{2}\left(\omegac |\x-\x_0|\right)
+    -\frac{\I}{4} \;\H{0}{2}\left(\omegac |\x-\x_0|\right)
     }_{G_\twoD(\x-\x_0,\omega)}
     \approx
     \sqrt{2\PI \frac{c}{\I\omega} |\x-\x_0|} \;
@@ -548,7 +548,7 @@ case results in
 %
 \begin{equation}
     P(\x,\omega) = \oint_S \sqrt{2\PI \frac{c}{\I\omega} |\x-\x_0|} \;
-    D(\x_0,\omega) G_\threeD(\x-\x0,\omega) \, dA(\x_0) \qp
+    D(\x_0,\omega) G_\threeD(\x-\x0,\omega) \, \D A(\x_0) \qp
     \label{eq:single_layer_potential_25D}
 \end{equation}
 %
@@ -631,7 +631,7 @@ The expansion coefficients for spherical basis functions are given
 as\sidenote[][]{\cite[][(2.38)]{Ahrens2012}}
 %
 \begin{equation}
-    \breve{S}_n^m(\theta_k,\phi_k,\omega) = 4\PI i^{-n} Y_n^{-m}(\theta_k,\phi_k)
+    \breve{S}_n^m(\theta_k,\phi_k,\omega) = 4\PI \I^{-n} Y_n^{-m}(\theta_k,\phi_k)
     \qc
     \label{eq:plane_wave_spherical}
 \end{equation}
@@ -642,7 +642,7 @@ In a similar manner the expansion coefficients for circular basis functions are
 given as
 %
 \begin{equation}
-    \breve{S}_m(\phi_\text{s},\omega) = i^{-n} \Phi_{-m}(\phi_\text{s}) \qp
+    \breve{S}_m(\phi_\text{s},\omega) = \I^{-n} \Phi_{-m}(\phi_\text{s}) \qp
     \label{eq:plane_wave_circular}
 \end{equation}
 %
@@ -702,7 +702,7 @@ as\autocite[][(2.37)]{Ahrens2012}
 %
 \begin{equation}
     \breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\omega) =
-    -i \omegac \, h_n^{(2)}\!\!\left(\omegac r_\text{s}\right)
+    -\I \omegac \, h_n^{(2)}\!\!\left(\omegac r_\text{s}\right)
     Y_n^{-m}(\theta_\text{s},\phi_\text{s}) \qc
     \label{eq:point_source_spherical}
 \end{equation}
@@ -715,7 +715,7 @@ as\autocite[][(C.10)]{Ahrens2012}
 %
 \begin{equation}
     \breve{S}(k_x,y,\omega) =
-    -\frac{i}{4} \H{0}{2} \left( \sqrt{(\tfrac{\omega}{c})^2-k_x^2} \;
+    -\frac{\I}{4} \H{0}{2} \left( \sqrt{(\tfrac{\omega}{c})^2-k_x^2} \;
         |y-y_\text{s}| \right) \chi(-k_x,x_\text{s}) \qc
     \label{eq:point_source_linear}
 \end{equation}
@@ -732,7 +732,7 @@ The source model for a line source is given by the two dimensional Green's
 function as\sidenote[][-0.5cm]{\cite[][(8.47)]{Williams1999}}
 %
 \begin{equation}
-    S(\x,\omega) = -A(\omega) \frac{i}{4} \H{0}{2} \left(\omegac |\x-\xs|\right)
+    S(\x,\omega) = -A(\omega) \frac{\I}{4} \H{0}{2} \left(\omegac |\x-\xs|\right)
     \qp
     \label{eq:line_source_omega}
 \end{equation}
@@ -762,7 +762,7 @@ the temporal domain this becomes
 The expansion coefficients for circular basis functions are given as
 %
 \begin{equation}
-    \breve{S}_m(\phi_\text{s},r_\text{s},\omega) = -\frac{i}{4}
+    \breve{S}_m(\phi_\text{s},r_\text{s},\omega) = -\frac{\I}{4}
     \H{m}{2} \left(\omegac r_\text{s}\right)
     \Phi_{-m}(\phi_\text{s}) \qp
     \label{eq:line_source_circular}
@@ -772,7 +772,7 @@ The expansion coefficients for circular basis functions are given as
 The expansion coefficients for linear basis functions are given as
 %
 \begin{equation}
-    \breve{S}(k_x,y_\text{s},\omega) = -\frac{i}{2} \frac{1}{\sqrt{(\omegac)^2-k_x^2}}
+    \breve{S}(k_x,y_\text{s},\omega) = -\frac{\I}{2} \frac{1}{\sqrt{(\omegac)^2-k_x^2}}
     \chi(k_y,y_\text{s})\qp
     \label{eq:line_source_linear}
 \end{equation}
@@ -825,7 +825,7 @@ into~\eqref{eq:D_spherical} and yield\autocite[][(96)]{Schultz2014}
 %
 \begin{equation}
     D_\text{spherical}(\theta_0,\phi_0,\omega) = -A(\omega) \frac{4\PI}{R_0^{\,2}}
-    \sum_{n=0}^\infty \sum_{m=-n}^n \frac{i^{-n} Y_n^{-m}(\theta_k,\phi_k)}{\I\omegac h_n^{(2)}
+    \sum_{n=0}^\infty \sum_{m=-n}^n \frac{\I^{-n} Y_n^{-m}(\theta_k,\phi_k)}{\I\omegac h_n^{(2)}
     \left(\omegac R_0\right)} Y_n^m(\theta_0,\phi_0) \qp
     \label{eq:D_nfchoa_pw_3D}
 \end{equation}
@@ -848,7 +848,7 @@ yield\sidenote[][0.5cm]{\cite[Compare][(16)]{Ahrens2009c}}
 %
 \begin{equation}
     D_\text{circular}(\phi_0,\omega) = -A(\omega) \frac{2i}{\PI R_0}
-    \sum_{m=-\infty}^\infty \frac{i^{-m}\Phi_{-m}(\phi_k)}
+    \sum_{m=-\infty}^\infty \frac{\I^{-m}\Phi_{-m}(\phi_k)}
     {\H{m}{2}(\omegac R_0)} \Phi_m(\phi_0) \qp
     \label{eq:D_nfchoa_pw_2D}
 \end{equation}
@@ -861,7 +861,7 @@ and a point source~\eqref{eq:point_source_spherical} into~\eqref{eq:D_circular_2
 %
 \begin{equation}
     D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega) \frac{2}{R_0}
-    \sum_{m=-\infty}^\infty \frac{i^{-|m|} \Phi_{-m}(\phi_k)} {\I\omegac
+    \sum_{m=-\infty}^\infty \frac{\I^{-|m|} \Phi_{-m}(\phi_k)} {\I\omegac
     h_{|m|}^{(2)}\left(\omegac R_0\right)} \Phi_m(\phi_0) \qp
     \label{eq:D_nfchoa_pw_25D}
 \end{equation}
@@ -875,7 +875,7 @@ $0 \le |k_{x_\text{s}}| \le |\omegac|$ this results
 in\sidenote[][]{\fullcite[][(17)]{Ahrens2010a}}
 %
 \begin{equation}
-    D_{\text{linear},\,\twohalfD}(x_0,\omega) = A(\omega) \frac{4i
+    D_{\text{linear},\,\twohalfD}(x_0,\omega) = A(\omega) \frac{4\I
     \chi(k_y,y_\text{ref})}
     {\H{0}{2}(k_y y_\text{ref})} \chi(k_x,x_0) \qp
     \label{eq:D_sdm_pw_25D}
@@ -895,7 +895,7 @@ in\sidenote[][1cm]{\cite[][(18)]{Ahrens2010a}}
 where $\phi_k$ denotes the azimuth direction of the plane wave and
 \begin{equation}
 h(t) =
-\IFT{\frac{4i}{\H{0}{2}(k_y y_\text{ref})}} \qp
+\IFT{\frac{4\I}{\H{0}{2}(k_y y_\text{ref})}} \qp
 \end{equation}
 The advantage of this
 result is that it can be implemented by a simple weighting and delaying of
@@ -958,7 +958,7 @@ in\autocite[Compare (4.53) in][]{Ahrens2012}
     A(\omega) \int_{-\infty}^\infty \frac{
     \H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \; (y_\text{ref}-y_\text{s}) \right)
     \chi(-k_x,x_\text{s})} {\H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \;
-    y_\text{ref}\right)} \chi(k_x,x_0) \, dk_x \qp
+    y_\text{ref}\right)} \chi(k_x,x_0) \, \D k_x \qp
     \label{eq:D_sdm_ps_25D}
 \end{multline}
 %
@@ -988,7 +988,7 @@ into~\eqref{eq:D_linear} as
 %
 \begin{equation}
     D_\text{linear}(x_0,\omega) = A(\omega) \frac{1}{2\PI}
-    \int_{-\infty}^\infty \chi(k_y,y_s) \chi(k_x,x_0) \, dk_x \qp
+    \int_{-\infty}^\infty \chi(k_y,y_s) \chi(k_x,x_0) \, \D k_x \qp
 \end{equation}
 %
 
@@ -1232,7 +1232,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
         \reproduce{\GITHUB/fig2_11}}
 \end{marginfigure}
 %
-Applying $\H{1}{2}(\zeta) \approx -\sqrt{\frac{2}{\PI i\zeta}} \E^{-i\zeta}$ for $z\gg1$ after
+Applying $\H{1}{2}(\zeta) \approx -\sqrt{\frac{2}{\PI \I\zeta}} \E^{-\I\zeta}$ for $z\gg1$ after
 Williams\sidenote[][-6.8cm]{\cite[][(4.23)]{Williams1999}} and transfered to the
 temporal domain via an inverse Fourier
 transform~\eqref{eq:ift} it follows
