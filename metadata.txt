@@ -1,0 +1,15 @@
+InfoBegin
+InfoKey: Title
+InfoValue: Theory of Sound Field Synthesis
+InfoBegin
+InfoKey: Author
+InfoValue: Hagen Wierstorf, Fiete Winter, Frank Schultz, Jens Ahrens, Sascha Spors
+InfoBegin
+InfoKey: Subject
+InfoValue: White Paper
+InfoBegin
+InfoKey: Keywords
+InfoValue: WFS, HOA, sound field synthesis
+inFoBegin
+InfoKey: Creator
+InfoValue: LaTeX

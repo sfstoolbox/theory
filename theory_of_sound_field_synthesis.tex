@@ -1,0 +1,219 @@
+% ----------------------------------------------------------------------------
+% Sound Field Synthesis Toolbox                                               |
+%                                                                             |
+% Theory of sound field synthesis and the derivation of the driving functions |
+% implemented in the Toolbox.                                                 |
+%                                                                             |
+% ----------------------------------------------------------------------------
+
+% ----------------------------------------------------------------------------
+% Copyright (c) 2010-2015 Quality & Usability Lab, together with              |
+%                         Assessment of IP-based Applications                 |
+%                         Telekom Innovation Laboratories, TU Berlin          |
+%                         Ernst-Reuter-Platz 7, 10587 Berlin, Germany         |
+%                                                                             |
+% Copyright (c) 2013-2015 Institut fuer Nachrichtentechnik                    |
+%                         Universitaet Rostock                                |
+%                         Richard-Wagner-Strasse 31, 18119 Rostock            |
+%                                                                             |
+% This file is part of the Sound Field Synthesis-Toolbox (SFS).               |
+%                                                                             |
+% The SFS is free software:  you can redistribute it and/or modify it  under  |
+% the terms of the  GNU  General  Public  License  as published by the  Free  |
+% Software Foundation, either version 3 of the License,  or (at your option)  |
+% any later version.                                                          |
+%                                                                             |
+% The SFS is distributed in the hope that it will be useful, but WITHOUT ANY  |
+% WARRANTY;  without even the implied warranty of MERCHANTABILITY or FITNESS  |
+% FOR A PARTICULAR PURPOSE.                                                   |
+% See the GNU General Public License for more details.                        |
+%                                                                             |
+% You should  have received a copy  of the GNU General Public License  along  |
+% with this program.  If not, see <http://www.gnu.org/licenses/>.             |
+%                                                                             |
+% The SFS is a toolbox for Matlab/Octave to  simulate and  investigate sound  |
+% field  synthesis  methods  like  wave  field  synthesis  or  higher  order  |
+% ambisonics.                                                                 |
+%                                                                             |
+% http://github.com/sfstoolbox/sfs                      sfstoolbox@gmail.com  |
+% ----------------------------------------------------------------------------
+
+
+\documentclass[a4paper, oneside, nobib, notoc, justified]{tufte-book}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+% --- PAGE LAYOUT ------------------------------------------------------------
+\setcounter{secnumdepth}{3}% add numbering to sections                        |
+\setcounter{tocdepth}{1}% include section to the TOC                          |
+% ----------------------------------------------------------------------------
+
+% --- COLORS -----------------------------------------------------------------
+\usepackage{xcolor}%                                                          |
+% Colors for URL links                                                        |
+\definecolor{link}{HTML}{006A80}%                                             |
+% ----------------------------------------------------------------------------
+
+% --- FONTS ------------------------------------------------------------------
+% math fonts (I think it uses mathpazo)                                       |
+\usepackage{amsmath,amssymb}%                                                 |
+% allows for the creation of 2/3 with \nicefrac{2}{3}                         |
+\usepackage{nicefrac}%                                                        |
+% provide a command similar to \newthought but without vspace fot start of    |
+% sections                                                                    |
+\newcommand{\firstthought}[1]{\noindent\textsc{#1}}%                          |
+% ----------------------------------------------------------------------------
+
+% --- FIGURES and TABLES -----------------------------------------------------
+\usepackage{graphicx,rotating}%                                               |
+\usepackage{import}%   fix the inclusion of subfolders                        |
+\usepackage{marvosym}% includes \Pointinghand                                 |
+\newcommand{\reproduce}[1]{%                                                  |
+    \href{#1}{\color{link}\large\Pointinghand}% add reproduce link            |
+}%                                                                            |
+\usepackage{tikz}% tikz for drawing sketches                                  |
+% ----------------------------------------------------------------------------
+
+% --- CODE -------------------------------------------------------------------
+% The fancyvrb package lets us customize the formatting of verbatim           |
+% environments.  We use a slightly smaller font.                              |
+\usepackage{fancyvrb}%                                                        |
+\fvset{fontsize=\normalsize}%                                                 |
+% ----------------------------------------------------------------------------
+
+% --- HYPERREF ---------------------------------------------------------------
+%\usepackage{hyperref}%                                                       |
+\hypersetup{%                                                                 |
+    colorlinks=false,%                        used colored links w/o border   |
+}%                                                                            |
+% ----------------------------------------------------------------------------
+
+% --- MARGIN NOTES and CITATION ----------------------------------------------
+\usepackage{csquotes}%                                                        |
+\usepackage[%                                                                 |
+style=verbose-trad1,%                                                         |
+autocite=footnote,%                                                           |
+backend=biber,%                                                               |
+firstinits=true% render all first and middle names as initials                |
+]{biblatex}%                                                                  |
+\bibliography{long,theory_of_sound_field_synthesis}%                          |
+% Remove ``In:'' for journal articles                                         |
+% see: http://ow.ly/qavZh                                                     |
+\renewbibmacro{in:}{%                                                         |
+    \ifentrytype{article}{}{%                                                 |
+    \printtext{\bibstring{in}\intitlepunct}}}%                                |
+% Put text into the margin                                                    |
+\newcommand{\note}[1]{\marginnote{#1}}%                                       |
+% URL                                                                         |
+\renewcommand{\url}[2]{\href{#2}{\color{link}\texttt{#1}}}%                   |
+% URL in the margin                                                           |
+\newcommand{\urlnote}[2]{\marginnote{\url{#1}{#2}}}%                          |
+% ----------------------------------------------------------------------------
+
+% --- COMMANDS ---------------------------------------------------------------
+% Comments                                                                    |
+\newcommand{\comment}[1]{{ \color{magenta}{#1}}}                  % comment   |
+\newcommand{\TODO}[1]{{ \color{blue}{#1}}}                        % TODO      |
+\newcommand{\ft}{\footnotesize}                                   % ft        |
+\newcommand{\scs}{\scriptsize}                                    % scs       |
+% --- Math commands ----------------------------------------------------------
+\DeclareSymbolFont{euler}{U}{eur}{m}{n}                           %           |
+\DeclareMathSymbol \PI \mathalpha {euler} {"19}                   % pi        |
+\newcommand{\I}{\ensuremath{\mathrm{i}}}                          % i         |
+\newcommand{\E}{\ensuremath{\mathrm{e}}}                          % e         |
+\newcommand{\D}[1]{\ensuremath{\mathop{\mathrm{d}{#1}}}}         % d         |
+\newcommand{\degree}{\ensuremath{^\circ}}                         % °         |
+\renewcommand{\vec}[1]{\ensuremath{\mathbf{#1}}}                  % vector    |
+%\newcommand{\p}[2]{\ensuremath{\frac{\partial #1}{\partial #2}}}  % df/dx     |
+\newcommand{\x}{\ensuremath{\vec{x}}}                             % x         |
+\newcommand{\xs}{\ensuremath{\x_\text{s}}}                        % xs        |
+\newcommand{\xref}{\ensuremath{\x_\text{ref}}}                    % xref      |
+\newcommand{\X}{\ensuremath{\vec{X}}}                             % X         |
+\renewcommand{\k}{\ensuremath{\vec{k}}}                           % k         |
+\newcommand{\n}{\ensuremath{\vec{n}}}                             % n         |
+\newcommand{\omegac}{\ensuremath{\frac{\omega}{c}}}               % w/c       |
+\renewcommand{\H}[2]{\ensuremath{\,H_{#1}^{(#2)}\!}}              % H         |
+\newcommand{\h}[2]{\ensuremath{\,h_{#1}^{(#2)}\!}}                % h         |
+\newcommand{\deltafunc}[1]{\ensuremath{\,\delta\!\left(#1\right)}}% \delta()  |
+\newcommand{\defeq}{\mathrel{\!\mathop:}=}                        % :=        |
+% --- Spaces -----------------------------------------------------------------
+\newcommand{\R}{\ensuremath{\mathbb{R}}}                          % R         |
+% --- Operators --------------------------------------------------------------
+\newcommand{\FT}[1]{\ensuremath{\mathcal{F}\left\{#1\right\}}}    % F{}       |
+\newcommand{\IFT}[1]{\ensuremath{%                                % F^-1{}    |
+    \mathcal{F}^{-1}\left\{#1\right\}}}%                                      |
+% --- Punctuation ------------------------------------------------------------
+\newcommand{\qc}{\;,}                                             % ,         |
+\newcommand{\qp}{\;.}                                             % .         |
+\newcommand{\qs}{\;;}                                             % ;         |
+% ----------------------------------------------------------------------------
+
+% --- VARIABLES --------------------------------------------------------------
+% fix spaces after defined variables, if there is a punctuation               |
+\usepackage{xspace}%                                                          |
+\def \GITHUBBASE {http://github.com/hagenw/phd-thesis/tree/master}% thesis url|
+\def \SFS {http://github.com/sfstoolbox/sfs/blob/1.0.0}           % SFS url   |
+\def \AMT {http://github.com/hagenw/amtoolbox/blob/thesis}        % AMT url   |
+\def \PATH {.}                                                    % basepath  |
+\def \TITLE {00_title}                                            % title page|
+\def \CHAPONE {01_introduction}                                   % chapter 1 |
+\def \CHAPTWO {02_theory_of_sound_field_synthesis}                % chapter 2 |
+\def \twoD {{2\text{D}}\xspace}                                   % 2D        |
+\def \twohalfD {{2.5\text{D}}\xspace}                             % 2.5D      |
+\def \threeD {{3\text{D}}\xspace}                                 % 3D        |
+\def \etal {{et al.}}                                             % et al.    |
+% ----------------------------------------------------------------------------
+
+% --- ACRONYMS ---------------------------------------------------------------
+\usepackage{relsize}% for the smaller option of the acronym package           |
+\usepackage[smaller]{acronym}%                                                |
+% usage: \ac{ACRONYM} or \acp{ACRONYM° for plural                             |
+\acrodef{BRS}{binaural room scanning}%                                        |
+\acrodef{HOA}{Higher Order Ambisonics}%                                       |
+\acrodef{HRTF}{head-related transfer function}%                               |
+\acrodef{ILD}{interaural level difference}%                                   |
+\acrodef{IPD}{interaural phase difference}%                                   |
+\acrodef{ITD}{interaural time difference}%                                    |
+\acrodef{IVS}{interaural vector strength}%                                    |
+\acrodef{NFC-HOA}{Near-Field Compensated Higher Order Ambisonics}%            |
+\acrodef{PCA}{principal component analysis}%                                  |
+\acrodef{RGT}{repetory grid technique}%                                       |
+\acrodef{SDM}{Spectral Division Method}%                                      |
+\acrodef{SFS}{sound field synthesis}%                                         |
+\acrodef{SSR}{SoundScape Renderer}%                                           |
+\acrodef{WFS}{Wave Field Synthesis}%                                          |
+% ----------------------------------------------------------------------------
+
+% --- HYPHENATION ------------------------------------------------------------
+\hyphenation{Fesh-bach set-up set-ups Experi-mente %                          |
+Aliasing-arte-fakten Uni-ver-si-t\"{a}t}%                                     |
+% ----------------------------------------------------------------------------
+
+% Length of the parindent of the second line in the bibliography
+%\setlength{\bibhang}{.3cm}
+
+% Bug fixing for error: ``Too many unprocessed floats''
+% Insert the following command within the text:
+% \FloatBarrier
+% Note, that it introduces a linebreak
+
+
+%% ===== DOCUMENT BEGIN ==================================================
+\begin{document}
+
+%% --- Title Page --------------------------------------------------------
+\import{\PATH/00_title/}{00_title}
+
+%% --- Tabel of Content --------------------------------------------------
+\tableofcontents
+
+%% --- Introduction ------------------------------------------------------
+\import{\PATH/01_introduction/}{01_introduction}
+
+%% --- Theory of Sound Field Synthesis -----------------------------------
+\import{\PATH/02_theory_of_sound_field_synthesis/}{02_theory_of_sound_field_synthesis}
+
+%% --- Bibliography ------------------------------------------------------
+\printbibliography
+
+\end{document}
