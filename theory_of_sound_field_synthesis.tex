@@ -59,6 +59,8 @@
 \usepackage{amsmath,amssymb}%                                                 |
 % allows for the creation of 2/3 with \nicefrac{2}{3}                         |
 \usepackage{nicefrac}%                                                        |
+% provide straight (non-italic) \int symbol                                   |
+%\usepackage[integrals]{wasysym}%                                             |
 % provide a command similar to \newthought but without vspace fot start of    |
 % sections                                                                    |
 \newcommand{\firstthought}[1]{\noindent\textsc{#1}}%                          |
@@ -119,9 +121,6 @@ firstinits=true% render all first and middle names as initials                |
 % --- Math commands ----------------------------------------------------------
 \DeclareSymbolFont{euler}{U}{eur}{m}{n}                           %           |
 \DeclareMathSymbol \PI \mathalpha {euler} {"19}                   % pi        |
-% The next two lines define a non-italic int symbol                           |
-%\DeclareSymbolFont{eulargesymbols}{U}{zeuex}{m}{n}                %           |
-%\DeclareMathSymbol{\intop}{\mathop}{eulargesymbols}{"52}          % int       |
 \newcommand{\I}{\ensuremath{\mathrm{i}}}                          % i         |
 \newcommand{\E}{\ensuremath{\mathrm{e}}}                          % e         |
 \newcommand{\D}[1]{\ensuremath{\mathop{\mathrm{d}{#1}}}}          % d         |
