@@ -259,7 +259,7 @@ convolution along the plane as\autocite[][(3.65)]{Ahrens2012}
 \begin{equation}
     D_\text{planar}(x_0,\omega) = \frac{1}{4\PI^2} \iint_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{s},k_z,\omega)}{\breve{G}(k_x,0,k_z,\omega)}
-    \Lambda(k_x,x_0,k_z,z_0) \, \D k_x \D k_z \qc
+    \Lambda(k_x,x_0,k_z,z_0) \, \D{k_x} \D{k_z} \qc
     \label{eq:D_planar}
 \end{equation}
 %
@@ -308,7 +308,7 @@ as\autocite[Compare (3.73) in][]{Ahrens2012}
 \begin{equation}
     D_\text{linear}(x_0,\omega) = \frac{1}{2\PI} \int_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{s},\omega)}{\breve{G}(k_x,0,\omega)}
-    \chi(k_x,x_0) \, \D k_x \qc
+    \chi(k_x,x_0) \, \D{k_x} \qc
     \label{eq:D_linear}
 \end{equation}
 %
@@ -514,7 +514,7 @@ as\autocite[][(3.77)]{Ahrens2012}
 \begin{equation}
     D_{\text{linear},\twohalfD}(x_0,\omega) = \frac{1}{2\PI} \int_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{ref},0,\omega)}
-    {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \, \D k_x \qp
+    {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \, \D{k_x} \qp
     \label{eq:D_linear_25D}
 \end{equation}
 %
@@ -847,7 +847,7 @@ inserted into~\eqref{eq:D_circular} and
 yield\sidenote[][0.5cm]{\cite[Compare][(16)]{Ahrens2009c}}
 %
 \begin{equation}
-    D_\text{circular}(\phi_0,\omega) = -A(\omega) \frac{2i}{\PI R_0}
+    D_\text{circular}(\phi_0,\omega) = -A(\omega) \frac{2\I}{\PI R_0}
     \sum_{m=-\infty}^\infty \frac{\I^{-m}\Phi_{-m}(\phi_k)}
     {\H{m}{2}(\omegac R_0)} \Phi_m(\phi_0) \qp
     \label{eq:D_nfchoa_pw_2D}
@@ -887,7 +887,7 @@ in\sidenote[][1cm]{\cite[][(18)]{Ahrens2010a}}
 %
 \begin{equation}
     d_{\text{linear},\,\twohalfD}(x_0,t) = h(t) *
-    a(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}sin\phi_k)
+    a(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k)
     \qc
     \label{eq:d_sdm_pw_25D}
 \end{equation}
@@ -958,7 +958,7 @@ in\autocite[Compare (4.53) in][]{Ahrens2012}
     A(\omega) \int_{-\infty}^\infty \frac{
     \H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \; (y_\text{ref}-y_\text{s}) \right)
     \chi(-k_x,x_\text{s})} {\H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \;
-    y_\text{ref}\right)} \chi(k_x,x_0) \, \D k_x \qp
+    y_\text{ref}\right)} \chi(k_x,x_0) \, \D{k_x} \qp
     \label{eq:D_sdm_ps_25D}
 \end{multline}
 %
@@ -988,7 +988,7 @@ into~\eqref{eq:D_linear} as
 %
 \begin{equation}
     D_\text{linear}(x_0,\omega) = A(\omega) \frac{1}{2\PI}
-    \int_{-\infty}^\infty \chi(k_y,y_s) \chi(k_x,x_0) \, \D k_x \qp
+    \int_{-\infty}^\infty \chi(k_y,y_s) \chi(k_x,x_0) \, \D{k_x} \qp
 \end{equation}
 %
 
