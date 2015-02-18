@@ -1465,3 +1465,27 @@ calculated as
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%-
+\subsection{Local Wave Field Synthesis}
+\label{sec:driving_functions_localwfs}
+
+In the following, the driving functions for local \ac{WFS} in the frequency and
+temporal domain
+for selected source models are presented.
+Local \ac{WFS} describes situations in which \ac{WFS} is used in a way to
+enhance the spatial resolution in one particular part of the listening area and
+reduce it in others. The results are similar to band-limited \ac{NFC-HOA}, with
+the difference that the form and position of the enhanced area can freely be
+chosen within the listening area.
+This is achieved by creating a virtual secondary source distribution in the
+listening area with focused sources. Those virtual secondary sources are then
+again driven by \ac{WFS} in order to achieve the desired sound field.
+
+%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----
+\paragraph{Plane Wave}
+%
+\urlnote{driving\_function\_mono\_wfs\_vss.m}{\SFS/SFS_monochromatic/driving_functions_mono/driving_function_mono_wfs_vss.m}
+\urlnote{driving\_function\_imp\_wfs\_vss.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_vss.m}
+%
+
