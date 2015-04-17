@@ -653,7 +653,7 @@ Transformed in the temporal domain this becomes
 \begin{equation}
     s(\x,t) = a(t) * \deltafunc{t -\frac{\n_k \x}{c}}
     \qc
-    \tag{\#yhj}
+    \eqname{s:pw}
     \label{eq:plane_wave_t}
 \end{equation}
 where $a(t)$ is the Fourier transformation of the frequency spectrum $A(\omega)$.
@@ -728,7 +728,7 @@ Transformed to the temporal domain this becomes
     s(\x,t) = a(t) * \frac{1}{4\PI} \frac{1}{|\x-\xs|}
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
-    \tag{\#2aq}
+    \eqname{s:ps}
     \label{point_source_t}
 \end{equation}
 %
@@ -794,7 +794,7 @@ the temporal domain this becomes
     s(\x,t) = a(t) * \IFT{\sqrt{\frac{c}{\I\omega}}} * \sqrt{\frac{1}{8\PI}} \frac{1}{\sqrt{|\x-\xs|}}
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
-    \tag{\#m3f}
+    \eqname{s:ls}
     \label{line_source_t}
 \end{equation}
 %
@@ -1127,27 +1127,27 @@ transform~\eqref{eq:ift}, it follows
 \begin{equation}
     d(\x_0,t) = 2 a(t) * h(t) * w(\x_0) \n_k \n_{\x_0} \deltafunc{t -
     \frac{\n_k\x_0}{c}} \qc
-    \tag{\#9a4}
+    \eqname{d:wfs:pw}
     \label{eq:d_wfs_pw}
 \end{equation}
 %
 \begin{equation}
     d_\twohalfD(\x_0,t) = 2g_0 a(t) * h_\twohalfD(t) * w(\x_0) \n_k \n_{\x_0}
     \deltafunc{t - \frac{\n_k\x_0}{c}} \qc
-    \tag{\#cjo}
+    \eqname{d:wfs:pw:2.5D}
     \label{eq:d_wfs_pw_25D}
 \end{equation}
 %
 where
 \begin{equation}
     h(t) = \IFT{\I\omegac} \qc
-    \tag{\#wmg}
+    \eqname{wfs:preeq}
     \label{eq:wfs_preeq}
 \end{equation}
 and
 \begin{equation}
     h_\twohalfD(t) = \IFT{\sqrt{\I\omegac}}
-    \tag{\#0wo}
+    \eqname{wfs:preeq:2.5D}
     \label{eq:wfs_preeq25D}
 \end{equation}
 denote the so called pre-equalization filters in \ac{WFS}.
@@ -1244,7 +1244,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     d(\x_0,t) = \frac{1}{2\PI} a(t) * h(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
-    \tag{\#6l1}
+    \eqname{d:wfs:ps}
     \label{eq:d_wfs_ps}
 \end{equation}
 %
@@ -1253,7 +1253,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{g_0}{2\PI} a(t) * h_\twohalfD(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qp
-    \tag{\#xdu}
+    \eqname{d:wfs:ps:2.5D}
     \label{eq:d_wfs_ps_25D}
 \end{multline}
 %
@@ -1319,7 +1319,7 @@ transform~\eqref{eq:ift} it follows
     d(\x_0,t) = \sqrt{\frac{1}{2\PI}} a(t) * h(t) *
     w(\x0) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
-    \tag{\#3gg}
+    \eqname{d:wfs:ls}
     \label{eq:d_wfs_ls}
 \end{equation}
 %
@@ -1423,7 +1423,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     d(\x_0,t) = \frac{1}{2\PI} a(t) * h(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qc
-    \tag{\#u8m}
+    \eqname{d:wfs:fs}
     \label{eq:d_wfs_fs}
 \end{equation}
 %
@@ -1432,7 +1432,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{g_0}{2\PI} a(t) * h_\twohalfD(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qp
-    \tag{\#jlk}
+    \eqname{d:wfs:fs:2.5D}
     \label{eq:d_wfs_fs_25D}
 \end{multline}
 %
