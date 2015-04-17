@@ -43,7 +43,6 @@ given by the \emph{single-layer potential}
 %
 \begin{equation}
     P(\x,\omega) = \oint_{\partial V} D(\x_0,\omega) G(\x-\x_0,\omega) \; \D A(\x_0) \qc
-    \tag{\#46k}
     \label{eq:single_layer_potential}
 \end{equation}
 %
@@ -81,21 +80,18 @@ into the basis functions $\psi_n$ as\autocite[Compare][p.\,940]{Morse1981}
 \begin{equation}
     G(\x-\x_0,\omega) = \sum_{n=1}^N \tilde{G}_n(\omega) \,
         \psi_n^*(\x_0) \psi_n(\x)
-    \tag{\#qco}
     \label{eq:G_expansion}
 \end{equation}
 %
 \begin{equation}
     D(\x_0,\omega) = \sum_{n=1}^N \tilde{D}_n(\omega) \,
         \psi_n(\x_0)
-    \tag{\#4w4}
     \label{eq:D_expansion}
 \end{equation}
 %
 \begin{equation}
     S(\x,\omega) = \sum_{n=1}^N \tilde{S}_n(\omega) \,
         \psi_n(\x) \qc
-    \tag{\#hf6}
     \label{eq:S_expansion}
 \end{equation}
 %
@@ -107,7 +103,6 @@ into~\eqref{eq:single_layer_potential} one gets
 %
 \begin{equation}
     \tilde{D}_n(\omega) = \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)} \qp
-    \tag{\#scx}
     \label{eq:D_HOA}
 \end{equation}
 %
@@ -143,7 +138,6 @@ Figure\,\ref{fig:coordinate_system} in this thesis.]{Gumerov2004}
 \begin{gather}
     Y_n^m(\theta,\phi) = (-1)^m \sqrt{\frac{(2n+1)(n-|m|)!}{4\PI(n+|m|)!}}
     P_n^{|m|}(\sin\theta) \E^{\I m\phi} \qc
-    \tag{\#bw3}
     \label{eq:Y} \\
     n = 0,1,2,... \;\;\;\;\;\; m = -n,...,n
     \notag
@@ -157,7 +151,6 @@ The complex conjugate of $Y_n^m$ is given by negating the degree $m$ as
 %
 \begin{equation}
     Y_n^m(\theta,\phi)^* = Y_n^{-m}(\theta,\phi) \qp
-    \tag{\#dz5}
     \label{eq:Y_complex_conjugate}
 \end{equation}
 %
@@ -175,7 +168,6 @@ as\sidenote{\cite[][(3.21)]{Ahrens2012}. The $\frac{1}{2\PI}$ term is wrong in
     \sum_{n=0}^\infty \sum_{m=-n}^n \sqrt{\frac{2n+1}{4\PI}}
     \frac{\breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\omega)}
     {\breve{G}_n^0(\frac{\PI}{2},0,\omega)} Y_n^m(\theta_0,\phi_0) \qc
-    \tag{\#h8a}
     \label{eq:D_spherical}
 \end{multline}
 %
@@ -189,7 +181,6 @@ secondary point source that is located at the north pole of the sphere with $\x_
 \begin{equation}
     \breve{G}_n^0(\tfrac{\PI}{2},0,\omega) =
     -\I\omegac \sqrt{\frac{2n+1}{4\PI}} \h{n}{2}\left(\omegac R_0\right) \qc
-    \tag{\#8m2}
     \label{eq:G_spherical}
 \end{equation}
 where $\h{n}{2}$ describes the spherical Hankel function of $n$-th order and
@@ -205,7 +196,6 @@ distribution\autocite{Williams1999}
 %
 \begin{equation}
     \Phi_m(\phi) = \E^{\I m\phi} \qp
-    \tag{\#aos}
     \label{eq:circular_harmonics}
 \end{equation}
 %
@@ -213,7 +203,6 @@ The complex conjugate of $\Phi_m$ is given by negating the degree $m$ as
 %
 \begin{equation}
     \Phi_m(\phi)^* = \Phi_{-m}(\phi) \qp
-    \tag{\#lnr}
     \label{eq:Phi_complex_conjugate}
 \end{equation}
 %
@@ -227,7 +216,6 @@ shown by Ahrens\autocite{Ahrens2009c} and is then given as
     D_\text{circular}(\phi_0,\omega) = \frac{1}{2\PI R_0} \sum_{m=-\infty}^\infty 
     \frac{\breve{S}_m(\phi_\text{s},r_\text{s},\omega)}{\breve{G}_m(0,\omega)} \,
     \Phi_m(\phi_0) \qc
-    \tag{\#ra8}
     \label{eq:D_circular}
 \end{equation}
 %
@@ -237,7 +225,6 @@ the circular expansion coefficients for a secondary line source with
 %
 \begin{equation}
     \breve{G}_m(0,\omega) = -\frac{\I}{4} \H{m}{2}\left(\omegac R_0\right) \qc
-    \tag{\#gd5}
     \label{eq:G_circular}
 \end{equation}
 %
@@ -253,7 +240,6 @@ located on the $xz$-plane in $\R^3$ are given as
 %
 \begin{equation}
     \Lambda(k_x,k_z,x,z) = \E^{-\I(k_x x + k_z z)} \qc
-    \tag{\#54z}
     \label{eq:planar_harmonics}
 \end{equation}
 %
@@ -263,7 +249,6 @@ The complex conjugate is given by negating $k_x$ and $k_z$ as
 %
 \begin{equation}
     \Lambda(k_x,k_z,x,z)^* = \Lambda(-k_x,-k_z,x,z) \qp
-    \tag{\#wgs}
 \end{equation}
 %
 
@@ -275,7 +260,6 @@ convolution along the plane as\autocite[][(3.65)]{Ahrens2012}
     D_\text{planar}(x_0,\omega) = \frac{1}{4\PI^2} \iint_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{s},k_z,\omega)}{\breve{G}(k_x,0,k_z,\omega)}
     \Lambda(k_x,x_0,k_z,z_0) \, \D{k_x} \D{k_z} \qc
-    \tag{\#t23}
     \label{eq:D_planar}
 \end{equation}
 %
@@ -287,7 +271,6 @@ expansion coefficients of a secondary point source with\autocite[][(65)]{Schultz
     \breve{G}(k_x,0,k_z,\omega) = -\frac{\I}{2}
     \frac{1}{\sqrt{(\omegac)^2-k_x^2-k_z^2}}
     \qc
-    \tag{\#apw}
     \label{G_planar}
 \end{equation}
 %
@@ -308,7 +291,6 @@ located on the $x$-axis are given as
 %
 \begin{equation}
     \chi(k_x,x) = \E^{-\I k_x x} \qp
-    \tag{\#ix9}
     \label{eq:linear_harmonics}
 \end{equation}
 %
@@ -316,7 +298,6 @@ The complex conjugate is given by negating $k_x$ as
 %
 \begin{equation}
     \chi(k_x,x)^* = \chi(-k_x,x) \qp
-    \tag{\#09i}
 \end{equation}
 %
 
@@ -328,7 +309,6 @@ as\autocite[Compare (3.73) in][]{Ahrens2012}
     D_\text{linear}(x_0,\omega) = \frac{1}{2\PI} \int_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{s},\omega)}{\breve{G}(k_x,0,\omega)}
     \chi(k_x,x_0) \, \D{k_x} \qc
-    \tag{\#adr}
     \label{eq:D_linear}
 \end{equation}
 %
@@ -339,7 +319,6 @@ and $\breve{G}$ the linear expansion coefficients of a secondary line source wit
 \begin{equation}
     \breve{G}(k_x,0,\omega) = -\frac{\I}{2} \frac{1}{\sqrt{(\omegac)^2-k_x^2}}
     \qc
-    \tag{\#u7f}
     \label{eq:G_linear}
 \end{equation}
 %
@@ -366,7 +345,6 @@ as\sidenote[][0cm]{\cite[Compare][]{Fazi2013}}
 \begin{equation}
     D(\x_0,\omega) = \partial_\n
     P(\x_0,\omega) + \partial_{-\n} P(\x_0,\omega)\qc
-    \tag{\#e2x}
     \label{eq:D_gradient}
 \end{equation}
 %
@@ -378,7 +356,6 @@ boundary $\partial V$ is given as
 %
 \begin{equation}
     D(\x_0,\omega) = -2 \partial_\n S(\x_0,\omega)\qc
-    \tag{\#tjx}
     \label{eq:D_wfs}
 \end{equation}
 %
@@ -439,7 +416,6 @@ secondary sources into~\eqref{eq:D_wfs} as
     P(\x,\omega) \approx \oint_{\partial V} \!\!  G(\x|\x_0,\omega) \,
     \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\omega)}_{D(\x_0,\omega)} \; \D
     A(\x_0) \qp
-    \tag{\#khg}
     \label{eq:P_wfs}
 \end{equation}
 %
@@ -523,7 +499,6 @@ Ahrens\autocite[][(3.49)]{Ahrens2012} as
     \frac{\breve{S}_{|m|}^m (\frac{\PI}{2},\phi_\text{s},r_\text{s},\omega)}{\breve{G}_{|m|}^m
     (\frac{\PI}{2},0,\omega)}
     \Phi_m(\phi_0) \qp
-    \tag{\#1tt}
     \label{eq:D_circular_25D}
 \end{equation}
 %
@@ -540,7 +515,6 @@ as\autocite[][(3.77)]{Ahrens2012}
     D_{\text{linear},\twohalfD}(x_0,\omega) = \frac{1}{2\PI} \int_{-\infty}^\infty
     \frac{\breve{S}(k_x,y_\text{ref},0,\omega)}
     {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \, \D{k_x} \qp
-    \tag{\#glv}
     \label{eq:D_linear_25D}
 \end{equation}
 %
@@ -564,7 +538,6 @@ Green's functions can be established.
     \underbrace{
         \frac{1}{4 \PI} \frac{\E^{-\I\omegac|\x-\x_0|}}{|\x-\x_0|}
     }_{G_\threeD(\x-\x_0,\omega)} \qc
-    \tag{\#p7b}
     \label{eq:25D_approximation}
 \end{multline}
 %
@@ -576,7 +549,6 @@ case results in
 \begin{equation}
     P(\x,\omega) = \oint_S \sqrt{2\PI \frac{c}{\I\omega} |\x-\x_0|} \;
     D(\x_0,\omega) G_\threeD(\x-\x0,\omega) \, \D A(\x_0) \qp
-    \tag{\#zcl}
     \label{eq:single_layer_potential_25D}
 \end{equation}
 %
@@ -588,7 +560,6 @@ as
     D_\twohalfD(\x_0,\omega) = \underbrace{\sqrt{2\PI |\x_\text{ref}-\x_0|}}_{g_0}
     \sqrt{\frac{c}{\I\omega}} \,
     D(\x_0,\omega) \qc
-    \tag{\#9ie}
     \label{eq:D25D_wfs}
 \end{equation}
 %
@@ -640,7 +611,6 @@ in his definitions of the Green's functions and field expansions.]{Williams1999}
 \begin{equation} 
     S(\x,\omega) = A(\omega) \E^{-\I\omegac \n_k \x}
     \qc
-    \tag{\#vmd}
     \label{eq:plane_wave_omega}
 \end{equation}
 %
@@ -653,7 +623,6 @@ Transformed in the temporal domain this becomes
 \begin{equation}
     s(\x,t) = a(t) * \deltafunc{t -\frac{\n_k \x}{c}}
     \qc
-    \tag{\#yhj}
     \label{eq:plane_wave_t}
 \end{equation}
 where $a(t)$ is the Fourier transformation of the frequency spectrum $A(\omega)$.
@@ -664,7 +633,6 @@ as\sidenote[][]{\cite[][(2.38)]{Ahrens2012}}
 \begin{equation}
     \breve{S}_n^m(\theta_k,\phi_k,\omega) = 4\PI \I^{-n} Y_n^{-m}(\theta_k,\phi_k)
     \qc
-    \tag{\#ddj}
     \label{eq:plane_wave_spherical}
 \end{equation}
 %
@@ -675,7 +643,6 @@ given as
 %
 \begin{equation}
     \breve{S}_m(\phi_\text{s},\omega) = \I^{-n} \Phi_{-m}(\phi_\text{s}) \qp
-    \tag{\#1ki}
     \label{eq:plane_wave_circular}
 \end{equation}
 %
@@ -687,7 +654,6 @@ given as after Ahrens\sidenote[][-0.4cm]{\cite[][(C.5)]{Ahrens2012}}
     \breve{S}(k_x,y,\omega) = 2\PI \deltafunc{k_x-k_{x,\text{s}}}
     \chi(k_{y,\text{s}},y)
     \qc
-    \tag{\#ch9}
     \label{eq:plane_wave_linear}
 \end{equation}
 %
@@ -716,7 +682,6 @@ function as\sidenote[][-6.6cm]{\cite[][(6.73)]{Williams1999}}
     S(\x,\omega) = A(\omega) \frac{1}{4\PI}
     \frac{\E^{-\I\omegac|\x-\xs|}}{|\x-\xs|}
     \qc
-    \tag{\#ynr}
     \label{eq:point_source_omega}
 \end{equation}
 %
@@ -728,7 +693,6 @@ Transformed to the temporal domain this becomes
     s(\x,t) = a(t) * \frac{1}{4\PI} \frac{1}{|\x-\xs|}
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
-    \tag{\#2aq}
     \label{point_source_t}
 \end{equation}
 %
@@ -740,7 +704,6 @@ as\autocite[][(2.37)]{Ahrens2012}
     \breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\omega) =
     -\I \omegac \, h_n^{(2)}\!\!\left(\omegac r_\text{s}\right)
     Y_n^{-m}(\theta_\text{s},\phi_\text{s}) \qc
-    \tag{\#wkl}
     \label{eq:point_source_spherical}
 \end{equation}
 %
@@ -754,7 +717,6 @@ as\autocite[][(C.10)]{Ahrens2012}
     \breve{S}(k_x,y,\omega) =
     -\frac{\I}{4} \H{0}{2} \left( \sqrt{(\tfrac{\omega}{c})^2-k_x^2} \;
         |y-y_\text{s}| \right) \chi(-k_x,x_\text{s}) \qc
-    \tag{\#nx1}
     \label{eq:point_source_linear}
 \end{equation}
 %
@@ -772,7 +734,6 @@ function as\sidenote[][-0.5cm]{\cite[][(8.47)]{Williams1999}}
 \begin{equation}
     S(\x,\omega) = -A(\omega) \frac{\I}{4} \H{0}{2} \left(\omegac |\x-\xs|\right)
     \qp
-    \tag{\#54d}
     \label{eq:line_source_omega}
 \end{equation}
 %
@@ -794,7 +755,6 @@ the temporal domain this becomes
     s(\x,t) = a(t) * \IFT{\sqrt{\frac{c}{\I\omega}}} * \sqrt{\frac{1}{8\PI}} \frac{1}{\sqrt{|\x-\xs|}}
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
-    \tag{\#m3f}
     \label{line_source_t}
 \end{equation}
 %
@@ -805,7 +765,6 @@ The expansion coefficients for circular basis functions are given as
     \breve{S}_m(\phi_\text{s},r_\text{s},\omega) = -\frac{\I}{4}
     \H{m}{2} \left(\omegac r_\text{s}\right)
     \Phi_{-m}(\phi_\text{s}) \qp
-    \tag{\#5pr}
     \label{eq:line_source_circular}
 \end{equation}
 %
@@ -815,7 +774,6 @@ The expansion coefficients for linear basis functions are given as
 \begin{equation}
     \breve{S}(k_x,y_\text{s},\omega) = -\frac{\I}{2} \frac{1}{\sqrt{(\omegac)^2-k_x^2}}
     \chi(k_y,y_\text{s})\qp
-    \tag{\#pmh}
     \label{eq:line_source_linear}
 \end{equation}
 %
@@ -869,7 +827,6 @@ into~\eqref{eq:D_spherical} and yield\autocite[][(96)]{Schultz2014}
     D_\text{spherical}(\theta_0,\phi_0,\omega) = -A(\omega) \frac{4\PI}{R_0^{\,2}}
     \sum_{n=0}^\infty \sum_{m=-n}^n \frac{\I^{-n} Y_n^{-m}(\theta_k,\phi_k)}{\I\omegac h_n^{(2)}
     \left(\omegac R_0\right)} Y_n^m(\theta_0,\phi_0) \qp
-    \tag{\#fvw}
     \label{eq:D_nfchoa_pw_3D}
 \end{equation}
 %
@@ -893,7 +850,6 @@ yield\sidenote[][0.5cm]{\cite[Compare][(16)]{Ahrens2009c}}
     D_\text{circular}(\phi_0,\omega) = -A(\omega) \frac{2\I}{\PI R_0}
     \sum_{m=-\infty}^\infty \frac{\I^{-m}\Phi_{-m}(\phi_k)}
     {\H{m}{2}(\omegac R_0)} \Phi_m(\phi_0) \qp
-    \tag{\#aov}
     \label{eq:D_nfchoa_pw_2D}
 \end{equation}
 %
@@ -907,7 +863,6 @@ and a point source~\eqref{eq:point_source_spherical} into~\eqref{eq:D_circular_2
     D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega) \frac{2}{R_0}
     \sum_{m=-\infty}^\infty \frac{\I^{-|m|} \Phi_{-m}(\phi_k)} {\I\omegac
     h_{|m|}^{(2)}\left(\omegac R_0\right)} \Phi_m(\phi_0) \qp
-    \tag{\#cys}
     \label{eq:D_nfchoa_pw_25D}
 \end{equation}
 %
@@ -923,7 +878,6 @@ in\sidenote[][]{\fullcite[][(17)]{Ahrens2010a}}
     D_{\text{linear},\,\twohalfD}(x_0,\omega) = A(\omega) \frac{4\I
     \chi(k_y,y_\text{ref})}
     {\H{0}{2}(k_y y_\text{ref})} \chi(k_x,x_0) \qp
-    \tag{\#7a6}
     \label{eq:D_sdm_pw_25D}
 \end{equation}
 %
@@ -935,7 +889,6 @@ in\sidenote[][1cm]{\cite[][(18)]{Ahrens2010a}}
     d_{\text{linear},\,\twohalfD}(x_0,t) = h(t) *
     a(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k)
     \qc
-    \tag{\#u4q}
     \label{eq:d_sdm_pw_25D}
 \end{equation}
 %
@@ -943,7 +896,6 @@ where $\phi_k$ denotes the azimuth direction of the plane wave and
 \begin{equation}
     h(t) =
     \IFT{\frac{4\I}{\H{0}{2}(k_y y_\text{ref})}} \qp
-    \tag{\#y73}
 \end{equation}
 The advantage of this
 result is that it can be implemented by a simple weighting and delaying of
@@ -966,7 +918,6 @@ function~\eqref{eq:G_spherical} are inserted into~\eqref{eq:D_spherical} and yie
     A(\omega) \frac{1}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
     \frac{h_n^{(2)}(\omegac r_\text{s}) Y_n^{-m}(\theta_\text{s},\phi_\text{s})}
     {h_n^{(2)}(\omegac R_0)} Y_n^m (\theta_0,\phi_0) \qp
-    \tag{\#e0n}
     \label{eq:D_nfchoa_ps_3D}
 \end{multline}
 %
@@ -990,7 +941,6 @@ into~\eqref{eq:D_circular_25D} as
         \sum_{m=-\infty}^{\infty}
         \frac{h_{|m|}^{(2)} (\omegac r_s) \Phi_{-m}(\phi_\text{s})} 
         {h_{|m|}^{(2)} (\omegac R_0)} \Phi_m(\phi_0) \qp
-    \tag{\#eep}
     \label{eq:D_nfchoa_ps_25D}
 \end{equation}
 %
@@ -1009,7 +959,6 @@ in\autocite[Compare (4.53) in][]{Ahrens2012}
     \H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \; (y_\text{ref}-y_\text{s}) \right)
     \chi(-k_x,x_\text{s})} {\H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \;
     y_\text{ref}\right)} \chi(k_x,x_0) \, \D{k_x} \qp
-    \tag{\#gk2}
     \label{eq:D_sdm_ps_25D}
 \end{multline}
 %
@@ -1028,7 +977,6 @@ into~\eqref{eq:D_circular} as
         \sum_{m=-\infty}^{\infty}
         \frac{\H{m}{2}(\omegac r_s) \Phi_{-m}(\phi_\text{s})}
         {\H{m}{2}(\omegac R_0)} \Phi_m(\phi_0) \qp
-    \tag{\#y0d}
     \label{eq:D_nfchoa_ls_2D}
 \end{equation}
 %
@@ -1041,7 +989,6 @@ into~\eqref{eq:D_linear} as
 \begin{equation}
     D_\text{linear}(x_0,\omega) = A(\omega) \frac{1}{2\PI}
     \int_{-\infty}^\infty \chi(k_y,y_s) \chi(k_x,x_0) \, \D{k_x} \qp
-    \tag{\#zfc}
 \end{equation}
 %
 
@@ -1100,14 +1047,12 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 \begin{equation}
     D(\x_0,\omega) = 2 w(\x_0) A(\omega) \I\omegac \n_k\n_{\x_0}
     \E^{-\I\omegac\n_k\x_0} \qc
-    \tag{\#5sr}
     \label{eq:D_wfs_pw}
 \end{equation}
 %
 \begin{equation}
     D_\twohalfD(\x_0,\omega) = 2g_0 w(\x_0) A(\omega) \sqrt{\I\omegac} \n_k\n_{\x_0} 
     \E^{-\I\omegac\n_k\x_0} \qp
-    \tag{\#sev}
     \label{eq:D_wfs_pw_25D}
 \end{equation}
 %
@@ -1127,27 +1072,23 @@ transform~\eqref{eq:ift}, it follows
 \begin{equation}
     d(\x_0,t) = 2 a(t) * h(t) * w(\x_0) \n_k \n_{\x_0} \deltafunc{t -
     \frac{\n_k\x_0}{c}} \qc
-    \tag{\#9a4}
     \label{eq:d_wfs_pw}
 \end{equation}
 %
 \begin{equation}
     d_\twohalfD(\x_0,t) = 2g_0 a(t) * h_\twohalfD(t) * w(\x_0) \n_k \n_{\x_0}
     \deltafunc{t - \frac{\n_k\x_0}{c}} \qc
-    \tag{\#cjo}
     \label{eq:d_wfs_pw_25D}
 \end{equation}
 %
 where
 \begin{equation}
     h(t) = \IFT{\I\omegac} \qc
-    \tag{\#wmg}
     \label{eq:wfs_preeq}
 \end{equation}
 and
 \begin{equation}
     h_\twohalfD(t) = \IFT{\sqrt{\I\omegac}}
-    \tag{\#0wo}
     \label{eq:wfs_preeq25D}
 \end{equation}
 denote the so called pre-equalization filters in \ac{WFS}.
@@ -1163,7 +1104,6 @@ calculated after Spors et al. as\autocite{Spors2008}
         1 & \n_k \n_{\x_0} > 0 \\
         0 & \text{else}
     \end{cases}
-    \tag{\#3vy}
     \label{eq:w_pw}
 \end{equation}
 %
@@ -1195,7 +1135,6 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \frac{1}{2\PI} A(\omega) w(\x_0) \left(\I\omegac +
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \tag{\#y49}
     \label{eq:D_wfs_ps_without_approximation}
 \end{multline}
 %
@@ -1204,7 +1143,6 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac} \left(
     1 + \frac{1}{\I\omegac|\x_0-\xs|}
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{-\I\omegac |\x_0-\xs|} \qp
-    \tag{\#a11}
     \label{eq:D_wfs_ps_25D_without_approximation}
 \end{multline}
 %
@@ -1216,7 +1154,6 @@ and~\eqref{eq:D_wfs_ps_25D_without_approximation} can be approximated by
     D(\x_0,\omega) = \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \tag{\#byv}
     \label{eq:D_wfs_ps}
 \end{equation}
 %
@@ -1225,7 +1162,6 @@ and~\eqref{eq:D_wfs_ps_25D_without_approximation} can be approximated by
     \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \tag{\#emr}
     \label{eq:D_wfs_ps_25D}
 \end{multline}
 %
@@ -1244,7 +1180,6 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     d(\x_0,t) = \frac{1}{2\PI} a(t) * h(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
-    \tag{\#6l1}
     \label{eq:d_wfs_ps}
 \end{equation}
 %
@@ -1253,7 +1188,6 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{g_0}{2\PI} a(t) * h_\twohalfD(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qp
-    \tag{\#xdu}
     \label{eq:d_wfs_ps_25D}
 \end{multline}
 %
@@ -1267,7 +1201,6 @@ calculated after Spors at al. as\autocite{Spors2008}
         1 & (\x_0-\xs) \n_{\x_0} > 0 \\
         0 & \text{else}
     \end{cases}
-    \tag{\#ykn}
     \label{eq:w_ps}
 \end{equation}
 %
@@ -1287,7 +1220,6 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qc
-    \tag{\#e4b}
     \label{eq:D_wfs_ls}
 \end{equation}
 %
@@ -1296,7 +1228,6 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     -\frac{1}{2}g_0 A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qp
-    \tag{\#z5x}
     \label{eq:D_wfs_ls_25D}
 \end{multline}
 %
@@ -1319,7 +1250,6 @@ transform~\eqref{eq:ift} it follows
     d(\x_0,t) = \sqrt{\frac{1}{2\PI}} a(t) * h(t) *
     w(\x0) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
-    \tag{\#3gg}
     \label{eq:d_wfs_ls}
 \end{equation}
 %
@@ -1329,7 +1259,6 @@ transform~\eqref{eq:ift} it follows
     \IFT{\sqrt{\frac{c}{\I\omega}}} * w(\x0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qp
-    \tag{\#yht}
     \label{eq:d_wfs_ls_25D}
 \end{multline}
 %
@@ -1343,7 +1272,6 @@ calculated after Spors et al. as\autocite{Spors2008}
         1 & (\x_0-\xs) \n_{\x_0} > 0 \\
         0 & \text{else}
     \end{cases}
-    \tag{\#f51}
     \label{eq:w_ls}
 \end{equation}
 %
@@ -1382,7 +1310,6 @@ versions of the driving functions for a point source as
     \frac{1}{2\PI} A(\omega) w(\x_0) \left(\I\omegac +
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{\I\omegac |\x_0-\xs|} \qc
-    \tag{\#rwz}
     \label{eq:D_wfs_fs_without_approximation}
 \end{multline}
 %
@@ -1392,7 +1319,6 @@ versions of the driving functions for a point source as
     1 + \frac{1}{\I\omegac|\x_0-\xs|}
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{\I\omegac |\x_0-\xs|}
     \qc
-    \tag{\#xcs}
     \label{eq:D_wfs_fs_25D_without_approximation}
 \end{multline}
 %
@@ -1402,7 +1328,6 @@ or by using an approximated point source as
     D(\x_0,\omega) = \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qc
-    \tag{\#o29}
     \label{eq:D_wfs_fs}
 \end{equation}
 %
@@ -1410,7 +1335,6 @@ or by using an approximated point source as
     D_\twohalfD(\x_0,\omega) = \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qp
-    \tag{\#owy}
     \label{eq:D_wfs_fs_25D}
 \end{equation}
 %
@@ -1423,7 +1347,6 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     d(\x_0,t) = \frac{1}{2\PI} a(t) * h(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qc
-    \tag{\#u8m}
     \label{eq:d_wfs_fs}
 \end{equation}
 %
@@ -1432,7 +1355,6 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{g_0}{2\PI} a(t) * h_\twohalfD(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qp
-    \tag{\#jlk}
     \label{eq:d_wfs_fs_25D}
 \end{multline}
 %
@@ -1444,7 +1366,6 @@ same way starting from~\eqref{eq:D_wfs_ls}
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{1}\left(\omegac|\x_0-\xs|\right) \qp
-    \tag{\#uyg}
     \label{eq:D_wfs_ls_fs}
 \end{equation}
 %
@@ -1458,7 +1379,6 @@ calculated as
         1 & \n_\text{s} (\xs-\x_0) > 0 \\
         0 & \text{else}
     \end{cases}
-    \tag{\#rpa}
     \label{eq:w_fs}
 \end{equation}
 %
