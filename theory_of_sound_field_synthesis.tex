@@ -57,9 +57,11 @@
 % --- FONTS ------------------------------------------------------------------
 % math fonts                                                                  |
 \usepackage{amsmath,amssymb}%                                                 |
-% change numbering of equation to (number)                                    |
+% Change numbering of equation to (number)                                    |
 \renewcommand{\theequation}{\arabic{equation}}%                               |
-% enable IEEE fonts                                                           |
+\usepackage{chngcntr}%                                                        |
+\counterwithout{equation}{chapter}% allow continuous numbering across chapters|
+% Enable IEEE fonts                                                           |
 \renewcommand{\sfdefault}{phv}%                                               |
 \renewcommand{\rmdefault}{ptm}%                                               |
 \renewcommand{\ttdefault}{pcr}%                                               |
@@ -68,7 +70,7 @@
 \usepackage{nicefrac}%                                                        |
 % provide straight (non-italic) \int symbol                                   |
 %\usepackage[integrals]{wasysym}%                                             |
-% provide a command similar to \newthought but without vspace fot start of    |
+% Provide a command similar to \newthought but without vspace fot start of    |
 % sections                                                                    |
 \newcommand{\firstthought}[1]{\noindent\textsc{#1}}%                          |
 % ----------------------------------------------------------------------------
