@@ -43,7 +43,7 @@ given by the \emph{single-layer potential}
 %
 \begin{equation}
     P(\x,\omega) = \oint_{\partial V} D(\x_0,\omega) G(\x-\x_0,\omega) \; \D A(\x_0) \qc
-    \tag{\#46k}
+    \eqname{single:layer}
     \label{eq:single_layer_potential}
 \end{equation}
 %
@@ -640,7 +640,7 @@ in his definitions of the Green's functions and field expansions.]{Williams1999}
 \begin{equation} 
     S(\x,\omega) = A(\omega) \E^{-\I\omegac \n_k \x}
     \qc
-    \tag{\#vmd}
+    \eqname{S:pw}
     \label{eq:plane_wave_omega}
 \end{equation}
 %
@@ -716,7 +716,7 @@ function as\sidenote[][-6.6cm]{\cite[][(6.73)]{Williams1999}}
     S(\x,\omega) = A(\omega) \frac{1}{4\PI}
     \frac{\E^{-\I\omegac|\x-\xs|}}{|\x-\xs|}
     \qc
-    \tag{\#ynr}
+    \eqname{S:ps}
     \label{eq:point_source_omega}
 \end{equation}
 %
@@ -772,7 +772,7 @@ function as\sidenote[][-0.5cm]{\cite[][(8.47)]{Williams1999}}
 \begin{equation}
     S(\x,\omega) = -A(\omega) \frac{\I}{4} \H{0}{2} \left(\omegac |\x-\xs|\right)
     \qp
-    \tag{\#54d}
+    \eqname{S:ls}
     \label{eq:line_source_omega}
 \end{equation}
 %
@@ -869,7 +869,7 @@ into~\eqref{eq:D_spherical} and yield\autocite[][(96)]{Schultz2014}
     D_\text{spherical}(\theta_0,\phi_0,\omega) = -A(\omega) \frac{4\PI}{R_0^{\,2}}
     \sum_{n=0}^\infty \sum_{m=-n}^n \frac{\I^{-n} Y_n^{-m}(\theta_k,\phi_k)}{\I\omegac h_n^{(2)}
     \left(\omegac R_0\right)} Y_n^m(\theta_0,\phi_0) \qp
-    \tag{\#fvw}
+    \eqname{D:hoa:pw:3D}
     \label{eq:D_nfchoa_pw_3D}
 \end{equation}
 %
@@ -893,7 +893,7 @@ yield\sidenote[][0.5cm]{\cite[Compare][(16)]{Ahrens2009c}}
     D_\text{circular}(\phi_0,\omega) = -A(\omega) \frac{2\I}{\PI R_0}
     \sum_{m=-\infty}^\infty \frac{\I^{-m}\Phi_{-m}(\phi_k)}
     {\H{m}{2}(\omegac R_0)} \Phi_m(\phi_0) \qp
-    \tag{\#aov}
+    \eqname{D:hoa:pw:2D}
     \label{eq:D_nfchoa_pw_2D}
 \end{equation}
 %
@@ -907,7 +907,7 @@ and a point source~\eqref{eq:point_source_spherical} into~\eqref{eq:D_circular_2
     D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega) \frac{2}{R_0}
     \sum_{m=-\infty}^\infty \frac{\I^{-|m|} \Phi_{-m}(\phi_k)} {\I\omegac
     h_{|m|}^{(2)}\left(\omegac R_0\right)} \Phi_m(\phi_0) \qp
-    \tag{\#cys}
+    \eqname{D:hoa:pw:2.5D}
     \label{eq:D_nfchoa_pw_25D}
 \end{equation}
 %
@@ -923,7 +923,7 @@ in\sidenote[][]{\fullcite[][(17)]{Ahrens2010a}}
     D_{\text{linear},\,\twohalfD}(x_0,\omega) = A(\omega) \frac{4\I
     \chi(k_y,y_\text{ref})}
     {\H{0}{2}(k_y y_\text{ref})} \chi(k_x,x_0) \qp
-    \tag{\#7a6}
+    \eqname{D:sdm:pw:2.5D}
     \label{eq:D_sdm_pw_25D}
 \end{equation}
 %
@@ -966,7 +966,7 @@ function~\eqref{eq:G_spherical} are inserted into~\eqref{eq:D_spherical} and yie
     A(\omega) \frac{1}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
     \frac{h_n^{(2)}(\omegac r_\text{s}) Y_n^{-m}(\theta_\text{s},\phi_\text{s})}
     {h_n^{(2)}(\omegac R_0)} Y_n^m (\theta_0,\phi_0) \qp
-    \tag{\#e0n}
+    \eqname{D:hoa:ps:3D}
     \label{eq:D_nfchoa_ps_3D}
 \end{multline}
 %
@@ -990,7 +990,7 @@ into~\eqref{eq:D_circular_25D} as
         \sum_{m=-\infty}^{\infty}
         \frac{h_{|m|}^{(2)} (\omegac r_s) \Phi_{-m}(\phi_\text{s})} 
         {h_{|m|}^{(2)} (\omegac R_0)} \Phi_m(\phi_0) \qp
-    \tag{\#eep}
+    \eqname{D:hoa:ps:2.5D}
     \label{eq:D_nfchoa_ps_25D}
 \end{equation}
 %
@@ -1009,7 +1009,7 @@ in\autocite[Compare (4.53) in][]{Ahrens2012}
     \H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \; (y_\text{ref}-y_\text{s}) \right)
     \chi(-k_x,x_\text{s})} {\H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \;
     y_\text{ref}\right)} \chi(k_x,x_0) \, \D{k_x} \qp
-    \tag{\#gk2}
+    \eqname{D:sdm:ps:2.5D}
     \label{eq:D_sdm_ps_25D}
 \end{multline}
 %
@@ -1100,14 +1100,14 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 \begin{equation}
     D(\x_0,\omega) = 2 w(\x_0) A(\omega) \I\omegac \n_k\n_{\x_0}
     \E^{-\I\omegac\n_k\x_0} \qc
-    \tag{\#5sr}
+    \eqname{D:wfs:pw}
     \label{eq:D_wfs_pw}
 \end{equation}
 %
 \begin{equation}
     D_\twohalfD(\x_0,\omega) = 2g_0 w(\x_0) A(\omega) \sqrt{\I\omegac} \n_k\n_{\x_0} 
     \E^{-\I\omegac\n_k\x_0} \qp
-    \tag{\#sev}
+    \eqname{D:wfs:pw:2.5D}
     \label{eq:D_wfs_pw_25D}
 \end{equation}
 %
@@ -1195,7 +1195,7 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \frac{1}{2\PI} A(\omega) w(\x_0) \left(\I\omegac +
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \tag{\#y49}
+    \eqname{D:wfs:ps:woapprox}
     \label{eq:D_wfs_ps_without_approximation}
 \end{multline}
 %
@@ -1204,7 +1204,7 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac} \left(
     1 + \frac{1}{\I\omegac|\x_0-\xs|}
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{-\I\omegac |\x_0-\xs|} \qp
-    \tag{\#a11}
+    \eqname{D.wfs:ps:woapprox:2.5D}
     \label{eq:D_wfs_ps_25D_without_approximation}
 \end{multline}
 %
@@ -1216,7 +1216,7 @@ and~\eqref{eq:D_wfs_ps_25D_without_approximation} can be approximated by
     D(\x_0,\omega) = \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \tag{\#byv}
+    \eqname{D:wfs:ps}
     \label{eq:D_wfs_ps}
 \end{equation}
 %
@@ -1225,7 +1225,7 @@ and~\eqref{eq:D_wfs_ps_25D_without_approximation} can be approximated by
     \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \tag{\#emr}
+    \eqname{D:wfs:ps:2.5D}
     \label{eq:D_wfs_ps_25D}
 \end{multline}
 %
@@ -1287,7 +1287,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qc
-    \tag{\#e4b}
+    \eqname{D:wfs:ls}
     \label{eq:D_wfs_ls}
 \end{equation}
 %
@@ -1296,7 +1296,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     -\frac{1}{2}g_0 A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qp
-    \tag{\#z5x}
+    \eqname{D:wfs:ls:2.5D}
     \label{eq:D_wfs_ls_25D}
 \end{multline}
 %
@@ -1382,7 +1382,7 @@ versions of the driving functions for a point source as
     \frac{1}{2\PI} A(\omega) w(\x_0) \left(\I\omegac +
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{\I\omegac |\x_0-\xs|} \qc
-    \tag{\#rwz}
+    \eqname{D:wfs:fs:woapprox}
     \label{eq:D_wfs_fs_without_approximation}
 \end{multline}
 %
@@ -1392,7 +1392,7 @@ versions of the driving functions for a point source as
     1 + \frac{1}{\I\omegac|\x_0-\xs|}
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{\I\omegac |\x_0-\xs|}
     \qc
-    \tag{\#xcs}
+    \eqname{D:wfs:fs:woapprox:2.5D}
     \label{eq:D_wfs_fs_25D_without_approximation}
 \end{multline}
 %
@@ -1402,7 +1402,7 @@ or by using an approximated point source as
     D(\x_0,\omega) = \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qc
-    \tag{\#o29}
+    \eqname{D:wfs:fs}
     \label{eq:D_wfs_fs}
 \end{equation}
 %
@@ -1410,7 +1410,7 @@ or by using an approximated point source as
     D_\twohalfD(\x_0,\omega) = \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qp
-    \tag{\#owy}
+    \eqname{D:wfs:fs:2.5D}
     \label{eq:D_wfs_fs_25D}
 \end{equation}
 %
@@ -1444,7 +1444,7 @@ same way starting from~\eqref{eq:D_wfs_ls}
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{1}\left(\omegac|\x_0-\xs|\right) \qp
-    \tag{\#uyg}
+    \eqname{D:wfs:fs:ls}
     \label{eq:D_wfs_ls_fs}
 \end{equation}
 %
