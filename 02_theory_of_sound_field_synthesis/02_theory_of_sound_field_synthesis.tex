@@ -28,7 +28,7 @@
     \input{fig2_01/kirchhoff_helmholtz_intergal}
     \caption{Illustration of the geometry used to discuss the physical
         fundamentals of sound field synthesis and the single-layer
-        potential~\protect\eqref{eq:single_layer_potential}.
+        potential~\protect\eqref{eq:single:layer}.
         \reproduce{\GITHUB/fig2_01}}
     \label{fig:KHint}
 \end{figure}
@@ -44,7 +44,7 @@ given by the \emph{single-layer potential}
 \begin{equation}
     P(\x,\omega) = \oint_{\partial V} D(\x_0,\omega) G(\x-\x_0,\omega) \; \D A(\x_0) \qc
     \eqname{single:layer}
-    \label{eq:single_layer_potential}
+    \label{eq:single:layer}
 \end{equation}
 %
 where $G(\x-\x_0,\omega)$ denotes the sound propagation of the source at
@@ -66,13 +66,12 @@ to formulate the desired sound field $S$ is described and finally it is
 shown how to derive the driving function $D$.
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Near-Field Compensated Higher Order Ambisonics]{Solution for Special
 Geometries: Near-Field Compensated Higher Order Ambisonics and Spectral Division Method}
 \label{sec:HOA_SDM}
 
-The integral equation~\eqref{eq:single_layer_potential} states a Fredholm
+The integral equation~\eqref{eq:single:layer} states a Fredholm
 equation of first kind with a Green's function as kernel. This type of equation
 can be solved in a straightforward manner for geometries that have a complete
 set of orthogonal basis functions. Then the involved functions are expanded
@@ -100,14 +99,14 @@ where $\tilde{G}_n, \tilde{D}_n, \tilde{S}_n$ denote the series expansion
 coefficients and \linebreak $\langle\psi_n, \psi_{n'}\rangle = 0$ for $n \ne n'$.
 %$\psi_n^*$ is the complex conjugate of $\psi_n$ for a symmetrical kernel.
 Introducing these three equations
-into~\eqref{eq:single_layer_potential} one gets
+into~\eqref{eq:single:layer} one gets
 %
 \begin{equation}
     \tilde{D}_n(\omega) = \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)} \qp
     \label{eq:D_HOA}
 \end{equation}
 %
-This means that the Fredholm equation~\eqref{eq:single_layer_potential}
+This means that the Fredholm equation~\eqref{eq:single:layer}
 states a convolution. For geometries where
 the required orthogonal basis functions exist, \eqref{eq:D_HOA} follows directly via
 the convolution theorem.\autocite[Compare][p.\,1013]{Arfken2005}
@@ -330,7 +329,7 @@ for $0<|k_x|<|\omegac|$.
 \section[Wave Field Synthesis]{High Frequency Approximation: Wave Field Synthesis}
 \label{sec:WFS}
 
-The single-layer potential~\eqref{eq:single_layer_potential} satisfies the homogeneous
+The single-layer potential~\eqref{eq:single:layer} satisfies the homogeneous
 Helmholtz equation
 \index{Helmholtz equation}
 both in the interior and exterior regions $V$ and $V^*
@@ -363,7 +362,7 @@ boundary $\partial V$ is given as
 where the pressure in the outside region is the mirrored interior pressure given by the
 source model $S(\x,\omega)$ for $\x \in V$.  The
 integral equation resulting from introducing~\eqref{eq:D_wfs}
-into~\eqref{eq:single_layer_potential} for a planar boundary $\partial V$ is known as
+into~\eqref{eq:single:layer} for a planar boundary $\partial V$ is known as
 {\em Rayleigh's first integral equation}. This solution is identical
 to the explicit solution for planar geometries~\eqref{eq:D_planar} in $\R^3$ and for
 linear geometries~\eqref{eq:D_linear} in $\R^2$.
@@ -401,7 +400,7 @@ distributions.\sidenote[][0.1cm]{\cite[E.g.][]{Spors2008}}
     \centering
     \input{fig2_02/concave_array}
     \caption[][0.2cm]{Sound pressure of a point source synthesized with
-    \ac{WFS}~\protect\eqref{eq:D_wfs_ps_25D}. The secondary source
+    \ac{WFS}~\protect\eqref{eq:D:wfs:ps:2.5D}. The secondary source
         distribution is shown in black, whereby inactive sources are marked with a
         dashed line. Parameters: $\xs = (0,2.5,0)$\,m,
         $\xref = (0,-3,0)$\,m, $f = 700$\,Hz.
@@ -431,7 +430,7 @@ solutions presented in Section\,\ref{sec:HOA_SDM}.
 \section{Sound Field Dimensionality}
 \label{sec:sound_field_dimensionality}
 %
-The single-layer potential~\eqref{eq:single_layer_potential} is valid for all $V
+The single-layer potential~\eqref{eq:single:layer} is valid for all $V
 \subset \R^n$. Consequentially, for practical applications a two-dimensional
 (\twoD) as well as a three-dimensional (\threeD) synthesis is possible.
 Two-dimensional is not referring to a synthesis in a plane only, but describes a setup
@@ -550,7 +549,7 @@ case results in
 \begin{equation}
     P(\x,\omega) = \oint_S \sqrt{2\PI \frac{c}{\I\omega} |\x-\x_0|} \;
     D(\x_0,\omega) G_\threeD(\x-\x0,\omega) \, \D A(\x_0) \qp
-    \label{eq:single_layer_potential_25D}
+    \label{eq:single:layer_25D}
 \end{equation}
 %
 If the amplitude correction is further restricted to one reference point
@@ -604,7 +603,7 @@ in his definitions of the Green's functions and field expansions.]{Williams1999}
     \ft
     \input{fig2_04/sound_field_plane_wave}
     \caption{Sound pressure for a monochromatic plane
-        wave~\eqref{eq:plane_wave_omega} going into the
+        wave~\eqref{eq:S:pw} going into the
         direction $(1,1,0)$. Parameters: $f = 800$\,Hz.
         \reproduce{\GITHUB/fig2_04}}
 \end{marginfigure}
@@ -613,7 +612,7 @@ in his definitions of the Green's functions and field expansions.]{Williams1999}
     S(\x,\omega) = A(\omega) \E^{-\I\omegac \n_k \x}
     \qc
     \eqname{S:pw}
-    \label{eq:plane_wave_omega}
+    \label{eq:S:pw}
 \end{equation}
 %
 where $A(\omega)$ denotes the frequency spectrum of the source
@@ -626,7 +625,7 @@ Transformed in the temporal domain this becomes
     s(\x,t) = a(t) * \deltafunc{t -\frac{\n_k \x}{c}}
     \qc
     \eqname{s:pw}
-    \label{eq:plane_wave_t}
+    \label{eq:s:pw}
 \end{equation}
 where $a(t)$ is the Fourier transformation of the frequency spectrum $A(\omega)$.
 
@@ -673,7 +672,7 @@ the plane wave.
     \ft
     \input{fig2_05/sound_field_point_source}
     \caption{Sound pressure for a monochromatic point
-        source~\eqref{eq:point_source_omega} placed at $(0,0,0)$. Parameters: $f =
+        source~\eqref{eq:S:ps} placed at $(0,0,0)$. Parameters: $f =
         800$\,Hz.
         \reproduce{\GITHUB/fig2_05}}
 \end{marginfigure}
@@ -686,7 +685,7 @@ function as\sidenote[][-6.6cm]{\cite[][(6.73)]{Williams1999}}
     \frac{\E^{-\I\omegac|\x-\xs|}}{|\x-\xs|}
     \qc
     \eqname{S:ps}
-    \label{eq:point_source_omega}
+    \label{eq:S:ps}
 \end{equation}
 %
 where $\xs$ describes the position of the point source.
@@ -698,7 +697,7 @@ Transformed to the temporal domain this becomes
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
     \eqname{s:ps}
-    \label{point_source_t}
+    \label{eq:s:ps}
 \end{equation}
 %
 
@@ -740,7 +739,7 @@ function as\sidenote[][-0.5cm]{\cite[][(8.47)]{Williams1999}}
     S(\x,\omega) = -A(\omega) \frac{\I}{4} \H{0}{2} \left(\omegac |\x-\xs|\right)
     \qp
     \eqname{S:ls}
-    \label{eq:line_source_omega}
+    \label{eq:S:ls}
 \end{equation}
 %
 \begin{marginfigure}
@@ -748,7 +747,7 @@ function as\sidenote[][-0.5cm]{\cite[][(8.47)]{Williams1999}}
     \ft
     \input{fig2_06/sound_field_line_source}
     \caption{Sound pressure for a monochromatic line
-    source~(\ref{eq:line_source_omega}) placed at $(0,0,0)$. Parameters: $f =
+    source~(\ref{eq:S:ls}) placed at $(0,0,0)$. Parameters: $f =
         800$\,Hz.
         \reproduce{\GITHUB/fig2_06}}
 \end{marginfigure}
@@ -762,7 +761,7 @@ the temporal domain this becomes
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
     \eqname{s:ls}
-    \label{line_source_t}
+    \label{eq:s:ls}
 \end{equation}
 %
 
@@ -835,7 +834,7 @@ into~\eqref{eq:D_spherical} and yield\autocite[][(96)]{Schultz2014}
     \sum_{n=0}^\infty \sum_{m=-n}^n \frac{\I^{-n} Y_n^{-m}(\theta_k,\phi_k)}{\I\omegac h_n^{(2)}
     \left(\omegac R_0\right)} Y_n^m(\theta_0,\phi_0) \qp
     \eqname{D:hoa:pw:3D}
-    \label{eq:D_nfchoa_pw_3D}
+    \label{eq:D:hoa:pw:3D}
 \end{equation}
 %
 \begin{marginfigure}
@@ -843,7 +842,7 @@ into~\eqref{eq:D_spherical} and yield\autocite[][(96)]{Schultz2014}
     \ft
     \input{fig2_07/sound_field_nfchoa_pw}
     \caption{Sound pressure of a monochromatic plane wave synthesized with
-        \twohalfD \ac{NFC-HOA}~(\ref{eq:D_nfchoa_pw_25D}). Parameters: $\n_k = (0,-1,0)$,
+        \twohalfD \ac{NFC-HOA}~(\ref{eq:D:hoa:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$,
         $\xref = (0,0,0)$, $f = 1$\,kHz.
         \reproduce{\GITHUB/fig2_07}}
 \end{marginfigure}
@@ -859,7 +858,7 @@ yield\sidenote[][0.5cm]{\cite[Compare][(16)]{Ahrens2009c}}
     \sum_{m=-\infty}^\infty \frac{\I^{-m}\Phi_{-m}(\phi_k)}
     {\H{m}{2}(\omegac R_0)} \Phi_m(\phi_0) \qp
     \eqname{D:hoa:pw:2D}
-    \label{eq:D_nfchoa_pw_2D}
+    \label{eq:D:hoa:pw:2D}
 \end{equation}
 %
 
@@ -873,7 +872,7 @@ and a point source~\eqref{eq:point_source_spherical} into~\eqref{eq:D_circular_2
     \sum_{m=-\infty}^\infty \frac{\I^{-|m|} \Phi_{-m}(\phi_k)} {\I\omegac
     h_{|m|}^{(2)}\left(\omegac R_0\right)} \Phi_m(\phi_0) \qp
     \eqname{D:hoa:pw:2.5D}
-    \label{eq:D_nfchoa_pw_25D}
+    \label{eq:D:hoa:pw:2.5D}
 \end{equation}
 %
 For an infinite linear secondary source distribution located on the $x$-axis the
@@ -889,7 +888,7 @@ in\sidenote[][]{\fullcite[][(17)]{Ahrens2010a}}
     \chi(k_y,y_\text{ref})}
     {\H{0}{2}(k_y y_\text{ref})} \chi(k_x,x_0) \qp
     \eqname{D:sdm:pw:2.5D}
-    \label{eq:D_sdm_pw_25D}
+    \label{eq:D:sdm:pw:2.5D}
 \end{equation}
 %
 
@@ -930,7 +929,7 @@ function~\eqref{eq:G_spherical} are inserted into~\eqref{eq:D_spherical} and yie
     \frac{h_n^{(2)}(\omegac r_\text{s}) Y_n^{-m}(\theta_\text{s},\phi_\text{s})}
     {h_n^{(2)}(\omegac R_0)} Y_n^m (\theta_0,\phi_0) \qp
     \eqname{D:hoa:ps:3D}
-    \label{eq:D_nfchoa_ps_3D}
+    \label{eq:D:hoa:ps:3D}
 \end{multline}
 %
 \begin{marginfigure}
@@ -938,7 +937,7 @@ function~\eqref{eq:G_spherical} are inserted into~\eqref{eq:D_spherical} and yie
     \ft
     \input{fig2_08/sound_field_nfchoa_ps}
     \caption{Sound pressure for a monochromatic point source synthesized by
-        \twohalfD \ac{NFC-HOA}~\eqref{eq:D_nfchoa_ps_25D}. Parameters: $\xs =
+        \twohalfD \ac{NFC-HOA}~\eqref{eq:D:hoa:ps:2.5D}. Parameters: $\xs =
         (0,2.5,0)$\,m, $\xref = (0,0,0)$, $f = 1$\,kHz.
         \reproduce{\GITHUB/fig2_08}}
 \end{marginfigure}
@@ -954,7 +953,7 @@ into~\eqref{eq:D_circular_25D} as
         \frac{h_{|m|}^{(2)} (\omegac r_s) \Phi_{-m}(\phi_\text{s})} 
         {h_{|m|}^{(2)} (\omegac R_0)} \Phi_m(\phi_0) \qp
     \eqname{D:hoa:ps:2.5D}
-    \label{eq:D_nfchoa_ps_25D}
+    \label{eq:D:hoa:ps:2.5D}
 \end{equation}
 %
 
@@ -973,7 +972,7 @@ in\autocite[Compare (4.53) in][]{Ahrens2012}
     \chi(-k_x,x_\text{s})} {\H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \;
     y_\text{ref}\right)} \chi(k_x,x_0) \, \D{k_x} \qp
     \eqname{D:sdm:ps:2.5D}
-    \label{eq:D_sdm_ps_25D}
+    \label{eq:D:sdm:ps:2.5D}
 \end{multline}
 %
 
@@ -1055,21 +1054,21 @@ to most of the \ac{NFC-HOA}/\ac{SDM} solutions discussed above.
 \urlnote{driving\_function\_mono\_wfs\_pw.m}{\SFS/SFS_monochromatic/driving_functions_mono/driving_function_mono_wfs_pw.m}
 \urlnote{driving\_function\_imp\_wfs\_pw.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_pw.m}
 %
-By inserting the source model of a plane wave~\eqref{eq:plane_wave_omega}
+By inserting the source model of a plane wave~\eqref{eq:S:pw}
 into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 %
 \begin{equation}
     D(\x_0,\omega) = 2 w(\x_0) A(\omega) \I\omegac \n_k\n_{\x_0}
     \E^{-\I\omegac\n_k\x_0} \qc
     \eqname{D:wfs:pw}
-    \label{eq:D_wfs_pw}
+    \label{eq:D:wfs:pw}
 \end{equation}
 %
 \begin{equation}
     D_\twohalfD(\x_0,\omega) = 2g_0 w(\x_0) A(\omega) \sqrt{\I\omegac} \n_k\n_{\x_0} 
     \E^{-\I\omegac\n_k\x_0} \qp
     \eqname{D:wfs:pw:2.5D}
-    \label{eq:D_wfs_pw_25D}
+    \label{eq:D:wfs:pw:2.5D}
 \end{equation}
 %
 \begin{marginfigure}[-0.5cm]
@@ -1077,7 +1076,7 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \ft
     \input{fig2_09/sound_field_wfs_pw}
     \caption{Sound pressure for a monochromatic plane wave synthesized by
-    \twohalfD \ac{WFS}~(\ref{eq:D_wfs_pw_25D}). Parameters: $\n_k = (0,-1,0)$, $\xref
+    \twohalfD \ac{WFS}~(\ref{eq:D:wfs:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$, $\xref
         = (0,0,0)$, $f = 1$\,kHz.
         \reproduce{\GITHUB/fig2_09}}
 \end{marginfigure}
@@ -1089,27 +1088,27 @@ transform~\eqref{eq:ift}, it follows
     d(\x_0,t) = 2 a(t) * h(t) * w(\x_0) \n_k \n_{\x_0} \deltafunc{t -
     \frac{\n_k\x_0}{c}} \qc
     \eqname{d:wfs:pw}
-    \label{eq:d_wfs_pw}
+    \label{eq:d:wfs:pw}
 \end{equation}
 %
 \begin{equation}
     d_\twohalfD(\x_0,t) = 2g_0 a(t) * h_\twohalfD(t) * w(\x_0) \n_k \n_{\x_0}
     \deltafunc{t - \frac{\n_k\x_0}{c}} \qc
     \eqname{d:wfs:pw:2.5D}
-    \label{eq:d_wfs_pw_25D}
+    \label{eq:d:wfs:pw:2.5D}
 \end{equation}
 %
 where
 \begin{equation}
     h(t) = \IFT{\I\omegac} \qc
     \eqname{wfs:preeq}
-    \label{eq:wfs_preeq}
+    \label{eq:wfs:preeq}
 \end{equation}
 and
 \begin{equation}
     h_\twohalfD(t) = \IFT{\sqrt{\I\omegac}}
     \eqname{wfs:preeq:2.5D}
-    \label{eq:wfs_preeq25D}
+    \label{eq:wfs:preeq:2.5D}
 \end{equation}
 denote the so called pre-equalization filters in \ac{WFS}.
 
@@ -1125,7 +1124,7 @@ calculated after Spors et al. as\autocite{Spors2008}
         0 & \text{else}
     \end{cases}
     \eqname{wfs:pw:selection}
-    \label{eq:w_pw}
+    \label{eq:wfs:pw:selection}
 \end{equation}
 %
 
@@ -1138,7 +1137,7 @@ calculated after Spors et al. as\autocite{Spors2008}
 %
 By inserting the source model for a point
 \urlnote{driving\_function\_imp\_wfs\_ps.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_ps.m}
-source~\eqref{eq:point_source_omega}
+source~\eqref{eq:S:ps}
 into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 %
 \begin{marginfigure}
@@ -1146,7 +1145,7 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \ft
     \input{fig2_10/sound_field_wfs_ps}
     \caption{Sound pressure for a monochromatic point source synthesized by
-        \twohalfD \ac{WFS}~(\ref{eq:D_wfs_ps_25D}). Parameters: $\xs = (0,2.5,0)$\,m,
+        \twohalfD \ac{WFS}~(\ref{eq:D:wfs:ps:2.5D}). Parameters: $\xs = (0,2.5,0)$\,m,
         $\xref = (0,0,0)$, $f = 1$\,kHz.
         \reproduce{\GITHUB/fig2_10}}
 \end{marginfigure}
@@ -1157,7 +1156,7 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{-\I\omegac |\x_0-\xs|} \qc
     \eqname{D:wfs:ps:woapprox}
-    \label{eq:D_wfs_ps_without_approximation}
+    \label{eq:D:wfs:ps:woapprox}
 \end{multline}
 %
 \begin{multline}
@@ -1166,19 +1165,19 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     1 + \frac{1}{\I\omegac|\x_0-\xs|}
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{-\I\omegac |\x_0-\xs|} \qp
     \eqname{D:wfs:ps:woapprox:2.5D}
-    \label{eq:D_wfs_ps_25D_without_approximation}
+    \label{eq:D:wfs:ps:woapprox:2.5D}
 \end{multline}
 %
 Under the assumption of $|\x_0-\xs| \gg
-1$~\eqref{eq:D_wfs_ps_without_approximation}
-and~\eqref{eq:D_wfs_ps_25D_without_approximation} can be approximated by
+1$~\eqref{eq:D:wfs:ps:woapprox}
+and~\eqref{eq:D:wfs:ps:woapprox:2.5D} can be approximated by
 %
 \begin{equation}
     D(\x_0,\omega) = \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
     \eqname{D:wfs:ps}
-    \label{eq:D_wfs_ps}
+    \label{eq:D:wfs:ps}
 \end{equation}
 %
 \begin{multline}
@@ -1187,7 +1186,7 @@ and~\eqref{eq:D_wfs_ps_25D_without_approximation} can be approximated by
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
     \eqname{D:wfs:ps:2.5D}
-    \label{eq:D_wfs_ps_25D}
+    \label{eq:D:wfs:ps:2.5D}
 \end{multline}
 %
 which is the traditional formulation of a point source in
@@ -1206,7 +1205,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
     \eqname{d:wfs:ps}
-    \label{eq:d_wfs_ps}
+    \label{eq:d:wfs:ps}
 \end{equation}
 %
 \begin{multline}
@@ -1215,7 +1214,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qp
     \eqname{d:wfs:ps:2.5D}
-    \label{eq:d_wfs_ps_25D}
+    \label{eq:d:wfs:ps:2.5D}
 \end{multline}
 %
 \urlnote{secondary\_source\_selection.m}{\SFS/SFS_general/secondary_source_selection.m}
@@ -1229,7 +1228,7 @@ calculated after Spors at al. as\autocite{Spors2008}
         0 & \text{else}
     \end{cases}
     \eqname{wfs:ps:selection}
-    \label{eq:w_ps}
+    \label{eq:wfs:ps:selection}
 \end{equation}
 %
 
@@ -1240,7 +1239,7 @@ calculated after Spors at al. as\autocite{Spors2008}
 \urlnote{driving\_function\_mono\_wfs\_ls.m}{\SFS/SFS_monochromatic/driving_functions_mono/driving_function_mono_wfs_ls.m}
 \urlnote{driving\_function\_imp\_wfs\_ls.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_ls.m}
 %
-By inserting the source model for a line source~\eqref{eq:line_source_omega}
+By inserting the source model for a line source~\eqref{eq:S:ls}
 into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} and calculating the derivate of
 the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
 %
@@ -1249,7 +1248,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qc
     \eqname{D:wfs:ls}
-    \label{eq:D_wfs_ls}
+    \label{eq:D:wfs:ls}
 \end{equation}
 %
 \begin{multline}
@@ -1258,7 +1257,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qp
     \eqname{D:wfs:ls:2.5D}
-    \label{eq:D_wfs_ls_25D}
+    \label{eq:D:wfs:ls:2.5D}
 \end{multline}
 %
 \begin{marginfigure}
@@ -1266,7 +1265,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     \ft
     \input{fig2_11/sound_field_wfs_ls}
     \caption{Sound pressure for a monochromatic line source synthesized by
-        \twohalfD \ac{WFS}~\eqref{eq:D_wfs_ls_25D}. Parameters: $\xs = (0,2.5,0)$\,m,
+        \twohalfD \ac{WFS}~\eqref{eq:D:wfs:ls:2.5D}. Parameters: $\xs = (0,2.5,0)$\,m,
         $\xref = (0,0,0)$, $f = 1$\,kHz.
         \reproduce{\GITHUB/fig2_11}}
 \end{marginfigure}
@@ -1281,7 +1280,7 @@ transform~\eqref{eq:ift} it follows
     w(\x0) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
     \eqname{d:wfs:ls}
-    \label{eq:d_wfs_ls}
+    \label{eq:d:wfs:ls}
 \end{equation}
 %
 \begin{multline}
@@ -1290,7 +1289,7 @@ transform~\eqref{eq:ift} it follows
     \IFT{\sqrt{\frac{c}{\I\omega}}} * w(\x0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qp
-    \label{eq:d_wfs_ls_25D}
+    \label{eq:d:wfs:ls_25D}
 \end{multline}
 %
 \urlnote{secondary\_source\_selection.m}{\SFS/SFS_general/secondary_source_selection.m}
@@ -1304,7 +1303,7 @@ calculated after Spors et al. as\autocite{Spors2008}
         0 & \text{else}
     \end{cases}
     \eqname{wfs:ls:selection}
-    \label{eq:w_ls}
+    \label{eq:wfs:ls:selection}
 \end{equation}
 %
 
@@ -1321,7 +1320,7 @@ calculated after Spors et al. as\autocite{Spors2008}
     \ft
     \input{fig2_12/sound_field_wfs_fs}
     \caption{Sound pressure of a mono-frequent focused source synthesized with
-        \twohalfD \ac{WFS}~(\ref{eq:D_wfs_fs_25D}). Parameters: $\xs = (0,0.5,0)$\,m,
+        \twohalfD \ac{WFS}~(\ref{eq:D:wfs:fs:2.5D}). Parameters: $\xs = (0,0.5,0)$\,m,
         $\n_\text{s} = (0,-1,0)$, $\xref = (0,0,0)$, $f = 1$\,kHz.
         \reproduce{\GITHUB/fig2_12}}
     \label{fig:wfs_focused_source}
@@ -1343,7 +1342,7 @@ versions of the driving functions for a point source as
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{\I\omegac |\x_0-\xs|} \qc
     \eqname{D:wfs:fs:woapprox}
-    \label{eq:D_wfs_fs_without_approximation}
+    \label{eq:D:wfs:fs:woapprox}
 \end{multline}
 %
 \begin{multline}
@@ -1353,7 +1352,7 @@ versions of the driving functions for a point source as
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{\I\omegac |\x_0-\xs|}
     \qc
     \eqname{D:wfs:fs:woapprox:2.5D}
-    \label{eq:D_wfs_fs_25D_without_approximation}
+    \label{eq:D:wfs:fs:woapprox:2.5D}
 \end{multline}
 %
 or by using an approximated point source as
@@ -1363,7 +1362,7 @@ or by using an approximated point source as
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qc
     \eqname{D:wfs:fs}
-    \label{eq:D_wfs_fs}
+    \label{eq:D:wfs:fs}
 \end{equation}
 %
 \begin{equation}
@@ -1371,7 +1370,7 @@ or by using an approximated point source as
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qp
     \eqname{D:wfs:fs:2.5D}
-    \label{eq:D_wfs_fs_25D}
+    \label{eq:D:wfs:fs:2.5D}
 \end{equation}
 %
 As before for other source types, the approximated versions are the default driving functions for a focused
@@ -1384,7 +1383,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qc
     \eqname{d:wfs:fs}
-    \label{eq:d_wfs_fs}
+    \label{eq:d:wfs:fs}
 \end{equation}
 %
 \begin{multline}
@@ -1393,19 +1392,19 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qp
     \eqname{d:wfs:fs:2.5D}
-    \label{eq:d_wfs_fs_25D}
+    \label{eq:d:wfs:fs:2.5D}
 \end{multline}
 %
 In this thesis a focused source always refers to the time-reversed
 version of a point source, but a focused line source can be defined in the
-same way starting from~\eqref{eq:D_wfs_ls}
+same way starting from~\eqref{eq:D:wfs:ls}
 %
 \begin{equation}
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{1}\left(\omegac|\x_0-\xs|\right) \qp
     \eqname{D:wfs:fs:ls}
-    \label{eq:D_wfs_ls_fs}
+    \label{eq:D:wfs:fs:ls}
 \end{equation}
 %
 \urlnote{secondary\_source\_selection.m}{\SFS/SFS_general/secondary_source_selection.m}
@@ -1419,7 +1418,7 @@ calculated as
         0 & \text{else}
     \end{cases}
     \eqname{wfs:fs:selection}
-    \label{eq:w_fs}
+    \label{eq:wfs:fs:selection}
 \end{equation}
 %
 
