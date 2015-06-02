@@ -56,7 +56,8 @@ Kirchhoff-Helmholtz integral.\autocite{Williams1999}
 The challenge in sound field synthesis is to solve the integral
 with respect to $D(\x_0,\omega)$ for
 a desired sound field $P = S$ in $V$.
-It has unique solutions which Zotter and Spors\autocite{Zotter2013} explicitly
+It has unique solutions which Zotter and
+Spors\sidenote[][-0.5cm]{\cite{Zotter2013}} explicitly
 showed for the spherical case and Fazi\autocite[][Chap.\,4.3]{Fazi2010} for the
 planar case.
 
@@ -369,17 +370,17 @@ linear geometries~\eqref{eq:D_linear} in $\R^2$.
 
 A solution of~\eqref{eq:D_gradient} for  arbitrary boundaries can be
 found by applying the \emph{Kirchhoff} or \emph{physical optics
-approximation}.\sidenote[][-1.4cm]{\cite[See][p.\,53--54]{Colton1983}}
+approximation}.\sidenote[][-3.2cm]{\cite[See][p.\,53--54]{Colton1983}}
 \index{Kirchhoff approximation}
 In acoustics this is also known as \emph{determining the visible elements} for
 the high frequency boundary element
-method.\sidenote[][-1.1cm]{\cite[E.g.][]{Herrin2003}}
+method.\sidenote[][-3cm]{\cite[E.g.][]{Herrin2003}}
 Here, it is assumed that a
 bent surface can be approximated by a set of small planar surfaces for
 which~\eqref{eq:D_wfs} holds locally.  In general, this will be the case if the
 wave length is much smaller than the size of a planar surface patch and the
 position of the listener is far away from the secondary
-sources.\sidenote[][-1.2cm]{\cite[Compare the two assumptions in][made before
+sources.\sidenote[][-3.1cm]{\cite[Compare the two assumptions in][made before
 (15), which lead to the derivation of the same window function in a more explicit way.]{Spors2013}}
 Additionally, only one part of the surface is active: the area that is
 illuminated from the incident field of the source model.
@@ -388,11 +389,11 @@ illuminated from the incident field of the source model.
 also non-convex secondary
 source distributions can be used with
 WFS -- compare
-Figure\,\ref{fig:concave_array}.\sidenote[][-0.2cm]{\cite[See the appendix
+Figure\,\ref{fig:concave_array}.\sidenote[][-2cm]{\cite[See the appendix
 in][]{Lax1947}}
 This was neglected in most of the literature so far, which postulates
 convex secondary source
-distributions.\sidenote[][0.1cm]{\cite[E.g.][]{Spors2008}}
+distributions.\sidenote[][-1cm]{\cite[E.g.][]{Spors2008}}
 
 
 \begin{figure}
@@ -630,7 +631,7 @@ Transformed in the temporal domain this becomes
 where $a(t)$ is the Fourier transformation of the frequency spectrum $A(\omega)$.
 
 The expansion coefficients for spherical basis functions are given
-as\sidenote[][]{\cite[][(2.38)]{Ahrens2012}}
+as\sidenote[][0.2cm]{\cite[][(2.38)]{Ahrens2012}}
 %
 \begin{equation}
     \breve{S}_n^m(\theta_k,\phi_k,\omega) = 4\PI \I^{-n} Y_n^{-m}(\theta_k,\phi_k)
@@ -650,7 +651,7 @@ given as
 %
 
 The expansion coefficients for linear basis functions are
-given as after Ahrens\sidenote[][-0.4cm]{\cite[][(C.5)]{Ahrens2012}}
+given as after Ahrens\sidenote[][]{\cite[][(C.5)]{Ahrens2012}}
 %
 \begin{equation}
     \breve{S}(k_x,y,\omega) = 2\PI \deltafunc{k_x-k_{x,\text{s}}}
@@ -678,7 +679,7 @@ the plane wave.
 \end{marginfigure}
 %
 The source model for a point source is given by the three dimensional Green's
-function as\sidenote[][-6.6cm]{\cite[][(6.73)]{Williams1999}}
+function as\sidenote[][-6.2cm]{\cite[][(6.73)]{Williams1999}}
 %
 \begin{equation}
     S(\x,\omega) = A(\omega) \frac{1}{4\PI}
@@ -1014,17 +1015,18 @@ area. For the single-layer potential the assumption is that the audience area is
 free from sources and sinks. However, a focused source is neither of them. It
 represents a sound field that converges towards a focal point and diverges
 afterwards. This can be achieved by reversing the driving function of a point or
-line source in time which is known as time reversal focusing.\autocite{Yon2003}
+line source in time which is known as time reversal
+focusing.\sidenote[][-0.5cm]{\cite{Yon2003}}
 
 Nonetheless, the single-layer potential should not be solved for focused sources
 without any approximation. In the near field of a source,
 evanescent
-waves\autocite[][p.\,24]{Williams1999} appear for spatial frequencies $k_x > |\omegac|$.
+waves\sidenote[][-0.4cm]{\cite[][p.\,24]{Williams1999}} appear for spatial frequencies $k_x > |\omegac|$.
 They decay exponentially with the distance from the source. An exact solution for a focused
 source is supposed to include these evanescent waves around the focal point.
 That is only
 possible by applying very large amplitudes to the secondary
-sources.\sidenote[][-1.2cm]{\cite[Compare Fig.\,2a in][]{Spors2010}}
+sources.\sidenote[][-1.4cm]{\cite[Compare Fig.\,2a in][]{Spors2010}}
 Since the evanescent waves decay rapidly and are hence not
 influencing the perception, they can easily be omitted.
 For corresponding driving functions for focused sources without the
