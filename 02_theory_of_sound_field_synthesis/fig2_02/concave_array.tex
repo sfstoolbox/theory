@@ -71,8 +71,15 @@
       \expandafter\def\csname LT8\endcsname{\color{black}}%
     \fi
   \fi
-  \setlength{\unitlength}{0.0500bp}%
-  \begin{picture}(5668.00,2834.00)%
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(5668.00,2834.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%
       \put(1025,220){\makebox(0,0)[r]{\strut{}$-10$}}%
@@ -106,11 +113,11 @@
       \put(4074,63){\makebox(0,0){\strut{}$6$}}%
       \colorrgb{0.50,0.50,0.50}%
       \put(4465,63){\makebox(0,0){\strut{}$8$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%
       \put(519,1394){\rotatebox{-270}{\makebox(0,0){\strut{}$y$ / m}}}%
       \put(2899,-157){\makebox(0,0){\strut{}$x$ / m}}%
-    }%
-    \gplgaddtomacro\gplfronttext{%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{concave_array}}%

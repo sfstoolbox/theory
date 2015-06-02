@@ -71,8 +71,15 @@
       \expandafter\def\csname LT8\endcsname{\color{black}}%
     \fi
   \fi
-  \setlength{\unitlength}{0.0500bp}%
-  \begin{picture}(2834.00,2834.00)%
+    \setlength{\unitlength}{0.0500bp}%
+    \ifx\gptboxheight\undefined%
+      \newlength{\gptboxheight}%
+      \newlength{\gptboxwidth}%
+      \newsavebox{\gptboxtext}%
+    \fi%
+    \setlength{\fboxrule}{0.5pt}%
+    \setlength{\fboxsep}{1pt}%
+\begin{picture}(2834.00,2834.00)%
     \gplgaddtomacro\gplbacktext{%
       \colorrgb{0.50,0.50,0.50}%
       \put(550,887){\makebox(0,0)[r]{\strut{}$-1$}}%
@@ -86,11 +93,11 @@
       \put(1550,350){\makebox(0,0){\strut{}$0$}}%
       \colorrgb{0.50,0.50,0.50}%
       \put(2057,350){\makebox(0,0){\strut{}$1$}}%
+    }%
+    \gplgaddtomacro\gplfronttext{%
       \csname LTb\endcsname%
       \put(176,1394){\rotatebox{-270}{\makebox(0,0){\strut{}$y$ / m}}}%
       \put(1550,130){\makebox(0,0){\strut{}$x$ / m}}%
-    }%
-    \gplgaddtomacro\gplfronttext{%
     }%
     \gplbacktext
     \put(0,0){\includegraphics{sound_field_wfs_fs}}%
