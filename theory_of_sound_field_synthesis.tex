@@ -197,6 +197,16 @@ firstinits=true% render all first and middle names as initials                |
 \acrodef{HRTF}{Head-Related Transfer Function}%                               |
 % ----------------------------------------------------------------------------
 
+\usepackage[acronym,nomain]{glossaries}
+
+\newcommand\eqlabel[2][]{%
+  \newacronym{#2}{#2}{eq. \eqref{eq:#2}}%
+  \eqname{\acrshort{#2}} %
+  \label{eq:#2}%
+}
+
+\makeglossary
+
 % --- HYPHENATION ------------------------------------------------------------
 \hyphenation{Fesh-bach set-up set-ups}%                                       |
 % ----------------------------------------------------------------------------
@@ -229,9 +239,16 @@ firstinits=true% render all first and middle names as initials                |
 \import{\PATH/02_theory_of_sound_field_synthesis/}{02_theory_of_sound_field_synthesis}
 
 %% --- Formula Mapping ---------------------------------------------------
-\import{\PATH/03_formula/}{03_formula}
+% \import{\PATH/03_formula/}{03_formula}
+
+%% --- Glossary
+\glossarystyle{long}
+\printglossary[title=Formula reference mapping]
 
 %% --- Bibliography ------------------------------------------------------
 \printbibliography
 
 \end{document}
+
+
+
