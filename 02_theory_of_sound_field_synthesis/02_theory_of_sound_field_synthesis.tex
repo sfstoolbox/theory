@@ -1428,25 +1428,78 @@ calculated as
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%-
-%\subsection{Local Wave Field Synthesis}
-%\label{sec:driving_functions_localwfs}
+\subsection{Local Sound Field Synthesis}
+\label{sec:driving_functions_localwfs}
+
+The reproduction accuracy of \ac{WFS} is limited due to practical aspects. For 
+the 
+audible frequency range the desired sound field can not be synthesized 
+aliasing-free over an extended listening area, which is surrounded by a 
+discrete ensemble of individually driven loudspeakers. However, it is suitable 
+for certain applications to increase reproduction accuracy inside a smaller 
+(local) listening region while stronger artifacts outside are permitted. The 
+implemented Local Wave Field Synthesis method utilizes focused sources as a 
+distribution of virtual loudspeakers which are placed more densely around the 
+local listening area. These virtual loudspeakers can be driven by conventional 
+\ac{SFS} techniques, like e.g. \ac{WFS} or \ac{NFC-HOA}. The results are 
+similar to band-limited \ac{NFC-HOA}, with the difference that the form and 
+position of the enhanced area can freely be chosen within the listening area.
+
+The set of focused sources is treated as a virtual loudspeaker 
+distribution and their positions \(\xfs\) are subsumed under 
+\(\mathcal{X}_{\mathrm{fs}}\). Therefore, each focused source is driven 
+individually by 
+\(D_l(\xfs, \omega)\), which in principle can be any driving function for real 
+loudspeakers mentioned in previous sections. At the moment however, only 
+\ac{WFS} and \ac{NFC-HOA} driving functions are supported. The resulting 
+driving function for a loudspeaker located at \(\x_0\) reads
 %
-%In the following, the driving functions for local \ac{WFS} in the frequency and
-%temporal domain
-%for selected source models are presented.
-%Local \ac{WFS} describes situations in which \ac{WFS} is used in a way to
-%enhance the spatial resolution in one particular part of the listening area and
-%reduce it in others. The results are similar to band-limited \ac{NFC-HOA}, with
-%the difference that the form and position of the enhanced area can freely be
-%chosen within the listening area.
-%This is achieved by creating a virtual secondary source distribution in the
-%listening area with focused sources. Those virtual secondary sources are then
-%again driven by \ac{WFS} in order to achieve the desired sound field.
+\urlnote{driving\_function\_mono\_localwfs.m}{\SFS/SFS_monochromatic/driving_function_mono_localwfs.m}
+\urlnote{driving\_function\_mono\_wfs\_vss.m}{\SFS/SFS_monochromatic/driving_functions_mono/driving_function_mono_wfs_vss.m}
+\begin{equation}
+  D(\x_0,\omega) = \sum_{\xfs \in \mathcal{X}_{\mathrm{fs}}} 
+  D_{\mathrm l}(\xfs, \omega) 
+  D_{\mathrm{fs}}(\x_0,\xfs,\omega) \qc
+  \eqname{D:localwfs}
+  \label{eq:D:localwfs}
+\end{equation}
 %
-%%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----
-%\paragraph{Plane Wave}
-%%
-%\urlnote{driving\_function\_mono\_wfs\_vss.m}{\SFS/SFS_monochromatic/driving_functions_mono/driving_function_mono_wfs_vss.m}
-%\urlnote{driving\_function\_imp\_wfs\_vss.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_vss.m}
-%%
+which is superposition of the driving function 
+\(D_{\mathrm l}{\mathrm{fs}}(\x_0,\xfs,\omega)\) reproducing a single 
+focused source at \(\xfs\) weighted by \(D_l(\xfs, \omega)\). Former is 
+derived by replacing \(\xs\) with 
+\(\xfs\) in the WFS driving functions \eqref{eq:D:wfs:fs} and 
+\eqref{eq:d:wfs:fs:2.5D} for focused sources. This yields
 %
+\begin{equation}
+  D_{\mathrm{fs}}(\x_0,\xfs,\omega) =
+    \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
+    \frac{(\x_0-\xfs)\n_{\x_0}}{|\x_0-\xfs|^{\nicefrac{3}{2}}}
+    \E^{\I\omegac |\x_0-\xfs|}
+\end{equation}
+%
+and
+%
+\begin{equation}
+  D_{\mathrm{fs,2.5D}}(\x_0,\xfs,\omega) = 
+    \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
+    \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
+    \E^{\I\omegac |\x_0-\xs|} \qp
+\end{equation}
+for the 2.5D case. For the temporal domain, inverse Fourier transform yields 
+the driving signals
+%
+\urlnote{driving\_function\_imp\_localwfs.m}{\SFS/SFS_time_domain/driving\_function\_imp\_localwfs.m}
+\urlnote{driving\_function\_imp\_wfs\_vss.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_vss.m}
+%
+\begin{equation}
+  d(\x_0,t) = \sum_{\xfs \in \mathcal{X}_{\mathrm{fs}}} 
+    d_{\mathrm l}(\xfs, t) * d_{\mathrm{fs}}(\x_0,\xfs, t) \qc
+  \eqname{d:localwfs}
+  \label{eq:d:localwfs}
+\end{equation}
+%
+while \(d_{\mathrm{fs}}(\x_0,\xfs, t)\) is derived analogously to
+\eqref{eq:D:localwfs} from \eqref{eq:d:wfs:fs} or \eqref{eq:d:wfs:fs:2.5D}. At 
+the moment \(d_{\mathrm l}(\xfs, t)\) does only support driving functions from 
+\ac{WFS}.
