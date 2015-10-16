@@ -723,6 +723,45 @@ as\autocite[][(C.10)]{Ahrens2012}
 for $|k_x|<|\omegac|$ and with $(x_\text{s},y_\text{s})$ describing the position
 of the point source.
 
+%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----
+\paragraph{3D Dipole Source}
+\label{sec:dipole_source_3D}
+%
+The source model for a dimensional dipole source is given by the directional
+derivative of the three dimensional Green's function with respect to \(\ns\)
+defining the orientation of the dipole source.
+%
+\begin{equation}
+  \begin{aligned}
+  S(\x,\omega) &= A(\omega) 
+  \left\langle
+    \nabla_{\xs} \left( \frac{1}{4\PI} \frac{\E^{-\I\omegac|\x-\xs|}}{|\x-\xs|}
+    \right), \ns
+  \right\rangle \\
+  &=
+    A(\omega)
+    \frac{1}{4\PI} 
+    \left( \frac{1}{|\x-\xs|} + \I \omegac \right)
+    \frac{\langle \x-\xs, \ns \rangle}{|\x-\xs|^2}
+    \E^{-\I\omegac|\x-\xs|}
+  \qp
+  \end{aligned}
+  \eqname{S:dps}
+  \label{eq:S:dps}
+\end{equation}
+%
+Transformed to the temporal domain this becomes
+%
+\begin{equation}
+  s(\x,t) = a(t) *
+  \left( \frac{1}{|\x-\xs|} + \IFT{ \frac{\I\omega}{c} } \right)
+  *
+  \frac{\langle \x-\xs, \ns \rangle}{4\PI |\x-\xs|^2}
+  \deltafunc{t - \frac{|\x-\xs|}{c}} .
+  \eqname{s:dps}
+  \label{eq:s:dps}
+\end{equation}
+%
 
 %----%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----
 \paragraph{Line Source}
