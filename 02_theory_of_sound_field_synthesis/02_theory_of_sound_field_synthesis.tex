@@ -43,8 +43,7 @@ given by the \emph{single-layer potential}
 %
 \begin{equation}
     P(\x,\omega) = \oint_{\partial V} D(\x_0,\omega) G(\x-\x_0,\omega) \; \D A(\x_0) \qc
-    \eqname{single:layer}
-    \label{eq:single:layer}
+    \eqlabel{single:layer}
 \end{equation}
 %
 where $G(\x-\x_0,\omega)$ denotes the sound propagation of the source at
@@ -612,8 +611,7 @@ in his definitions of the Green's functions and field expansions.]{Williams1999}
 \begin{equation} 
     S(\x,\omega) = A(\omega) \E^{-\I\omegac \n_k \x}
     \qc
-    \eqname{S:pw}
-    \label{eq:S:pw}
+    \eqlabel{S:pw}
 \end{equation}
 %
 where $A(\omega)$ denotes the frequency spectrum of the source
@@ -625,8 +623,7 @@ Transformed in the temporal domain this becomes
 \begin{equation}
     s(\x,t) = a(t) * \deltafunc{t -\frac{\n_k \x}{c}}
     \qc
-    \eqname{s:pw}
-    \label{eq:s:pw}
+    \eqlabel{s:pw}
 \end{equation}
 where $a(t)$ is the Fourier transformation of the frequency spectrum $A(\omega)$.
 
@@ -685,8 +682,7 @@ function as\sidenote[][-6.2cm]{\cite[][(6.73)]{Williams1999}}
     S(\x,\omega) = A(\omega) \frac{1}{4\PI}
     \frac{\E^{-\I\omegac|\x-\xs|}}{|\x-\xs|}
     \qc
-    \eqname{S:ps}
-    \label{eq:S:ps}
+    \eqlabel{S:ps}
 \end{equation}
 %
 where $\xs$ describes the position of the point source.
@@ -697,8 +693,7 @@ Transformed to the temporal domain this becomes
     s(\x,t) = a(t) * \frac{1}{4\PI} \frac{1}{|\x-\xs|}
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
-    \eqname{s:ps}
-    \label{eq:s:ps}
+    \eqlabel{s:ps}
 \end{equation}
 %
 
@@ -739,8 +734,7 @@ function as\sidenote[][-0.5cm]{\cite[][(8.47)]{Williams1999}}
 \begin{equation}
     S(\x,\omega) = -A(\omega) \frac{\I}{4} \H{0}{2} \left(\omegac |\x-\xs|\right)
     \qp
-    \eqname{S:ls}
-    \label{eq:S:ls}
+    \eqlabel{S:ls}
 \end{equation}
 %
 \begin{marginfigure}
@@ -761,8 +755,7 @@ the temporal domain this becomes
     s(\x,t) = a(t) * \IFT{\sqrt{\frac{c}{\I\omega}}} * \sqrt{\frac{1}{8\PI}} \frac{1}{\sqrt{|\x-\xs|}}
     \deltafunc{t - \frac{|\x-\xs|}{c}}
     \qp
-    \eqname{s:ls}
-    \label{eq:s:ls}
+    \eqlabel{s:ls}
 \end{equation}
 %
 
@@ -834,8 +827,7 @@ into~\eqref{eq:D_spherical} and yield\autocite[][(96)]{Schultz2014}
     D_\text{spherical}(\theta_0,\phi_0,\omega) = -A(\omega) \frac{4\PI}{R_0^{\,2}}
     \sum_{n=0}^\infty \sum_{m=-n}^n \frac{\I^{-n} Y_n^{-m}(\theta_k,\phi_k)}{\I\omegac h_n^{(2)}
     \left(\omegac R_0\right)} Y_n^m(\theta_0,\phi_0) \qp
-    \eqname{D:hoa:pw:3D}
-    \label{eq:D:hoa:pw:3D}
+    \eqlabel{D:hoa:pw:3D}
 \end{equation}
 %
 \begin{marginfigure}
@@ -858,8 +850,7 @@ yield\sidenote[][0.5cm]{\cite[Compare][(16)]{Ahrens2009c}}
     D_\text{circular}(\phi_0,\omega) = -A(\omega) \frac{2\I}{\PI R_0}
     \sum_{m=-\infty}^\infty \frac{\I^{-m}\Phi_{-m}(\phi_k)}
     {\H{m}{2}(\omegac R_0)} \Phi_m(\phi_0) \qp
-    \eqname{D:hoa:pw:2D}
-    \label{eq:D:hoa:pw:2D}
+    \eqlabel{D:hoa:pw:2D}
 \end{equation}
 %
 
@@ -872,8 +863,7 @@ and a point source~\eqref{eq:point_source_spherical} into~\eqref{eq:D_circular_2
     D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega) \frac{2}{R_0}
     \sum_{m=-\infty}^\infty \frac{\I^{-|m|} \Phi_{-m}(\phi_k)} {\I\omegac
     h_{|m|}^{(2)}\left(\omegac R_0\right)} \Phi_m(\phi_0) \qp
-    \eqname{D:hoa:pw:2.5D}
-    \label{eq:D:hoa:pw:2.5D}
+    \eqlabel{D:hoa:pw:2.5D}
 \end{equation}
 %
 For an infinite linear secondary source distribution located on the $x$-axis the
@@ -888,8 +878,7 @@ in\sidenote[][]{\fullcite[][(17)]{Ahrens2010a}}
     D_{\text{linear},\,\twohalfD}(x_0,\omega) = A(\omega) \frac{4\I
     \chi(k_y,y_\text{ref})}
     {\H{0}{2}(k_y y_\text{ref})} \chi(k_x,x_0) \qp
-    \eqname{D:sdm:pw:2.5D}
-    \label{eq:D:sdm:pw:2.5D}
+    \eqlabel{D:sdm:pw:2.5D}
 \end{equation}
 %
 
@@ -929,8 +918,7 @@ function~\eqref{eq:G_spherical} are inserted into~\eqref{eq:D_spherical} and yie
     A(\omega) \frac{1}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
     \frac{h_n^{(2)}(\omegac r_\text{s}) Y_n^{-m}(\theta_\text{s},\phi_\text{s})}
     {h_n^{(2)}(\omegac R_0)} Y_n^m (\theta_0,\phi_0) \qp
-    \eqname{D:hoa:ps:3D}
-    \label{eq:D:hoa:ps:3D}
+    \eqlabel{D:hoa:ps:3D}
 \end{multline}
 %
 \begin{marginfigure}
@@ -953,8 +941,7 @@ into~\eqref{eq:D_circular_25D} as
         \sum_{m=-\infty}^{\infty}
         \frac{h_{|m|}^{(2)} (\omegac r_s) \Phi_{-m}(\phi_\text{s})} 
         {h_{|m|}^{(2)} (\omegac R_0)} \Phi_m(\phi_0) \qp
-    \eqname{D:hoa:ps:2.5D}
-    \label{eq:D:hoa:ps:2.5D}
+    \eqlabel{D:hoa:ps:2.5D}
 \end{equation}
 %
 
@@ -972,8 +959,7 @@ in\autocite[Compare (4.53) in][]{Ahrens2012}
     \H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \; (y_\text{ref}-y_\text{s}) \right)
     \chi(-k_x,x_\text{s})} {\H{0}{2}\left(\sqrt{(\omegac)^2-k_x^2} \;
     y_\text{ref}\right)} \chi(k_x,x_0) \, \D{k_x} \qp
-    \eqname{D:sdm:ps:2.5D}
-    \label{eq:D:sdm:ps:2.5D}
+    \eqlabel{D:sdm:ps:2.5D}
 \end{multline}
 %
 
@@ -1062,15 +1048,13 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 \begin{equation}
     D(\x_0,\omega) = 2 w(\x_0) A(\omega) \I\omegac \n_k\n_{\x_0}
     \E^{-\I\omegac\n_k\x_0} \qc
-    \eqname{D:wfs:pw}
-    \label{eq:D:wfs:pw}
+    \eqlabel{D:wfs:pw}
 \end{equation}
 %
 \begin{equation}
     D_\twohalfD(\x_0,\omega) = 2g_0 w(\x_0) A(\omega) \sqrt{\I\omegac} \n_k\n_{\x_0} 
     \E^{-\I\omegac\n_k\x_0} \qp
-    \eqname{D:wfs:pw:2.5D}
-    \label{eq:D:wfs:pw:2.5D}
+    \eqlabel{D:wfs:pw:2.5D}
 \end{equation}
 %
 \begin{marginfigure}[-0.5cm]
@@ -1089,28 +1073,24 @@ transform~\eqref{eq:ift}, it follows
 \begin{equation}
     d(\x_0,t) = 2 a(t) * h(t) * w(\x_0) \n_k \n_{\x_0} \deltafunc{t -
     \frac{\n_k\x_0}{c}} \qc
-    \eqname{d:wfs:pw}
-    \label{eq:d:wfs:pw}
+    \eqlabel{d:wfs:pw}
 \end{equation}
 %
 \begin{equation}
     d_\twohalfD(\x_0,t) = 2g_0 a(t) * h_\twohalfD(t) * w(\x_0) \n_k \n_{\x_0}
     \deltafunc{t - \frac{\n_k\x_0}{c}} \qc
-    \eqname{d:wfs:pw:2.5D}
-    \label{eq:d:wfs:pw:2.5D}
+    \eqlabel{d:wfs:pw:2.5D}
 \end{equation}
 %
 where
 \begin{equation}
     h(t) = \IFT{\I\omegac} \qc
-    \eqname{wfs:preeq}
-    \label{eq:wfs:preeq}
+    \eqlabel{wfs:preeq}
 \end{equation}
 and
 \begin{equation}
     h_\twohalfD(t) = \IFT{\sqrt{\I\omegac}}
-    \eqname{wfs:preeq:2.5D}
-    \label{eq:wfs:preeq:2.5D}
+    \eqlabel{wfs:preeq:2.5D}
 \end{equation}
 denote the so called pre-equalization filters in \ac{WFS}.
 
@@ -1125,8 +1105,7 @@ calculated after Spors et al. as\autocite{Spors2008}
         1 & \n_k \n_{\x_0} > 0 \\
         0 & \text{else}
     \end{cases}
-    \eqname{wfs:pw:selection}
-    \label{eq:wfs:pw:selection}
+    \eqlabel{wfs:pw:selection}
 \end{equation}
 %
 
@@ -1157,8 +1136,7 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \frac{1}{2\PI} A(\omega) w(\x_0) \left(\I\omegac +
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \eqname{D:wfs:ps:woapprox}
-    \label{eq:D:wfs:ps:woapprox}
+    \eqlabel{D:wfs:ps:woapprox}
 \end{multline}
 %
 \begin{multline}
@@ -1166,8 +1144,7 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac} \left(
     1 + \frac{1}{\I\omegac|\x_0-\xs|}
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{-\I\omegac |\x_0-\xs|} \qp
-    \eqname{D:wfs:ps:woapprox:2.5D}
-    \label{eq:D:wfs:ps:woapprox:2.5D}
+    \eqlabel{D:wfs:ps:woapprox:2.5D}
 \end{multline}
 %
 Under the assumption of $|\x_0-\xs| \gg
@@ -1178,8 +1155,7 @@ and~\eqref{eq:D:wfs:ps:woapprox:2.5D} can be approximated by
     D(\x_0,\omega) = \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \eqname{D:wfs:ps}
-    \label{eq:D:wfs:ps}
+    \eqlabel{D:wfs:ps}
 \end{equation}
 %
 \begin{multline}
@@ -1187,8 +1163,7 @@ and~\eqref{eq:D:wfs:ps:woapprox:2.5D} can be approximated by
     \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{-\I\omegac |\x_0-\xs|} \qc
-    \eqname{D:wfs:ps:2.5D}
-    \label{eq:D:wfs:ps:2.5D}
+    \eqlabel{D:wfs:ps:2.5D}
 \end{multline}
 %
 which is the traditional formulation of a point source in
@@ -1206,8 +1181,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     d(\x_0,t) = \frac{1}{2\PI} a(t) * h(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
-    \eqname{d:wfs:ps}
-    \label{eq:d:wfs:ps}
+    \eqlabel{d:wfs:ps}
 \end{equation}
 %
 \begin{multline}
@@ -1215,8 +1189,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{g_0}{2\PI} a(t) * h_\twohalfD(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qp
-    \eqname{d:wfs:ps:2.5D}
-    \label{eq:d:wfs:ps:2.5D}
+    \eqlabel{d:wfs:ps:2.5D}
 \end{multline}
 %
 \urlnote{secondary\_source\_selection.m}{\SFS/SFS_general/secondary_source_selection.m}
@@ -1229,8 +1202,7 @@ calculated after Spors at al. as\autocite{Spors2008}
         1 & (\x_0-\xs) \n_{\x_0} > 0 \\
         0 & \text{else}
     \end{cases}
-    \eqname{wfs:ps:selection}
-    \label{eq:wfs:ps:selection}
+    \eqlabel{wfs:ps:selection}
 \end{equation}
 %
 
@@ -1249,8 +1221,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qc
-    \eqname{D:wfs:ls}
-    \label{eq:D:wfs:ls}
+    \eqlabel{D:wfs:ls}
 \end{equation}
 %
 \begin{multline}
@@ -1258,8 +1229,7 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
     -\frac{1}{2}g_0 A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{2}\left(\omegac|\x_0-\xs|\right) \qp
-    \eqname{D:wfs:ls:2.5D}
-    \label{eq:D:wfs:ls:2.5D}
+    \eqlabel{D:wfs:ls:2.5D}
 \end{multline}
 %
 \begin{marginfigure}
@@ -1281,8 +1251,7 @@ transform~\eqref{eq:ift} it follows
     d(\x_0,t) = \sqrt{\frac{1}{2\PI}} a(t) * h(t) *
     w(\x0) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t-\frac{|\x_0-\xs|}{c}} \qc
-    \eqname{d:wfs:ls}
-    \label{eq:d:wfs:ls}
+    \eqlabel{d:wfs:ls}
 \end{equation}
 %
 \begin{multline}
@@ -1304,8 +1273,7 @@ calculated after Spors et al. as\autocite{Spors2008}
         1 & (\x_0-\xs) \n_{\x_0} > 0 \\
         0 & \text{else}
     \end{cases}
-    \eqname{wfs:ls:selection}
-    \label{eq:wfs:ls:selection}
+    \eqlabel{wfs:ls:selection}
 \end{equation}
 %
 
@@ -1343,8 +1311,7 @@ versions of the driving functions for a point source as
     \frac{1}{2\PI} A(\omega) w(\x_0) \left(\I\omegac +
     \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
     \E^{\I\omegac |\x_0-\xs|} \qc
-    \eqname{D:wfs:fs:woapprox}
-    \label{eq:D:wfs:fs:woapprox}
+    \eqlabel{D:wfs:fs:woapprox}
 \end{multline}
 %
 \begin{multline}
@@ -1353,8 +1320,7 @@ versions of the driving functions for a point source as
     1 + \frac{1}{\I\omegac|\x_0-\xs|}
     \right) \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} \E^{\I\omegac |\x_0-\xs|}
     \qc
-    \eqname{D:wfs:fs:woapprox:2.5D}
-    \label{eq:D:wfs:fs:woapprox:2.5D}
+    \eqlabel{D:wfs:fs:woapprox:2.5D}
 \end{multline}
 %
 or by using an approximated point source as
@@ -1363,16 +1329,14 @@ or by using an approximated point source as
     D(\x_0,\omega) = \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qc
-    \eqname{D:wfs:fs}
-    \label{eq:D:wfs:fs}
+    \eqlabel{D:wfs:fs}
 \end{equation}
 %
 \begin{equation}
     D_\twohalfD(\x_0,\omega) = \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \E^{\I\omegac |\x_0-\xs|} \qp
-    \eqname{D:wfs:fs:2.5D}
-    \label{eq:D:wfs:fs:2.5D}
+    \eqlabel{D:wfs:fs:2.5D}
 \end{equation}
 %
 As before for other source types, the approximated versions are the default driving functions for a focused
@@ -1384,8 +1348,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     d(\x_0,t) = \frac{1}{2\PI} a(t) * h(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qc
-    \eqname{d:wfs:fs}
-    \label{eq:d:wfs:fs}
+    \eqlabel{d:wfs:fs}
 \end{equation}
 %
 \begin{multline}
@@ -1393,8 +1356,7 @@ Transfered to the temporal domain via an inverse Fourier transform~\eqref{eq:ift
     \frac{g_0}{2\PI} a(t) * h_\twohalfD(t) * w(\x_0)
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
     \deltafunc{t+\frac{|\x_0-\xs|}{c}} \qp
-    \eqname{d:wfs:fs:2.5D}
-    \label{eq:d:wfs:fs:2.5D}
+    \eqlabel{d:wfs:fs:2.5D}
 \end{multline}
 %
 In this thesis a focused source always refers to the time-reversed
@@ -1405,8 +1367,7 @@ same way starting from~\eqref{eq:D:wfs:ls}
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) \I\omegac
     \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
     \H{1}{1}\left(\omegac|\x_0-\xs|\right) \qp
-    \eqname{D:wfs:fs:ls}
-    \label{eq:D:wfs:fs:ls}
+    \eqlabel{D:wfs:fs:ls}
 \end{equation}
 %
 \urlnote{secondary\_source\_selection.m}{\SFS/SFS_general/secondary_source_selection.m}
@@ -1419,8 +1380,7 @@ calculated as
         1 & \n_\text{s} (\xs-\x_0) > 0 \\
         0 & \text{else}
     \end{cases}
-    \eqname{wfs:fs:selection}
-    \label{eq:wfs:fs:selection}
+    \eqlabel{wfs:fs:selection}
 \end{equation}
 %
 
@@ -1428,25 +1388,76 @@ calculated as
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%--%-
-%\subsection{Local Wave Field Synthesis}
-%\label{sec:driving_functions_localwfs}
+\subsection{Local Sound Field Synthesis}
+\label{sec:driving_functions_localwfs}
+
+The reproduction accuracy of \ac{WFS} is limited due to practical aspects. For 
+the 
+audible frequency range the desired sound field can not be synthesized 
+aliasing-free over an extended listening area, which is surrounded by a 
+discrete ensemble of individually driven loudspeakers. However, it is suitable 
+for certain applications to increase reproduction accuracy inside a smaller 
+(local) listening region while stronger artifacts outside are permitted. The 
+implemented Local Wave Field Synthesis method utilizes focused sources as a 
+distribution of virtual loudspeakers which are placed more densely around the 
+local listening area. These virtual loudspeakers can be driven by conventional 
+\ac{SFS} techniques, like e.g. \ac{WFS} or \ac{NFC-HOA}. The results are 
+similar to band-limited \ac{NFC-HOA}, with the difference that the form and 
+position of the enhanced area can freely be chosen within the listening area.
+
+The set of focused sources is treated as a virtual loudspeaker 
+distribution and their positions \(\xfs\) are subsumed under 
+\(\mathcal{X}_{\mathrm{fs}}\). Therefore, each focused source is driven 
+individually by 
+\(D_l(\xfs, \omega)\), which in principle can be any driving function for real 
+loudspeakers mentioned in previous sections. At the moment however, only 
+\ac{WFS} and \ac{NFC-HOA} driving functions are supported. The resulting 
+driving function for a loudspeaker located at \(\x_0\) reads
 %
-%In the following, the driving functions for local \ac{WFS} in the frequency and
-%temporal domain
-%for selected source models are presented.
-%Local \ac{WFS} describes situations in which \ac{WFS} is used in a way to
-%enhance the spatial resolution in one particular part of the listening area and
-%reduce it in others. The results are similar to band-limited \ac{NFC-HOA}, with
-%the difference that the form and position of the enhanced area can freely be
-%chosen within the listening area.
-%This is achieved by creating a virtual secondary source distribution in the
-%listening area with focused sources. Those virtual secondary sources are then
-%again driven by \ac{WFS} in order to achieve the desired sound field.
+\urlnote{driving\_function\_mono\_localwfs.m}{\SFS/SFS_monochromatic/driving_function_mono_localwfs.m}
+\urlnote{driving\_function\_mono\_wfs\_vss.m}{\SFS/SFS_monochromatic/driving_functions_mono/driving_function_mono_wfs_vss.m}
+\begin{equation}
+  D(\x_0,\omega) = \sum_{\xfs \in \mathcal{X}_{\mathrm{fs}}} 
+  D_{\mathrm l}(\xfs, \omega) 
+  D_{\mathrm{fs}}(\x_0,\xfs,\omega) \qc
+  \eqlabel{D:localwfs}
+\end{equation}
 %
-%%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----
-%\paragraph{Plane Wave}
-%%
-%\urlnote{driving\_function\_mono\_wfs\_vss.m}{\SFS/SFS_monochromatic/driving_functions_mono/driving_function_mono_wfs_vss.m}
-%\urlnote{driving\_function\_imp\_wfs\_vss.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_vss.m}
-%%
+which is superposition of the driving function 
+\(D_{\mathrm l}{\mathrm{fs}}(\x_0,\xfs,\omega)\) reproducing a single 
+focused source at \(\xfs\) weighted by \(D_l(\xfs, \omega)\). Former is 
+derived by replacing \(\xs\) with 
+\(\xfs\) in the WFS driving functions \eqref{eq:D:wfs:fs} and 
+\eqref{eq:d:wfs:fs:2.5D} for focused sources. This yields
 %
+\begin{equation}
+  D_{\mathrm{fs}}(\x_0,\xfs,\omega) =
+    \frac{1}{2\PI} A(\omega) w(\x_0) \I\omegac
+    \frac{(\x_0-\xfs)\n_{\x_0}}{|\x_0-\xfs|^{\nicefrac{3}{2}}}
+    \E^{\I\omegac |\x_0-\xfs|}
+\end{equation}
+%
+and
+%
+\begin{equation}
+  D_{\mathrm{fs,2.5D}}(\x_0,\xfs,\omega) = 
+    \frac{g_0}{2\PI} A(\omega) w(\x_0) \sqrt{\I\omegac}
+    \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\nicefrac{3}{2}}}
+    \E^{\I\omegac |\x_0-\xs|} \qp
+\end{equation}
+for the 2.5D case. For the temporal domain, inverse Fourier transform yields 
+the driving signals
+%
+\urlnote{driving\_function\_imp\_localwfs.m}{\SFS/SFS_time_domain/driving\_function\_imp\_localwfs.m}
+\urlnote{driving\_function\_imp\_wfs\_vss.m}{\SFS/SFS_time_domain/driving_functions_imp/driving_function_imp_wfs_vss.m}
+%
+\begin{equation}
+  d(\x_0,t) = \sum_{\xfs \in \mathcal{X}_{\mathrm{fs}}} 
+    d_{\mathrm l}(\xfs, t) * d_{\mathrm{fs}}(\x_0,\xfs, t) \qc
+  \eqlabel{d:localwfs}
+\end{equation}
+%
+while \(d_{\mathrm{fs}}(\x_0,\xfs, t)\) is derived analogously to
+\eqref{eq:D:localwfs} from \eqref{eq:d:wfs:fs} or \eqref{eq:d:wfs:fs:2.5D}. At 
+the moment \(d_{\mathrm l}(\xfs, t)\) does only support driving functions from 
+\ac{WFS}.
