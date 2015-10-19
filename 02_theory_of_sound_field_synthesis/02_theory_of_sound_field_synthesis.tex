@@ -15,6 +15,7 @@
 {\PATH/\CHAPTWO/fig2_10/}%
 {\PATH/\CHAPTWO/fig2_11/}%
 {\PATH/\CHAPTWO/fig2_12/}%
+{\PATH/\CHAPTWO/fig2_13/}%
 }
 
 
@@ -749,6 +750,16 @@ defining the orientation of the dipole source.
   \eqlabel{S:dps}
 \end{equation}
 %
+\begin{marginfigure}
+  \centering
+  \ft
+  \input{fig2_06/sound_field_dipole_source}
+  \caption{Sound pressure for a monochromatic 3D dipole source
+    ~(\ref{eq:S:dps}) placed at $(0,0,0)$. Parameters: $f =
+    800$\,Hz.
+    \reproduce{\GITHUB/fig2_06}}
+\end{marginfigure}
+%
 Transformed to the temporal domain this becomes
 %
 \begin{equation}
@@ -777,11 +788,11 @@ function as\sidenote[][-0.5cm]{\cite[][(8.47)]{Williams1999}}
 \begin{marginfigure}
     \centering
     \ft
-    \input{fig2_06/sound_field_line_source}
+    \input{fig2_07/sound_field_line_source}
     \caption{Sound pressure for a monochromatic line
     source~(\ref{eq:S:ls}) placed at $(0,0,0)$. Parameters: $f =
         800$\,Hz.
-        \reproduce{\GITHUB/fig2_06}}
+        \reproduce{\GITHUB/fig2_07}}
 \end{marginfigure}
 %
 Applying the large argument approximation of the Hankel
@@ -870,11 +881,11 @@ into~\eqref{eq:D_spherical} and yield\autocite[][(96)]{Schultz2014}
 \begin{marginfigure}
     \centering
     \ft
-    \input{fig2_07/sound_field_nfchoa_pw}
+    \input{fig2_08/sound_field_nfchoa_pw}
     \caption{Sound pressure of a monochromatic plane wave synthesized with
         \twohalfD \ac{NFC-HOA}~(\ref{eq:D:hoa:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$,
         $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_07}}
+        \reproduce{\GITHUB/fig2_08}}
 \end{marginfigure}
 %
 For a circular secondary source distribution with radius $R_0$ the circular
@@ -961,11 +972,11 @@ function~\eqref{eq:G_spherical} are inserted into~\eqref{eq:D_spherical} and yie
 \begin{marginfigure}
     \centering
     \ft
-    \input{fig2_08/sound_field_nfchoa_ps}
+    \input{fig2_09/sound_field_nfchoa_ps}
     \caption{Sound pressure for a monochromatic point source synthesized by
         \twohalfD \ac{NFC-HOA}~\eqref{eq:D:hoa:ps:2.5D}. Parameters: $\xs =
         (0,2.5,0)$\,m, $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_08}}
+        \reproduce{\GITHUB/fig2_09}}
 \end{marginfigure}
 %
 For a circular secondary source distribution with radius $R_0$ and point source
@@ -1097,11 +1108,11 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 \begin{marginfigure}[-0.5cm]
     \centering
     \ft
-    \input{fig2_09/sound_field_wfs_pw}
+    \input{fig2_10/sound_field_wfs_pw}
     \caption{Sound pressure for a monochromatic plane wave synthesized by
     \twohalfD \ac{WFS}~(\ref{eq:D:wfs:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$, $\xref
         = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_09}}
+        \reproduce{\GITHUB/fig2_10}}
 \end{marginfigure}
 %
 Transfered to the temporal domain via an inverse Fourier
@@ -1161,11 +1172,11 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 \begin{marginfigure}
     \centering
     \ft
-    \input{fig2_10/sound_field_wfs_ps}
+    \input{fig2_11/sound_field_wfs_ps}
     \caption{Sound pressure for a monochromatic point source synthesized by
         \twohalfD \ac{WFS}~(\ref{eq:D:wfs:ps:2.5D}). Parameters: $\xs = (0,2.5,0)$\,m,
         $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_10}}
+        \reproduce{\GITHUB/fig2_11}}
 \end{marginfigure}
 %
 \begin{multline}
@@ -1272,11 +1283,11 @@ the Hankel function\autocite[][(9.1.30)]{Abramowitz1972} it follows
 \begin{marginfigure}
     \centering
     \ft
-    \input{fig2_11/sound_field_wfs_ls}
+    \input{fig2_12/sound_field_wfs_ls}
     \caption{Sound pressure for a monochromatic line source synthesized by
         \twohalfD \ac{WFS}~\eqref{eq:D:wfs:ls:2.5D}. Parameters: $\xs = (0,2.5,0)$\,m,
         $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_11}}
+        \reproduce{\GITHUB/fig2_12}}
 \end{marginfigure}
 %
 Applying $\H{1}{2}(\zeta) \approx -\sqrt{\frac{2}{\PI \I\zeta}} \E^{-\I\zeta}$ for $z\gg1$ after
@@ -1325,11 +1336,11 @@ calculated after Spors et al. as\autocite{Spors2008}
 \begin{marginfigure}
     \centering
     \ft
-    \input{fig2_12/sound_field_wfs_fs}
+    \input{fig2_13/sound_field_wfs_fs}
     \caption{Sound pressure of a mono-frequent focused source synthesized with
         \twohalfD \ac{WFS}~(\ref{eq:D:wfs:fs:2.5D}). Parameters: $\xs = (0,0.5,0)$\,m,
         $\n_\text{s} = (0,-1,0)$, $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_12}}
+        \reproduce{\GITHUB/fig2_13}}
     \label{fig:wfs_focused_source}
 \end{marginfigure}
 %
