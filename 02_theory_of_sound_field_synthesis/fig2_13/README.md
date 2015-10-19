@@ -1,6 +1,6 @@
-![Fig 2.12](fig2_12.png)
+![Fig 2.13](fig2_13.png)
 
-**Figure 2.12**: Sound pressure of a mono-frequent
+**Figure 2.13**: Sound pressure of a mono-frequent
 focused source synthesized
 with 2.5D WFS (2.74). Parameters: x_s =
 (0,0.5,0) m, n_s = (0,−1,0), x_ref =
