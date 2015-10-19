@@ -1,18 +1,18 @@
 ![Fig 2.11](fig2_11.png)
 
 **Figure 2.11**: Sound pressure for a
-monochromatic line source synthesized
-by 2.5D WFS (2.67). Parameters: x_s =
-(0,2.5,0) m, x_ref = (0,0,0), f = 1 kHz.
+monochromatic point source synthesized by 2.5D WFS (2.62).
+Parameters: x_s = (0,2.5,0) m, x_ref = (0,0,0), f =
+1 kHz.
 
 ## Steps for reproduction
 
 Matlab/Octave:
 ```Matlab
->> sound_field_wfs_ls
+>> sound_field_wfs_ps
 ```
 
 Bash:
 ```Bash
-$ gnuplot sound_field_wfs_ls.gnu
+$ gnuplot sound_field_wfs_ps.gnu
 ```
