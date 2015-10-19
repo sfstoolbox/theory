@@ -9,10 +9,10 @@ f = 800 Hz.
 
 Matlab/Octave:
 ```Matlab
->> sound_field_line_source
+>> sound_field_dipole_source
 ```
 
 Bash:
 ```Bash
-$ gnuplot sound_field_line_source.gnu
+$ gnuplot sound_field_dipole_source.gnu
 ```
