@@ -14,22 +14,22 @@
 \chapter{Introduction}
 \label{cha:introduction}
 %
-\firstthought{This document} provides mathematical derivations of the equations that are
-implemented in the Sound Field Synthesis Toolbox.\sidenote{The Toolbox is
+This document provides mathematical derivations of the equations that are
+implemented in the Sound Field Synthesis Toolbox.\footnote{The Toolbox is
 available at
 \href{https://github.com/sfstoolbox/sfs/}{\color{link}https://github.com/sfstoolbox/sfs/}
 and was first described in
 \cite{Wierstorf2012a}}
 
 We decided to create the Toolbox and this documentation in order to fully allow
-for the principle of \emph{reproducible research}\sidenote{\cite[For one of the
-pioneers see][]{Donoho2009}} in the research area of \ac{SFS}.
+for the principle of \emph{reproducible research}\cite[For one of the
+pioneers see][]{Donoho2009} in the research area of \ac{SFS}.
 Like other fields that involve signal processing, the study of \ac{SFS}
 implies implementing a multitude of algorithms and running numerical simulations
 on a computer.
 As a consequence, the outcome of the algorithms are easily vulnerable to
 implementation errors which cannot completely be
-avoided.\sidenote[][]{\cite[Compare][]{Ince2012}}
+avoided.\cite[Compare][]{Ince2012}
 
 Functions derived in the theoretical chapter that are implemented in the
 toolbox are accompanied by a link to the corresponding function. All figures in
@@ -38,7 +38,7 @@ folder containing all the data and scripts in order to reproduce the single
 figures.
 
 This document is mainly based on the PhD thesis of Hagen
-Wierstorf.\autocite{Wierstorf2014} It starts with a small introduction to the
+Wierstorf.\cite{Wierstorf2014} It starts with a small introduction to the
 history of spatial sound presentation and presents afterwards the theory of
 sound field synthesis, including the derivation of lots of different driving
 functions. All functions that come with a name tag like \#D:wfs:pw are
@@ -54,7 +54,7 @@ document.
 The first ever practical attempt of spatial sound reproduction dates back to
 1881, only five years after the invention of the first monaural transducer.
 Back then, two parallel telephone channels were used to transmit recorded
-music to the homes of the listeners.\autocite{DuMoncel1881a}
+music to the homes of the listeners.\cite{DuMoncel1881a}
 The basic idea was the ability to influence the interaural
 differences between the two ear signals of the listener. That was achieved by
 recording a sound scene with two microphones placed at different positions 
@@ -82,8 +82,8 @@ the required \acp{HRTF} are available.
 
 Spatial sound presentation via loudspeakers started in the 1930s, the time when
 Blumlein invented the stereophonic recording and
-reproduction\sidenote[][]{\cite{Blumlein1958}} and Steinberg and Snow discussed the idea of
-the acoustical curtain.\autocite{Steinberg1934}
+reproduction\cite{Blumlein1958} and Steinberg and Snow discussed the idea of
+the acoustical curtain.\cite{Steinberg1934}
 The original idea of the latter was to create a sound field that mimics the real sound
 scene. Their practical implementation with two or three loudspeakers was not able
 to achieve this. With such low numbers of loudspeakers the sound field is only
@@ -101,7 +101,7 @@ is played through them. If the amplitude of one of the loudspeakers is changed
 the auditory event is moved between the two speakers. The connection of the
 amplitude difference between the loudspeakers and the actual position of the
 auditory event is empirical and is described by so called panning
-laws.\sidenote[][]{\cite{Leakey1959}}
+laws.\cite{Leakey1959}
 If the listener leaves the central line, the position of the auditory event
 will always be located at the position of one of the two loudspeakers. The area in which the
 spatial perception of the auditory scene works without considerable impairments
@@ -109,13 +109,13 @@ is called the \emph{sweet-spot} of a given loudspeaker setup. It is indicated
 by the blue color in Figure\,\ref{fig:stereophony}.
 To explain why the spatial perception of the listener is correct at the
 sweet-spot although the sound field is not, the theory of \emph{summing
-localization} was introduced by Warncke in 1941.\sidenote[][-1.3cm]{\cite[A discussion is
-provided in][p.\,204]{Blauert1997}}
+localization} was introduced by Warncke in 1941.\cite[A discussion is
+provided in][p.\,204]{Blauert1997}
 
 In the last years the stereophonic setup was expanded to 5.0 surround
-and even larger setups\sidenote[][-1.4cm]{\cite[E.g.][]{Hamasaki2005}} and the panning laws were
+and even larger setups\cite[E.g.][]{Hamasaki2005} and the panning laws were
 formulated in a more general way dealing with setups using multiple
-loudspeakers.\sidenote[][]{\cite{Pulkki1997}}
+loudspeakers.\cite{Pulkki1997}
 These approaches could not fix the sweet-spot problem, but added a richer
 spatial impression because sound is no longer restricted to come from the front.
 %
@@ -143,7 +143,7 @@ spatial impression because sound is no longer restricted to come from the front.
 
 Before 5.0 surround there were other approaches to enhance the spatial impression of
 stereophony. From the 1970s onwards quadro\-phony and
-Ambisonics\autocite{Gerzon1973} were developed in
+Ambisonics\cite{Gerzon1973} were developed in
 order to provide a surround experience with four loudspeakers. The basic idea of
 Ambisonics is comparable to nowadays \ac{NFC-HOA} for
 a larger number of loudspeakers: to describe an extended sound field by spherical
@@ -152,7 +152,7 @@ setup. In practice, the restriction of the limited number of loudspeakers has le
 of only two spherical basis functions. The results are
 loudspeaker signals that are comparable to the case of panning in
 stereophony with the difference of more active
-loudspeakers.\autocite[E.g.][]{Frank2013}
+loudspeakers.\cite[E.g.][]{Frank2013}
 If more than four loudspeakers and more than two basis functions
 are applied the term is changed to \ac{HOA} to highlight this fact.
 For the perceptual side of Ambisonics the sweet-spot problem exists as well.
@@ -169,7 +169,7 @@ impression for a bigger audience.
 
 In the late 1980s the old idea of Steinberg and Snow to reproduce a
 complete sound field came to new life due to the fact that now arrangements of
-more than 100 loudspeakers became possible.\autocite{Berkhout1988}
+more than 100 loudspeakers became possible.\cite{Berkhout1988}
 This high number of loudspeakers is needed: for controlling an extended
 sound field up to $20$\,kHz, loudspeaker spacings under $1$\,cm
 are required. Small distances like that are not possible in practice. Nonetheless,
