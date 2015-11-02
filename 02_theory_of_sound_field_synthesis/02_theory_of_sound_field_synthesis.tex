@@ -23,16 +23,16 @@
 \chapter{Theory of Sound Field Synthesis}
 \label{cha:sfs}
 
-\begin{figure}
-    \small
-    \centering
-    \input{fig2_01/kirchhoff_helmholtz_intergal}
-    \caption{Illustration of the geometry used to discuss the physical
-        fundamentals of sound field synthesis and the single-layer
-        potential~\protect\eqref{eq:single:layer}.
-        \reproduce{\GITHUB/fig2_01}}
-    \label{fig:KHint}
-\end{figure}
+%\begin{figure}
+%    \small
+%    \centering
+%    \input{fig2_01/kirchhoff_helmholtz_intergal}
+%    \caption{Illustration of the geometry used to discuss the physical
+%        fundamentals of sound field synthesis and the single-layer
+%        potential~\protect\eqref{eq:single:layer}.
+%        \reproduce{\GITHUB/fig2_01}}
+%    \label{fig:KHint}
+%\end{figure}
 
 The problem of sound field synthesis can be formulated as
 follows.\cite[Small parts of this section are published in][]{Wierstorf2013b}
@@ -393,18 +393,18 @@ convex secondary source
 distributions.\cite[E.g.][]{Spors2008}
 
 
-\begin{figure}
-    \small
-    \centering
-    \input{fig2_02/concave_array}
-    \caption{Sound pressure of a point source synthesized with
-    \ac{WFS}~\protect\eqref{eq:D:wfs:ps:2.5D}. The secondary source
-        distribution is shown in black, whereby inactive sources are marked with a
-        dashed line. Parameters: $\xs = (0,2.5,0)$\,m,
-        $\xref = (0,-3,0)$\,m, $f = 700$\,Hz.
-        \reproduce{\GITHUB/fig2_02}}
-    \label{fig:concave_array}
-\end{figure}
+%\begin{figure}
+%    \small
+%    \centering
+%    \input{fig2_02/concave_array}
+%    \caption{Sound pressure of a point source synthesized with
+%    \ac{WFS}~\protect\eqref{eq:D:wfs:ps:2.5D}. The secondary source
+%        distribution is shown in black, whereby inactive sources are marked with a
+%        dashed line. Parameters: $\xs = (0,2.5,0)$\,m,
+%        $\xref = (0,-3,0)$\,m, $f = 700$\,Hz.
+%        \reproduce{\GITHUB/fig2_02}}
+%    \label{fig:concave_array}
+%\end{figure}
 
 The outlined approximation can be formulated by
 introducing a window function $w(\x_0)$ for the selection of the active
@@ -452,24 +452,24 @@ classical secondary sources setups would be a sphere or a plane.
 \subsection{\twohalfD Synthesis}
 \label{sec:25d_synthesis}
 %
-\begin{figure}
-    \centering
-    \small
-    \begin{tikzpicture}
-        \draw (0,0)       node {\includegraphics[width=.8\columnwidth]{sound_field_dimensionality}};
-        \draw (-0.75,1.2) node {\twohalfD};
-        \draw (-3.75,1.2) node {\threeD};
-        \draw (2.05,1.2)  node {\twoD};
-    \end{tikzpicture}
-    \caption{Sound pressure in decibel for secondary source distributions with different
-    dimensionality all driven by the same signals. The sound pressure is color
-    coded, lighter color corresponds to lower pressure.
-    In the \threeD case a planar distribution of point sources is applied,
-    in the \twohalfD case a linear distribution of point sources, and in the \twoD
-    case a linear distribution of line sources.
-    \reproduce{\GITHUB/fig2_03}}
-    \label{fig:sound_field_dimensionality}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \small
+%    \begin{tikzpicture}
+%        \draw (0,0)       node {\includegraphics[width=.8\columnwidth]{sound_field_dimensionality}};
+%        \draw (-0.75,1.2) node {\twohalfD};
+%        \draw (-3.75,1.2) node {\threeD};
+%        \draw (2.05,1.2)  node {\twoD};
+%    \end{tikzpicture}
+%    \caption{Sound pressure in decibel for secondary source distributions with different
+%    dimensionality all driven by the same signals. The sound pressure is color
+%    coded, lighter color corresponds to lower pressure.
+%    In the \threeD case a planar distribution of point sources is applied,
+%    in the \twohalfD case a linear distribution of point sources, and in the \twoD
+%    case a linear distribution of line sources.
+%    \reproduce{\GITHUB/fig2_03}}
+%    \label{fig:sound_field_dimensionality}
+%\end{figure}
 %
 In practice, the most common setups of secondary sources are \twoD setups,
 employing cabinet loudspeakers. A cabinet loudspeaker does not show the characteristics
@@ -594,15 +594,15 @@ as\cite[][p.\,21, (2.24). Williams defines the Fourier transform with transposed
 signs as $F(\omega) = \int f(t) \E^{\I\omega t}$. This leads also to changed signs
 in his definitions of the Green's functions and field expansions.]{Williams1999}
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_04/sound_field_plane_wave}
-    \caption{Sound pressure for a monochromatic plane
-        wave~\eqref{eq:S:pw} going into the
-        direction $(1,1,0)$. Parameters: $f = 800$\,Hz.
-        \reproduce{\GITHUB/fig2_04}}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_04/sound_field_plane_wave}
+%    \caption{Sound pressure for a monochromatic plane
+%        wave~\eqref{eq:S:pw} going into the
+%        direction $(1,1,0)$. Parameters: $f = 800$\,Hz.
+%        \reproduce{\GITHUB/fig2_04}}
+%\end{figure}
 %
 \begin{equation} 
     S(\x,\omega) = A(\omega) \E^{-\I\omegac \n_k \x}
@@ -661,15 +661,15 @@ the plane wave.
 \paragraph{Point Source}
 \label{sec:point_source}
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_05/sound_field_point_source}
-    \caption{Sound pressure for a monochromatic point
-        source~\eqref{eq:S:ps} placed at $(0,0,0)$. Parameters: $f =
-        800$\,Hz.
-        \reproduce{\GITHUB/fig2_05}}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_05/sound_field_point_source}
+%    \caption{Sound pressure for a monochromatic point
+%        source~\eqref{eq:S:ps} placed at $(0,0,0)$. Parameters: $f =
+%        800$\,Hz.
+%        \reproduce{\GITHUB/fig2_05}}
+%\end{figure}
 %
 The source model for a point source is given by the three dimensional Green's
 function as\cite[][(6.73)]{Williams1999}
@@ -745,15 +745,15 @@ directional derivative of the three dimensional Green's function with respect to
   \eqlabel{S:dps}
 \end{equation}
 %
-\begin{figure}
-  \centering
-  \ft
-  \input{fig2_06/sound_field_dipole_source}
-  \caption{Sound pressure for a monochromatic 3D dipole source
-    ~(\ref{eq:S:dps}) placed at $(0,0,0)$. Parameters: $f =
-    800$\,Hz.
-    \reproduce{\GITHUB/fig2_06}}
-\end{figure}
+%\begin{figure}
+%  \centering
+%  \ft
+%  \input{fig2_06/sound_field_dipole_source}
+%  \caption{Sound pressure for a monochromatic 3D dipole source
+%    ~(\ref{eq:S:dps}) placed at $(0,0,0)$. Parameters: $f =
+%    800$\,Hz.
+%    \reproduce{\GITHUB/fig2_06}}
+%\end{figure}
 %
 Transformed to the temporal domain this becomes
 %
@@ -780,15 +780,15 @@ function as\cite[][(8.47)]{Williams1999}
     \eqlabel{S:ls}
 \end{equation}
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_07/sound_field_line_source}
-    \caption{Sound pressure for a monochromatic line
-    source~(\ref{eq:S:ls}) placed at $(0,0,0)$. Parameters: $f =
-        800$\,Hz.
-        \reproduce{\GITHUB/fig2_07}}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_07/sound_field_line_source}
+%    \caption{Sound pressure for a monochromatic line
+%    source~(\ref{eq:S:ls}) placed at $(0,0,0)$. Parameters: $f =
+%        800$\,Hz.
+%        \reproduce{\GITHUB/fig2_07}}
+%\end{figure}
 %
 Applying the large argument approximation of the Hankel
 function\cite[][(4.23)]{Williams1999} and transformed to
@@ -869,15 +869,15 @@ into~\eqref{eq:D_spherical} and yield\cite[][(96)]{Schultz2014}
     \eqlabel{D:hoa:pw:3D}
 \end{equation}
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_08/sound_field_nfchoa_pw}
-    \caption{Sound pressure of a monochromatic plane wave synthesized with
-        \twohalfD \ac{NFC-HOA}~(\ref{eq:D:hoa:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$,
-        $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_08}}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_08/sound_field_nfchoa_pw}
+%    \caption{Sound pressure of a monochromatic plane wave synthesized with
+%        \twohalfD \ac{NFC-HOA}~(\ref{eq:D:hoa:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$,
+%        $\xref = (0,0,0)$, $f = 1$\,kHz.
+%        \reproduce{\GITHUB/fig2_08}}
+%\end{figure}
 %
 For a circular secondary source distribution with radius $R_0$ the circular
 expansion coefficients of a plane wave~\eqref{eq:plane_wave_circular} and
@@ -957,15 +957,15 @@ function~\eqref{eq:G_spherical} are inserted into~\eqref{eq:D_spherical} and yie
     \eqlabel{D:hoa:ps:3D}
 \end{multline}
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_09/sound_field_nfchoa_ps}
-    \caption{Sound pressure for a monochromatic point source synthesized by
-        \twohalfD \ac{NFC-HOA}~\eqref{eq:D:hoa:ps:2.5D}. Parameters: $\xs =
-        (0,2.5,0)$\,m, $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_09}}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_09/sound_field_nfchoa_ps}
+%    \caption{Sound pressure for a monochromatic point source synthesized by
+%        \twohalfD \ac{NFC-HOA}~\eqref{eq:D:hoa:ps:2.5D}. Parameters: $\xs =
+%        (0,2.5,0)$\,m, $\xref = (0,0,0)$, $f = 1$\,kHz.
+%        \reproduce{\GITHUB/fig2_09}}
+%\end{figure}
 %
 For a circular secondary source distribution with radius $R_0$ and point source
 as secondary sources the \twohalfD driving function is given by inserting the
@@ -1090,15 +1090,15 @@ into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
     \eqlabel{D:wfs:pw:2.5D}
 \end{equation}
 %
-\begin{figure}[-0.5cm]
-    \centering
-    \ft
-    \input{fig2_10/sound_field_wfs_pw}
-    \caption{Sound pressure for a monochromatic plane wave synthesized by
-    \twohalfD \ac{WFS}~(\ref{eq:D:wfs:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$, $\xref
-        = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_10}}
-\end{figure}
+%\begin{figure}[-0.5cm]
+%    \centering
+%    \ft
+%    \input{fig2_10/sound_field_wfs_pw}
+%    \caption{Sound pressure for a monochromatic plane wave synthesized by
+%    \twohalfD \ac{WFS}~(\ref{eq:D:wfs:pw:2.5D}). Parameters: $\n_k = (0,-1,0)$, $\xref
+%        = (0,0,0)$, $f = 1$\,kHz.
+%        \reproduce{\GITHUB/fig2_10}}
+%\end{figure}
 %
 Transfered to the temporal domain via an inverse Fourier
 transform~\eqref{eq:ift}, it follows
@@ -1149,15 +1149,15 @@ By inserting the source model for a point
 source~\eqref{eq:S:ps}
 into~\eqref{eq:D_wfs} and~\eqref{eq:D25D_wfs} it follows
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_11/sound_field_wfs_ps}
-    \caption{Sound pressure for a monochromatic point source synthesized by
-        \twohalfD \ac{WFS}~(\ref{eq:D:wfs:ps:2.5D}). Parameters: $\xs = (0,2.5,0)$\,m,
-        $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_11}}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_11/sound_field_wfs_ps}
+%    \caption{Sound pressure for a monochromatic point source synthesized by
+%        \twohalfD \ac{WFS}~(\ref{eq:D:wfs:ps:2.5D}). Parameters: $\xs = (0,2.5,0)$\,m,
+%        $\xref = (0,0,0)$, $f = 1$\,kHz.
+%        \reproduce{\GITHUB/fig2_11}}
+%\end{figure}
 %
 \begin{multline}
     D(\x_0,\omega) = \\
@@ -1256,15 +1256,15 @@ the Hankel function\cite[][(9.1.30)]{Abramowitz1972} it follows
     \eqlabel{D:wfs:ls:2.5D}
 \end{multline}
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_12/sound_field_wfs_ls}
-    \caption{Sound pressure for a monochromatic line source synthesized by
-        \twohalfD \ac{WFS}~\eqref{eq:D:wfs:ls:2.5D}. Parameters: $\xs = (0,2.5,0)$\,m,
-        $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_12}}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_12/sound_field_wfs_ls}
+%    \caption{Sound pressure for a monochromatic line source synthesized by
+%        \twohalfD \ac{WFS}~\eqref{eq:D:wfs:ls:2.5D}. Parameters: $\xs = (0,2.5,0)$\,m,
+%        $\xref = (0,0,0)$, $f = 1$\,kHz.
+%        \reproduce{\GITHUB/fig2_12}}
+%\end{figure}
 %
 Applying $\H{1}{2}(\zeta) \approx -\sqrt{\frac{2}{\PI \I\zeta}} \E^{-\I\zeta}$ for $z\gg1$ after
 Williams\cite[][(4.23)]{Williams1999} and transfered to the
@@ -1305,16 +1305,16 @@ calculated after Spors et al. as\cite{Spors2008}
 %----%----%----%----%----%----%----%----%----%----%----%----%----%----%----%----
 \paragraph{Focused Source}
 %
-\begin{figure}
-    \centering
-    \ft
-    \input{fig2_13/sound_field_wfs_fs}
-    \caption{Sound pressure of a mono-frequent focused source synthesized with
-        \twohalfD \ac{WFS}~(\ref{eq:D:wfs:fs:2.5D}). Parameters: $\xs = (0,0.5,0)$\,m,
-        $\n_\text{s} = (0,-1,0)$, $\xref = (0,0,0)$, $f = 1$\,kHz.
-        \reproduce{\GITHUB/fig2_13}}
-    \label{fig:wfs_focused_source}
-\end{figure}
+%\begin{figure}
+%    \centering
+%    \ft
+%    \input{fig2_13/sound_field_wfs_fs}
+%    \caption{Sound pressure of a mono-frequent focused source synthesized with
+%        \twohalfD \ac{WFS}~(\ref{eq:D:wfs:fs:2.5D}). Parameters: $\xs = (0,0.5,0)$\,m,
+%        $\n_\text{s} = (0,-1,0)$, $\xref = (0,0,0)$, $f = 1$\,kHz.
+%        \reproduce{\GITHUB/fig2_13}}
+%    \label{fig:wfs_focused_source}
+%\end{figure}
 %
 As mentioned before, focused sources exhibit a field that converges in a focal
 point inside the audience area. After passing the focal
