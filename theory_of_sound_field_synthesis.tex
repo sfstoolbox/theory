@@ -39,14 +39,9 @@
 % ----------------------------------------------------------------------------
 
 
-\documentclass[a4paper, oneside, nobib, notoc, justified, nofonts]{tufte-book}
+\documentclass[a4paper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
-
-% --- PAGE LAYOUT ------------------------------------------------------------
-\setcounter{secnumdepth}{3}% add numbering to sections                        |
-\setcounter{tocdepth}{1}% include section to the TOC                          |
-% ----------------------------------------------------------------------------
 
 % --- COLORS -----------------------------------------------------------------
 \usepackage{xcolor}%                                                          |
@@ -64,18 +59,15 @@
 \normalfont\selectfont%                                                       |
 % provide straight (non-italic) \int symbol                                   |
 %\usepackage[integrals]{wasysym}%                                             |
-% Provide a command similar to \newthought but without vspace fot start of    |
-% sections                                                                    |
-\newcommand{\firstthought}[1]{\noindent\textsc{#1}}%                          |
 % ----------------------------------------------------------------------------
 
 % --- EQUATIONS --------------------------------------------------------------
 % Change numbering of equation to (number)                                    |
-\renewcommand{\theequation}{\arabic{equation}}%                               |
-\usepackage{chngcntr}%                                                        |
-\counterwithout{equation}{chapter}% allow continuous numbering across chapters|
+%\renewcommand{\theequation}{\arabic{equation}}%                               |
+%\usepackage{chngcntr}%                                                        |
+%\counterwithout{equation}{chapter}% allow continuous numbering across chapters|
 % Add equation name below number, see http://bit.ly/1CVCGTD                   |
-\input{config/equation_name.tex}%                                             |
+%\input{config/equation_name.tex}%                                             |
 % Allows for the creation of 2/3 with \nicefrac{2}{3}                         |
 \usepackage{nicefrac}%                                                        |
 % ----------------------------------------------------------------------------
@@ -100,7 +92,7 @@
 % ----------------------------------------------------------------------------
 
 % --- HYPERREF ---------------------------------------------------------------
-%\usepackage{hyperref}%                                                       |
+\usepackage{hyperref}%                                                       |
 \hypersetup{%                                                                 |
     colorlinks=true,% use colored links w/o border                            |
     linkcolor=link,%  set color for in document reference, like equations     |
@@ -124,11 +116,11 @@ firstinits=true% render all first and middle names as initials                |
     \ifentrytype{article}{}{%                                                 |
     \printtext{\bibstring{in}\intitlepunct}}}%                                |
 % Put text into the margin                                                    |
-\newcommand{\note}[1]{\marginnote{#1}}%                                       |
+%\newcommand{\note}[1]{\marginnote{#1}}%                                       |
 % URL                                                                         |
 \renewcommand{\url}[2]{\href{#2}{\color{link}\texttt{#1}}}%                   |
 % URL in the margin                                                           |
-\newcommand{\urlnote}[2]{\marginnote{\url{#1}{#2}}}%                          |
+%\newcommand{\urlnote}[2]{\marginnote{\url{#1}{#2}}}%                          |
 % ----------------------------------------------------------------------------
 
 % --- COMMANDS ---------------------------------------------------------------
@@ -201,8 +193,6 @@ firstinits=true% render all first and middle names as initials                |
 \usepackage[acronym,nomain]{glossaries}
 
 \newcommand\eqlabel[2][]{%
-  \newacronym{#2}{#2}{eq. \eqref{eq:#2}}%
-  \eqname{\acrshort{#2}} %
   \label{eq:#2}%
 }
 
