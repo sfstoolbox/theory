@@ -1,0 +1,108 @@
+.. _sec-dimensionality:
+
+Sound Field Dimensionality
+--------------------------
+
+The single-layer potential  is valid for all :math:`V
+\subset {\mathbb{R}}^n`. Consequentially, for practical applications a
+two-dimensional () as well as a three-dimensional () synthesis is
+possible. Two-dimensional is not referring to a synthesis in a plane
+only, but describes a setup that is independent of one dimension. For
+example, an infinite cylinder is independent of the dimension along its
+axis. The same is true for secondary source distributions in synthesis.
+They exhibit line source characteristics and are aligned in parallel to
+the independent dimension. Typical arrangements of such secondary
+sources are a circular or a linear setup.
+
+The characteristics of the secondary sources limit the set of possible
+sources which can be synthesized. For example, when using a secondary
+source setup it is not possible to synthesize the amplitude decay of a
+point source.
+
+For a synthesis the involved secondary sources depend on all dimensions
+and exhibit point source characteristics. In this scenario classical
+secondary sources setups would be a sphere or a plane.
+
+Synthesis
+~~~~~~~~~
+
+In practice, the most common setups of secondary sources are setups,
+employing cabinet loudspeakers. A cabinet loudspeaker does not show the
+characteristics of a line source, but of a point source. This
+dimensionality mismatch prevents perfect synthesis within the desired
+plane. The combination of a secondary source setup with secondary
+sources that exhibit characteristics has led to naming such
+configurations *synthesis* [Start1997]_. Such scenarios are associated
+with a wrong amplitude decay due to the inherent mismatch of secondary
+sources as is highlighted in Figure. In general, the amplitude is only
+correct at a given reference point :math:`{{\mathbf{x}}}_\text{ref}`.
+
+For a circular secondary source distribution with point source
+characteristic the driving function can be derived by introducing
+expansion coefficients for the spherical case into the driving
+function . The equation is than solved for :math:`\theta = 0{^\circ}`
+and :math:`r_\text{ref} = 0`. This results in a driving function given
+in [Ahrens2012]_ (3.49) as
+
+.. math::
+
+   D_{\text{circular},\twohalfD}(\phi_0,\omega) = \frac{1}{2{\pi}R_0} \sum_{m=-\infty}^\infty
+       \frac{\breve{S}_{|m|}^m (\frac{{\pi}}{2},\phi_\text{s},r_\text{s},\omega)}{\breve{G}_{|m|}^m
+       (\frac{{\pi}}{2},0,\omega)}
+       \Phi_m(\phi_0) {\;.}\label{eq:D_circular_25D}
+
+For a linear secondary source distribution with point source
+characteristics the driving function is derived by introducing the
+linear expansion coefficients for a monopole source  into the driving
+function  and solving the equation for :math:`y = y_\text{ref}` and
+:math:`z = 0`. This results in a driving function given as [Ahrens2012]_
+(3.77)
+
+.. math::
+
+   D_{\text{linear},\twohalfD}(x_0,\omega) = \frac{1}{2{\pi}} \int_{-\infty}^\infty
+       \frac{\breve{S}(k_x,y_\text{ref},0,\omega)}
+       {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \, {\mathop{\mathrm{d}{k_x}}} {\;.}\label{eq:D_linear_25D}
+
+A driving function for the situation in the context of WFS and
+arbitrary geometries of the secondary source distribution can be
+achieved by applying the far-field approximation [Williams1999]_ (4.23).
+:math:`{\,H_{0}^{(2)}\!}(\zeta) \approx \sqrt{\frac{2{\mathrm{i}}}{{\pi}\zeta}}
+{\mathrm{e}}^{-{\mathrm{i}}\zeta}` for :math:`\zeta \gg 1` to the
+Green’s function. Using this the following relationship between the and
+Green’s functions can be established.
+
+.. math::
+
+   \begin{gathered}
+       \underbrace{
+       -\frac{{\mathrm{i}}}{4} \;{\,H_{0}^{(2)}\!}\left({\frac{\omega}{c}}|{{\mathbf{x}}}-{{\mathbf{x}}}_0|\right)
+       }_{G_\twoD({{\mathbf{x}}}-{{\mathbf{x}}}_0,\omega)}
+       \approx
+       \sqrt{2{\pi}\frac{c}{{\mathrm{i}}\omega} |{{\mathbf{x}}}-{{\mathbf{x}}}_0|} \;
+       \underbrace{
+           \frac{1}{4 {\pi}} \frac{{\mathrm{e}}^{-{\mathrm{i}}{\frac{\omega}{c}}|{{\mathbf{x}}}-{{\mathbf{x}}}_0|}}{|{{\mathbf{x}}}-{{\mathbf{x}}}_0|}
+       }_{G_\threeD({{\mathbf{x}}}-{{\mathbf{x}}}_0,\omega)} {\;,}\label{eq:25D_approximation}\end{gathered}
+
+where :math:`{\,H_{0}^{(2)}\!}` denotes the Hankel function of second
+kind and zeroth order. Inserting this approximation into the
+single-layer potential for the case results in
+
+.. math::
+
+   P({{\mathbf{x}}},\omega) = \oint_S \sqrt{2{\pi}\frac{c}{{\mathrm{i}}\omega} |{{\mathbf{x}}}-{{\mathbf{x}}}_0|} \;
+       D({{\mathbf{x}}}_0,\omega) G_\threeD({{\mathbf{x}}}-{{\mathbf{x}}}0,\omega) \, {\mathop{\mathrm{d}{A}}}({{\mathbf{x}}}_0) {\;.}\label{eq:single:layer_25D}
+
+If the amplitude correction is further restricted to one reference
+point :math:`{{\mathbf{x}}}_\text{ref}`, the driving function for WFS
+can be formulated as
+
+.. math::
+
+   D_\twohalfD({{\mathbf{x}}}_0,\omega) = \underbrace{\sqrt{2{\pi}|{{\mathbf{x}}}_\text{ref}-{{\mathbf{x}}}_0|}}_{g_0}
+       \sqrt{\frac{c}{{\mathrm{i}}\omega}} \,
+       D({{\mathbf{x}}}_0,\omega) {\;,}\label{eq:D25D_wfs}
+
+where :math:`g_0` is independent of :math:`{{\mathbf{x}}}`.
+
+.. vim: filetype=rst spell:

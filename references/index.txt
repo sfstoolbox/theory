@@ -1,0 +1,86 @@
+.. _sec-references:
+
+References
+==========
+
+.. [AbramowitzStegun1972] Abramowitz, Milton, and Irene A Stegun. 1972. *Handbook of Mathematical Functions*. Washington: National Bureau of Standards.
+
+.. [Ahrens2012] Ahrens, Jens. 2012. *Analytic Methods of Sound Field Synthesis*. New York: Springer.
+
+.. [AhrensSpors2009a] Ahrens, Jens, and Sascha Spors. 2009a. “On the Secondary Source Type Mismatch in Wave Field Synthesis Employing Circular Distributions of Loudspeakers.” In *Aes127*, Paper 7952.
+
+.. [AhrensSpors2009b] Ahrens, Jens, and Sascha Spors. 2009b. “Spatial encoding and decoding of focused virtual sound sources.” In *Ambisonics*. Vol. 0.
+
+.. [AhrensSpors2010] Ahrens, Jens, and Sascha Spors. 2010. “Sound Field Reproduction Using Planar and Linear Arrays of Loudspeakers.” *Taslp* 18 (8): 2038–50.
+
+.. [ArfkenWeber2005] Arfken, George B., and Hans J. Weber. 2005. *Mathematical Methods for Physicists*. Amsterdam: Elsevier.
+
+.. [Avni2013] Avni, Amir, Jens Ahrens, Matthias Geier, Sascha Spors, Hagen Wierstorf, and Boaz Rafaely. 2013. “Spatial perception of sound fields recorded by spherical microphone arrays with varying spatial resolution.” *Jasa* 133 (5): 2711–21.
+
+.. [Berkhout1988] Berkhout, A.J. 1988. “A holographic approach to acoustic control.” *Jaes* 36 (12): 977–95.
+
+.. [Blauert1997] Blauert, Jens. 1997. *Spatial Hearing*. The MIT Press.
+
+.. [Blumlein1958] Blumlein, Alan Dower. 1958. “Improvements in and relating to Sound-transmission, Sound-recording and Sound-reproducing Systems.” *Jaes* 6 (2): 91–98, 130.
+
+.. [Bracewell2000] Bracewell, Ronald N. 2000. *The Fourier Transform and its Applications*. Boston: McGraw Hill.
+
+.. [ColtonKress1983] Colton, D, and R Kress. 1983. *Integral Equation Methods in Scattering Theory*. New York: Wiley.
+
+.. [Donoho2009] Donoho, David L., Arian Maleki, Inam Ur Rahman, Morteza Shahram, and Victoria Stodden. 2009. “Reproducible Research in Computational Harmonic Analysis.” *Cse* 11 (1): 8–18.
+
+.. [Fazi2010] Fazi, Filippo M. 2010. “Sound Field Reproduction.” PhD thesis, University of Southampton.
+
+.. [FaziNelson2013] Fazi, Filippo M, and Philip A Nelson. 2013. “Sound field reproduction as an equivalent acoustical scattering problem.” *Jasa* 134 (5): 3721–9.
+
+.. [Frank2013] Frank, Matthias. 2013. “Phantom Sources using Multiple Loudspeakers.” PhD thesis, University of Music; Performing Arts Graz.
+
+.. [Gerzon1973] Gerzon, Michael A. 1973. “Periphony: With-Height Sound Reproduction.” *Jaes* 21 (1): 2–10.
+
+.. [GumerovDuraiswami2004] Gumerov, Nail A., and Ramani Duraiswami. 2004. *Fast Multipole Methods for the Helmholtz Equation in Three Dimensions*. Amsterdam: Elsevier.
+
+.. [Hamasaki2005] Hamasaki, Kimio, Koichiro Hiyama, and Hiraku Okumura. 2005. “The 22.2 Multichannel Sound System and Its Application.” In *Aes118*, Paper 6406.
+
+.. [Herrin2003] Herrin, D W, F Martinus, T W Wu, and A F Seybert. 2003. “A New Look at the High Frequency Boundary Element and Rayleigh Integral Approximations.” In *Noise & Vibration Conference and Exhibition*.
+
+.. [Ince2012] Ince, Darrel C., Leslie Hatton, and John Graham-Cumming. 2012. “The case for open computer programs.” *Nature* 482 (7386). Nature Publishing Group: 485–88.
+
+.. [LaxFeshbach1947] Lax, M., and Herman Feshbach. 1947. “On the Radiation Problem at High Frequencies.” *Jasa* 19 (4): 682–90.
+
+.. [Leakey1959] Leakey, D. M. 1959. “Some Measurements on the Effects of Interchannel Intensity and Time Differences in Two Channel Sound Systems.” *Jasa* 31 (7): 977–86.
+
+.. [Moncel1881] Moncel, Théodore du. 1881. “The international exhibition and congress of electricity at Paris.” *Nature*, no. October 20: 585–89.
+
+.. [MorseFeshbach1981] Morse, Philip M., and Herman Feshbach. 1981. *Methods of Theoretical Physics*. Minneapolis: Feshbach Publishing.
+
+.. [Pulkki1997] Pulkki, Ville. 1997. “Virtual Sound Source Positioning Using Vector Base Amplitude Panning.” *Jaes* 45 (6): 456–66.
+
+.. [SchultzSpors2014] Schultz, Frank, and Sascha Spors. 2014. “Comparing Approaches to the Spherical and Planar Single Layer Potentials for Interior Sound Field Synthesis.” *Acta* 100 (5): 900–911.
+
+.. [SporsAhrens2010] Spors, Sascha, and Jens Ahrens. 2010. “Reproduction of Focused Sources by the Spectral Division Method.” In *Isccsp*.
+
+.. [SporsZotter2013] Spors, Sascha, and Franz Zotter. 2013. “Spatial Sound Synthesis with Loudspeakers.” In *Cutting Edge in Spatial Audio, EAA Winter School*, 32–37.
+
+.. [Spors2011] Spors, Sascha, Vincent Kuscher, and Jens Ahrens. 2011. “Efficient realization of model-based rendering for 2.5-dimensional near-field compensated higher order Ambisonics.” In *Waspaa*, 61–64.
+
+.. [Spors2008] Spors, Sascha, Rudolf Rabenstein, and Jens Ahrens. 2008. “The Theory of Wave Field Synthesis Revisited.” In *Aes124*, Paper 7358.
+
+.. [Start1997] Start, Evert W. 1997. “Direct Sound Enhancement by Wave Field Synthesis.” PhD thesis, Technische Universiteit Delft.
+
+.. [SteinbergandSnow1934] Steinberg, JC, and William B Snow. 1934. “Symposium on wire transmission of symphonic music and its reproduction in auditory perspective: Physical Factors.” *Bell System Technical Journal* 13 (2): 245–58.
+
+.. [Verheijen1997] Verheijen, Edwin. 1997. “Sound Reproduction by Wave Field Synthesis.” PhD thesis, Technische Universiteit Delft.
+
+.. [Wierstorf2014] Wierstorf, Hagen. 2014. “Perceptual Assessment of Sound Field Synthesis.” PhD thesis, Technische Universität Berlin.
+
+.. [WierstorfSpors2012] Wierstorf, Hagen, and Sascha Spors. 2012. “Sound Field Synthesis Toolbox.” In *Aes132*, eBrief 50.
+
+.. [Wierstorf2013] Wierstorf, Hagen, Alexander Raake, and Sascha Spors. 2013. “Binaural assessment of multi-channel reproduction.” In *The Technology of Binaural Listening*, edited by J Blauert, 255–78. New York: Springer.
+
+.. [Williams1999] Williams, Earl G. 1999. *Fourier Acoustics*. San Diego: Academic Press.
+
+.. [Yon2003] Yon, Sylvain, Mickael Tanter, and Mathias Fink. 2003. “Sound focusing in rooms: The time-reversal approach.” *Jasa* 113 (3): 1533–43.
+
+.. [ZotterSpors2013] Zotter, Franz, and Sascha Spors. 2013. “Is sound field control determined at all frequencies? How is it related to numerical acoustics?” In *Aesc52*, Paper 1.3.
+
+.. vim: filetype=rst spell:

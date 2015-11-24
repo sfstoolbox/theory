@@ -1,0 +1,16 @@
+
+.. sec-intro::
+
+==============================
+What is sound field synthesis?
+==============================
+
+TODO: write a general introduction to sound field synthesis.
+
+.. toctree::
+    :maxdepth: 2
+
+    spatial_sound
+
+
+.. vim: filetype=rst spell:

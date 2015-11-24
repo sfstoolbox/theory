@@ -1,0 +1,17 @@
+.. _sec-theory:
+
+Mathematical fundamentals of sound field synthesis
+==================================================
+
+.. toctree::
+    :maxdepth: 2
+
+    definitions
+    problem
+    nfchoa
+    wfs
+    dimensionality
+    model_based_rendering
+    driving_functions
+
+.. vim: filetype=rst spell:

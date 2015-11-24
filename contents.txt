@@ -1,10 +1,17 @@
 .. _contents:
 
-=============================
-Sound Field Synthesis Toolbox
-=============================
+=========================
+Sound Field Synthesis ...
+=========================
+
+.. toctree::
+    :hidden:
+
+    index
 
 .. toctree::
     :maxdepth: 3
 
-    index
+    intro/index
+    theory/index
+    references/index

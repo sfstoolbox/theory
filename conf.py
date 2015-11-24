@@ -66,9 +66,9 @@ source_suffix = '.txt'
 master_doc = 'contents'
 
 # General information about the project. (substitutions)
-project = 'The Two!Ears Auditory Model'
-copyright = '2015, Two!Ears team'
-author = 'Two!Ears team'
+project = 'Sound Field Synthesis Toolbox'
+copyright = '2015, SFS Toolbox team'
+author = 'SFS Toolbox team'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -137,7 +137,7 @@ todo_include_todos = False
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #html_theme = "sphinx_rtd_theme"
-html_theme = "twoears"
+html_theme = "sfs"
 
 # Theme options are theme-specific and customize the look and feel of a theme
 # further.  For a list of options available for each theme, see the
@@ -153,16 +153,16 @@ html_theme_path = ["_theme",sphinx_rtd_theme.get_html_theme_path()]
 #html_title = None
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title = "Back to twoears.eu"
+html_short_title = "Sound Field Synthesis Toolbox"
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
-html_logo = "img/twoears.png"
+html_logo = "img/sfs.png"
 
 # The name of an image file (within the static path) to use as favicon of the
 # docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
 # pixels large.
-html_favicon = "twoears.ico"
+html_favicon = "sfs.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
@@ -230,29 +230,13 @@ html_show_sphinx = False
 #html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'TwoEars-doc'
+htmlhelp_basename = 'sfs-doc'
 
 # Appended to every page
 rst_epilog = rst_epilog + """
 .. |TwoearsMailingList| replace:: `Two!Ears mailing list`_
-.. |TwoEars| replace:: Two!Ears
-.. |TwoEarsModel| replace:: :ref:`Two!Ears Auditory Model <index>`
-.. |AFE| replace:: :ref:`sec-afe`
-.. |BinSim| replace:: :ref:`sec-binsim`
-.. |robot| replace:: :ref:`sec-robot`
-.. |database| replace:: :ref:`sec-database`
-.. |blackboard| replace:: :ref:`sec-blackboard`
-.. |amtoolbox| replace:: `Auditory Modeling Toolbox`_
 .. |LatestVersion| replace:: `the latest version`_
 .. _Two!Ears mailing list: https://groups.google.com/d/forum/twoears
-.. _Two!Ears: https://github.com/TWOEARS/twoears
-.. _Two!Ears Auditory Model: https://github.com/TWOEARS/twoears
-.. _Two!Ears Binaural Simulator: https://github.com/TWOEARS/binaural-simulator
-.. _Two!Ears Auditory Front-End: https://github.com/TWOEARS/auditory-front-end
-.. _Two!Ears Blackboard System: https://github.com/TWOEARS/blackboard-system
-.. _Two!Ears Database: https://dev.qu.tu-berlin.de/projects/twoears-database
-.. _Two!Ears Robotic Platform: https://github.com/TWOEARS
-.. _Auditory Modeling Toolbox: http://amtoolbox.sf.net
 .. _the latest version: https://github.com/TWOEARS/TwoEars/archive/master.zip
 """
 
@@ -276,8 +260,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'twoears-auditory-model.tex', u'The Two!Ears Auditory Model Documentation',
-   u'Two!Ears team', 'manual'),
+  (master_doc, 'sfs-toolbox.tex', u'Sound Field Synthesis Toolbox',
+   u'SFS Toolbox team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
@@ -306,7 +290,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'TwoEars-doc', u'The Two!Ears Auditory Model Documentation',
+    (master_doc, 'sfs-toolbox', u'Sound Field Synthesis Toolbox',
      [author], 1)
 ]
 
@@ -320,8 +304,9 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  (master_doc, 'TwoEars-doc', u'The Two!Ears Auditory Model Documentation',
-   author, 'Two!Ears team', 'Everything you need to know about Two!Ears',
+  (master_doc, 'sfs-toolbox', u'Sound Field Synthesis Toolbox',
+   author, 'SFS Toolbox team',
+   'Everything you need to know about Sound Field Synthesis',
    'Miscellaneous'),
 ]
 

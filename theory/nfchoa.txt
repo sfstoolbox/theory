@@ -1,0 +1,220 @@
+.. _sec-nfchoa:
+
+Solution for Special Geometries: Near-Field Compensated Higher Order Ambisonics and Spectral Division Method
+------------------------------------------------------------------------------------------------------------
+
+The integral equation  states a Fredholm equation of first kind with a
+Green’s function as kernel. This type of equation can be solved in a
+straightforward manner for geometries that have a complete set of
+orthogonal basis functions. Then the involved functions are expanded
+into the basis functions :math:`\psi_n` as [MorseFeshbach1981]_ (940)
+
+.. math::
+
+   G({{\mathbf{x}}}-{{\mathbf{x}}}_0,\omega) = \sum_{n=1}^N \tilde{G}_n(\omega) \,
+           \psi_n^*({{\mathbf{x}}}_0) \psi_n({{\mathbf{x}}})
+       \label{eq:G_expansion}
+
+.. math::
+
+   D({{\mathbf{x}}}_0,\omega) = \sum_{n=1}^N \tilde{D}_n(\omega) \,
+           \psi_n({{\mathbf{x}}}_0)
+       \label{eq:D_expansion}
+
+.. math::
+
+   S({{\mathbf{x}}},\omega) = \sum_{n=1}^N \tilde{S}_n(\omega) \,
+           \psi_n({{\mathbf{x}}}) {\;,}\label{eq:S_expansion}
+
+where :math:`\tilde{G}_n, \tilde{D}_n, \tilde{S}_n` denote the series
+expansion coefficients and \ :math:`\langle\psi_n, \psi_{n'}\rangle = 0`
+for :math:`n \ne n'`. Introducing these three equations into  one gets
+
+.. math:: \tilde{D}_n(\omega) = \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)} {\;.}\label{eq:D_HOA}
+
+This means that the Fredholm equation  states a convolution. For
+geometries where the required orthogonal basis functions exist, follows
+directly via the convolution theorem [ArfkenWeber2005]_ (1013).
+Due to the division of the desired sound field by the spectrum of
+the Green’s function this kind of approach has been named SDM [AhrensSpors2010]_.
+For circular and spherical geometries the term NFC-HOA is
+more common due to the corresponding basis functions. “Near-field
+compensated” highlights the usage of point sources as secondary sources
+in contrast to Ambisonics and HOA that assume plane waves as secondary
+sources.
+
+The challenge is to find a set of basis functions for a given geometry.
+In the following paragraphs three simple geometries and their widely
+known sets of basis functions will be discussed.
+
+Spherical Geometries
+~~~~~~~~~~~~~~~~~~~~
+
+The spherical harmonic functions constitute a basis for a spherical
+secondary source distribution in :math:`{\mathbb{R}}^3` and can be
+defined as [GumerovDuraiswami2004]_ (12.153), note that :math:`\sin\theta` is
+used here instead of :math:`\cos\theta` due to the use of another
+coordinate system, compare Figure 2.1 from Gumerov and Duraiswami and
+Figure ...:
+
+.. math::
+
+   \begin{gathered}
+       Y_n^m(\theta,\phi) = (-1)^m \sqrt{\frac{(2n+1)(n-|m|)!}{4{\pi}(n+|m|)!}}
+       P_n^{|m|}(\sin\theta) {\mathrm{e}}^{{\mathrm{i}}m\phi} {\;,}\label{eq:Y} \\
+       n = 0,1,2,... \;\;\;\;\;\; m = -n,...,n
+       \notag\end{gathered}
+
+where :math:`P_n^{|m|}` are the associated Legendre functions. Note that
+this function may also be defined in a slightly different way, omitting
+the :math:`(-1)^m` factor, see for example [Williams1999]_ (6.20)
+
+The complex conjugate of :math:`Y_n^m` is given by negating the degree
+:math:`m` as
+
+.. math:: Y_n^m(\theta,\phi)^* = Y_n^{-m}(\theta,\phi) {\;.}\label{eq:Y_complex_conjugate}
+
+For a spherical secondary source distribution with a radius of
+:math:`R_0` the sound field can be calculated by a convolution along the
+surface. The driving function is then given by a simple division
+as [Ahrens2012]_ (3.21, note the :math:`\frac{1}{2{\pi}}` term is wrong
+in (3.21) and omitted here, compare the
+`errata <errata>`__\ http://www.soundfieldsynthesis.org/errata/ and
+[SchultzSpors2014]_ (24)):
+
+.. math::
+
+   \begin{gathered}
+       D_\text{spherical}(\theta_0,\phi_0,\omega) = \\ 
+       \frac{1}{R_0^{\,2}}
+       \sum_{n=0}^\infty \sum_{m=-n}^n \sqrt{\frac{2n+1}{4{\pi}}}
+       \frac{\breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\omega)}
+       {\breve{G}_n^0(\frac{{\pi}}{2},0,\omega)} Y_n^m(\theta_0,\phi_0) {\;,}\label{eq:D_spherical}\end{gathered}
+
+where :math:`\breve{S}_n^m` denote the spherical expansion coefficients
+of the source model, :math:`\theta_\text{s}` and :math:`\phi_\text{s}`
+its directional dependency, and :math:`\breve{G}_n^0` the spherical
+expansion coefficients of a secondary point source that is located at
+the north pole of the sphere with :math:`{{\mathbf{x}}}_0 =
+(0,0,R_0)` and is given as [SchultzSpors2014]_ (25)
+
+.. math::
+
+   \breve{G}_n^0(\tfrac{{\pi}}{2},0,\omega) =
+       -{\mathrm{i}}{\frac{\omega}{c}}\sqrt{\frac{2n+1}{4{\pi}}} {\,h_{n}^{(2)}\!}\left({\frac{\omega}{c}}R_0\right) {\;,}\label{eq:G_spherical}
+
+where :math:`{\,h_{n}^{(2)}\!}` describes the spherical Hankel function
+of :math:`n`-th order and second kind.
+
+Circular Geometries
+~~~~~~~~~~~~~~~~~~~
+
+The following functions build a basis in :math:`{\mathbb{R}}^2` for a
+circular secondary source distribution [Williams1999]_
+
+.. math:: \Phi_m(\phi) = {\mathrm{e}}^{{\mathrm{i}}m\phi} {\;.}\label{eq:circular_harmonics}
+
+The complex conjugate of :math:`\Phi_m` is given by negating the degree
+:math:`m` as
+
+.. math:: \Phi_m(\phi)^* = \Phi_{-m}(\phi) {\;.}\label{eq:Phi_complex_conjugate}
+
+For a circular secondary source distribution with a radius of
+:math:`R_0` the driving function can be calculated by a convolution
+along the surface of the circle as explicitly shown by [AhrensSpors2009a]_
+and is then given as
+
+.. math::
+
+   D_\text{circular}(\phi_0,\omega) = \frac{1}{2{\pi}R_0} \sum_{m=-\infty}^\infty 
+       \frac{\breve{S}_m(\phi_\text{s},r_\text{s},\omega)}{\breve{G}_m(0,\omega)} \,
+       \Phi_m(\phi_0) {\;,}\label{eq:D_circular}
+
+where :math:`\breve{S}_m` denotes the circular expansion coefficients
+for the source model, :math:`\phi_\text{s}` its directional dependency,
+and :math:`\breve{G}_m` the circular expansion coefficients for a
+secondary line source with
+
+.. math:: \breve{G}_m(0,\omega) = -\frac{{\mathrm{i}}}{4} {\,H_{m}^{(2)}\!}\left({\frac{\omega}{c}}R_0\right) {\;,}\label{eq:G_circular}
+
+where :math:`{\,H_{m}^{(2)}\!}` describes the Hankel function of
+:math:`m`-th order and second kind.
+
+Planar Geometries
+~~~~~~~~~~~~~~~~~
+
+The basis functions for a planar secondary source distribution located
+on the :math:`xz`-plane in :math:`{\mathbb{R}}^3` are given as
+
+.. math:: \Lambda(k_x,k_z,x,z) = {\mathrm{e}}^{-{\mathrm{i}}(k_x x + k_z z)} {\;,}\label{eq:planar_harmonics}
+
+where :math:`k_x`, :math:`k_z` are entries in the wave vector
+:math:`{{\mathbf{k}}}` with :math:`k^2 =
+({\frac{\omega}{c}})^2`. The complex conjugate is given by negating
+:math:`k_x` and :math:`k_z` as
+
+.. math:: \Lambda(k_x,k_z,x,z)^* = \Lambda(-k_x,-k_z,x,z) {\;.}
+
+For an infinitely long secondary source distribution located on the
+:math:`xz`-plane the driving function can be calculated by a
+two-dimensional convolution along the plane as [Ahrens2012]_ (3.65)
+
+.. math::
+
+   D_\text{planar}(x_0,\omega) = \frac{1}{4{\pi}^2} \iint_{-\infty}^\infty
+       \frac{\breve{S}(k_x,y_\text{s},k_z,\omega)}{\breve{G}(k_x,0,k_z,\omega)}
+       \Lambda(k_x,x_0,k_z,z_0) \, {\mathop{\mathrm{d}{k_x}}} {\mathop{\mathrm{d}{k_z}}} {\;,}\label{eq:D_planar}
+
+where :math:`\breve{S}` denotes the planar expansion coefficients for
+the source model, :math:`y_\text{s}` its positional dependency, and
+:math:`\breve{G}` the planar expansion coefficients of a secondary point
+source with [SchultzSpors2014]_ (65)
+
+.. math::
+
+   \breve{G}(k_x,0,k_z,\omega) = -\frac{{\mathrm{i}}}{2}
+       \frac{1}{\sqrt{({\frac{\omega}{c}})^2-k_x^2-k_z^2}}
+       {\;,}\label{G_planar}
+
+for :math:`({\frac{\omega}{c}})^2 > (k_x^2+k_z^2)`.
+
+For the planar and the following linear geometries the Fredholm equation
+is solved for a non compact space :math:`V`, which leads to an infinite
+and non-denumerable number of basis functions as opposed to the
+denumerable case for compact spaces [SchultzSpors2014]_.
+
+Linear Geometries
+~~~~~~~~~~~~~~~~~
+
+The basis functions for a linear secondary source distribution located
+on the :math:`x`-axis are given as
+
+.. math:: \chi(k_x,x) = {\mathrm{e}}^{-{\mathrm{i}}k_x x} {\;.}\label{eq:linear_harmonics}
+
+The complex conjugate is given by negating :math:`k_x` as
+
+.. math:: \chi(k_x,x)^* = \chi(-k_x,x) {\;.}
+
+For an infinitely long secondary source distribution located on the
+:math:`x`-axis the driving function for :math:`{\mathbb{R}}^2` can be
+calculated by a convolution along this axis as (compare [Ahrens2012]_ (3.73))
+
+.. math::
+
+   D_\text{linear}(x_0,\omega) = \frac{1}{2{\pi}} \int_{-\infty}^\infty
+       \frac{\breve{S}(k_x,y_\text{s},\omega)}{\breve{G}(k_x,0,\omega)}
+       \chi(k_x,x_0) \, {\mathop{\mathrm{d}{k_x}}} {\;,}\label{eq:D_linear}
+
+where :math:`\breve{S}` denotes the linear expansion coefficients for
+the source model, :math:`y_\text{s}`, :math:`z_\text{s}` its positional
+dependency, and :math:`\breve{G}` the linear expansion coefficients of a
+secondary line source with
+
+.. math::
+
+   \breve{G}(k_x,0,\omega) = -\frac{{\mathrm{i}}}{2} \frac{1}{\sqrt{({\frac{\omega}{c}})^2-k_x^2}}
+       {\;,}\label{eq:G_linear}
+
+for :math:`0<|k_x|<|{\frac{\omega}{c}}|`.
+
+.. vim: filetype=rst spell:
