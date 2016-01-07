@@ -7,7 +7,7 @@ The integral equation  states a Fredholm equation of first kind with a
 Green’s function as kernel. This type of equation can be solved in a
 straightforward manner for geometries that have a complete set of
 orthogonal basis functions. Then the involved functions are expanded
-into the basis functions :math:`\psi_n` as [MorseFeshbach1981]_ (940)
+into the basis functions :math:`\psi_n` as [MorseFeshbach1981]_, eq. (940)
 
 .. math::
 

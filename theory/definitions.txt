@@ -26,7 +26,8 @@ Fourier transformation
 ''''''''''''''''''''''
 
 Let :math:`s` be an absolute integrable function, :math:`t,\omega` real
-numbers, then the temporal Fourier transform is defined as [Bracewell2000]_
+numbers, then the temporal Fourier transform is defined after [Bracewell2000]_
+as
 
 .. math::
 

@@ -37,6 +37,9 @@ needs_sphinx = '1.3'
 #extensions = ['sphinx.ext.autodoc','sphinx.ext.mathjax','rst2pdf.pdfbuilder']
 extensions = ['sphinx.ext.autodoc','sphinx.ext.mathjax']
 
+# MathJax folder is in _static
+#mathjax_path = 'MathJax/MathJax.js'
+
 # Enable numbering of figures and tables
 numfig = True
 
@@ -67,7 +70,7 @@ master_doc = 'contents'
 
 # General information about the project. (substitutions)
 project = 'Sound Field Synthesis Toolbox'
-copyright = '2015, SFS Toolbox team'
+copyright = '2016, SFS Toolbox team'
 author = 'SFS Toolbox team'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -238,6 +241,8 @@ rst_epilog = rst_epilog + """
 .. |LatestVersion| replace:: `the latest version`_
 .. _Two!Ears mailing list: https://groups.google.com/d/forum/twoears
 .. _the latest version: https://github.com/TWOEARS/TwoEars/archive/master.zip
+:math:`\\renewcommand{\\vec}[1]{\\mathbf{#1}}`
+:math:`\\newcommand{\\x}{\\vec{x}}`
 """
 
 # -- Options for LaTeX output ---------------------------------------------
