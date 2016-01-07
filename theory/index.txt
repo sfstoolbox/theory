@@ -114,8 +114,8 @@ described and finally it is shown how to derive the driving function
 
 .. _sec-nfchoa:
 
-Solution for Special Geometries: NFC-HOA and SDM
-------------------------------------------------
+Solution for Special Geometries: |NFC-HOA| and |SDM|
+----------------------------------------------------
 
 The integral equation  states a Fredholm equation of first kind with a Green’s
 function as kernel. This type of equation can be solved in a straightforward
@@ -381,8 +381,8 @@ for :math:`0<|k_x|<|\frac{\omega}{c}|`.
 
 .. _sec-wfs:
 
-High Frequency Approximation: WFS
----------------------------------
+High Frequency Approximation: |WFS|
+-----------------------------------
 
 The single-layer potential  satisfies the homogeneous Helmholtz equation both in
 the interior and exterior regions :math:`V` and :math:`V^*
@@ -430,7 +430,7 @@ the secondary sources, compare the assumptions made before (15) in
 a more explicit way. Additionally, only one part of the surface is active: the
 area that is illuminated from the incident field of the source model. With this
 approximation also non-convex secondary source distributions can be used with
-WFS – compare Figure and appendix in [LaxFeshbach1947]_. This was neglected in
+|WFS| – compare Figure and appendix in [LaxFeshbach1947]_. This was neglected in
 most of the literature so far, which postulates convex secondary source
 distributions, e.g. [Spors2008]_.
 
@@ -519,7 +519,7 @@ given as [Ahrens2012]_ (3.77)
         {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \,
         {\mathop{\mathrm{d}{k_x}}} \;.
 
-A driving function for the situation in the context of WFS and arbitrary
+A driving function for the situation in the context of |WFS| and arbitrary
 geometries of the secondary source distribution can be achieved by applying the
 far-field approximation [Williams1999]_ (4.23).  :math:`{\,H_{0}^{(2)}\!}(\zeta)
 \approx \sqrt{\frac{2{\mathrm{i}}}{{\pi}\zeta}}
@@ -553,7 +553,7 @@ the case results in
         {\mathop{\mathrm{d}{A}}}(\x_0) \;.
 
 If the amplitude correction is further restricted to one reference point
-:math:`\xref`, the driving function for WFS can be formulated as
+:math:`\xref`, the driving function for |WFS| can be formulated as
 
 .. math::
     :label: D25D_wfs
@@ -797,8 +797,8 @@ sources. [AhrensSpors2010]_ in addition have considered Spectral Division Method
 driving functions for planar secondary source distributions.
 
 The driving functions are given in the temporal-frequency domain. For some of
-them, especially in the case of WFS an analytic solution in the temporal domain
-exists and is presented. For NFC-HOA, temporal-domain implementations for the
+them, especially in the case of |WFS| an analytic solution in the temporal domain
+exists and is presented. For |NFC-HOA|, temporal-domain implementations for the
 cases are available for a plane wave and a point source as source models. The
 derivation of the implementation is not explicitly shown here, but is described
 in [Spors2011]_.
@@ -884,7 +884,7 @@ where :math:`\phi_k` denotes the azimuth direction of the plane wave and
 
 The advantage of this result is that it can be implemented by a simple weighting
 and delaying of the signal, plus one convolution with :math:`h(t)`. The same
-holds for the driving functions of WFS as presented in the next section.
+holds for the driving functions of |WFS| as presented in the next section.
 
 .. _sec-driving-functions-nfchoa-sdm-point-source:
 
@@ -982,9 +982,9 @@ amplitudes to the secondary sources, compare Fig.2a in [SporsAhrens2010]_. Since
 the evanescent waves decay rapidly and are hence not influencing the perception,
 they can easily be omitted. For corresponding driving functions for focused
 sources without the evanescent part of the sound field see [SporsAhrens2010]_
-for SDM and [AhrensSpors2009b]_ for NFC-HOA.
+for |SDM| and [AhrensSpors2009b]_ for |NFC-HOA|.
 
-In the SFS Toolbox only focused sources in WFS are considered at the moment.
+In the SFS Toolbox only focused sources in |WFS| are considered at the moment.
 
 
 .. _sec-driving-functions-wfs:
@@ -992,12 +992,12 @@ In the SFS Toolbox only focused sources in WFS are considered at the moment.
 Wave Field Synthesis
 ~~~~~~~~~~~~~~~~~~~~
 
-In the following, the driving functions for WFS in the frequency and temporal
+In the following, the driving functions for |WFS| in the frequency and temporal
 domain for selected source models are presented. The temporal domain functions
 consist of a filtering of the source signal and a weighting and delaying of the
 individual secondary source signals. This property allows for a very efficient
-implementation of WFS driving functions in the temporal domain. It is one of the
-main advantages of WFS in comparison to most of the NFC-HOA, SDM solutions
+implementation of |WFS| driving functions in the temporal domain. It is one of the
+main advantages of |WFS| in comparison to most of the |NFC-HOA|, |SDM| solutions
 discussed above.
 
 .. _sec-driving-functions-wfs-plane-wave:
@@ -1049,7 +1049,7 @@ and
 
     h_\twohalfD(t) = {\mathcal{F}^{-1}\left\{\sqrt{{\mathrm{i}}\frac{\omega}{c}}\right\}}
 
-denote the so called pre-equalization filters in WFS.
+denote the so called pre-equalization filters in |WFS|.
 
 The window function :math:`w(\x_0)` for a plane wave as source model can be
 calculated after [Spors2008]_
@@ -1104,7 +1104,7 @@ Under the assumption of :math:`|\x_0-\xs| \gg 1` and can be approximated by
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
         {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
 
-which is the traditional formulation of a point source in WFS as given for the
+which is the traditional formulation of a point source in |WFS| as given for the
 case in [Verheijen1997]_ (2.22a), whereby :math:`r` corresponds to
 :math:`|\x_0-\xs|` and :math:`\cos\varphi` to
 :math:`\frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}`) It has the advantage that its
@@ -1293,7 +1293,7 @@ The window function :math:`w(\x_0)` for a focused source can be calculated as
 Local Sound Field Synthesis
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The reproduction accuracy of WFS is limited due to practical aspects.  For the
+The reproduction accuracy of |WFS| is limited due to practical aspects.  For the
 audible frequency range the desired sound field can not be synthesized
 aliasing-free over an extended listening area, which is surrounded by a discrete
 ensemble of individually driven loudspeakers.  However, it is suitable for
@@ -1302,7 +1302,7 @@ listening region while stronger artifacts outside are permitted. The implemented
 Local Wave Field Synthesis method utilizes focused sources as a distribution of
 virtual loudspeakers which are placed more densely around the local listening
 area. These virtual loudspeakers can be driven by conventional SFS techniques,
-like e.g. WFS or NFC-HOA. The results are similar to band-limited NFC-HOA, with
+like e.g. |WFS| or |NFC-HOA|. The results are similar to band-limited |NFC-HOA|, with
 the difference that the form and position of the enhanced area can freely be
 chosen within the listening area.
 
@@ -1311,7 +1311,7 @@ their positions :math:`{\x_\text{fs}}` are subsumed under
 :math:`\mathcal{X}_{\mathrm{fs}}`. Therefore, each focused source is driven
 individually by :math:`D_\text{l}({\x_\text{fs}}, \omega)`, which in principle
 can be any driving function for real loudspeakers mentioned in previous
-sections. At the moment however, only WFS and NFC-HOA driving functions are
+sections. At the moment however, only |WFS| and |NFC-HOA| driving functions are
 supported. The resulting driving function for a loudspeaker located at
 :math:`\x_0` reads
 
@@ -1326,7 +1326,7 @@ which is superposition of the driving function
 :math:`D_{\mathrm{fs}}(\x_0,{\x_\text{fs}},\omega)` reproducing a single focused
 source at :math:`{\x_\text{fs}}` weighted by :math:`D_\text{l}({\x_\text{fs}},
 \omega)`.  Former is derived by replacing :math:`\xs` with
-:math:`{\x_\text{fs}}` in the WFS driving functions and for focused sources.
+:math:`{\x_\text{fs}}` in the |WFS| driving functions and for focused sources.
 This yields
 
 .. math::
@@ -1360,6 +1360,6 @@ driving signals
 
 while :math:`d_{\mathrm{fs}}(\x_0,{\x_\text{fs}}, t)` is derived analogously to
 from or . At the moment :math:`d_{\mathrm l}({\x_\text{fs}}, t)` does only
-support driving functions from WFS.
+support driving functions from |WFS|.
 
 .. vim: filetype=rst spell:

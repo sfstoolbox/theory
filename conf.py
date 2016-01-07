@@ -237,12 +237,9 @@ htmlhelp_basename = 'sfs-doc'
 
 # Appended to every page
 rst_epilog = rst_epilog + """
-.. |TwoearsMailingList| replace:: `Two!Ears mailing list`_
+.. |SFS Toolbox|     replace:: SFS Tooblox
 .. |LatestVersion| replace:: `the latest version`_
-.. _Two!Ears mailing list: https://groups.google.com/d/forum/twoears
 .. _the latest version: https://github.com/TWOEARS/TwoEars/archive/master.zip
-:math:`\\renewcommand{\\vec}[1]{\\mathbf{#1}}`
-:math:`\\newcommand{\\x}{\\vec{x}}`
 """
 
 # -- Options for LaTeX output ---------------------------------------------
