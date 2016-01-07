@@ -27,6 +27,8 @@ References
 
 .. [ColtonKress1983] Colton, D, and R Kress. 1983. *Integral Equation Methods in Scattering Theory*. New York: Wiley.
 
+.. [ColtonKress1998] D. Colton and R. Kress, *Inverse Acoustic and Electromagnetic Scattering Theory*, (Springer, New York, 1998).
+
 .. [Donoho2009] Donoho, David L., Arian Maleki, Inam Ur Rahman, Morteza Shahram, and Victoria Stodden. 2009. “Reproducible Research in Computational Harmonic Analysis.” *Cse* 11 (1): 8–18.
 
 .. [Fazi2010] Fazi, Filippo M. 2010. “Sound Field Reproduction.” PhD thesis, University of Southampton.
