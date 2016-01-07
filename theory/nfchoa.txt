@@ -1,7 +1,7 @@
 .. _sec-nfchoa:
 
-Solution for Special Geometries: Near-Field Compensated Higher Order Ambisonics and Spectral Division Method
-------------------------------------------------------------------------------------------------------------
+Solution for Special Geometries: NFC-HOA and SDM
+------------------------------------------------
 
 The integral equation  states a Fredholm equation of first kind with a
 Green’s function as kernel. This type of equation can be solved in a

@@ -1,7 +1,7 @@
 .. _sec-wfs:
 
-High Frequency Approximation: Wave Field Synthesis
---------------------------------------------------
+High Frequency Approximation: WFS
+---------------------------------
 
 The single-layer potential  satisfies the homogeneous Helmholtz equation
 both in the interior and exterior regions :math:`V` and :math:`V^*
