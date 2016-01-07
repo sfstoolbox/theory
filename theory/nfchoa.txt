@@ -36,11 +36,11 @@ This means that the Fredholm equation  states a convolution. For
 geometries where the required orthogonal basis functions exist, follows
 directly via the convolution theorem [ArfkenWeber2005]_ (1013).
 Due to the division of the desired sound field by the spectrum of
-the Green’s function this kind of approach has been named SDM [AhrensSpors2010]_.
-For circular and spherical geometries the term NFC-HOA is
+the Green’s function this kind of approach has been named |SDM| [AhrensSpors2010]_.
+For circular and spherical geometries the term |NFC-HOA| is
 more common due to the corresponding basis functions. “Near-field
 compensated” highlights the usage of point sources as secondary sources
-in contrast to Ambisonics and HOA that assume plane waves as secondary
+in contrast to Ambisonics and |HOA| that assume plane waves as secondary
 sources.
 
 The challenge is to find a set of basis functions for a given geometry.
