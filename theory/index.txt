@@ -36,7 +36,7 @@ positive :math:`z`-values.
 
 .. _fig-coordinate-system:
 
-.. figure:: img/coordinate_system.png
+.. figure:: fig01/coordinate_system.png
     :align: center
 
     Coordinate system used in this document. The vector :math:`x` can also be
@@ -78,13 +78,19 @@ In the same way the inverse temporal Fourier transform is defined as
 Problem statement
 -----------------
 
-The problem of sound field synthesis can be formulated after
-as follows. Assume a volume :math:`V \subset \mathbb{R}^n`
-which is free of any sources and sinks, surrounded by a distribution of
-monopole sources on its surface :math:`\partial V`. The pressure
-:math:`P(\x,\omega)` at a point :math:`\x\in V`
-is then given by the *single-layer potential* (compare p. 39 in
-[ColtonKress1998]_)
+.. _fig-geometry:
+
+.. figure:: fig02/geometry.png
+    :align: center
+
+    Illustration of the geometry used to discuss the physical fundamentals of
+    sound field synthesis and the single-layer potential.
+
+The problem of sound field synthesis can be formulated after as follows. Assume
+a volume :math:`V \subset \mathbb{R}^n` which is free of any sources and sinks,
+surrounded by a distribution of monopole sources on its surface :math:`\partial
+V`. The pressure :math:`P(\x,\omega)` at a point :math:`\x\in V` is then given
+by the *single-layer potential* (compare p. 39 in [ColtonKress1998]_)
 
 .. math::
     :label: single-layer
