@@ -1,5 +1,9 @@
 .. _sec-nfchoa:
 
+.. math::
+    \renewcommand{\vec}[1]{\mathbf{#1}}
+    \newcommand{\x}{\vec{x}}
+
 Solution for Special Geometries: NFC-HOA and SDM
 ------------------------------------------------
 
@@ -10,27 +14,33 @@ orthogonal basis functions. Then the involved functions are expanded
 into the basis functions :math:`\psi_n` as [MorseFeshbach1981]_, eq. (940)
 
 .. math::
+    :label: G_expansion
 
-   G({{\mathbf{x}}}-{{\mathbf{x}}}_0,\omega) = \sum_{n=1}^N \tilde{G}_n(\omega) \,
-           \psi_n^*({{\mathbf{x}}}_0) \psi_n({{\mathbf{x}}})
-       \label{eq:G_expansion}
-
-.. math::
-
-   D({{\mathbf{x}}}_0,\omega) = \sum_{n=1}^N \tilde{D}_n(\omega) \,
-           \psi_n({{\mathbf{x}}}_0)
-       \label{eq:D_expansion}
+    G(\x-\x_0,\omega) = \sum_{n=1}^N \tilde{G}_n(\omega) \,
+        \psi_n^*(\x_0) \psi_n(\x)
 
 .. math::
+    :label: D_expansion
 
-   S({{\mathbf{x}}},\omega) = \sum_{n=1}^N \tilde{S}_n(\omega) \,
-           \psi_n({{\mathbf{x}}}) {\;,}\label{eq:S_expansion}
+    D(\x_0,\omega) = \sum_{n=1}^N \tilde{D}_n(\omega) \,
+        \psi_n(\x_0)
+
+.. math::
+    :label: S_expansion
+
+    S(\x,\omega) = \sum_{n=1}^N \tilde{S}_n(\omega) \,
+        \psi_n(\x) \;,
 
 where :math:`\tilde{G}_n, \tilde{D}_n, \tilde{S}_n` denote the series
 expansion coefficients and \ :math:`\langle\psi_n, \psi_{n'}\rangle = 0`
-for :math:`n \ne n'`. Introducing these three equations into  one gets
+for :math:`n \ne n'`. Introducing these three equations
+into :eq:`single_layer` one gets
 
-.. math:: \tilde{D}_n(\omega) = \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)} {\;.}\label{eq:D_HOA}
+.. math::
+    :label: eq-D_HOA
+
+    \tilde{D}_n(\omega) =
+        \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)} \;.
 
 This means that the Fredholm equation  states a convolution. For
 geometries where the required orthogonal basis functions exist, follows
@@ -63,7 +73,8 @@ Figure ...:
        Y_n^m(\theta,\phi) = (-1)^m \sqrt{\frac{(2n+1)(n-|m|)!}{4{\pi}(n+|m|)!}}
        P_n^{|m|}(\sin\theta) {\mathrm{e}}^{{\mathrm{i}}m\phi} {\;,}\label{eq:Y} \\
        n = 0,1,2,... \;\;\;\;\;\; m = -n,...,n
-       \notag\end{gathered}
+       \notag
+   \end{gathered}
 
 where :math:`P_n^{|m|}` are the associated Legendre functions. Note that
 this function may also be defined in a slightly different way, omitting
@@ -95,7 +106,7 @@ where :math:`\breve{S}_n^m` denote the spherical expansion coefficients
 of the source model, :math:`\theta_\text{s}` and :math:`\phi_\text{s}`
 its directional dependency, and :math:`\breve{G}_n^0` the spherical
 expansion coefficients of a secondary point source that is located at
-the north pole of the sphere with :math:`{{\mathbf{x}}}_0 =
+the north pole of the sphere with :math:`\x_0 =
 (0,0,R_0)` and is given as [SchultzSpors2014]_ (25)
 
 .. math::
