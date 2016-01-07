@@ -1,11 +1,3 @@
-*.aux
-*.swp
-*.bbl
-*.bcf
-*.blg
-*.dvi
-*.log
-*.out
-*.run.xml
-*.toc
+_build/
 *.pdf
+*.pyc
