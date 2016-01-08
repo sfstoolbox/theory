@@ -14,15 +14,14 @@ ___/   / ___/  Sound Field Synthesis Toolbox 2.1.0
   _   _ _
  / \ / / \
  \_ _|_\_
-   \ |   \ 
+   \ |   \
  \_/ | \_/  Sound Field Synthesis Toolbox 2.1.0
 
 
-      
-       
+
        _
    _ _|_  _
-  \   |  \  
+  \   |  \
   _\  |  _\  Sound Field Synthesis Toolbox 2.1.0
 
 
@@ -30,11 +29,33 @@ ___/   / ___/  Sound Field Synthesis Toolbox 2.1.0
        _
    _ _|_ _
   _\  | _\  Sound Field Synthesis Toolbox 2.1.0
-  
- 
+
+
 
 
   __  __ __
  |__ |_ |__
   __||   __| Sound Field Synthesis Toolbox 2.1.0
+
+
+         ##
+        #
+  ###  ###  ####
+ ##  #  #  ##   #
+  ###   #   ###
+ #  ##  # #   ##
+  ###   #  ####
+
+
+
+       ##
+  ### #   ###
+ ##   ## ##
+   ## #    ##
+ ###  #  ###   Sound Field Synthesis Toolbox 2.1.0
+
+
+       ▄▄
+ ▄█▀▀ █▄ ▄█▀▀ 
+ ▄▄█▀ █  ▄▄█▀  Sound Field Synthesis Toolbox 2.1.0
 
