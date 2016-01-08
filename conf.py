@@ -35,7 +35,7 @@ needs_sphinx = '1.3'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 #extensions = ['sphinx.ext.autodoc','sphinx.ext.mathjax','rst2pdf.pdfbuilder']
-extensions = ['sphinx.ext.autodoc','sphinx.ext.mathjax']
+extensions = ['sphinx.ext.autodoc','nbsphinx','sphinx.ext.mathjax']
 
 # MathJax folder is in _static
 #mathjax_path = 'MathJax/MathJax.js'
@@ -104,7 +104,7 @@ html_context = {'versions': [('1.0', '1.0/'), ('latest', 'latest/')],
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build']
+exclude_patterns = ['_build', '02_theory_of_sound_field_synthesis']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
