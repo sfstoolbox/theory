@@ -455,7 +455,7 @@ character the solution of the driving function  does not depend on the geometry
 of the secondary sources. This dependency applies to the direct solutions
 presented in Section.
 
-.. _fig-geometry:
+.. _fig-convex-concave-array:
 
 .. figure:: fig03/placeholder.png
     :align: center
@@ -497,16 +497,16 @@ sources setups would be a sphere or a plane.
 2.5D Synthesis
 ~~~~~~~~~~~~~~
 
-.. _fig-geometry:
+.. _fig-sound-field-dimensionality:
 
 .. figure:: fig04/sound_field_dimensionality.png
     :align: center
 
     Sound pressure in decibel for secondary source distributions with different
     dimensionality all driven by the same signals. The sound pressure is color
-    coded, lighter color corresponds to lower pressure. In the 3D case a pla-
-    nar distribution of point sources is ap- plied, in the 2.5D case a linear
-    distribu- tion of point sources, and in the 2D case a linear distribution of
+    coded, lighter color corresponds to lower pressure. In the 3D case a planar
+    distribution of point sources is applied, in the 2.5D case a linear
+    distribution of point sources, and in the 2D case a linear distribution of
     line sources.
 
 In practice, the most common setups of secondary sources are setups, employing
