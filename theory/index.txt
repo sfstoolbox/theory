@@ -455,6 +455,16 @@ character the solution of the driving function  does not depend on the geometry
 of the secondary sources. This dependency applies to the direct solutions
 presented in Section.
 
+.. _fig-geometry:
+
+.. figure:: fig03/placeholder.png
+    :align: center
+
+    Sound pressure of a point source synthesized with WFS :eq:`D.wfs.ps.2.5D`.
+    The secondary source distribution is shown in black, whereby inactive
+    sources are marked with a dashed line. Parameters: :math:`\xs = (0, 2.5, 0)`
+    m, :math:`\xref = (0,−3, 0)` m, :math:`f = 700` Hz.
+
 
 .. ============================================================================
 
@@ -482,10 +492,22 @@ For a synthesis the involved secondary sources depend on all dimensions and
 exhibit point source characteristics. In this scenario classical secondary
 sources setups would be a sphere or a plane.
 
-.. _sec-synthesis:
+.. _sec-25d-synthesis:
 
-Synthesis
-~~~~~~~~~
+2.5D Synthesis
+~~~~~~~~~~~~~~
+
+.. _fig-geometry:
+
+.. figure:: fig04/sound_field_dimensionality.png
+    :align: center
+
+    Sound pressure in decibel for secondary source distributions with different
+    dimensionality all driven by the same signals. The sound pressure is color
+    coded, lighter color corresponds to lower pressure. In the 3D case a pla-
+    nar distribution of point sources is ap- plied, in the 2.5D case a linear
+    distribu- tion of point sources, and in the 2D case a linear distribution of
+    line sources.
 
 In practice, the most common setups of secondary sources are setups, employing
 cabinet loudspeakers. A cabinet loudspeaker does not show the characteristics of
