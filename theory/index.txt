@@ -12,6 +12,16 @@
     \def \twohalfD {{2.5\text{D}}\,}
     \def \threeD {{3\text{D}}\,}
 
+.. Common plotting settings
+.. plot::
+    :context: reset
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import sfs
+    plt.rcParams['figure.figsize'] = 8, 4.5  # inch
+
+
 
 Mathematical fundamentals of sound field synthesis
 ==================================================
@@ -618,6 +628,22 @@ models used within the Sound Field Synthesis Toolbox are presented.
 
 Plane Wave
 ~~~~~~~~~~
+
+.. _fig-plane-wave:
+
+.. plot::
+    :context: close-figs
+
+    X = [-2, 2]
+    Y = [-2, 2]
+    Z = 0
+    pw_angle = 45  # traveling direction of plane wave
+    omega = 2 * np.pi * 800  # frequency
+    grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
+    n0 = sfs.util.direction_vector(np.radians(pw_angle))
+    x0 = [0, 0, 0]
+    p = sfs.mono.source.plane(omega, x0, n0, grid)
+    sfs.plot.soundfield(p, grid);
 
 The source model for a plane wave is given as [Williams1999]_, (2.24, note that
 Williams defines the Fourier transform with transposed signs as :math:`F(\omega)

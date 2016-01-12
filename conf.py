@@ -34,14 +34,34 @@ needs_sphinx = '1.3'
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-extensions = ['sphinx.ext.autodoc','nbsphinx','sphinx.ext.mathjax']
-#extensions = ['sphinx.ext.autodoc','sphinx.ext.mathjax']
+#extensions = ['sphinx.ext.autodoc','nbsphinx','sphinx.ext.mathjax']
+extensions = [
+	'sphinx.ext.autodoc',
+        'sphinx.ext.mathjax',
+	'sphinx.ext.viewcode',
+	'matplotlib.sphinxext.only_directives',
+	'matplotlib.sphinxext.plot_directive',
+]
 
 # MathJax folder is in _static
 #mathjax_path = 'MathJax/MathJax.js'
+#intersphinx_mapping = {
+#    'python': ('http://docs.python.org/3/', None),
+#    'numpy': ('http://docs.scipy.org/doc/numpy/', None),
+#    'scipy': ('http://docs.scipy.org/doc/scipy/reference/', None),
+#    'matplotlib': ('http://matplotlib.sourceforge.net/', None),
+#}
+
 
 # Enable numbering of figures and tables
 numfig = True
+
+# Plot settings ofr matplot
+plot_include_source = True
+plot_html_show_source_link = False
+plot_html_show_formats = False
+plot_formats = ['png']
+plot_rcparams = {'figure.figsize' : [8, 4.5] }
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
