@@ -1,5 +1,5 @@
 
-.. sec-intro::
+.. _sec-intro:
 
 ==============================
 What is sound field synthesis?
