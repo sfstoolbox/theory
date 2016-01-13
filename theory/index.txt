@@ -634,8 +634,8 @@ Plane Wave
 .. plot::
     :context: close-figs
 
-    X = [-1.5, 1.5]
-    Y = [-1.5, 1.5]
+    X = [-1.75, 1.75]
+    Y = [-1.75, 1.75]
     Z = 0
     nk = sfs.util.direction_vector(np.radians(45)) # direction of plane wave
     xs = [0, 0, 0]
@@ -710,8 +710,8 @@ Point Source
 .. plot::
     :context: close-figs
 
-    X = [-1.5, 1.5]
-    Y = [-1.5, 1.5]
+    X = [-1.75, 1.75]
+    Y = [-1.75, 1.75]
     Z = 0
     xs = [0, 0, 0] # position of source
     omega = 2 * np.pi * 800  # frequency
@@ -767,18 +767,18 @@ The expansion coefficients for linear basis functions are given as [Ahrens2012]_
 for :math:`|k_x|<|\frac{\omega}{c}|` and with :math:`(x_\text{s},y_\text{s})`
 describing the position of the point source.
 
-.. _sec-3d-dipole-source:
+.. _sec-dipole-point-source:
 
-3D Dipole Source
-~~~~~~~~~~~~~~~~
+Dipole Point Source
+~~~~~~~~~~~~~~~~~~~
 
-.. _fig-dipol-point-source:
+.. _fig-dipole-point-source:
 
 .. plot::
     :context: close-figs
 
-    X = [-1.5, 1.5]
-    Y = [-1.5, 1.5]
+    X = [-1.75, 1.75]
+    Y = [-1.75, 1.75]
     Z = 0
     xs = [0, 0, 0] # position of source
     ns = sfs.util.direction_vector(0) # direction of source
@@ -826,8 +826,8 @@ Line Source
 .. plot::
     :context: close-figs
 
-    X = [-1.5, 1.5]
-    Y = [-1.5, 1.5]
+    X = [-1.75, 1.75]
+    Y = [-1.75, 1.75]
     Z = 0
     xs = [0, 0, 0] # position of source
     omega = 2 * np.pi * 800  # frequency
@@ -912,6 +912,26 @@ Near-Field Compensated Higher Order Ambisonics and Spectral Division Method
 Plane Wave
 ''''''''''
 
+.. _fig-nfchoa-25d-plane-wave:
+
+.. plot::
+    :context: close-figs
+
+    X = [-1.75, 1.75]
+    Y = [-1.75, 1.75]
+    Z = 0
+    nk = [0, -1, 0] # direction of plane wave
+    omega = 2 * np.pi * 1000  # frequency
+    R0 = 1.5 # radius of secondary sources
+    x0, n0, a0 = sfs.array.circular(200, R0)
+    grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
+    d = sfs.mono.drivingfunction.nfchoa_25d_plane(omega, x0, R0, nk)
+    p = sfs.mono.synthesized.generic(omega, x0, n0, d * a0 , grid,
+        source=sfs.mono.source.point)
+    normalization = 0.05
+    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.secondarysource_2d(x0, n0, grid)
+
 For a spherical secondary source distribution with radius :math:`R_0` the
 spherical expansion coefficients of a plane wave  and of the Green’s function
 for a point source  are inserted into  and yield [SchultzSpors2014]_ (96)
@@ -986,6 +1006,26 @@ holds for the driving functions of |WFS| as presented in the next section.
 
 Point Source
 ''''''''''''
+
+.. _fig-nfchoa-25d-point-source:
+
+.. plot::
+    :context: close-figs
+
+    X = [-1.75, 1.75]
+    Y = [-1.75, 1.75]
+    Z = 0
+    xs = [0, 2.5, 0] # position of source
+    omega = 2 * np.pi * 1000  # frequency
+    R0 = 1.5 # radius of secondary sources
+    x0, n0, a0 = sfs.array.circular(200, R0)
+    grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
+    d = sfs.mono.drivingfunction.nfchoa_25d_point(omega, x0, R0, xs)
+    p = sfs.mono.synthesized.generic(omega, x0, n0, d * a0 , grid,
+        source=sfs.mono.source.point)
+    normalization = 20
+    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.secondarysource_2d(x0, n0, grid)
 
 For a spherical secondary source distribution with radius :math:`R_0` the
 spherical coefficients of a point source  and of the Green’s function  are
