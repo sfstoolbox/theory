@@ -1152,7 +1152,7 @@ Plane Wave
     nk = [0, -1, 0] # direction of plane wave
     omega = 2 * np.pi * 1000  # frequency
     xref = [0, 0, 0] # 2.5D reference point
-    x0, n0, a0 = sfs.array.circular(200, R0)
+    x0, n0, a0 = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_plane(omega, x0, n0, nk, xref)
     a = sfs.mono.drivingfunction.source_selection_plane(n0, nk)
@@ -1237,7 +1237,7 @@ Point Source
     xs = [0, 2.5, 0] # position of source
     omega = 2 * np.pi * 1000  # frequency
     xref = [0, 0, 0] # 2.5D reference point
-    x0, n0, a0 = sfs.array.circular(200, R0)
+    x0, n0, a0 = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_point(omega, x0, n0, xs, xref)
     a = sfs.mono.drivingfunction.source_selection_point(n0, x0, xs)
@@ -1336,7 +1336,7 @@ Line Source
     Z = 0
     xs = [0, 2.5, 0] # position of source
     omega = 2 * np.pi * 1000  # frequency
-    x0, n0, a0 = sfs.array.circular(200, R0)
+    x0, n0, a0 = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_2d_line(omega, x0, n0, xs)
     a = sfs.mono.drivingfunction.source_selection_line(n0, x0, xs)
