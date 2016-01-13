@@ -796,14 +796,12 @@ directional derivative of the three dimensional Green’s function with respect 
 
     \begin{aligned}
         S(\x,\omega) &= A(\omega)
-            \left\langle
             \nabla_{\xs} \left( \frac{1}{4{\pi}} \frac{{\mathrm{e}}^{-{\mathrm{i}}
-            \frac{\omega}{c}|\x-\xs|}}{|\x-\xs|} \right),
-            {\n_\text{s}}\right\rangle \\
+            \frac{\omega}{c}|\x-\xs|}}{|\x-\xs|} \right) \n_\text{s} \\
         &=
             A(\omega) \frac{1}{4{\pi}}
             \left( \frac{1}{|\x-\xs|} + {\mathrm{i}}\frac{\omega}{c}\right)
-            \frac{\langle \x-\xs, {\n_\text{s}}\rangle}{|\x-\xs|^2}
+            \frac{(\x-\xs) \n_\text{s}}{|\x-\xs|^2}
             {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x-\xs|} \;.
     \end{aligned}
 
@@ -815,7 +813,7 @@ Transformed to the temporal domain this becomes
     s(\x,t) = a(t) *
         \left( \frac{1}{|\x-\xs|} + {\mathcal{F}^{-1}\left\{
         \frac{{\mathrm{i}}\omega}{c} \right\}} \right) *
-        \frac{\langle \x-\xs, {\n_\text{s}}\rangle}{4{\pi}|\x-\xs|^2}
+        \frac{(\x-\xs) \n_\text{s}}{4{\pi}|\x-\xs|^2}
         {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)} \;.
 
 .. _sec-line-source:
