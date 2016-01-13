@@ -647,6 +647,12 @@ Plane Wave
     p = sfs.mono.source.plane(omega, xs, nk, grid)
     sfs.plot.soundfield(p, grid);
 
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
+    :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
+
 The source model for a plane wave is given as [Williams1999]_, (2.24, note that
 Williams defines the Fourier transform with transposed signs as :math:`F(\omega)
 = \int f(t) {\mathrm{e}}^{{\mathrm{i}}\omega t}`. This leads also to changed
