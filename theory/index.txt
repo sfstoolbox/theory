@@ -634,15 +634,14 @@ Plane Wave
 .. plot::
     :context: close-figs
 
-    X = [-2, 2]
-    Y = [-2, 2]
+    X = [-1.5, 1.5]
+    Y = [-1.5, 1.5]
     Z = 0
-    pw_angle = 45  # traveling direction of plane wave
+    nk = sfs.util.direction_vector(np.radians(45)) # direction of plane wave
+    xs = [0, 0, 0]
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
-    n0 = sfs.util.direction_vector(np.radians(pw_angle))
-    x0 = [0, 0, 0]
-    p = sfs.mono.source.plane(omega, x0, n0, grid)
+    p = sfs.mono.source.plane(omega, xs, nk, grid)
     sfs.plot.soundfield(p, grid);
 
 The source model for a plane wave is given as [Williams1999]_, (2.24, note that
@@ -706,6 +705,21 @@ direction of the plane wave.
 Point Source
 ~~~~~~~~~~~~
 
+.. _fig-point-source:
+
+.. plot::
+    :context: close-figs
+
+    X = [-1.5, 1.5]
+    Y = [-1.5, 1.5]
+    Z = 0
+    xs = [0, 0, 0] # position of source
+    omega = 2 * np.pi * 800  # frequency
+    grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
+    p = sfs.mono.source.point(omega, xs, [], grid)
+    normalization = 4 * np.pi
+    sfs.plot.soundfield(normalization * p, grid);
+
 The source model for a point source is given by the three dimensional Green’s
 function as [Williams1999]_ (6.73)
 
@@ -758,6 +772,21 @@ describing the position of the point source.
 3D Dipole Source
 ~~~~~~~~~~~~~~~~
 
+.. _fig-dipol-point-source:
+
+.. plot::
+    :context: close-figs
+
+    X = [-1.5, 1.5]
+    Y = [-1.5, 1.5]
+    Z = 0
+    xs = [0, 0, 0] # position of source
+    ns = sfs.util.direction_vector(0) # direction of source
+    omega = 2 * np.pi * 800  # frequency
+    grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
+    p = sfs.mono.source.point_dipol(omega, xs, ns, grid)
+    sfs.plot.soundfield(p, grid);
+
 The source model for a three dimensional dipole source is given by the
 directional derivative of the three dimensional Green’s function with respect to
 :math:`{\n_\text{s}}` defining the orientation of the dipole source.
@@ -793,6 +822,21 @@ Transformed to the temporal domain this becomes
 
 Line Source
 ~~~~~~~~~~~
+
+.. _fig-line-source:
+
+.. plot::
+    :context: close-figs
+
+    X = [-1.5, 1.5]
+    Y = [-1.5, 1.5]
+    Z = 0
+    xs = [0, 0, 0] # position of source
+    omega = 2 * np.pi * 800  # frequency
+    grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
+    p = sfs.mono.source.line(omega, xs, None, grid)
+    normalization = np.sqrt(8 * np.pi * omega / sfs.defs.c) * np.exp(1j * np.pi / 4)
+    sfs.plot.soundfield(normalization * p, grid);
 
 The source model for a line source is given by the two dimensional Green’s
 function as [Williams1999] (8.47)
