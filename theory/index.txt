@@ -136,11 +136,11 @@ described and finally it is shown how to derive the driving function
 Solution for Special Geometries: |NFC-HOA| and |SDM|
 ----------------------------------------------------
 
-The integral equation  states a Fredholm equation of first kind with a Green’s
-function as kernel. This type of equation can be solved in a straightforward
-manner for geometries that have a complete set of orthogonal basis functions.
-Then the involved functions are expanded into the basis functions :math:`\psi_n`
-as [MorseFeshbach1981]_, eq. (940)
+The integral equation :eq:`single-layer` states a Fredholm equation of first
+kind with a Green’s function as kernel. This type of equation can be solved in a
+straightforward manner for geometries that have a complete set of orthogonal
+basis functions.  Then the involved functions are expanded into the basis
+functions :math:`\psi_n` as [MorseFeshbach1981]_, eq. (940)
 
 .. math::
     :label: G_expansion
@@ -170,15 +170,15 @@ n'`. Introducing these three equations into :eq:`single-layer` one gets
     \tilde{D}_n(\omega) =
         \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)} \;.
 
-This means that the Fredholm equation  states a convolution. For geometries
-where the required orthogonal basis functions exist, follows directly via the
-convolution theorem [ArfkenWeber2005]_ (1013).  Due to the division of the
-desired sound field by the spectrum of the Green’s function this kind of
-approach has been named |SDM| [AhrensSpors2010]_.  For circular and spherical
-geometries the term |NFC-HOA| is more common due to the corresponding basis
-functions. “Near-field compensated” highlights the usage of point sources as
-secondary sources in contrast to Ambisonics and |HOA| that assume plane waves as
-secondary sources.
+This means that the Fredholm equation :eq:`single-layer` states a convolution.
+For geometries where the required orthogonal basis functions exist, :eq:`D_HOA`
+follows directly via the convolution theorem [ArfkenWeber2005]_, eq. (1013).
+Due to the division of the desired sound field by the spectrum of the Green’s
+function this kind of approach has been named |SDM| [AhrensSpors2010]_.  For
+circular and spherical geometries the term |NFC-HOA| is more common due to the
+corresponding basis functions. “Near-field compensated” highlights the usage of
+point sources as secondary sources in contrast to Ambisonics and |HOA| that
+assume plane waves as secondary sources.
 
 The challenge is to find a set of basis functions for a given geometry.
 In the following paragraphs three simple geometries and their widely
@@ -191,10 +191,7 @@ Spherical Geometries
 
 The spherical harmonic functions constitute a basis for a spherical secondary
 source distribution in :math:`{\mathbb{R}}^3` and can be defined as
-[GumerovDuraiswami2004]_ (12.153), note that :math:`\sin\theta` is used here
-instead of :math:`\cos\theta` due to the use of another coordinate system,
-compare Figure 2.1 from Gumerov and Duraiswami and
-:numref:`fig-coordinate-system`:
+[GumerovDuraiswami2004]_, eq. (12.153) [#]_
 
 .. math::
     :label: spherical-harmonics
@@ -207,7 +204,7 @@ compare Figure 2.1 from Gumerov and Duraiswami and
 
 where :math:`P_n^{|m|}` are the associated Legendre functions. Note that
 this function may also be defined in a slightly different way, omitting
-the :math:`(-1)^m` factor, see for example [Williams1999]_ (6.20).
+the :math:`(-1)^m` factor, see for example [Williams1999]_, eq. (6.20).
 
 The complex conjugate of :math:`Y_n^m` is given by negating the degree
 :math:`m` as
@@ -219,10 +216,7 @@ The complex conjugate of :math:`Y_n^m` is given by negating the degree
 
 For a spherical secondary source distribution with a radius of :math:`R_0` the
 sound field can be calculated by a convolution along the surface. The driving
-function is then given by a simple division as [Ahrens2012]_ (3.21, note the
-:math:`\frac{1}{2{\pi}}` term is wrong in (3.21) and omitted here, compare the
-`errata <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_
-(24)):
+function is then given by a simple division as [Ahrens2012]_, eq. (3.21) [#]_
 
 .. math::
     :label: D_spherical
@@ -239,7 +233,7 @@ where :math:`\breve{S}_n^m` denote the spherical expansion coefficients of the
 source model, :math:`\theta_\text{s}` and :math:`\phi_\text{s}` its directional
 dependency, and :math:`\breve{G}_n^0` the spherical expansion coefficients of a
 secondary point source that is located at the north pole of the sphere with
-:math:`\x_0 = (0,0,R_0)` and is given as [SchultzSpors2014]_ (25)
+:math:`\x_0 = (0,0,R_0)` and is given as [SchultzSpors2014]_, eq. (25)
 
 .. math::
     :label: G_spherical
@@ -322,7 +316,7 @@ where :math:`k_x`, :math:`k_z` are entries in the wave vector :math:`\k` with
 
 For an infinitely long secondary source distribution located on the
 :math:`xz`-plane the driving function can be calculated by a two-dimensional
-convolution along the plane as [Ahrens2012]_ (3.65)
+convolution along the plane as [Ahrens2012]_, eq. (3.65)
 
 .. math::
     :label: D_planar
@@ -335,7 +329,7 @@ convolution along the plane as [Ahrens2012]_ (3.65)
 where :math:`\breve{S}` denotes the planar expansion coefficients for the source
 model, :math:`y_\text{s}` its positional dependency, and :math:`\breve{G}` the
 planar expansion coefficients of a secondary point source with
-[SchultzSpors2014]_ (65)
+[SchultzSpors2014]_, eq. (65)
 
 .. math::
     :label: G_planar
@@ -372,7 +366,7 @@ The complex conjugate is given by negating :math:`k_x` as
 
 For an infinitely long secondary source distribution located on the
 :math:`x`-axis the driving function for :math:`{\mathbb{R}}^2` can be calculated
-by a convolution along this axis as (compare [Ahrens2012]_ (3.73))
+by a convolution along this axis as [Ahrens2012]_, eq. (3.73)
 
 .. math::
     :label: D_linear
@@ -403,10 +397,10 @@ for :math:`0<|k_x|<|\frac{\omega}{c}|`.
 High Frequency Approximation: |WFS|
 -----------------------------------
 
-The single-layer potential  satisfies the homogeneous Helmholtz equation both in
-the interior and exterior regions :math:`V` and :math:`V^*
-{\mathrel{\!\mathop:}=}{\mathbb{R}}^n \setminus (V \cup \partial V)`. If
-:math:`D(\x_0,\omega)` is continuous, the pressure :math:`P(\x,\omega)` is
+The single-layer potential :eq:`single-layer` satisfies the homogeneous
+Helmholtz equation both in the interior and exterior regions :math:`V` and
+:math:`V^* {\mathrel{\!\mathop:}=}{\mathbb{R}}^n \setminus (V \cup \partial V)`.
+If :math:`D(\x_0,\omega)` is continuous, the pressure :math:`P(\x,\omega)` is
 continuous when approaching the surface :math:`\partial V` from the inside and
 outside. Due to the presence of the secondary sources at the surface
 :math:`\partial V`, the gradient of :math:`P(\x,\omega)` is discontinuous when
@@ -421,8 +415,8 @@ as [FaziNelson2013]_
         \partial_{-\n} P(\x_0,\omega)\;,
 
 where :math:`\partial_\n\!{\mathrel{\!\mathop:}=}\!\langle\nabla,\n\rangle` is
-the directional gradient in direction :math:`\n` – see Figure. Due to the
-symmetry of the problem the solution for an infinite planar boundary
+the directional gradient in direction :math:`\n` – see :numref:`fig-geometry`.
+Due to the symmetry of the problem the solution for an infinite planar boundary
 :math:`\partial V` is given as
 
 .. math::
@@ -432,29 +426,30 @@ symmetry of the problem the solution for an infinite planar boundary
 
 where the pressure in the outside region is the mirrored interior pressure given
 by the source model :math:`S(\x,\omega)` for :math:`\x\in V`. The integral
-equation resulting from introducing  into  for a planar boundary :math:`\partial
-V` is known as *Rayleigh’s first integral equation*. This solution is identical
-to the explicit solution for planar geometries  in :math:`{\mathbb{R}}^3` and
-for linear geometries  in :math:`{\mathbb{R}}^2`.
+equation resulting from introducing :eq:`D_wfs` into :eq:`single-layer` for a
+planar boundary :math:`\partial V` is known as *Rayleigh’s first integral
+equation*. This solution is identical to the explicit solution for planar
+geometries :eq:`D_planar` in :math:`{\mathbb{R}}^3` and for linear
+geometries :eq:`D_linear` in :math:`{\mathbb{R}}^2`.
 
-A solution of  for arbitrary boundaries can be found by applying the *Kirchhoff*
-or *physical optics approximation* [ColtonKress1983]_, page 53–54.  In acoustics
-this is also known as *determining the visible elements* for the high frequency
-boundary element method [Herrin2003]_.  Here, it is assumed that a bent surface
-can be approximated by a set of small planar surfaces for which  holds locally.
-In general, this will be the case if the wave length is much smaller than the
-size of a planar surface patch and the position of the listener is far away from
-the secondary sources, compare the assumptions made before (15) in
-[SporsZotter2013]_, which lead to the derivation of the same window function in
-a more explicit way. Additionally, only one part of the surface is active: the
-area that is illuminated from the incident field of the source model. With this
-approximation also non-convex secondary source distributions can be used with
-|WFS| – compare Figure and appendix in [LaxFeshbach1947]_. This was neglected in
-most of the literature so far, which postulates convex secondary source
-distributions, e.g. [Spors2008]_.
+A solution of :eq:`D_gradient` for arbitrary boundaries can be found by applying
+the *Kirchhoff* or *physical optics approximation* [ColtonKress1983]_, p. 53–54.
+In acoustics this is also known as *determining the visible elements* for the
+high frequency boundary element method [Herrin2003]_.  Here, it is assumed that
+a bent surface can be approximated by a set of small planar surfaces for
+which :eq:`D_wfs` holds locally.  In general, this will be the case if the wave
+length is much smaller than the size of a planar surface patch and the position
+of the listener is far away from the secondary sources.[#]_ Additionally, only
+one part of the surface is active: the area that is illuminated from the
+incident field of the source model. With this approximation also non-convex
+secondary source distributions can be used with |WFS| – compare
+:numref:`fig-convex-concave-array` and the appendix in [LaxFeshbach1947]_. This
+was neglected in most of the literature so far, which postulates convex
+secondary source distributions, e.g. [Spors2008]_.
 
 The outlined approximation can be formulated by introducing a window function
-:math:`w(\x_0)` for the selection of the active secondary sources into  as
+:math:`w(\x_0)` for the selection of the active secondary sources
+into :eq:`D_wfs` as
 
 .. math::
     :label: P_wfs
@@ -464,9 +459,9 @@ The outlined approximation can be formulated by introducing a window function
         {\mathop{\mathrm{d}{A}}}(\x_0) \;.
 
 One of the advantages of the applied approximation is that due to its local
-character the solution of the driving function  does not depend on the geometry
+character the solution of the driving function :eq:`D_wfs` does not depend on the geometry
 of the secondary sources. This dependency applies to the direct solutions
-presented in Section.
+presented in :ref:`sec-nfchoa`.
 
 .. _fig-convex-concave-array:
 
@@ -487,21 +482,21 @@ presented in Section.
 Sound Field Dimensionality
 --------------------------
 
-The single-layer potential  is valid for all :math:`V \subset {\mathbb{R}}^n`.
-Consequentially, for practical applications a two-dimensional () as well as a
-three-dimensional () synthesis is possible. Two-dimensional is not referring to
-a synthesis in a plane only, but describes a setup that is independent of one
-dimension. For example, an infinite cylinder is independent of the dimension
-along its axis. The same is true for secondary source distributions in
-synthesis.  They exhibit line source characteristics and are aligned in parallel
-to the independent dimension. Typical arrangements of such secondary sources are
-a circular or a linear setup.
+The single-layer potential :eq:`single-layer` is valid for all :math:`V \subset
+{\mathbb{R}}^n`.  Consequentially, for practical applications a two-dimensional
+(2D) as well as a three-dimensional (3D) synthesis is possible. Two-dimensional
+is not referring to a synthesis in a plane only, but describes a setup that is
+independent of one dimension. For example, an infinite cylinder is independent
+of the dimension along its axis. The same is true for secondary source
+distributions in 2D synthesis.  They exhibit line source characteristics and are
+aligned in parallel to the independent dimension. Typical arrangements of such
+secondary sources are a circular or a linear setup.
 
 The characteristics of the secondary sources limit the set of possible sources
-which can be synthesized. For example, when using a secondary source setup it is
-not possible to synthesize the amplitude decay of a point source.
+which can be synthesized. For example, when using a 2D secondary source setup it
+is not possible to synthesize the amplitude decay of a point source.
 
-For a synthesis the involved secondary sources depend on all dimensions and
+For a 3D synthesis the involved secondary sources depend on all dimensions and
 exhibit point source characteristics. In this scenario classical secondary
 sources setups would be a sphere or a plane.
 
@@ -522,21 +517,22 @@ sources setups would be a sphere or a plane.
     distribution of point sources, and in the 2D case a linear distribution of
     line sources.
 
-In practice, the most common setups of secondary sources are setups, employing
-cabinet loudspeakers. A cabinet loudspeaker does not show the characteristics of
-a line source, but of a point source. This dimensionality mismatch prevents
-perfect synthesis within the desired plane. The combination of a secondary
-source setup with secondary sources that exhibit characteristics has led to
-naming such configurations *synthesis* [Start1997]_. Such scenarios are
-associated with a wrong amplitude decay due to the inherent mismatch of
-secondary sources as is highlighted in Figure. In general, the amplitude is only
+In practice, the most common setups of secondary sources are 2D setups,
+employing cabinet loudspeakers. A cabinet loudspeaker does not show the
+characteristics of a line source, but of a point source. This dimensionality
+mismatch prevents perfect synthesis within the desired plane. The combination of
+a 2D secondary source setup with secondary sources that exhibit 3D
+characteristics has led to naming such configurations *2.5D synthesis*
+[Start1997]_. Such scenarios are associated with a wrong amplitude decay due to
+the inherent mismatch of secondary sources as is highlighted in
+:numref:`fig-sound-field-dimensionality`. In general, the amplitude is only
 correct at a given reference point :math:`\xref`.
 
 For a circular secondary source distribution with point source characteristic
-the driving function can be derived by introducing expansion coefficients for
-the spherical case into the driving function . The equation is than solved for
-:math:`\theta = 0{^\circ}` and :math:`r_\text{ref} = 0`. This results in a
-driving function given in [Ahrens2012]_ (3.49) as
+the 2.5D driving function can be derived by introducing expansion coefficients
+for the spherical case into the driving function :eq:`D_circular`. The equation
+is than solved for :math:`\theta = 0{^\circ}` and :math:`r_\text{ref} = 0`. This
+results in a 2.5D driving function given as [Ahrens2012]_, eq. (3.49)
 
 .. math::
     :label: D_circular_25D
@@ -547,10 +543,11 @@ driving function given in [Ahrens2012]_ (3.49) as
        (\frac{{\pi}}{2},0,\omega)} \Phi_m(\phi_0) \;.
 
 For a linear secondary source distribution with point source characteristics the
-driving function is derived by introducing the linear expansion coefficients for
-a monopole source  into the driving function  and solving the equation for
-:math:`y = y_\text{ref}` and :math:`z = 0`. This results in a driving function
-given as [Ahrens2012]_ (3.77)
+2.5D driving function is derived by introducing the linear expansion
+coefficients for a monopole source :eq:`point-source-linear-coefficients` into
+the driving function :eq:`D_linear` and solving the equation for :math:`y =
+y_\text{ref}` and :math:`z = 0`. This results in a 2.5D driving function given
+as [Ahrens2012]_, eq. (3.77)
 
 .. math::
     :label: D_linear_25D
@@ -560,13 +557,13 @@ given as [Ahrens2012]_ (3.77)
         {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \,
         {\mathop{\mathrm{d}{k_x}}} \;.
 
-A driving function for the situation in the context of |WFS| and arbitrary
-geometries of the secondary source distribution can be achieved by applying the
-far-field approximation [Williams1999]_ (4.23).  :math:`{\,H_{0}^{(2)}\!}(\zeta)
-\approx \sqrt{\frac{2{\mathrm{i}}}{{\pi}\zeta}}
-{\mathrm{e}}^{-{\mathrm{i}}\zeta}` for :math:`\zeta \gg 1` to the Green’s
-function. Using this the following relationship between the and Green’s
-functions can be established.
+A driving function for the 2.5D situation in the context of |WFS| and arbitrary
+2D geometries of the secondary source distribution can be achieved by applying
+the far-field approximation  :math:`{\,H_{0}^{(2)}\!}(\zeta) \approx
+\sqrt{\frac{2{\mathrm{i}}}{{\pi}\zeta}} {\mathrm{e}}^{-{\mathrm{i}}\zeta}` for
+:math:`\zeta \gg 1` to the 2D Green’s function [Williams1999]_, eq. (4.23).
+Using this the following relationship between the 2D and 3D Green’s functions
+can be established.
 
 .. math::
     :label: 25D_approximation
@@ -584,7 +581,7 @@ functions can be established.
 
 where :math:`{\,H_{0}^{(2)}\!}` denotes the Hankel function of second kind and
 zeroth order. Inserting this approximation into the single-layer potential for
-the case results in
+the 2D case results in
 
 .. math::
     :label: single-layer_25D
@@ -594,7 +591,7 @@ the case results in
         {\mathop{\mathrm{d}{A}}}(\x_0) \;.
 
 If the amplitude correction is further restricted to one reference point
-:math:`\xref`, the driving function for |WFS| can be formulated as
+:math:`\xref`, 2.5D the driving function for |WFS| can be formulated as
 
 .. math::
     :label: D25D_wfs
@@ -618,14 +615,13 @@ required in order to derive the driving signal for the secondary source
 distribution. It can either be measured, i.e. recorded, or modeled. While the
 former is known as *data-based rendering*, the latter is known as *model-based
 rendering*.  For data-based rendering, the problem of how to capture a complete
-sound field still has to be solved. Avni et al. discuss some influences of the
-recording limitations on the perception of the reproduced sound field
-[Avni2013]_. This thesis focusses on the perception of the synthesis part.
-Therefore it will consider only model-based rendering.
+sound field still has to be solved. [Avni2013]_ et al. discuss some influences
+of the recording limitations on the perception of the reproduced sound field.
+This document will consider only model-based rendering.
 
 Frequently applied models in model-based rendering are plane waves, point
 sources, or sources with a prescribed complex directivity. In the following the
-models used within the Sound Field Synthesis Toolbox are presented.
+models used within the |SFS Toolbox| are presented.
 
 .. _sec-plane-wave:
 
@@ -653,10 +649,7 @@ Plane Wave
     Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
     :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
 
-The source model for a plane wave is given as [Williams1999]_, (2.24, note that
-Williams defines the Fourier transform with transposed signs as :math:`F(\omega)
-= \int f(t) {\mathrm{e}}^{{\mathrm{i}}\omega t}`. This leads also to changed
-signs in his definitions of the Green’s functions and field expansions.)
+The source model for a plane wave is given as [Williams1999]_, eq. (2.24) [#F4]_
 
 .. math::
     :label: S.pw
@@ -678,7 +671,7 @@ where :math:`a(t)` is the Fourier transformation of the frequency spectrum
 :math:`A(\omega)`.
 
 The expansion coefficients for spherical basis functions are given as
-[Ahrens2012]_ (2.38)
+[Ahrens2012]_, eq. (2.38)
 
 .. math::
     :label: plane-wave-spherical-coefficients
@@ -698,7 +691,7 @@ given as
         \Phi_{-m}(\phi_\text{s}) \;.
 
 The expansion coefficients for linear basis functions are given as after
-[Ahrens2012]_ (C.5)
+[Ahrens2012]_, eq. (C.5)
 
 .. math::
     :label: plane-wave-linear-coefficients
@@ -729,8 +722,14 @@ Point Source
     normalization = 4 * np.pi
     sfs.plot.soundfield(normalization * p, grid);
 
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic point source :eq:`S.ps` placed at :math:`(0, 0, 0)`.
+    Parameters: :math:`f = 800` Hz.
+
 The source model for a point source is given by the three dimensional Green’s
-function as [Williams1999]_ (6.73)
+function as [Williams1999]_, eq. (6.73)
 
 .. math::
     :label: S.ps
@@ -749,7 +748,7 @@ Transformed to the temporal domain this becomes
         {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)} \;.
 
 The expansion coefficients for spherical basis functions are given
-as [Ahrens2012]_ (2.37)
+as [Ahrens2012]_, eq. (2.37)
 
 .. math::
     :label: point-source-spherical-coefficients
@@ -762,8 +761,8 @@ as [Ahrens2012]_ (2.37)
 where :math:`(\phi_\text{s},\theta_\text{s},r_\text{s})` describes the position
 of the point source.
 
-The expansion coefficients for linear basis functions are given as [Ahrens2012]_
-(C.10)
+The expansion coefficients for linear basis functions are given as
+[Ahrens2012]_, eq. (C.10)
 
 .. math::
     :label: point-source-linear-coefficients
@@ -795,6 +794,13 @@ Dipole Point Source
     grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
     p = sfs.mono.source.point_dipole(omega, xs, ns, grid)
     sfs.plot.soundfield(p, grid);
+
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic dipole point source :eq:`S.dps` placed at
+    :math:`(0, 0, 0)` and pointing towards :math:`(1, 0, 0)`.  Parameters:
+    :math:`f = 800` Hz.
 
 The source model for a three dimensional dipole source is given by the
 directional derivative of the three dimensional Green’s function with respect to
@@ -845,8 +851,14 @@ Line Source
     normalization = np.sqrt(8 * np.pi * omega / sfs.defs.c) * np.exp(1j * np.pi / 4)
     sfs.plot.soundfield(normalization * p, grid);
 
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic line source :eq:`S.ls` placed at :math:`(0, 0, 0)`.
+    Parameters: :math:`f = 800` Hz.
+
 The source model for a line source is given by the two dimensional Green’s
-function as [Williams1999] (8.47)
+function as [Williams1999]_, eq. (8.47)
 
 .. math::
     :label: S.ls
@@ -854,8 +866,8 @@ function as [Williams1999] (8.47)
     S(\x,\omega) = -A(\omega) \frac{{\mathrm{i}}}{4} {\,H_{0}^{(2)}\!}
         \left(\frac{\omega}{c}|\x-\xs|\right) \;.
 
-Applying the large argument approximation of the Hankel function [Williams1999]_
-(4.23)) and transformed to the temporal domain this becomes
+Applying the large argument approximation of the Hankel function
+[Williams1999]_, eq. (4.23) and transformed to the temporal domain this becomes
 
 .. math::
     :label: s.ls
@@ -892,24 +904,22 @@ The expansion coefficients for linear basis functions are given as
 Driving Functions
 -----------------
 
-In the following, driving functions for Near-Field Compensated Higher Order
-Ambisonics, the Spectral Division Method and Wave Field Synthesis are derived
+In the following, driving functions for |NFC-HOA|, |SDM|, and |WFS| are derived
 for spherical, circular, and linear secondary source distributions. Among the
 possible combinations of methods and secondary sources not all are meaningful.
 Hence, only the relevant ones will be presented. The same holds for the
 introduced source models of plane waves, point sources, line sources and focused
-sources. [AhrensSpors2010]_ in addition have considered Spectral Division Method
+sources. [AhrensSpors2010]_ in addition have considered |SDM|
 driving functions for planar secondary source distributions.
 
 The driving functions are given in the temporal-frequency domain. For some of
 them, especially in the case of |WFS| an analytic solution in the temporal domain
 exists and is presented. For |NFC-HOA|, temporal-domain implementations for the
-cases are available for a plane wave and a point source as source models. The
+2.5D cases are available for a plane wave and a point source as source models. The
 derivation of the implementation is not explicitly shown here, but is described
 in [Spors2011]_.
 
-The cases are illustrated in the following by companion figures, because only
-those cases will be investigated in the remainder of this thesis.
+The 2D or 2.5D cases are illustrated in the following by companion figures.
 
 .. _sec-driving-functions-nfchoa-sdm:
 
@@ -941,9 +951,18 @@ Plane Wave
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic plane wave synthesized with 2.5D
+    |NFC-HOA| :eq:`D.nfchoa.pw.2.5D`.  Parameters: :math:`\n_k = (0, -1, 0)`,
+    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+
 For a spherical secondary source distribution with radius :math:`R_0` the
-spherical expansion coefficients of a plane wave  and of the Green’s function
-for a point source  are inserted into  and yield [SchultzSpors2014]_ (96)
+spherical expansion coefficients of a plane
+wave :eq:`plane-wave-spherical-coefficients` and of the Green’s function for a
+point source :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
+[SchultzSpors2014]_, eq. (96)
 
 .. math::
     :label: D.nfchoa.pw.3D
@@ -955,8 +974,10 @@ for a point source  are inserted into  and yield [SchultzSpors2014]_ (96)
         Y_n^m(\theta_0,\phi_0) \;.
 
 For a circular secondary source distribution with radius :math:`R_0` the
-circular expansion coefficients of a plane wave  and of the Green’s function for
-a line source  are inserted into  and yield [AhrensSpors2009a]_ (16)
+circular expansion coefficients of a plane
+wave :eq:`plane-wave-circular-coefficients` and of the Green’s function for a
+line source :eq:`G_circular` are inserted into :eq:`D_circular` and yield
+[AhrensSpors2009a]_, eq. (16)
 
 .. math::
     :label: D.nfchoa.pw.2D
@@ -966,8 +987,10 @@ a line source  are inserted into  and yield [AhrensSpors2009a]_ (16)
         {{\,H_{m}^{(2)}\!}(\frac{\omega}{c}R_0)} \Phi_m(\phi_0) \;.
 
 For a circular secondary source distribution with radius :math:`R_0` and point
-source as Green’s function the driving function is given by inserting the
-spherical expansion coefficients for a plane wave  and a point source  into  as
+source as Green’s function the 2.5D driving function is given by inserting the
+spherical expansion coefficients for a plane
+wave :eq:`plane-wave-spherical-coefficients` and a point
+source :eq:`point-source-spherical-coefficients` into :eq:`D_circular_25D` as
 
 .. math::
     :label: D.nfchoa.pw.2.5D
@@ -978,11 +1001,13 @@ spherical expansion coefficients for a plane wave  and a point source  into  
         \left(\frac{\omega}{c}R_0\right)} \Phi_m(\phi_0) \;.
 
 For an infinite linear secondary source distribution located on the
-:math:`x`-axis the driving function is given by inserting the linear expansion
-coefficients for a point source as Green’s function  and a plane wave  into  and
-exploiting the fact that :math:`(\frac{\omega}{c})^2 - k_{x_\text{s}}` is
-constant. Assuming :math:`0 \le |k_{x_\text{s}}| \le |\frac{\omega}{c}|` this
-results in [AhrensSpors2010]_ (17)
+:math:`x`-axis the 2.5D driving function is given by inserting the linear
+expansion coefficients for a point source as Green’s
+function :eq:`point-source-linear-coefficients` and a plane
+wave :eq:`plane-wave-linear-coefficients` into :eq:`D_linear_25D` and exploiting
+the fact that :math:`(\frac{\omega}{c})^2 - k_{x_\text{s}}` is constant.
+Assuming :math:`0 \le |k_{x_\text{s}}| \le |\frac{\omega}{c}|` this results in
+[AhrensSpors2010]_, eq. (17)
 
 .. math::
     :label: D.sdm.pw.2.5D
@@ -991,7 +1016,7 @@ results in [AhrensSpors2010]_ (17)
         \frac{4{\mathrm{i}}\chi(k_y,y_\text{ref})}
         {{\,H_{0}^{(2)}\!}(k_y y_\text{ref})} \chi(k_x,x_0) \;.
 
-Transfered to the temporal domain this results in [AhrensSpors2010]_ (18)
+Transfered to the temporal domain this results in [AhrensSpors2010]_, eq. (18)
 
 .. math::
     :label: d.sdm.pw.2.5D
@@ -1036,9 +1061,17 @@ Point Source
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic point source synthesized with 2.5D
+    |NFC-HOA| :eq:`D.nfchoa.ps.2.5D`.  Parameters: :math:`\xs = (0, 2.5, 0)` m,
+    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+
 For a spherical secondary source distribution with radius :math:`R_0` the
-spherical coefficients of a point source  and of the Green’s function  are
-inserted into  and yield
+spherical coefficients of a point
+source :eq:`point-source-spherical-coefficients` and of the Green’s
+function :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
 
 .. math::
     :label: D.nfchoa.ps.3D
@@ -1050,8 +1083,9 @@ inserted into  and yield
         {h_n^{(2)}(\frac{\omega}{c}R_0)} Y_n^m (\theta_0,\phi_0) \;.
 
 For a circular secondary source distribution with radius :math:`R_0` and point
-source as secondary sources the driving function is given by inserting the
-spherical coefficients  and  into  as
+source as secondary sources the 2.5D driving function is given by inserting the
+spherical coefficients eq:`point-source-spherical-coefficients`
+and :eq:`G_spherical` into :eq:`D_circular_25D` as
 
 .. math::
     :label: D.nfchoa.ps.2.5D
@@ -1062,10 +1096,11 @@ spherical coefficients  and  into  as
         {h_{|m|}^{(2)} (\frac{\omega}{c}R_0)} \Phi_m(\phi_0) \;.
 
 For an infinite linear secondary source distribution located on the
-:math:`x`-axis and point sources as secondary sources the driving function for a
-point source is given by inserting the corresponding linear expansion
-coefficients  and  into . Assuming :math:`0 \le |k_x| < |\frac{\omega}{c}|` this
-results in [Ahrens2012]_ (4.53)
+:math:`x`-axis and point sources as secondary sources the 2.5D driving function
+for a point source is given by inserting the corresponding linear expansion
+coefficients eq:`point-source-linear-coefficients` and :eq:`G_linear`
+into :eq:`D_linear_25D`.  Assuming :math:`0 \le |k_x| < |\frac{\omega}{c}|` this
+results in [Ahrens2012]_, eq. (4.53)
 
 .. math::
     :label: D.sdm.ps.2.5D
@@ -1084,7 +1119,8 @@ Line Source
 
 For a circular secondary source distribution with radius :math:`R_0` and line
 sources as secondary sources the driving function is given by inserting the
-circular coefficients  and  into  as
+circular coefficients :eq:`line-source-circular-coefficients`
+and :eq:`G_circular` into :eq:`D_circular` as
 
 .. math::
     :label: D.nfchoa.ls.2D
@@ -1096,7 +1132,8 @@ circular coefficients  and  into  as
 
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis and line sources as secondary sources the driving function is
-given by inserting the linear coefficients  and  into  as
+given by inserting the linear coefficients :eq:`line-source-linear-coefficients`
+and :eq:`G_linear` into :eq:`D_linear` as
 
 .. math::
     :label: D.sdm.ls.2D
@@ -1119,17 +1156,17 @@ line source in time which is known as time reversal focusing [Yon2003]_.
 
 Nonetheless, the single-layer potential should not be solved for focused sources
 without any approximation. In the near field of a source, evanescent waves
-[Williams1999]_ (24) appear for spatial frequencies :math:`k_x >
-|\frac{\omega}{c}|`. They decay exponentially with the distance from the source.
-An exact solution for a focused source is supposed to include these evanescent
-waves around the focal point. That is only possible by applying very large
-amplitudes to the secondary sources, compare Fig.2a in [SporsAhrens2010]_. Since
-the evanescent waves decay rapidly and are hence not influencing the perception,
+appear for spatial frequencies :math:`k_x > |\frac{\omega}{c}|` [Williams1999]_,
+eq. (24). They decay exponentially with the distance from the source.  An exact
+solution for a focused source is supposed to include these evanescent waves
+around the focal point. That is only possible by applying very large amplitudes
+to the secondary sources, compare Fig. 2a in [SporsAhrens2010]_. Since the
+evanescent waves decay rapidly and are hence not influencing the perception,
 they can easily be omitted. For corresponding driving functions for focused
 sources without the evanescent part of the sound field see [SporsAhrens2010]_
 for |SDM| and [AhrensSpors2009b]_ for |NFC-HOA|.
 
-In the SFS Toolbox only focused sources in |WFS| are considered at the moment.
+In the |SFS Toolbox| only focused sources in |WFS| are considered at the moment.
 
 
 .. _sec-driving-functions-wfs:
@@ -1172,7 +1209,15 @@ Plane Wave
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
-By inserting the source model of a plane wave  into  and  it follows
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic plane wave synthesized with 2.5D
+    |WFS| :eq:`D.wfs.ps.2.5D`.  Parameters: :math:`\n_k = (0, -1, 0)`,
+    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+
+By inserting the source model of a plane wave :eq:`S.pw` into :eq:`D_wfs`
+and :eq:`D25D_wfs` it follows
 
 .. math::
     :label: D.wfs.pw
@@ -1188,7 +1233,8 @@ By inserting the source model of a plane wave  into  and  it follows
         \sqrt{{\mathrm{i}}\frac{\omega}{c}} \n_k\n_{\x_0}
         {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k\x_0} \;.
 
-Transfered to the temporal domain via an inverse Fourier transform , it follows
+Transfered to the temporal domain via an inverse Fourier transform :eq:`ifft`,
+it follows
 
 .. math::
     :label: d.wfs.pw
@@ -1214,7 +1260,8 @@ and
 .. math::
     :label: h.wfs.2.5D
 
-    h_\twohalfD(t) = {\mathcal{F}^{-1}\left\{\sqrt{{\mathrm{i}}\frac{\omega}{c}}\right\}}
+    h_\twohalfD(t) = \mathcal{F}^{-1}\left\{
+        \sqrt{{\mathrm{i}}\frac{\omega}{c}}\right\}
 
 denote the so called pre-equalization filters in |WFS|.
 
@@ -1594,5 +1641,16 @@ driving signals
 while :math:`d_{\mathrm{fs}}(\x_0,{\x_\text{fs}}, t)` is derived analogously to
 from or . At the moment :math:`d_{\mathrm l}({\x_\text{fs}}, t)` does only
 support driving functions from |WFS|.
+
+.. rubric:: Footnotes
+
+.. [#] Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due to the use of another coordinate system, compare Figure 2.1 from Gumerov and Duraiswami and :numref:`fig-coordinate-system`.
+
+.. [#]  Note the :math:`\frac{1}{2{\pi}}` term is wrong in (3.21) and omitted here, compare the `errata <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq. (24).
+
+.. [#] Compare the assumptions made before (15) in [SporsZotter2013]_, which lead to the derivation of the same window function in a more explicit way.
+
+.. [#F4] Note that Williams defines the Fourier transform with transposed signs as :math:`F(\omega) = \int f(t) {\mathrm{e}}^{{\mathrm{i}}\omega t}`. This leads also to changed signs in his definitions of the Green’s functions and field expansions.
+
 
 .. vim: filetype=rst spell:
