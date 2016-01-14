@@ -191,7 +191,7 @@ Spherical Geometries
 
 The spherical harmonic functions constitute a basis for a spherical secondary
 source distribution in :math:`{\mathbb{R}}^3` and can be defined as
-[GumerovDuraiswami2004]_, eq. (12.153) [#]_
+[GumerovDuraiswami2004]_, eq. (12.153) [#F1]_
 
 .. math::
     :label: spherical-harmonics
@@ -216,7 +216,7 @@ The complex conjugate of :math:`Y_n^m` is given by negating the degree
 
 For a spherical secondary source distribution with a radius of :math:`R_0` the
 sound field can be calculated by a convolution along the surface. The driving
-function is then given by a simple division as [Ahrens2012]_, eq. (3.21) [#]_
+function is then given by a simple division as [Ahrens2012]_, eq. (3.21) [#F2]_
 
 .. math::
     :label: D_spherical
@@ -414,7 +414,7 @@ as [FaziNelson2013]_
     D(\x_0,\omega) = \partial_\n P(\x_0,\omega) +
         \partial_{-\n} P(\x_0,\omega)\;,
 
-where :math:`\partial_\n\!{\mathrel{\!\mathop:}=}\!\langle\nabla,\n\rangle` is
+where :math:`\partial_\n{\mathrel{\mathop:}=}\langle\nabla,\n\rangle` is
 the directional gradient in direction :math:`\n` – see :numref:`fig-geometry`.
 Due to the symmetry of the problem the solution for an infinite planar boundary
 :math:`\partial V` is given as
@@ -439,7 +439,7 @@ high frequency boundary element method [Herrin2003]_.  Here, it is assumed that
 a bent surface can be approximated by a set of small planar surfaces for
 which :eq:`D_wfs` holds locally.  In general, this will be the case if the wave
 length is much smaller than the size of a planar surface patch and the position
-of the listener is far away from the secondary sources.[#]_ Additionally, only
+of the listener is far away from the secondary sources. [#F3]_ Additionally, only
 one part of the surface is active: the area that is illuminated from the
 incident field of the source model. With this approximation also non-convex
 secondary source distributions can be used with |WFS| – compare
@@ -628,8 +628,6 @@ models used within the |SFS Toolbox| are presented.
 Plane Wave
 ~~~~~~~~~~
 
-.. _fig-plane-wave:
-
 .. plot::
     :context: close-figs
 
@@ -642,6 +640,8 @@ Plane Wave
     grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
     p = sfs.mono.source.plane(omega, xs, nk, grid)
     sfs.plot.soundfield(p, grid);
+
+.. _fig-plane-wave:
 
 .. figure:: img/placeholder.png
     :align: center
@@ -707,8 +707,6 @@ direction of the plane wave.
 Point Source
 ~~~~~~~~~~~~
 
-.. _fig-point-source:
-
 .. plot::
     :context: close-figs
 
@@ -721,6 +719,8 @@ Point Source
     p = sfs.mono.source.point(omega, xs, [], grid)
     normalization = 4 * np.pi
     sfs.plot.soundfield(normalization * p, grid);
+
+.. _fig-point-source:
 
 .. figure:: img/placeholder.png
     :align: center
@@ -780,8 +780,6 @@ describing the position of the point source.
 Dipole Point Source
 ~~~~~~~~~~~~~~~~~~~
 
-.. _fig-dipole-point-source:
-
 .. plot::
     :context: close-figs
 
@@ -794,6 +792,8 @@ Dipole Point Source
     grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
     p = sfs.mono.source.point_dipole(omega, xs, ns, grid)
     sfs.plot.soundfield(p, grid);
+
+.. _fig-dipole-point-source:
 
 .. figure:: img/placeholder.png
     :align: center
@@ -836,8 +836,6 @@ Transformed to the temporal domain this becomes
 Line Source
 ~~~~~~~~~~~
 
-.. _fig-line-source:
-
 .. plot::
     :context: close-figs
 
@@ -850,6 +848,8 @@ Line Source
     p = sfs.mono.source.line(omega, xs, None, grid)
     normalization = np.sqrt(8 * np.pi * omega / sfs.defs.c) * np.exp(1j * np.pi / 4)
     sfs.plot.soundfield(normalization * p, grid);
+
+.. _fig-line-source:
 
 .. figure:: img/placeholder.png
     :align: center
@@ -931,8 +931,6 @@ Near-Field Compensated Higher Order Ambisonics and Spectral Division Method
 Plane Wave
 ''''''''''
 
-.. _fig-nfchoa-25d-plane-wave:
-
 .. plot::
     :context: close-figs
 
@@ -950,6 +948,8 @@ Plane Wave
     normalization = 0.05
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
+
+.. _fig-nfchoa-25d-plane-wave:
 
 .. figure:: img/placeholder.png
     :align: center
@@ -1041,8 +1041,6 @@ holds for the driving functions of |WFS| as presented in the next section.
 Point Source
 ''''''''''''
 
-.. _fig-nfchoa-25d-point-source:
-
 .. plot::
     :context: close-figs
 
@@ -1060,6 +1058,8 @@ Point Source
     normalization = 20
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
+
+.. _fig-nfchoa-25d-point-source:
 
 .. figure:: img/placeholder.png
     :align: center
@@ -1084,7 +1084,7 @@ function :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
 
 For a circular secondary source distribution with radius :math:`R_0` and point
 source as secondary sources the 2.5D driving function is given by inserting the
-spherical coefficients eq:`point-source-spherical-coefficients`
+spherical coefficients :eq:`point-source-spherical-coefficients`
 and :eq:`G_spherical` into :eq:`D_circular_25D` as
 
 .. math::
@@ -1098,7 +1098,7 @@ and :eq:`G_spherical` into :eq:`D_circular_25D` as
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis and point sources as secondary sources the 2.5D driving function
 for a point source is given by inserting the corresponding linear expansion
-coefficients eq:`point-source-linear-coefficients` and :eq:`G_linear`
+coefficients :eq:`point-source-linear-coefficients` and :eq:`G_linear`
 into :eq:`D_linear_25D`.  Assuming :math:`0 \le |k_x| < |\frac{\omega}{c}|` this
 results in [Ahrens2012]_, eq. (4.53)
 
@@ -1187,8 +1187,6 @@ discussed above.
 Plane Wave
 ''''''''''
 
-.. _fig-wfs-25d-plane-wave:
-
 .. plot::
     :context: close-figs
 
@@ -1208,6 +1206,8 @@ Plane Wave
     normalization = 0.5
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
+
+.. _fig-wfs-25d-plane-wave:
 
 .. figure:: img/placeholder.png
     :align: center
@@ -1282,8 +1282,6 @@ calculated after [Spors2008]_
 Point Source
 ''''''''''''
 
-.. _fig-wfs-25d-point-source:
-
 .. plot::
     :context: close-figs
 
@@ -1304,7 +1302,17 @@ Point Source
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
-By inserting the source model for a point source  into  and  it follows
+.. _fig-wfs-25d-point-source:
+
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic point source synthesized with 2.5D
+    |WFS| :eq:`D.wfs.ps.2.5D`.  Parameters: :math:`\xs = (0, 2.5, 0)` m,
+    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+
+By inserting the source model for a point source :eq:`S.ps` into :eq:`D_wfs`
+and :eq:`D25D_wfs` it follows
 
 .. math::
     :label: D.wfs.ps.woapprox
@@ -1323,7 +1331,8 @@ By inserting the source model for a point source  into  and  it follows
         \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} {\mathrm{e}}^{-{\mathrm{i}}
         \frac{\omega}{c}|\x_0-\xs|} \;.
 
-Under the assumption of :math:`|\x_0-\xs| \gg 1` and can be approximated by
+Under the assumption of :math:`|\x_0-\xs| \gg 1`, :eq:`D.wfs.ps.woapprox` and
+:eq:`D.wfs.ps.woapprox.2.5D` can be approximated by
 
 .. math::
     :label: D.wfs.ps
@@ -1340,15 +1349,14 @@ Under the assumption of :math:`|\x_0-\xs| \gg 1` and can be approximated by
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
         {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
 
-which is the traditional formulation of a point source in |WFS| as given for the
-case in [Verheijen1997]_ (2.22a), whereby :math:`r` corresponds to
-:math:`|\x_0-\xs|` and :math:`\cos\varphi` to
-:math:`\frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}`) It has the advantage that its
+which is the traditional formulation of a point source in |WFS| as given by eq.
+(2.22a) in [Verheijen1997]_ [#F5]_ for the 2.5D. It has the advantage that its
 temporal domain version could again be implemented as a simple weighting- and
 delaying-mechanism. This is the default driving function for a point source in
-the SFS Toolbox.
+the |SFS Toolbox|.
 
-Transfered to the temporal domain via an inverse Fourier transform  it follows
+Transfered to the temporal domain via an inverse Fourier transform :eq:`ifft` it
+follows
 
 .. math::
     :label: d.wfs.ps
@@ -1366,7 +1374,7 @@ Transfered to the temporal domain via an inverse Fourier transform  it follows
         {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)} \;.
 
 The window function :math:`w(\x_0)` for a point source as source model can be
-calculated after [Spors2008]_.
+calculated after [Spors2008]_ as
 
 .. math::
     :label: wfs.ps.selection
@@ -1381,8 +1389,6 @@ calculated after [Spors2008]_.
 
 Line Source
 '''''''''''
-
-.. _fig-wfs-25d-line-source:
 
 .. plot::
     :context: close-figs
@@ -1403,8 +1409,18 @@ Line Source
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
-By inserting the source model for a line source  into  and  and calculating the
-derivate of the Hankel function [AbramowitzStegun1972]_ (9.1.30) it follows
+.. _fig-wfs-25d-line-source:
+
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic line source synthesized with 2D
+    |WFS| :eq:`D.wfs.ls`.  Parameters: :math:`\xs = (0, 2.5, 0)` m,
+    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+
+By inserting the source model for a line source :eq:`S.ls` into :eq:`D_wfs`
+and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq.
+(9.1.20) in [AbramowitzStegun1972]_ it follows
 
 .. math::
     :label: D.wfs.ls
@@ -1423,8 +1439,8 @@ derivate of the Hankel function [AbramowitzStegun1972]_ (9.1.30) it follows
 
 Applying :math:`{\,H_{1}^{(2)}\!}(\zeta) \approx
 -\sqrt{\frac{2}{{\pi}{\mathrm{i}}\zeta}} {\mathrm{e}}^{-{\mathrm{i}}\zeta}` for
-:math:`z\gg1` after [Williams1999]_ (4.23) and transfered to the temporal domain
-via an inverse Fourier transform  it follows
+:math:`z\gg1` after [Williams1999]_, eq. (4.23) and transfered to the temporal
+domain via an inverse Fourier transform :eq:`ifft` it follows
 
 .. math::
     :label: d.wfs.ls
@@ -1444,7 +1460,7 @@ via an inverse Fourier transform  it follows
         {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)} \;.
 
 The window function :math:`w(\x_0)` for a line source as source model can be
-calculated after [Spors2008]_
+calculated after [Spors2008]_ as
 
 .. math::
     :label: wfs.ls.selection
@@ -1459,8 +1475,6 @@ calculated after [Spors2008]_
 
 Focused Source
 ''''''''''''''
-
-.. _fig-wfs-25d-focused-source:
 
 .. plot::
     :context: close-figs
@@ -1483,11 +1497,21 @@ Focused Source
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
+.. _fig-wfs-25d-focused-source:
+
+.. figure:: img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic focused source synthesized with 2.5D
+    |WFS| :eq:`D.wfs.fs.2.5D`.  Parameters: :math:`\xs = (0, 0.5, 0)` m,
+    :math:`\n_\text{s} = (0, -1, 0)`, :math:`\xref = (0, 0, 0)`, :math:`f = 1`
+    kHz.
+
 As mentioned before, focused sources exhibit a field that converges in a focal
 point inside the audience area. After passing the focal point, the field becomes
-a diverging one as can be seen in Figure . In order to choose the active
-secondary sources, especially for circular or spherical geometries, the focused
-source also needs a direction :math:`\n_\text{s}`.
+a diverging one as can be seen in :numref:`fig-wfs-25d-focused-source`. In order
+to choose the active secondary sources, especially for circular or spherical
+geometries, the focused source also needs a direction :math:`\n_\text{s}`.
 
 The driving function for a focused source are given by the time-reversed
 versions of the driving functions for a point source as
@@ -1529,7 +1553,8 @@ or by using an approximated point source as
 As before for other source types, the approximated versions are the default
 driving functions for a focused source used in the |SFS Toolbox|.
 
-Transfered to the temporal domain via an inverse Fourier transform it follows
+Transfered to the temporal domain via an inverse Fourier transform :eq:`ifft` it
+follows
 
 .. math::
     :label: d.wfs.fs
@@ -1546,9 +1571,9 @@ Transfered to the temporal domain via an inverse Fourier transform it follows
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
         {\,\delta\!\left(t+\frac{|\x_0-\xs|}{c}\right)} \;.
 
-In this thesis a focused source always refers to the time-reversed version of a
+In this document a focused source always refers to the time-reversed version of a
 point source, but a focused line source can be defined in the same way starting
-from 
+from :eq:`D.wfs.ls`
 
 .. math::
     :label: D.wfs.fs.ls
@@ -1644,13 +1669,14 @@ support driving functions from |WFS|.
 
 .. rubric:: Footnotes
 
-.. [#] Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due to the use of another coordinate system, compare Figure 2.1 from Gumerov and Duraiswami and :numref:`fig-coordinate-system`.
+.. [#F1] Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due to the use of another coordinate system, compare Figure 2.1 from Gumerov and Duraiswami and :numref:`fig-coordinate-system`.
 
-.. [#]  Note the :math:`\frac{1}{2{\pi}}` term is wrong in (3.21) and omitted here, compare the `errata <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq. (24).
+.. [#F2]  Note the :math:`\frac{1}{2{\pi}}` term is wrong in (3.21) and omitted here, compare the `errata <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq. (24).
 
-.. [#] Compare the assumptions made before (15) in [SporsZotter2013]_, which lead to the derivation of the same window function in a more explicit way.
+.. [#F3] Compare the assumptions made before (15) in [SporsZotter2013]_, which lead to the derivation of the same window function in a more explicit way.
 
 .. [#F4] Note that Williams defines the Fourier transform with transposed signs as :math:`F(\omega) = \int f(t) {\mathrm{e}}^{{\mathrm{i}}\omega t}`. This leads also to changed signs in his definitions of the Green’s functions and field expansions.
 
+.. [#F5] Whereby :math:`r` corresponds to :math:`|\x_0-\xs|` and :math:`\cos\varphi` to :math:`\frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}`.
 
 .. vim: filetype=rst spell:
