@@ -21,7 +21,7 @@ import sphinx_rtd_theme
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('./include'))
 
 from acronyms import rst_epilog # This includes things like |HRTF| etc.
 import version
@@ -37,7 +37,7 @@ needs_sphinx = '1.3'
 #extensions = ['sphinx.ext.autodoc','nbsphinx','sphinx.ext.mathjax']
 extensions = [
 	'sphinx.ext.autodoc',
-        'sphinx.ext.mathjax',
+        'mathjax',
 	'sphinx.ext.viewcode',
 	'matplotlib.sphinxext.only_directives',
 	'matplotlib.sphinxext.plot_directive',
