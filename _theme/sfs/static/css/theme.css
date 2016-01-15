@@ -6376,6 +6376,10 @@ span[id*='MathJax-Span'] {
     color: #404040;
 }
 
+.caption-number a {
+    color: #404040;
+}
+
 @font-face {
     font-family: "Inconsolata";
     font-style: normal;
