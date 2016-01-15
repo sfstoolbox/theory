@@ -265,36 +265,6 @@ td {
     vertical-align: top
 }
 
-span.eqno {
-    float: right;
-}
-
-.equationlink {
-    display: none;
-    visibility: hidden;
-    font-family: inherit;
-    font: 400 normal normal 14px/1 FontAwesome;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-}
-
-.equationlink:before {
-    font-family: FontAwesome;
-    display: inline-block;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1;
-    text-decoration: inherit;
-    -webkit-font-smoothing: antialiased;
-}
-
-.equationlink:after {
-    visibility: visible;
-    content: "";
-    font-family: FontAwesome;
-    display: inline-block;
-}
-
 .chromeframe {
     margin: 0.2em 0;
     background: #ccc;
@@ -6394,6 +6364,16 @@ span[id*='MathJax-Span'] {
 
 .math {
     text-align: center
+}
+
+.eqno {
+    position: relative;
+    float: right;
+    z-index: 10;
+}
+
+.eqno a {
+    color: #404040;
 }
 
 @font-face {
