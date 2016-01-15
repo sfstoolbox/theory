@@ -463,6 +463,60 @@ character the solution of the driving function :eq:`D_wfs` does not depend on t
 of the secondary sources. This dependency applies to the direct solutions
 presented in :ref:`sec-nfchoa`.
 
+.. plot::
+    :context: close-figs
+
+    X = -9, 9
+    Y = -10, 2
+    Z = 0
+    omega = 2 * np.pi * 700
+    xs = 0, 2.5, 0
+    xref = 0, -3, 0
+    # loudspeaker array
+    N = 100
+    radius = 1
+    assert N % 2 == 0
+    # start with a circle and split it
+    x0_circle, n0_circle, a0_circle = sfs.array.circular(N, radius)
+    upper_x, lower_x = np.split(x0_circle, [N//2 + 1])
+    upper_n, lower_n = np.split(n0_circle, [N//2 + 1])
+    # reverse order of upper loudspeaker
+    upper_x = np.flipud(upper_x)
+    upper_n = np.flipud(upper_n)
+    # reverse direction of lower loudspeaker
+    lower_n = -lower_n
+    # put all together
+    x0 = np.row_stack((
+        lower_x - [6 * radius, 0, 0],
+        upper_x - [4 * radius, 0, 0],
+        lower_x - [2 * radius, 0, 0],
+        upper_x,
+        lower_x + [2 * radius, 0, 0],
+        upper_x + [4 * radius, 0, 0],
+        lower_x + [6 * radius, 0, 0],
+    ))
+    n0 = np.row_stack((
+        lower_n,
+        upper_n,
+        lower_n,
+        upper_n,
+        lower_n,
+        upper_n,
+        lower_n,
+    ))
+    a0 = sfs.array.weights_midpoint(x0, closed=False)
+    grid = sfs.util.xyz_grid(X, Y, Z, spacing=0.02)
+    d = sfs.mono.drivingfunction.wfs_25d_point(omega, x0, n0, xs, xref)
+    a = sfs.mono.drivingfunction.source_selection_point(n0, x0, xs)
+    twin = sfs.tapering.tukey(a,.3)
+    p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
+        source=sfs.mono.source.point)
+    normalization = 5
+    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.secondarysource_2d(x0, n0, grid)
+
+
+
 .. _fig-convex-concave-array:
 
 .. figure:: img/placeholder.png
