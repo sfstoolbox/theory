@@ -682,8 +682,8 @@ Plane Wave
 .. plot::
     :context: close-figs
 
-    nk = sfs.util.direction_vector(np.radians(45)) # direction of plane wave
-    xs = 0, 0, 0 # center of plane wave
+    nk = sfs.util.direction_vector(np.radians(45))  # direction of plane wave
+    xs = 0, 0, 0  # center of plane wave
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     p = sfs.mono.source.plane(omega, xs, nk, grid)
@@ -758,7 +758,7 @@ Point Source
 .. plot::
     :context: close-figs
 
-    xs = 0, 0, 0 # position of source
+    xs = 0, 0, 0  # position of source
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     p = sfs.mono.source.point(omega, xs, [], grid)
@@ -828,8 +828,8 @@ Dipole Point Source
 .. plot::
     :context: close-figs
 
-    xs = 0, 0, 0 # position of source
-    ns = sfs.util.direction_vector(0) # direction of source
+    xs = 0, 0, 0  # position of source
+    ns = sfs.util.direction_vector(0)  # direction of source
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     p = sfs.mono.source.point_dipole(omega, xs, ns, grid)
@@ -881,7 +881,7 @@ Line Source
 .. plot::
     :context: close-figs
 
-    xs = 0, 0, 0 # position of source
+    xs = 0, 0, 0  # position of source
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     p = sfs.mono.source.line(omega, xs, None, grid)
@@ -973,9 +973,9 @@ Plane Wave
 .. plot::
     :context: close-figs
 
-    nk = 0, -1, 0 # direction of plane wave
+    nk = 0, -1, 0  # direction of plane wave
     omega = 2 * np.pi * 1000  # frequency
-    R0 = 1.5 # radius of secondary sources
+    R0 = 1.5  # radius of secondary sources
     x0, n0, a0 = sfs.array.circular(200, R0)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.nfchoa_25d_plane(omega, x0, R0, nk)
@@ -1080,9 +1080,9 @@ Point Source
 .. plot::
     :context: close-figs
 
-    xs = 0, 2.5, 0 # position of source
+    xs = 0, 2.5, 0  # position of source
     omega = 2 * np.pi * 1000  # frequency
-    R0 = 1.5 # radius of secondary sources
+    R0 = 1.5  # radius of secondary sources
     x0, n0, a0 = sfs.array.circular(200, R0)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.nfchoa_25d_point(omega, x0, R0, xs)
@@ -1223,9 +1223,9 @@ Plane Wave
 .. plot::
     :context: close-figs
 
-    nk = 0, -1, 0 # direction of plane wave
+    nk = 0, -1, 0  # direction of plane wave
     omega = 2 * np.pi * 1000  # frequency
-    xref = 0, 0, 0 # 2.5D reference point
+    xref = 0, 0, 0  # 2.5D reference point
     x0, n0, a0 = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_plane(omega, x0, n0, nk, xref)
@@ -1315,9 +1315,9 @@ Point Source
 .. plot::
     :context: close-figs
 
-    xs = 0, 2.5, 0 # position of source
+    xs = 0, 2.5, 0  # position of source
     omega = 2 * np.pi * 1000  # frequency
-    xref = 0, 0, 0 # 2.5D reference point
+    xref = 0, 0, 0  # 2.5D reference point
     x0, n0, a0 = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_point(omega, x0, n0, xs, xref)
@@ -1420,7 +1420,7 @@ Line Source
 .. plot::
     :context: close-figs
 
-    xs = 0, 2.5, 0 # position of source
+    xs = 0, 2.5, 0  # position of source
     omega = 2 * np.pi * 1000  # frequency
     x0, n0, a0 = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
@@ -1503,10 +1503,10 @@ Focused Source
 .. plot::
     :context: close-figs
 
-    xs = 0, 0.5, 0 # position of source
-    ns = 0, -1, 0 # direction of source
+    xs = 0, 0.5, 0  # position of source
+    ns = 0, -1, 0  # direction of source
     omega = 2 * np.pi * 1000  # frequency
-    xref = 0, 0, 0 # 2.5D reference point
+    xref = 0, 0, 0  # 2.5D reference point
     x0, n0, a0 = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_focused(omega, x0, n0, xs, xref)
