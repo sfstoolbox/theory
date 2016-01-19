@@ -145,24 +145,43 @@ functions :math:`\psi_n` as [MorseFeshbach1981]_, p. (940)
 .. math::
     :label: G_expansion
 
-    G(\x-\x_0,\omega) = \sum_{n=1}^N \tilde{G}_n(\omega) \,
-        \psi_n^*(\x_0) \psi_n(\x)
+    G(\x-\x_0, \omega) = \sum_{n} \tilde{G}_n(\omega) \psi_n^*(\x_0) \psi_n(\x)
 
 .. math::
     :label: D_expansion
 
-    D(\x_0,\omega) = \sum_{n=1}^N \tilde{D}_n(\omega) \,
-        \psi_n(\x_0)
+    D(\x_0, \omega) = \sum_n \tilde{D}_n(\omega) \psi_n(\x_0)
 
 .. math::
     :label: S_expansion
 
-    S(\x,\omega) = \sum_{n=1}^N \tilde{S}_n(\omega) \,
-        \psi_n(\x) \;,
+    S(\x, \omega) = \sum_n \tilde{S}_n(\omega) \psi_n(\x) \;,
 
 where :math:`\tilde{G}_n, \tilde{D}_n, \tilde{S}_n` denote the series expansion
-coefficients and \ :math:`\langle\psi_n, \psi_{n'}\rangle = 0` for :math:`n \ne
-n'`. Introducing these three equations into :eq:`single-layer` one gets
+coefficients, :math:`n \in \mathbb{Z}`, and \ :math:`\langle\psi_n,
+\psi_{n'}\rangle = 0` for :math:`n \ne n'`.
+If the underlying space is not compact the equations will involve an integration
+instead of a summation
+
+.. math::
+    :label: G_expansion_non_compact
+
+    G(\x-\x_0, \omega) = \int \tilde{G}(k, \omega) \psi^*(k, \x_0)
+        \psi(k, \x) \, \mathop{\mathrm{d}{k}}
+
+.. math::
+    :label: D_expansion_non_compact
+
+    D(\x_0, \omega) = \int \tilde{D}(k, \omega) \psi(k, \x_0)
+        \mathop{\mathrm{d}{k}}
+
+.. math::
+    :label: S_expansion_non_compact
+
+    S(\x, \omega) = \int \tilde{S}(k, \omega) \psi(k, \x)
+        \mathop{\mathrm{d}{k}} \;,
+
+Introducing these equations into :eq:`single-layer` one gets
 
 .. math::
     :label: D_HOA
