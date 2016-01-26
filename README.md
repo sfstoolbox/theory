@@ -11,9 +11,13 @@ Python implementations of the Sound Field Synthesis Toolbox.
 
 ## Credits
 
-This documentation is developed by  
+This documentation is developed by (in alphabetical order):
+Jens Ahrens, TU Berlin  
+Vera Erbes, University of Rostock  
+Matthias Geier, University of Rostock  
+Nara Hahn, University of Rostock  
+Till Rettberg, University of Rostock  
+Frank Schultz, University of Rostock  
+Sascha Spors, University of Rostock  
 Hagen Wierstorf, TU Berlin  
 Fiete Winter, University of Rostock  
-Frank Schultz, University of Rostock  
-Jens Ahrens, TU Berlin  
-Sascha Spors, University of Rostock
