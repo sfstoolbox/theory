@@ -441,11 +441,7 @@ which :eq:`D_wfs` holds locally.  In general, this will be the case if the wave
 length is much smaller than the size of a planar surface patch and the position
 of the listener is far away from the secondary sources. [#F3]_ Additionally, only
 one part of the surface is active: the area that is illuminated from the
-incident field of the source model. With this approximation also non-convex
-secondary source distributions can be used with |WFS| – compare
-:numref:`fig-convex-concave-array` and the appendix in [LaxFeshbach1947]_. This
-was neglected in most of the literature so far, which postulates convex
-secondary source distributions, e.g. [Spors2008]_.
+incident field of the source model.
 
 The outlined approximation can be formulated by introducing a window function
 :math:`w(\x_0)` for the selection of the active secondary sources
@@ -458,71 +454,17 @@ into :eq:`D_wfs` as
         \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\omega)}_{D(\x_0,\omega)} \;
         {\mathop{\mathrm{d}{A}}}(\x_0) \;.
 
+In the |SFS Toolbox| we assume convex secondary source distributions, which
+allows to formulate the window function by a scalar product with the normal
+vector of the secondary source distribution.  In general, also non-convex
+secondary source distributions can be used with |WFS| – compare the appendix in
+[LaxFeshbach1947]_. In this case the selection criterion has to be chosen more
+carefully, incorporating the exact position of the listener to avoid ...
+
 One of the advantages of the applied approximation is that due to its local
-character the solution of the driving function :eq:`D_wfs` does not depend on the geometry
-of the secondary sources. This dependency applies to the direct solutions
-presented in :ref:`sec-nfchoa`.
-
-.. plot::
-    :context: close-figs
-
-    xs = 0, 2.5, 0
-    omega = 2 * np.pi * 700
-    xref = 0, -3, 0
-    # loudspeaker array
-    N = 100
-    radius = 1
-    # start with a circle and split it
-    x0_circle, n0_circle, a0_circle = sfs.array.circular(N, radius)
-    assert N % 2 == 0
-    upper_x, lower_x = np.split(x0_circle, [N//2 + 1])
-    upper_n, lower_n = np.split(n0_circle, [N//2 + 1])
-    # reverse order of upper loudspeakers
-    upper_x = np.flipud(upper_x)
-    upper_n = np.flipud(upper_n)
-    # reverse direction of lower loudspeakers
-    lower_n = -lower_n
-    # put all together
-    x0 = np.row_stack((
-        lower_x - [6 * radius, 0, 0],
-        upper_x - [4 * radius, 0, 0],
-        lower_x - [2 * radius, 0, 0],
-        upper_x,
-        lower_x + [2 * radius, 0, 0],
-        upper_x + [4 * radius, 0, 0],
-        lower_x + [6 * radius, 0, 0],
-    ))
-    n0 = np.row_stack((
-        lower_n,
-        upper_n,
-        lower_n,
-        upper_n,
-        lower_n,
-        upper_n,
-        lower_n,
-    ))
-    a0 = sfs.array.weights_midpoint(x0, closed=False)
-    grid = sfs.util.xyz_grid([-9, 9], [-10, 2], 0, spacing=0.02)
-    d = sfs.mono.drivingfunction.wfs_25d_point(omega, x0, n0, xs, xref)
-    a = sfs.mono.drivingfunction.source_selection_point(n0, x0, xs)
-    twin = sfs.tapering.tukey(a,.3)
-    p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
-        source=sfs.mono.source.point)
-    normalization = 4
-    sfs.plot.soundfield(normalization * p, grid);
-    sfs.plot.secondarysource_2d(x0, n0, grid)
-
-
-
-.. _fig-convex-concave-array:
-
-.. figure:: img/placeholder.png
-    :align: center
-
-    Sound pressure of a point source synthesized with WFS :eq:`D.wfs.ps.2.5D`.
-    The secondary source distribution is shown in black, whereby inactive
-    sources are marked with a dashed line. Parameters: :math:`\xs = (0, 2.5, 0)`
-    m, :math:`\xref = (0,−3, 0)` m, :math:`f = 700` Hz.
+character the solution of the driving function :eq:`D_wfs` does not depend on
+the geometry of the secondary sources. This dependency applies to the direct
+solutions presented in :ref:`sec-nfchoa`.
 
 
 .. ============================================================================
