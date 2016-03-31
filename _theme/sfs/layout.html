@@ -22,8 +22,8 @@
   {% endif %}
 
   {# CSS #}
-  <link rel="stylesheet" href="{{ pathto('_static/css/bootstrap.min.css', 1) }}" type="text/css" />
-  <link rel="stylesheet" href="{{ pathto('_static/css/freelancer.min.css', 1) }}" type="text/css" />
+  <link rel="stylesheet" href="{{ pathto('_static/libweb/css/bootstrap.min.css', 1) }}" type="text/css" />
+  <link rel="stylesheet" href="{{ pathto('_static/libweb/css/freelancer.min.css', 1) }}" type="text/css" />
 
   {%- block linktags %}
   {%- if hasdoc('about') %}
@@ -54,7 +54,7 @@
   {%- block extrahead %} {% endblock %}
 
   {# Keep modernizr in head - http://modernizr.com/docs/#installing #}
-  <script src="{{ pathto('_static/js/modernizr.min.js', 1) }}"></script>
+  {#<script src="{{ pathto('_static/libweb/js/modernizr.min.js', 1) }}"></script>#}
 
 </head>
 
@@ -213,19 +213,19 @@
   {% if not embedded %}
 
   <!-- jQuery -->
-  <script src="{{ pathto('_static/js/jquery.js', 1)}}"></script>
+  <script src="{{ pathto('_static/libweb/js/jquery.js', 1)}}"></script>
 
   <!-- Bootstrap Core JavaScript -->
-  <script src="{{ pathto('_static/js/bootstrap.min.js', 1)}}"></script>
+  <script src="{{ pathto('_static/libweb/js/bootstrap.min.js', 1)}}"></script>
 
   <!-- Plugin JavaScript -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="{{pathto('_static/js/classie.js', 1)}}"></script>
+  <script src="{{pathto('_static/libweb/js/classie.js', 1)}}"></script>
   <!--<script src="js/cbpAnimatedHeader.js"></script> This will include
   shrinking of navbar during scrolling-->
 
   <!-- Custom Theme JavaScript -->
-  <script src="{{ pathto('_static/js/freelancer.js', 1)}}"></script>
+  <script src="{{ pathto('_static/libweb/js/freelancer.js', 1)}}"></script>
 
   <!-- Mathematics -->
   <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -234,7 +234,7 @@
 
   {# RTD hosts this file, so just load on non RTD builds #}
   {% if not READTHEDOCS %}
-  <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+  <script type="text/javascript" src="{{ pathto('_static/libweb/js/theme.js', 1) }}"></script>
   {% endif %}
 
   {# STICKY NAVIGATION #}
