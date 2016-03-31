@@ -64,7 +64,7 @@ plot_formats = ['png']
 plot_rcparams = {'figure.figsize' : [8, 4.5] }
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ['_theme/sfs/static/libweb']
 
 # Spelling check needs an additional module that is not installed by default.
 # Add it only if spelling check is requested so docs can be generated without it.
