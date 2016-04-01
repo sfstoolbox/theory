@@ -99,17 +99,17 @@
     <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 sidebar">
-      <div role="navigation" aria-label="main navigation">
-        {% block menu %}
-        {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
-        {% if toctree %}
-          {{ toctree }}
-        {% else %}
-          <!-- Local TOC -->
-          <div class="local-toc">{{ toc }}</div>
-        {% endif %}
-        {% endblock %}
-      </div>
+        <div class="nav nav-sidebar">
+          {% block menu %}
+          {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
+          {% if toctree %}
+            {{ toctree }}
+          {% else %}
+            <!-- Local TOC -->
+            <div class="local-toc">{{ toc }}</div>
+          {% endif %}
+          {% endblock %}
+        </div>
       </div>
       <div class="col-lg-6 col-lg-offset-1 main">
       {# Main page #}
