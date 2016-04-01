@@ -23,26 +23,6 @@ replaces the old irs file format formerly used by the Toolbox. If you
 still need this you should download `the latest version with irs file
 support <https://github.com/sfstoolbox/sfs/releases/tag/1.2.0>`__.
 
-Table of Contents
------------------
-
-| **`Installation <#installation>`__**
-| **`Requirements <#requirements>`__**
-| **`Usage <#usage>`__**
-|  `Secondary sources <#secondary-sources>`__
-|  `Simulate monochromatic sound
-  fields <#simulate-monochromatic-sound-fields>`__
-|  `Simulate time snapshots of sound
-  fields <#simulate-time-snapshots-of-sound-fields>`__
-|  `Custom grid for sound field
-  simulations <#custom-grid-for-sound-field-simulations>`__
-|  `Make binaural simulations of your
-  systems <#make-binaural-simulations-of-your-systems>`__
-|  `Small helper functions <#small-helper-functions>`__
-|  `Plotting with Matlab/Octave or
-  gnuplot <#plotting-with-matlaboctave-or-gnuplot>`__
-| **`Credits and License <#credits-and-license>`__**
-
 Installation
 ------------
 
@@ -110,7 +90,7 @@ Linear array
     %print_png('img/secondary_sources_linear.png');
 
 .. figure:: img/secondary_sources_linear.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -130,7 +110,7 @@ Circular array
     %print_png('img/secondary_sources_circle.png');
 
 .. figure:: img/secondary_sources_circle.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -150,7 +130,7 @@ Box shaped array
     %print_png('img/secondary_sources_box.png');
 
 .. figure:: img/secondary_sources_box.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -178,7 +158,7 @@ place directly in the corners of the box.
     %print_png('img/secondary_sources_rounded-box.png');
 
 .. figure:: img/secondary_sources_rounded-box.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -212,7 +192,7 @@ repository <http://github.com/sfstoolbox/data>`__ to the data folder.
     %print_png('img/secondary_sources_sphere.png');
 
 .. figure:: img/secondary_sources_sphere.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -275,7 +255,7 @@ a sphere.
     %print_png('img/secondary_sources_arbitrary.png');
 
 .. figure:: img/secondary_sources_arbitrary.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -296,7 +276,7 @@ array.
     %print_png('img/secondary_sources_arbitrary_realloudspeakers.png');
 
 .. figure:: img/secondary_sources_arbitrary_realloudspeakers.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -348,17 +328,17 @@ with 3D WFS.
     %print_png('img/sound_field_wfs_3d_yz.png');
 
 .. figure:: img/sound_field_wfs_3d_xy.png
-   :alt: Image
+   :align: center
 
    Image
 
 .. figure:: img/sound_field_wfs_3d_xz.png
-   :alt: Image
+   :align: center
 
    Image
 
 .. figure:: img/sound_field_wfs_3d_yz.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -381,7 +361,7 @@ case no secondary sources will be added to the plot.
     %print_png('img/sound_field_wfs_3d_xyz.png');
 
 .. figure:: img/sound_field_wfs_3d_xyz.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -402,7 +382,7 @@ plot the results, by conf.plot.useplot = true;.
     %print_png('img/sound_field_wfs_25d.png');
 
 .. figure:: img/sound_field_wfs_25d.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -423,7 +403,7 @@ only the active ones to x0(:,7).
     %print_png('img/sound_field_wfs_25d_with_all_sources.png');
 
 .. figure:: img/sound_field_wfs_25d_with_all_sources.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -443,7 +423,7 @@ with 2.5D NFC-HOA.
     %print_png('img/sound_field_nfchoa_25d.png');
 
 .. figure:: img/sound_field_nfchoa_25d.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -479,7 +459,7 @@ into ``SFS_config.m`` for all possible settings.
     %print_png('img/sound_field_localwfs_2d.png');
 
 .. figure:: img/sound_field_localwfs_2d.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -505,7 +485,7 @@ setting to work.
     %print_png('img/sound_field_stereo.png');
 
 .. figure:: img/sound_field_stereo.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -528,7 +508,7 @@ a broadband virtual point source placed at (0 2 0) m for 2.5D NFC-HOA.
     %print_png('img/sound_field_imp_nfchoa_25d.png');
 
 .. figure:: img/sound_field_imp_nfchoa_25d.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -545,7 +525,7 @@ larger values.
     %print_png('img/sound_field_imp_nfchoa_25d_dB.png');
 
 .. figure:: img/sound_field_imp_nfchoa_25d_dB.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -582,7 +562,7 @@ default behavior. You can change this by setting
     %print_png('sound_field_imp_multiple_sources_dB.png');
 
 .. figure:: img/sound_field_imp_multiple_sources_dB.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -614,12 +594,12 @@ it for one dimension, two dimensions, or all three dimensions.
     %print_png('img/sound_field_imp_nfchoa_25d_dB_custom_grid.png');
 
 .. figure:: img/sound_field_wfs_3d_xyz_custom_grid.png
-   :alt: Image
+   :align: center
 
    Image
 
 .. figure:: img/sound_field_imp_nfchoa_25d_dB_custom_grid.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -654,7 +634,7 @@ Binaural simulation of arbitrary loudspeaker arrays
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: img/tu_berlin_hrtf.jpg
-   :alt: Image
+   :align: center
 
    Image
 
@@ -723,7 +703,7 @@ Binaural simulation of a real setup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. figure:: img/university_rostock_loudspeaker_array.jpg
-   :alt: Image
+   :align: center
 
    Image
 
@@ -793,7 +773,7 @@ the figure).
     %print_png('img/impulse_response_wfs_25d.png');
 
 .. figure:: img/impulse_response_wfs_25d.png
-   :alt: Image
+   :align: center
 
    Image
 
@@ -808,7 +788,7 @@ the whole frequency range will be affected.
     %print_png('img/impulse_response_wfs_25d_mono.png');
 
 .. figure:: img/impulse_response_wfs_25d_mono.png
-   :alt: Image
+   :align: center
 
    Image
 
