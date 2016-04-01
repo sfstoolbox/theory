@@ -65,47 +65,73 @@
 
   <!-- Navigation (top) -->
   {% include "navigation.html" %}
+  <div class="navbar navbar-default navbar-fixed-top navbar-shrink navbar-doc">
+    <div class="container">
+      <div class="navbar-left">
+        <span class="navbar-brand">Documentation</span>
+      </div>
+      <div class="collapse navbar-collapse" id="documentation-navbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li class="page-scroll">
+            <a href="#">Matlab</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#">Python</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#">Code References</a>
+          </li>
+          <li class="page-scroll">
+            <a href="#">Mathematical Fundamentals</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
-  <section>
-  <div class="container-fluid">
-  <div class="row">
-    <div class="col-lg-2 sidebar">
-    <div class="search">
-      {% block sidebartitle %}
-      {% include "searchbox.html" %}
-      {% endblock %}
-    </div>
-    <div role="navigation" aria-label="main navigation">
-      {% block menu %}
-      {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
-      {% if toctree %}
-        {{ toctree }}
-      {% else %}
-        <!-- Local TOC -->
-        <div class="local-toc">{{ toc }}</div>
-      {% endif %}
-      {% endblock %}
-    </div>
-    </div>
-    <div class="col-lg-6 col-lg-offset-1 main">
-    {# Main page #}
-    {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
-    <div class="wy-nav-top" role="navigation" aria-label="top navigation">
-      <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-      <a href="{{ pathto(master_doc) }}">{{ project }}</a>
-    </div>
-    {# PAGE CONTENT #}
-    <div class="wy-nav-content">
-      <div class="rst-content">
-        {% include "breadcrumbs.html" %}
-        <div role="main" class="document">
-          {% block body %}{% endblock %}
+  <section class="doc">
+    <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-2 sidebar">
+      <div class="search">
+        {% block sidebartitle %}
+        {% include "searchbox.html" %}
+        {% endblock %}
+      </div>
+      <div role="navigation" aria-label="main navigation">
+        {% block menu %}
+        {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
+        {% if toctree %}
+          {{ toctree }}
+        {% else %}
+          <!-- Local TOC -->
+          <div class="local-toc">{{ toc }}</div>
+        {% endif %}
+        {% endblock %}
+      </div>
+      </div>
+      <div class="col-lg-6 col-lg-offset-1 main">
+      {# Main page #}
+      {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
+      <div class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="{{ pathto(master_doc) }}">{{ project }}</a>
+      </div>
+      {# PAGE CONTENT #}
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          {% include "breadcrumbs.html" %}
+          <div role="main" class="document">
+            {% block body %}{% endblock %}
+          </div>
         </div>
+      </div>
       </div>
     </div>
     </div>
-  </div>
-  </div>
   </section>
 
   {% if web %}
