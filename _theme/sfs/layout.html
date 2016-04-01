@@ -68,7 +68,10 @@
   <div class="navbar navbar-default navbar-fixed-top navbar-shrink navbar-doc">
     <div class="container">
       <div class="navbar-left">
-        <span class="navbar-brand">Documentation</span>
+        <div class="search doc">
+          {% include "searchbox.html" %}
+        </div>
+        {#<span class="navbar-brand">Documentation</span>#}
       </div>
       <div class="collapse navbar-collapse" id="documentation-navbar">
         <ul class="nav navbar-nav navbar-right">
@@ -96,11 +99,6 @@
     <div class="container-fluid">
     <div class="row">
       <div class="col-lg-2 sidebar">
-      <div class="search">
-        {% block sidebartitle %}
-        {% include "searchbox.html" %}
-        {% endblock %}
-      </div>
       <div role="navigation" aria-label="main navigation">
         {% block menu %}
         {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
