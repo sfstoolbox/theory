@@ -79,16 +79,16 @@
             <a href="#page-top"></a>
           </li>
           <li class="page-scroll">
-            <a href="#">Matlab</a>
+            <a href="{{ home_url + 'matlab/' + version }}">Matlab</a>
           </li>
           <li class="page-scroll">
-            <a href="#">Python</a>
+            <a href="{{ home_url + 'python/' + version }}">Python</a>
           </li>
           <li class="page-scroll">
-            <a href="#">Code References</a>
+            <a href="{{ home_url + 'code_references/' + version }}">Code References</a>
           </li>
           <li class="page-scroll">
-            <a href="#">Mathematical Fundamentals</a>
+            <a href="{{ home_url + 'theory/' + version }}">Mathematical Fundamentals</a>
           </li>
         </ul>
       </div>
@@ -114,14 +114,14 @@
       <div class="col-lg-6 col-lg-offset-1 main">
       {# Main page #}
       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
-      <div class="wy-nav-top" role="navigation" aria-label="top navigation">
+      {#<div class="wy-nav-top" role="navigation" aria-label="top navigation">
         <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
         <a href="{{ pathto(master_doc) }}">{{ project }}</a>
-      </div>
+      </div>#}
       {# PAGE CONTENT #}
       <div class="wy-nav-content">
         <div class="rst-content">
-          {% include "breadcrumbs.html" %}
+          {#{% include "breadcrumbs.html" %}#}
           <div role="main" class="document">
             {% block body %}{% endblock %}
           </div>
@@ -132,11 +132,11 @@
     </div>
   </section>
 
-  {% if web %}
+  {#{% if web %}
 
   {% include "versions.html" %}
 
-  {% endif %}
+  {% endif %}#}
 
 
   <!-- Footer -->

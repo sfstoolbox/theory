@@ -5,8 +5,9 @@
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
 PAPER         =
-BUILDDIR      = _build
-VERSION       = $(shell python include/version.py)
+BUILDDIR      = ../_build
+PART          = theory
+VERSION       = $(shell python ../_include/version.py)
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -40,53 +41,32 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html:
-	$(SPHINXBUILD) -b html -A web=0 $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(VERSION)
+	$(SPHINXBUILD) -b html -A web=0 $(ALLSPHINXOPTS) $(BUILDDIR)/html/$(PART)/$(VERSION)
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$(VERSION)."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$(PART)/$(VERSION)."
 
 dirhtml:
-	$(SPHINXBUILD) -b dirhtml -A web=1 $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml/$(VERSION)
+	$(SPHINXBUILD) -b dirhtml -A web=1 $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml/$(PART)/$(VERSION)
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml/$(VERSION)."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/dirhtml/$(PART)/$(VERSION)."
 
 singlehtml:
-	$(SPHINXBUILD) -b singlehtml -A web=0 $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/$(VERSION)
+	$(SPHINXBUILD) -b singlehtml -A web=0 $(ALLSPHINXOPTS) $(BUILDDIR)/singlehtml/$(PART)/$(VERSION)
 	@echo
-	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/$(VERSION)."
-
-epub:
-	$(SPHINXBUILD) -b epub $(ALLSPHINXOPTS) $(BUILDDIR)/epub/$(VERSION)
-	@echo
-	@echo "Build finished. The epub file is in $(BUILDDIR)/epub/$(VERSION)."
+	@echo "Build finished. The HTML page is in $(BUILDDIR)/singlehtml/$(PART)/$(VERSION)."
 
 latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(VERSION)
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(PART)/$(VERSION)
 	@echo
-	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex/$(VERSION)."
+	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex/$(PART)/$(VERSION)."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
 	      "(use \`make latexpdf' here to do that automatically)."
 
 latexpdf:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(VERSION)
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(PART)/$(VERSION)
 	@echo "Running LaTeX files through pdflatex..."
-	$(MAKE) -C $(BUILDDIR)/latex/$(VERSION) all-pdf
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex/$(VERSION)."
-
-latexpdfja:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(BUILDDIR)/latex/$(VERSION)
-	@echo "Running LaTeX files through platex and dvipdfmx..."
-	$(MAKE) -C $(BUILDDIR)/latex/$(VERSION) all-pdf-ja
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex/$(VERSION)."
-
-man:
-	$(SPHINXBUILD) -b man $(ALLSPHINXOPTS) $(BUILDDIR)/man/$(VERSION)
-	@echo
-	@echo "Build finished. The manual pages are in $(BUILDDIR)/man/$(VERSION)."
-
-changes:
-	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes/$(VERSION)
-	@echo
-	@echo "The overview file is in $(BUILDDIR)/changes/$(VERSION)."
+	$(MAKE) -C $(BUILDDIR)/latex/$(PART)/$(VERSION) all-pdf
+	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex/$(PART)/$(VERSION)."
 
 linkcheck:
 	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(BUILDDIR)/linkcheck

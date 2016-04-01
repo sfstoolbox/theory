@@ -1,10 +1,23 @@
-Theory of Sound Field Synthesis
-===============================
+Documentation of the SFS Toolbox
+================================
 
-This repository provides the LaTeX sources for the PDF document `Theory of Sound
-Field Synthesis` which provides the basic documentation for the Matlab/Octave and
-Python implementations of the Sound Field Synthesis Toolbox.
+This repository provides the sphinx sources for building the online
+documentation.
 
+## Usage
+
+To compile it you have to run the following commands:
+
+```bash
+$ cd theory
+$ make dirhtml
+$ cd ../matlab
+$ make dirhtml
+$ cd ../pyhton
+$ make dirhtml
+$ cd ../code_references
+$ make dirhtml
+```
 ## License
 [Creative Commons Attribution (CC BY
 3.0)](https://creativecommons.org/licenses/by/3.0/)
@@ -19,5 +32,5 @@ Nara Hahn, University of Rostock
 Till Rettberg, University of Rostock  
 Frank Schultz, University of Rostock  
 Sascha Spors, University of Rostock  
-Hagen Wierstorf, TU Berlin  
+Hagen Wierstorf, TU Ilmenau  
 Fiete Winter, University of Rostock  

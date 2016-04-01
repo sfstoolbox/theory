@@ -1,0 +1,31 @@
+
+.. _sec-code-references:
+
+Code references
+===============
+
+We decided to create the Toolbox and this documentation in order to
+fully allow for the principle of *reproducible research* [Donoho2009]_
+in the research area of SFS. Like other fields that involve
+signal processing, the study of SFS implies implementing a multitude of
+algorithms and running numerical simulations on a computer. As a
+consequence, the outcome of the algorithms are easily vulnerable to
+implementation errors which cannot completely be avoided [Ince2012]_.
+
+State something about the reproduction of the figures ...
+
+The first version of this document is based on the PhD thesis of
+[Wierstorf2014]_. It is now evolving under the participations of all the team
+members with the final goal to provide the most up-to-date version of the
+current knowledge and software in the field of sound field synthesis.
+
+References
+==========
+
+.. [Donoho2009] D. L. Donoho, A. Maleki, I. U. Rahman, M. Shahram, and V. Stodden, “Reproducible Research in Computational Harmonic Analysis,” Comput. Sci. Eng. **11**, 8–18 (2009).
+
+.. [Ince2012] D. C. Ince, L. Hatton, and J. Graham-Cumming, “The case for open computer programs,” Nature **482**, 485–488 (2012).
+
+.. [Wierstorf2014] H. Wierstorf, *Perceptual Assessment of Sound Field Synthesis*, Ph.D. dissertation, Technische Universität Berlin, Berlin, Germany, 2014.
+
+.. vim: filetype=rst spell:

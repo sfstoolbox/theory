@@ -5,13 +5,6 @@ Sound Field Synthesis ...
 =========================
 
 .. toctree::
-    :hidden:
+    :maxdepth: 2
 
     index
-
-.. toctree::
-    :maxdepth: 3
-
-    intro/index
-    theory/index
-    references/index
