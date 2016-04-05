@@ -1706,88 +1706,57 @@ support driving functions from |WFS|.
 References
 ==========
 
-.. [AbramowitzStegun1972] M. Abramowitz, and I. A. Stegun, *Handbook of Mathematical Functions*. (National Bureau of Standards, Washington, 1972).
+.. [AbramowitzStegun1972] Abramowitz, M. and Stegun, I. A., *Handbook of Mathematical Functions*. (National Bureau of Standards, Washington, 1972).
 
-.. [Ahrens2012] J. Ahrens, *Analytic Methods of Sound Field Synthesis*. (Springer, New York, 2012).
+.. [Ahrens2012] Ahrens, J., *Analytic Methods of Sound Field Synthesis*. (Springer, New York, 2012).
 
-.. [AhrensSpors2009a] J. Ahrens and S. Spors, “On the Secondary Source Type Mismatch in Wave Field Synthesis Employing Circular Distributions of Loudspeakers,” in *127th Conv. Audio Eng. Soc.*, New York, NY (2009), preprint 7952.
+.. [AhrensSpors2009a] Ahrens, J. and Spors, S., “On the Secondary Source Type Mismatch in Wave Field Synthesis Employing Circular Distributions of Loudspeakers,” in *127th Conv. Audio Eng. Soc.*, New York, NY (2009), preprint 7952.
 
-.. [AhrensSpors2009b] J. Ahrens and S. Spors, “Spatial encoding and decoding of focused virtual sound sources,” In *1st Ambisonics S.*, Graz, Austria (2009).
+.. [AhrensSpors2009b] Ahrens, J. and Spors, S., “Spatial encoding and decoding of focused virtual sound sources,” In *1st Ambisonics S.*, Graz, Austria (2009).
 
-.. [AhrensSpors2010] J. Ahrens and S. Spors, “Sound Field Reproduction Using Planar and Linear Arrays of Loudspeakers,” IEEE Trans. Audio Speech Lang. Processing **18**, 2038–2050 (2010).
+.. [AhrensSpors2010] Ahrens, J. and Spors, S., “Sound Field Reproduction Using Planar and Linear Arrays of Loudspeakers,” IEEE Trans. Audio Speech Lang. Processing **18**, 2038–2050 (2010).
 
-.. [ArfkenWeber2005] G. B. Arfken and H. J. Weber. *Mathematical Methods for Physicists*. (Elsevier, Amsterdam, 2015).
+.. [ArfkenWeber2005] Arfken, G. B. and Weber, H. J., *Mathematical Methods for Physicists*. (Elsevier, Amsterdam, 2015).
 
-.. [Avni2013] A. Avni, J. Ahrens, M. Geier, S. Spors, H. Wierstorf, and B. Rafaely, “Spatial perception of sound fields recorded by spherical microphone arrays with varying spatial resolution,” J. Acoust. Soc. Am. **133**, 2711–2721 (2013).
+.. [Avni2013] Avni, A., Ahrens, J., Geier, M., Spors, S., Wierstorf, H., and Rafaely, B., “Spatial perception of sound fields recorded by spherical microphone arrays with varying spatial resolution,” J. Acoust. Soc. Am. **133**, 2711–2721 (2013).
 
-.. [Berkhout1988] A. J. Berkhout, “A holographic approach to acoustic control,” J. Audio Eng. Soc. **36**, 977–995 (1988).
+.. [Bracewell2000] Bracewell, R. N., *The Fourier Transform and its Applications*. (McGraw Hill, Boston, 2000).
 
-.. [Blauert1997] J. Blauert, *Spatial Hearing*. (The MIT Press, Cambridge, 1997).
+.. [ColtonKress1983] Colton, D. and Kress, R., *Integral Equation Methods in Scattering Theory*. (Wiley, New York, 2000).
 
-.. [Blumlein1958] A. D. Blumlein. “Improvements in and relating to Sound-transmission, Sound-recording and Sound-reproducing Systems,” J. Audio Eng. Soc. **6**, 91–98, 130 (1958).
+.. [ColtonKress1998] Colton, D. and Kress, R., *Inverse Acoustic and Electromagnetic Scattering Theory*, (Springer, New York, 1998).
 
-.. [Bracewell2000] R. N. Bracewell, *The Fourier Transform and its Applications*. (McGraw Hill, Boston, 2000).
+.. [Fazi2010] Fazi, F. M., *Sound Field Reproduction*, Ph.D. dissertation, University of Southampton, Southampton, UK, 2010.
 
-.. [ColtonKress1983] D. Colton and R. Kress, *Integral Equation Methods in Scattering Theory*. (Wiley, New York, 2000).
+.. [FaziNelson2013] Fazi, F. M. and Nelson, P. A., “Sound field reproduction as an equivalent acoustical scattering problem,” J. Acoust. Soc. Am. **134**, 3721–3729 (2013).
 
-.. [ColtonKress1998] D. Colton and R. Kress, *Inverse Acoustic and Electromagnetic Scattering Theory*, (Springer, New York, 1998).
+.. [GumerovDuraiswami2004] Gumerov, N. A. and Duraiswami, R., *Fast Multipole Methods for the Helmholtz Equation in Three Dimensions*. (Elsevier, Amsterdam, 2004).
 
-.. [Donoho2009] D. L. Donoho, A. Maleki, I. U. Rahman, M. Shahram, and V. Stodden, “Reproducible Research in Computational Harmonic Analysis,” Comput. Sci. Eng. **11**, 8–18 (2009).
+.. [Herrin2003] Herrin, D. W., Martinus, F., Wu, T. W., and Seybert, A. F., “A New Look at the High Frequency Boundary Element and Rayleigh Integral Approximations,” SAE Technical Paper, doi:10.4271/2003-01-1451 (2003).
 
-.. [Fazi2010] F. M. Fazi, *Sound Field Reproduction*, Ph.D. dissertation, University of Southampton, Southampton, UK, 2010.
+.. [LaxFeshbach1947] Lax, M. and Feshbach, H., “On the Radiation Problem at High Frequencies,” J. Acoust. Soc. Am. **19**, 682–690 (1947).
 
-.. [FaziNelson2013] F. M. Fazi and P. A. Nelson, “Sound field reproduction as an equivalent acoustical scattering problem,” J. Acoust. Soc. Am. **134**, 3721–3729 (2013).
+.. [MorseFeshbach1981] Morse, P. M. and Feshbach, H., *Methods of Theoretical Physics*. (Feshbach Publishing, Minneapolis, 1981).
 
-.. [Frank2013] M. Frank, *Phantom Sources using Multiple Loudspeakers*, Ph.D. dissertation, University of Music; Performing Arts Graz, Graz, Austria, 2013.
+.. [SchultzSpors2014] Schultz, F. and Spors, S., “Comparing Approaches to the Spherical and Planar Single Layer Potentials for Interior Sound Field Synthesis,” Acta Acust. **100**, 900–911 (2014).
 
-.. [Gerzon1973] M. A. Gerzon, “Periphony: With-Height Sound Reproduction,” J. Audio Eng. Soc. **21**, 2–10 (1973).
+.. [SporsAhrens2010] Spors, S. and Ahrens, J., “Reproduction of Focused Sources by the Spectral Division Method,” in *4th IEEE ISCCSP*, Limassol, Cyprus (2010), doi:10.1109/ISCCSP.2010.5463335.
 
-.. [GumerovDuraiswami2004] N. A. Gumerov and R. Duraiswami, *Fast Multipole Methods for the Helmholtz Equation in Three Dimensions*. (Elsevier, Amsterdam, 2004).
+.. [SporsZotter2013] Spors, S. and Zotter, F., “Spatial Sound Synthesis with Loudspeakers,” in *Cutting Edge in Spatial Audio, EAA Winter School*, Merano, Italy (2013), pp. 32–37.
 
-.. [Hamasaki2005] K. Hamasaki, K. Hiyama, and H. Okumura, “The 22.2 Multichannel Sound System and Its Application,” in *118th Conv. Audio Eng. Soc.*, Barcelona, Spain (2005), preprint 6406.
+.. [Spors2011] Spors, S., Kuscher, V., and Ahrens, J., “Efficient realization of model-based rendering for 2.5-dimensional near-field compensated higher order Ambisonics,” in *IEEE WASPAA*, New Paltz, NY (2011), pp. 61–64.
 
-.. [Herrin2003] D. W. Herrin, F. Martinus, T. W. Wu, and A. F. Seybert, “A New Look at the High Frequency Boundary Element and Rayleigh Integral Approximations,” SAE Technical Paper, doi:10.4271/2003-01-1451 (2003).
+.. [Spors2008] Spors, S., Rabenstein, R., and Ahrens, J., “The Theory of Wave Field Synthesis Revisited,” in *124th Conv. Audio Eng. Soc.*, Amsterdam, Netherlands (2008), preprint 7358.
 
-.. [Ince2012] D. C. Ince, L. Hatton, and J. Graham-Cumming, “The case for open computer programs,” Nature **482**, 485–488 (2012).
+.. [Start1997] Start, E. W., *Direct Sound Enhancement by Wave Field Synthesis*, Ph.D. dissertation, Technische Universiteit Delft, Delft, Netherlands, 1997.
 
-.. [LaxFeshbach1947] M. Lax and H. Feshbach, “On the Radiation Problem at High Frequencies,” J. Acoust. Soc. Am. **19**, 682–690 (1947).
+.. [Verheijen1997] Verheijen, E., *Sound Reproduction by Wave Field Synthesis*, Ph.D. dissertation, Technische Universiteit Delft, Delft, Netherlands, 1997.
 
-.. [Leakey1959] D. M. Leakey, “Some Measurements on the Effects of Interchannel Intensity and Time Differences in Two Channel Sound Systems,” J. Acoust. Soc. Am. **31**, 977–986 (1959).
+.. [Williams1999] Williams, E. G., *Fourier Acoustics*. (Academic Press, San Diego, 1999).
 
-.. [Moncel1881] T. du Moncel, “The international exhibition and congress of electricity at Paris,” *Nature*, Oct. 20, 585–589 (1881).
+.. [Yon2003] Yon, S., Tanter, M., and Fink, M., “Sound focusing in rooms: The time-reversal approach,” J. Acoust. Soc. Am. **113**, 1533–1243 (2003).
 
-.. [MorseFeshbach1981] P. M. Morse and H. Feshbach, *Methods of Theoretical Physics*. (Feshbach Publishing, Minneapolis, 1981).
-
-.. [Pulkki1997] V. Pulkki, “Virtual Sound Source Positioning Using Vector Base Amplitude Panning,” J. Audio Eng. Soc. **45**, 456–466 (1997).
-
-.. [SchultzSpors2014] F. Schultz and S. Spors, “Comparing Approaches to the Spherical and Planar Single Layer Potentials for Interior Sound Field Synthesis,” Acta Acust. **100**, 900–911 (2014).
-
-.. [SporsAhrens2010] S. Spors and J. Ahrens, “Reproduction of Focused Sources by the Spectral Division Method,” in *4th IEEE ISCCSP*, Limassol, Cyprus (2010), doi:10.1109/ISCCSP.2010.5463335.
-
-.. [SporsZotter2013] S. Spors and F. Zotter, “Spatial Sound Synthesis with Loudspeakers,” in *Cutting Edge in Spatial Audio, EAA Winter School*, Merano, Italy (2013), pp. 32–37.
-
-.. [Spors2011] S. Spors, V. Kuscher, and J. Ahrens, “Efficient realization of model-based rendering for 2.5-dimensional near-field compensated higher order Ambisonics,” in *IEEE WASPAA*, New Paltz, NY (2011), pp. 61–64.
-
-.. [Spors2008] S. Spors, R. Rabenstein, and J. Ahrens, “The Theory of Wave Field Synthesis Revisited,” in *124th Conv. Audio Eng. Soc.*, Amsterdam, Netherlands (2008), preprint 7358.
-
-.. [Start1997] E. W. Start, *Direct Sound Enhancement by Wave Field Synthesis*, Ph.D. dissertation, Technische Universiteit Delft, Delft, Netherlands, 1997.
-
-.. [SteinbergandSnow1934] J. C. Steinberg and W. B.Snow, “Symposium on wire transmission of symphonic music and its reproduction in auditory perspective: Physical Factors,” Bell Syst. Tech. J. **13**, 245–258 (1934).
-
-.. [Verheijen1997] E. Verheijen, *Sound Reproduction by Wave Field Synthesis*, Ph.D. dissertation, Technische Universiteit Delft, Delft, Netherlands, 1997.
-
-.. [Wierstorf2014] H. Wierstorf, *Perceptual Assessment of Sound Field Synthesis*, Ph.D. dissertation, Technische Universität Berlin, Berlin, Germany, 2014.
-
-.. [WierstorfSpors2012] H. Wierstorf and S. Spors, “Sound Field Synthesis Toolbox.” in *132nd Conv. Audio Eng. Soc.*, Budapest, Hungary (2012), eBrief 50.
-
-.. [Wierstorf2013] H. Wierstorf, A. Raake, and S. Spors, “Binaural assessment of multi-channel reproduction,” In *The Technology of Binaural Listening*, edited by J. Blauert (Springer, New York, 2013), Chap. 10, pp. 255--278.
-
-.. [Williams1999] E. G. Williams, *Fourier Acoustics*. (Academic Press, San Diego, 1999).
-
-.. [Yon2003] S. Yon, M. Tanter, and M. Fink, “Sound focusing in rooms: The time-reversal approach,” J. Acoust. Soc. Am. **113**, 1533–1243 (2003).
-
-.. [ZotterSpors2013] F. Zotter and S. Spors, “Is sound field control determined at all frequencies? How is it related to numerical acoustics?” in *52th Int. Conf. Audio Eng. Soc.*, Guildford, UK (2013), preprint 1.3.
-
+.. [ZotterSpors2013] Zotter, F. and Spors, S., “Is sound field control determined at all frequencies? How is it related to numerical acoustics?” in *52th Int. Conf. Audio Eng. Soc.*, Guildford, UK (2013), preprint 1.3.
 
 
 .. vim: filetype=rst spell:
