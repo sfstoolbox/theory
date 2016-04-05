@@ -937,13 +937,14 @@ The expansion coefficients for linear basis functions are given as
 
 .. ============================================================================
 
+.. _sec-driving-functions-nfchoa-sdm:
 
-.. _sec-driving-functions:
+Driving functions for |NFC-HOA| and |SDM|
+-----------------------------------------
 
-Driving Functions
------------------
+.. _sec-driving-functions-nfchoa-sdm-plane-wave:
 
-In the following, driving functions for |NFC-HOA|, |SDM|, and |WFS| are derived
+In the following, driving functions for |NFC-HOA| and |SDM| are derived
 for spherical, circular, and linear secondary source distributions. Among the
 possible combinations of methods and secondary sources not all are meaningful.
 Hence, only the relevant ones will be presented. The same holds for the
@@ -951,24 +952,14 @@ introduced source models of plane waves, point sources, line sources and focused
 sources. [AhrensSpors2010]_ in addition have considered |SDM|
 driving functions for planar secondary source distributions.
 
-The driving functions are given in the temporal-frequency domain. For some of
-them, especially in the case of |WFS| an analytic solution in the temporal domain
-exists and is presented. For |NFC-HOA|, temporal-domain implementations for the
+For |NFC-HOA|, temporal-domain implementations for the
 2.5D cases are available for a plane wave and a point source as source models. The
 derivation of the implementation is not explicitly shown here, but is described
 in [Spors2011]_.
 
-The 2D or 2.5D cases are illustrated in the following by companion figures.
-
-.. _sec-driving-functions-nfchoa-sdm:
-
-Near-Field Compensated Higher Order Ambisonics and Spectral Division Method
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. _sec-driving-functions-nfchoa-sdm-plane-wave:
 
 Plane Wave
-''''''''''
+~~~~~~~~~~
 
 .. plot::
     :context: close-figs
@@ -1075,7 +1066,7 @@ holds for the driving functions of |WFS| as presented in the next section.
 .. _sec-driving-functions-nfchoa-sdm-point-source:
 
 Point Source
-''''''''''''
+~~~~~~~~~~~~
 
 .. plot::
     :context: close-figs
@@ -1148,7 +1139,7 @@ results in [Ahrens2012]_, eq. (4.53)
 .. _sec-driving-functions-nfchoa-sdm-line-source:
 
 Line Source
-'''''''''''
+~~~~~~~~~~~
 
 For a circular secondary source distribution with radius :math:`R_0` and line
 sources as secondary sources the driving function is given by inserting the
@@ -1178,7 +1169,7 @@ and :eq:`G_linear` into :eq:`D_linear` as
 .. _sec-driving-functions-nfchoa-sdm-focused-source:
 
 Focused Source
-''''''''''''''
+~~~~~~~~~~~~~~
 
 Focused sources mimic point or line sources that are located inside the audience
 area. For the single-layer potential the assumption is that the audience area is
@@ -1204,8 +1195,8 @@ In the |SFS Toolbox| only focused sources in |WFS| are considered at the moment.
 
 .. _sec-driving-functions-wfs:
 
-Wave Field Synthesis
-~~~~~~~~~~~~~~~~~~~~
+Driving functions for |WFS|
+---------------------------
 
 In the following, the driving functions for |WFS| in the frequency and temporal
 domain for selected source models are presented. The temporal domain functions
@@ -1218,7 +1209,7 @@ discussed above.
 .. _sec-driving-functions-wfs-plane-wave:
 
 Plane Wave
-''''''''''
+~~~~~~~~~~
 
 .. plot::
     :context: close-figs
@@ -1310,7 +1301,7 @@ calculated after [Spors2008]_
 .. _sec-driving-functions-wfs-point-source:
 
 Point Source
-''''''''''''
+~~~~~~~~~~~~
 
 .. plot::
     :context: close-figs
@@ -1415,7 +1406,7 @@ calculated after [Spors2008]_ as
 .. _sec-driving-functions-wfs-line-source:
 
 Line Source
-'''''''''''
+~~~~~~~~~~~
 
 .. plot::
     :context: close-figs
@@ -1498,7 +1489,7 @@ calculated after [Spors2008]_ as
 .. _sec-driving-functions-wfs-focused-source:
 
 Focused Source
-''''''''''''''
+~~~~~~~~~~~~~~
 
 .. plot::
     :context: close-figs
@@ -1616,8 +1607,8 @@ The window function :math:`w(\x_0)` for a focused source can be calculated as
 
 .. _sec-driving-functions-local-sfs:
 
-Local Sound Field Synthesis
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Driving functions for |LSFS|
+----------------------------
 
 The reproduction accuracy of |WFS| is limited due to practical aspects.  For the
 audible frequency range the desired sound field can not be synthesized
@@ -1688,7 +1679,8 @@ while :math:`d_{\mathrm{fs}}(\x_0,{\x_\text{fs}}, t)` is derived analogously to
 from or . At the moment :math:`d_{\mathrm l}({\x_\text{fs}}, t)` does only
 support driving functions from |WFS|.
 
-.. rubric:: Footnotes
+Footnotes
+---------
 
 .. [#F1] Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due to the use of another coordinate system, compare Figure 2.1 from Gumerov and Duraiswami and :numref:`fig-coordinate-system`.
 
@@ -1704,7 +1696,7 @@ support driving functions from |WFS|.
 .. _sec-references:
 
 References
-==========
+----------
 
 .. [AbramowitzStegun1972] Abramowitz, M. and Stegun, I. A., *Handbook of Mathematical Functions*. (National Bureau of Standards, Washington, 1972).
 
