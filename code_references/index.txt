@@ -22,10 +22,10 @@ current knowledge and software in the field of sound field synthesis.
 References
 ==========
 
-.. [Donoho2009] D. L. Donoho, A. Maleki, I. U. Rahman, M. Shahram, and V. Stodden, “Reproducible Research in Computational Harmonic Analysis,” Comput. Sci. Eng. **11**, 8–18 (2009).
+.. [Donoho2009] Donoho, D. L., Maleki, A., Rahman, I. U., Shahram, M., and Stodden, V., “Reproducible Research in Computational Harmonic Analysis,” Comput. Sci. Eng. **11**, 8–18 (2009).
 
-.. [Ince2012] D. C. Ince, L. Hatton, and J. Graham-Cumming, “The case for open computer programs,” Nature **482**, 485–488 (2012).
+.. [Ince2012] Ince, D. C., Hatton, L., and Graham-Cumming, J., “The case for open computer programs,” Nature **482**, 485–488 (2012).
 
-.. [Wierstorf2014] H. Wierstorf, *Perceptual Assessment of Sound Field Synthesis*, Ph.D. dissertation, Technische Universität Berlin, Berlin, Germany, 2014.
+.. [Wierstorf2014] Wierstorf, H., *Perceptual Assessment of Sound Field Synthesis*, Ph.D. dissertation, Technische Universität Berlin, Berlin, Germany, 2014.
 
 .. vim: filetype=rst spell:
