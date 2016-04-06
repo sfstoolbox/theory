@@ -65,7 +65,7 @@
 
   <!-- Navigation (top) -->
   {% include "navigation.html" %}
-  <div class="navbar navbar-default navbar-fixed-top navbar-shrink navbar-doc">
+  <div class="navbar navbar-default navbar-shrink navbar-doc">
     <div class="container">
       <div class="navbar-left">
         <div class="search doc">
@@ -98,10 +98,11 @@
   <section class="doc">
     <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-2 sidebar">
+      <nav class="col-lg-2 sidebar" id="docscroll">
         <div class="nav nav-sidebar">
+        <ul data-spy="affix" data-offset-top="120" data-offset-bottom="421">
           {% block menu %}
-          {% set toctree = toctree(maxdepth=4, collapse=False, includehidden=True) %}
+          {% set toctree = toctree(maxdepth=2, collapse=False, includehidden=True) %}
           {% if toctree %}
             {{ toctree }}
           {% else %}
@@ -109,8 +110,9 @@
             <div class="local-toc">{{ toc }}</div>
           {% endif %}
           {% endblock %}
+        </ul>
         </div>
-      </div>
+      </nav>
       <div class="col-lg-6 col-lg-offset-1 main">
       {# Main page #}
       {# MOBILE NAV, TRIGGLES SIDE NAV ON TOGGLE #}
@@ -119,7 +121,7 @@
         <a href="{{ pathto(master_doc) }}">{{ project }}</a>
       </div>#}
       {# PAGE CONTENT #}
-      <div class="wy-nav-content">
+      <div data-spy="scroll" data-target="docscroll" class="wy-nav-content">
         <div class="rst-content">
           {#{% include "breadcrumbs.html" %}#}
           <div role="main" class="document">
