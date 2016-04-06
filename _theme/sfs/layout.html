@@ -98,7 +98,7 @@
   <section class="doc">
     <div class="container-fluid">
     <div class="row">
-      <nav class="col-lg-2 sidebar" id="docscroll">
+      <nav class="col-lg-2 sidebar">
         <div class="nav nav-sidebar">
         <ul data-spy="affix" data-offset-top="120" data-offset-bottom="421">
           {% block menu %}
@@ -121,7 +121,7 @@
         <a href="{{ pathto(master_doc) }}">{{ project }}</a>
       </div>#}
       {# PAGE CONTENT #}
-      <div data-spy="scroll" data-target="docscroll" class="wy-nav-content">
+      <div class="wy-nav-content">
         <div class="rst-content">
           {#{% include "breadcrumbs.html" %}#}
           <div role="main" class="document">
