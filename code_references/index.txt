@@ -4,28 +4,37 @@
 Code references
 ===============
 
-We decided to create the Toolbox and this documentation in order to
-fully allow for the principle of *reproducible research* [Donoho2009]_
-in the research area of SFS. Like other fields that involve
-signal processing, the study of SFS implies implementing a multitude of
-algorithms and running numerical simulations on a computer. As a
-consequence, the outcome of the algorithms are easily vulnerable to
-implementation errors which cannot completely be avoided [Ince2012]_.
+We decided to create the Toolbox and this documentation in order to fully allow
+for the principle of *reproducible research* [Donoho2009]_.  Like other fields
+that involve signal processing, the study of sound field synthesis implies
+implementing a multitude of algorithms and running numerical simulations on a
+computer. As a consequence, the outcome of the algorithms are easily vulnerable
+to implementation errors which cannot completely be avoided [Ince2012]_.
+On the other hand, the theory of sound field synthesis is not completely settled
+yet and the best solutions for some driving functions are still under dispute or
+have not been derived yet.
 
-State something about the reproduction of the figures ...
+In order to provide a comprehensive and up-to-date review of the current theory
+on sound field synthesis, we summarized the theory of sound field synthesis in
+the `Mathematical fundamentals <http://sfstoolbox.org/doc/theory/>`_ section.
+Whenever a driving function or some other equation is implemented in the code of
+of the SFS Toolbox it comes with a comment providing a reference to the
+corresponding equation in this theory section. This provides the possibility to
+publish a release of the then current status of the theory together with the
+software releases, allowing to verify the references even for older versions of
+the software.
 
-The first version of this document is based on the PhD thesis of
-[Wierstorf2014]_. It is now evolving under the participations of all the team
-members with the final goal to provide the most up-to-date version of the
-current knowledge and software in the field of sound field synthesis.
+.. warning::
+    :class: alert, alert-danger
+
+    Note, that we will only start with version 2.2.0 of the Matlab Toolbox to
+    include this reference scheme.
 
 References
-==========
+----------
 
 .. [Donoho2009] Donoho, D. L., Maleki, A., Rahman, I. U., Shahram, M., and Stodden, V., “Reproducible Research in Computational Harmonic Analysis,” Comput. Sci. Eng. **11**, 8–18 (2009).
 
 .. [Ince2012] Ince, D. C., Hatton, L., and Graham-Cumming, J., “The case for open computer programs,” Nature **482**, 485–488 (2012).
-
-.. [Wierstorf2014] Wierstorf, H., *Perceptual Assessment of Sound Field Synthesis*, Ph.D. dissertation, Technische Universität Berlin, Berlin, Germany, 2014.
 
 .. vim: filetype=rst spell:
