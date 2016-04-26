@@ -3,11 +3,11 @@
 SFS Toolbox for Python
 ======================
 
-Python implementation of the `Sound Field Synthesis Toolbox`_.
+Python implementation of the SFS Toolbox.
 
 .. _Sound Field Synthesis Toolbox: http://github.com/sfstoolbox/sfs/
 
-Documentation:
+Feature documentation:
    http://sfs.rtfd.org/
 
 Code:
@@ -57,7 +57,7 @@ To un-install, use::
 How to Get Started
 ------------------
 
-Various examples are located in the directory examples/
+Various examples are located in the directory ``examples/``
 
 * sound_field_synthesis.py: 
     Illustrates the general usage of the toolbox
@@ -65,5 +65,11 @@ Various examples are located in the directory examples/
     Computes the sound fields for various techniques, virtual sources and loudspeaker array configurations
 * soundfigures.py: 
     Illustrates the synthesis of sound figures with Wave Field Synthesis
+
+Feature documentation
+---------------------
+
+For an extensive documentation of all its features, have a look at
+http://sfs.rtfd.org/.
 
 .. vim: filetype=rst spell:
