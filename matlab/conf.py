@@ -124,8 +124,7 @@ html_context = {'versions': [('1.0', '1.0/'), ('latest', 'latest/')],
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', '02_theory_of_sound_field_synthesis',
-        'logo_design']
+exclude_patterns = ['_build', 'logo_design']
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
