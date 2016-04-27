@@ -6,16 +6,21 @@ documentation.
 
 ## Usage
 
-To compile it you have to run the following commands:
+The different parts of the documentation are independently of each other and
+have to be compiled independently as well:
 
 ```bash
 $ cd theory
+$ make clean
 $ make dirhtml
 $ cd ../matlab
+$ make clean
 $ make dirhtml
 $ cd ../pyhton
+$ make clean
 $ make dirhtml
 $ cd ../code_references
+$ make clean
 $ make dirhtml
 ```
 ## License
