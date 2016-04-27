@@ -159,7 +159,7 @@ functions :math:`\psi_n` as [MorseFeshbach1981]_, p. (940)
 
 where :math:`\tilde{G}_n, \tilde{D}_n, \tilde{S}_n` denote the series expansion
 coefficients, :math:`n \in \mathbb{Z}`, and \ :math:`\langle\psi_n,
-\psi_{n'}\rangle = 0` for :math:`n \ne n'`.
+\psi_{n'}\rangle = 0\,` for :math:`n \ne n'`.
 If the underlying space is not compact the equations will involve an integration
 instead of a summation
 
@@ -167,20 +167,21 @@ instead of a summation
     :label: G_expansion_non_compact
 
     G(\x-\x_0, \omega) = \int \tilde{G}(k, \omega) \psi^*(k, \x_0)
-        \psi(k, \x) \, \mathop{\mathrm{d}{k}}
+        \psi(k, \x) \, \mathop{\mathrm{d}{\mu}}
 
 .. math::
     :label: D_expansion_non_compact
 
     D(\x_0, \omega) = \int \tilde{D}(k, \omega) \psi(k, \x_0)
-        \mathop{\mathrm{d}{k}}
+        \mathop{\mathrm{d}{\mu}}
 
 .. math::
     :label: S_expansion_non_compact
 
     S(\x, \omega) = \int \tilde{S}(k, \omega) \psi(k, \x)
-        \mathop{\mathrm{d}{k}} \;,
+        \mathop{\mathrm{d}{\mu}} \;,
 
+where :math:`\mathop{\mathrm{d}{\mu}}` is the measure in the underlying space.
 Introducing these equations into :eq:`single-layer` one gets
 
 .. math::
