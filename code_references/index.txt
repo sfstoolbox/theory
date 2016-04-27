@@ -4,31 +4,36 @@
 Code references
 ===============
 
-We decided to create the Toolbox and this documentation in order to fully allow
-for the principle of *reproducible research* [Donoho2009]_.  Like other fields
-that involve signal processing, the study of sound field synthesis implies
-implementing a multitude of algorithms and running numerical simulations on a
-computer. As a consequence, the outcome of the algorithms are easily vulnerable
-to implementation errors which cannot completely be avoided [Ince2012]_.
-On the other hand, the theory of sound field synthesis is not completely settled
-yet and the best solutions for some driving functions are still under dispute or
-have not been derived yet.
+We decided to create the SFS Toolbox in order to fully allow for the principle
+of *reproducible research* [Donoho2009]_.  Like other fields that involve signal
+processing, the study of sound field synthesis implies implementing a multitude
+of algorithms and running numerical simulations on a computer. As a consequence,
+the outcome of the algorithms are easily vulnerable to implementation errors
+which cannot completely be avoided [Ince2012]_.  On the other hand, the theory
+of sound field synthesis is not completely settled yet and the best solutions
+for some driving functions are still under dispute or have not been derived.
 
 In order to provide a comprehensive and up-to-date review of the current theory
-on sound field synthesis, we summarized the theory of sound field synthesis in
-the `Mathematical fundamentals <http://sfstoolbox.org/doc/theory/>`_ section.
-Whenever a driving function or some other equation is implemented in the code of
-of the SFS Toolbox it comes with a comment providing a reference to the
-corresponding equation in this theory section. This provides the possibility to
-publish a release of the then current status of the theory together with the
-software releases, allowing to verify the references even for older versions of
-the software.
+on sound field synthesis, we summarize the theory in the `Mathematical
+fundamentals <http://sfstoolbox.org/doc/theory/>`_ section.  Whenever a driving
+function or some other equation is implemented in the Matlab/Octave or Python
+version of the SFS Toolbox it comes with a comment providing a reference to the
+corresponding equation in this theory section.
 
 .. warning::
     :class: alert, alert-danger
 
-    Note, that we will only start with version 2.2.0 of the Matlab Toolbox to
-    include this reference scheme.
+    Note, that we will only start with version 2.2.0 of the Matlab/Octave
+    Toolbox to include this reference scheme.
+
+Versioning
+----------
+
+The Matlab/Octave and Python versions of the SFS Toolboxes have fixed releases
+with version numbers, like 2.1.0. In order to ensure that the references
+provided in the code of older versions of the software still work after some
+time, we apply also releases with version numbers to the documentation. In
+addition, this enables to track the history and changes in the theory itself.
 
 References
 ----------
