@@ -29,7 +29,7 @@ $ make dirhtml
 
 ## Credits
 
-This documentation is developed by (in alphabetical order):
+This documentation is developed by (in alphabetical order):  
 Jens Ahrens, TU Berlin  
 Vera Erbes, University of Rostock  
 Matthias Geier, University of Rostock  
