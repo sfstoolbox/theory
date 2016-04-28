@@ -9,7 +9,7 @@ import sphinx_rtd_theme
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('../_include'))
+sys.path.insert(0, os.path.abspath('./_include'))
 
 from acronyms import rst_epilog # This includes things like |HRTF| etc.
 import version
@@ -42,18 +42,7 @@ plot_formats = ['png']
 plot_rcparams = {'figure.figsize' : [8, 4.5] }
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['../_theme/sfs/static/libweb']
-
-# Spelling check needs an additional module that is not installed by default.
-# Add it only if spelling check is requested so docs can be generated without it.
-if 'spelling' in sys.argv:
-    extensions.append("sphinxcontrib.spelling")
-
-# Spelling language.
-spelling_lang = 'en_GB'
-
-# Location of word list.
-spelling_word_list_filename = 'spelling_wordlist'
+templates_path = ['./_theme/sfs/static/']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -66,7 +55,7 @@ source_suffix = '.txt'
 master_doc = 'contents'
 
 # General information about the project. (substitutions)
-project = 'SFS Toolbox'
+project = 'SFS Toolbox - Documentation'
 copyright = '2016, SFS Toolbox Team'
 author = 'SFS Toolbox Team'
 
@@ -81,20 +70,21 @@ version = version.get_version()
 release = version
 
 html_context = {'versions': [('1.0', '1.0/'), ('latest', 'latest/')],
-                'downloads': [('PDF', '/sfs-toolbox_python.pdf')],
+                'downloads': [('PDF', '/sfs-toolbox-documentation.pdf')],
                 'home_url': 'http://sfstoolbox.org/doc/'}
+
+# There are two options for replacing |today|: either, you set today to some
+# non-false value, then it is used:
+#today = ''
+# Else, today_fmt is used as the format for a strftime call.
+#today_fmt = '%B %d, %Y'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', '02_theory_of_sound_field_synthesis',
-        'logo_design']
+exclude_patterns = ['_build']
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
 add_function_parentheses = True
-
-# If true, sectionauthor and moduleauthor directives will be shown in the
-# output. They are ignored by default.
-show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
 #pygments_style = 'sphinx'
@@ -111,8 +101,7 @@ todo_include_todos = False
 html_theme = "sfs"
 
 # Add any paths that contain custom themes here, relative to this directory.
-#html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_path = ["../_theme",sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = ["./_theme",sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -121,13 +110,33 @@ html_title = "SFS Toolbox"
 # A shorter title for the navigation bar.  Default is the same as html_title.
 html_short_title = ""
 
-# The name of an image file (within the static path) to use as favicon of the
-# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
-# pixels large.
-html_favicon = "sfs2.ico"
-
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
+
+# If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
+#html_show_copyright = True
+
+# If true, an OpenSearch description file will be output, and all pages will
+# contain a <link> tag referring to it.  The value of this option must be the
+# base URL from which the finished HTML is served.
+#html_use_opensearch = ''
+
+# This is the file name suffix for HTML files (e.g. ".xhtml").
+#html_file_suffix = None
+
+# Language to be used for generating the HTML full-text search index.
+# Sphinx supports the following languages:
+#   'da', 'de', 'en', 'es', 'fi', 'fr', 'hu', 'it', 'ja'
+#   'nl', 'no', 'pt', 'ro', 'ru', 'sv', 'tr'
+#html_search_language = 'en'
+
+# A dictionary with options for the search language support, empty by default.
+# Now only 'ja' uses this config value
+#html_search_options = {'type': 'default'}
+
+# The name of a javascript file (relative to the configuration directory) that
+# implements a search results scorer. If empty, the default will be used.
+#html_search_scorer = 'scorer.js'
 
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'sfs-doc'
@@ -157,7 +166,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'sfs-toolbox_python.tex', u'SFS Toolbox',
+  (master_doc, 'sfs-toolbox-documentation.tex', u'SFS Toolbox - Documentation',
    u'SFS Toolbox team', 'manual'),
 ]
 
@@ -180,3 +189,5 @@ latex_documents = [
 
 # If false, no module index is generated.
 #latex_domain_indices = True
+
+

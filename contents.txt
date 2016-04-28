@@ -1,0 +1,13 @@
+.. _contents:
+
+=========================
+SFS Toolbox documentation
+=========================
+
+.. toctree::
+    :maxdepth: 2
+
+    matlab/index
+    python/index
+    code_references/index
+    theory/index

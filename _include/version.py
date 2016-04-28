@@ -4,7 +4,7 @@
 # other branches the name is used. This means the release branches should have
 # names like "1.0".
 def get_version():
-    with open("../.git/HEAD", "r") as versionfile:
+    with open("./.git/HEAD", "r") as versionfile:
         version = versionfile.read().replace('\n', '')
 
     version = version.replace('ref: refs/heads/', '')
