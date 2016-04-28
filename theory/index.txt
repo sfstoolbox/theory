@@ -166,19 +166,19 @@ instead of a summation
 .. math::
     :label: G_expansion_non_compact
 
-    G(\x-\x_0, \omega) = \int \tilde{G}(k, \omega) \psi^*(k, \x_0)
-        \psi(k, \x) \, \mathop{\mathrm{d}{\mu}}
+    G(\x-\x_0, \omega) = \int \tilde{G}(\mu, \omega) \psi^*(\mu, \x_0)
+        \psi(\mu, \x) \, \mathop{\mathrm{d}{\mu}}
 
 .. math::
     :label: D_expansion_non_compact
 
-    D(\x_0, \omega) = \int \tilde{D}(k, \omega) \psi(k, \x_0)
+    D(\x_0, \omega) = \int \tilde{D}(\mu, \omega) \psi(\mu, \x_0)
         \mathop{\mathrm{d}{\mu}}
 
 .. math::
     :label: S_expansion_non_compact
 
-    S(\x, \omega) = \int \tilde{S}(k, \omega) \psi(k, \x)
+    S(\x, \omega) = \int \tilde{S}(\mu, \omega) \psi(\mu, \x)
         \mathop{\mathrm{d}{\mu}} \;,
 
 where :math:`\mathop{\mathrm{d}{\mu}}` is the measure in the underlying space.
