@@ -10,4 +10,4 @@ SFS Toolbox documentation
     matlab/index
     python/index
     code_references/index
-    theory/index
+    math/index
