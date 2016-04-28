@@ -12,7 +12,7 @@ setup.
 
 This documentation is all about its usage, if you are interested in the
 underlying mathematics you should have a look at `Mathematical fundamentals
-<http://sfstoolbox.org/doc/theory/>`_.
+<http://sfstoolbox.org/doc/latest/math/>`_.
 
 Installation
 ------------
