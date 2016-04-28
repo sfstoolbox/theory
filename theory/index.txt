@@ -478,8 +478,7 @@ In the |SFS Toolbox| we assume convex secondary source distributions, which
 allows to formulate the window function by a scalar product with the normal
 vector of the secondary source distribution.  In general, also non-convex
 secondary source distributions can be used with |WFS| – compare the appendix in
-[LaxFeshbach1947]_. In this case the selection criterion has to be chosen more
-carefully, incorporating the exact position of the listener to avoid ...
+[LaxFeshbach1947]_ and [#F4]_.
 
 One of the advantages of the applied approximation is that due to its local
 character the solution of the driving function :eq:`D_wfs` does not depend on
@@ -659,7 +658,7 @@ Plane Wave
     Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
     :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
 
-The source model for a plane wave is given as [Williams1999]_, eq. (2.24) [#F4]_
+The source model for a plane wave is given as [Williams1999]_, eq. (2.24) [#F5]_
 
 .. math::
     :label: S.pw
@@ -1330,7 +1329,7 @@ Under the assumption of :math:`|\x_0-\xs| \gg 1`, :eq:`D.wfs.ps.woapprox` and
         {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
 
 which is the traditional formulation of a point source in |WFS| as given by eq.
-(2.22a) in [Verheijen1997]_ [#F5]_ for the 2.5D. It has the advantage that its
+(2.22a) in [Verheijen1997]_ [#F6]_ for the 2.5D. It has the advantage that its
 temporal domain version could again be implemented as a simple weighting- and
 delaying-mechanism. This is the default driving function for a point source in
 the |SFS Toolbox|.
@@ -1650,9 +1649,11 @@ Footnotes
 
 .. [#F3] Compare the assumptions made before (15) in [SporsZotter2013]_, which lead to the derivation of the same window function in a more explicit way.
 
-.. [#F4] Note that Williams defines the Fourier transform with transposed signs as :math:`F(\omega) = \int f(t) {\mathrm{e}}^{{\mathrm{i}}\omega t}`. This leads also to changed signs in his definitions of the Green’s functions and field expansions.
+.. [#F4]  The solution mentioned by [LaxFeshbach1947]_ assumes that the listener is far away from the radiator and that the radiator is a physical source not a notional one as the secondary sources. In this case the selection criterion has to be chosen more carefully, incorporating the exact position of the listener and the virtual source. See also the `related discussion <https://github.com/sfstoolbox/sfs-documentation/issues/8>`_.
 
-.. [#F5] Whereby :math:`r` corresponds to :math:`|\x_0-\xs|` and :math:`\cos\varphi` to :math:`\frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}`.
+.. [#F5] Note that Williams defines the Fourier transform with transposed signs as :math:`F(\omega) = \int f(t) {\mathrm{e}}^{{\mathrm{i}}\omega t}`. This leads also to changed signs in his definitions of the Green’s functions and field expansions.
+
+.. [#F6] Whereby :math:`r` corresponds to :math:`|\x_0-\xs|` and :math:`\cos\varphi` to :math:`\frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}`.
 
 
 .. _sec-references:
