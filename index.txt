@@ -14,13 +14,13 @@ The first
 implementation was done under Matlab/Octave. This version includes a fast
 variety of algorithms to make numerical simulations of different sound field
 synthesis systems. For getting started with this version have a look at the
-`Matlab Toolbox <matlab/#sec-matlab>`_ part of the documentation.
+`Matlab Toolbox <matlab/>`_ part of the documentation.
 
 In recent time, Python has become more common in the signal processing
 community, so we started a port of the SFS Toolbox to work under Python. This
 version is not as complete as the Matlab version and focuses mainly on
 simulations for monochromatic frequencies. To get started have a look at the
-`Python Toolbox <python/#sec-python>`_ part.
+`Python Toolbox <python/>`_ part.
 
 On the other hand, the theory of sound field synthesis is not completely settled
 yet and the best solutions for some driving functions are still under dispute or
