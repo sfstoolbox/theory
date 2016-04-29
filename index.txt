@@ -1,5 +1,16 @@
 
-.. _sec-code-references:
+.. _documentation:
+
+Documentation
+=============
+
+Research in sound field synthesis relies mainly on numerical implementations.
+The SFS Toolbox is a combined effort to ensure reproducibility of the results.
+It provides a common code based, which is accessible to everyone.
+
+Beside the code, the underlying equations are derived and presented in the
+Mathematical Fundamentals section. This enables to provide the implemented
+equations in the code directly with references to the underlying theory.
 
 Code references
 ===============
