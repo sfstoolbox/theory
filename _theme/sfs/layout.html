@@ -62,6 +62,8 @@
 
 <body id="page-top" class="index">
 
+  <div id="wrap">
+
   <!-- Navigation (top) -->
   {% include "navigation.html" %}
   <div class="navbar navbar-default navbar-shrink navbar-doc">
@@ -96,7 +98,7 @@
     <div class="row">
       <nav class="col-lg-2 sidebar">
         <div class="nav nav-sidebar">
-        <ul data-spy="affix" data-offset-top="120" data-offset-bottom="452">
+        <ul data-spy="affix" data-offset-top="120" data-offset-bottom="150">
           {% block menu %}
           {% set toctree = toctree(maxdepth=2, collapse=False, includehidden=True) %}
           {% if toctree %}
@@ -136,6 +138,8 @@
 
   {% endif %}#}
 
+
+  </div><!-- wrap -->
 
   <!-- Footer -->
   {% include "footer.html" %}
