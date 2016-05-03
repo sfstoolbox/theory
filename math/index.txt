@@ -72,7 +72,7 @@ as
 
     S(\omega) = {\mathcal{F}\left\{s(t)\right\}} =
         \int^{\infty}_{-\infty} s(t) {\mathrm{e}}^{-{\mathrm{i}}\omega t} \;
-        {\mathop{\mathrm{d}{t}}} \;.
+        {\mathop{\mathrm{d}{t}}}.
 
 In the same way the inverse temporal Fourier transform is defined as
 
@@ -82,7 +82,7 @@ In the same way the inverse temporal Fourier transform is defined as
     s(t) = {\mathcal{F}^{-1}\left\{S(\omega)\right\}} =
         \frac{1}{2{\pi}} \int^{\infty}_{-\infty} S(\omega)
         {\mathrm{e}}^{{\mathrm{i}}\omega t} \;
-        {\mathop{\mathrm{d}{\omega}}} \;.
+        {\mathop{\mathrm{d}{\omega}}}.
 
 
 .. ============================================================================
@@ -111,7 +111,7 @@ by the *single-layer potential* (compare p. 39 in [ColtonKress1998]_)
     :label: single-layer
 
     P(\x,\omega) = \oint_{\partial V} D(\x_0,\omega) G(\x-\x_0,\omega) \;
-    {\mathop{\mathrm{d}{A}}}(\x_0) \;,
+    {\mathop{\mathrm{d}{A}}}(\x_0),
 
 where :math:`G(\x-\x_0,\omega)` denotes the sound propagation of the source at
 location :math:`\x_0 \in \partial V`, and :math:`D(\x_0,\omega)` its weight,
@@ -157,7 +157,7 @@ functions :math:`\psi_n` as [MorseFeshbach1981]_, p. (940)
 .. math::
     :label: S_expansion
 
-    S(\x, \omega) = \sum_n \tilde{S}_n(\omega) \psi_n(\x) \;,
+    S(\x, \omega) = \sum_n \tilde{S}_n(\omega) \psi_n(\x),
 
 where :math:`\tilde{G}_n, \tilde{D}_n, \tilde{S}_n` denote the series expansion
 coefficients, :math:`n \in \mathbb{Z}`, and \ :math:`\langle\psi_n,
@@ -181,7 +181,7 @@ instead of a summation
     :label: S_expansion_non_compact
 
     S(\x, \omega) = \int \tilde{S}(\mu, \omega) \psi(\mu, \x)
-        \mathop{\mathrm{d}{\mu}} \;,
+        \mathop{\mathrm{d}{\mu}},
 
 where :math:`\mathop{\mathrm{d}{\mu}}` is the measure in the underlying space.
 Introducing these equations into :eq:`single-layer` one gets
@@ -190,7 +190,7 @@ Introducing these equations into :eq:`single-layer` one gets
     :label: D_HOA
 
     \tilde{D}_n(\omega) =
-        \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)} \;.
+        \frac{\tilde{S}_n(\omega)}{\tilde{G}_n(\omega)}.
 
 This means that the Fredholm equation :eq:`single-layer` states a convolution.
 For geometries where the required orthogonal basis functions exist, :eq:`D_HOA`
@@ -234,7 +234,7 @@ The complex conjugate of :math:`Y_n^m` is given by negating the degree
 .. math::
     :label: spherical-harmonics-complex-conjugate
 
-    Y_n^m(\theta,\phi)^* = Y_n^{-m}(\theta,\phi) \;.
+    Y_n^m(\theta,\phi)^* = Y_n^{-m}(\theta,\phi).
 
 For a spherical secondary source distribution with a radius of :math:`R_0` the
 sound field can be calculated by a convolution along the surface. The driving
@@ -248,7 +248,7 @@ function is then given by a simple division as [Ahrens2012]_, eq. (3.21) [#F2]_
         \frac{1}{R_0^{\,2}}
         \sum_{n=0}^\infty \sum_{m=-n}^n \sqrt{\frac{2n+1}{4{\pi}}}
         \frac{\breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\omega)}
-        {\breve{G}_n^0(\frac{{\pi}}{2},0,\omega)} Y_n^m(\theta_0,\phi_0) \;,
+        {\breve{G}_n^0(\frac{{\pi}}{2},0,\omega)} Y_n^m(\theta_0,\phi_0),
     \end{gathered}
 
 where :math:`\breve{S}_n^m` denote the spherical expansion coefficients of the
@@ -262,7 +262,7 @@ secondary point source that is located at the north pole of the sphere with
 
     \breve{G}_n^0(\tfrac{{\pi}}{2},0,\omega) =
         -{\mathrm{i}}\frac{\omega}{c}\sqrt{\frac{2n+1}{4{\pi}}}
-        {\,h_{n}^{(2)}\!}\left(\frac{\omega}{c}R_0\right) \;,
+        {\,h_{n}^{(2)}\!}\left(\frac{\omega}{c}R_0\right),
 
 where :math:`{\,h_{n}^{(2)}\!}` describes the spherical Hankel function of
 :math:`n`-th order and second kind.
@@ -278,7 +278,7 @@ secondary source distribution [Williams1999]_
 .. math::
     :label: circular-harmonics
 
-    \Phi_m(\phi) = {\mathrm{e}}^{{\mathrm{i}}m\phi} \;.
+    \Phi_m(\phi) = {\mathrm{e}}^{{\mathrm{i}}m\phi}.
 
 The complex conjugate of :math:`\Phi_m` is given by negating the degree
 :math:`m` as
@@ -286,7 +286,7 @@ The complex conjugate of :math:`\Phi_m` is given by negating the degree
 .. math::
     :label: circular-harmonics-complex-conjugate
 
-    \Phi_m(\phi)^* = \Phi_{-m}(\phi) \;.
+    \Phi_m(\phi)^* = \Phi_{-m}(\phi).
 
 For a circular secondary source distribution with a radius of :math:`R_0` the
 driving function can be calculated by a convolution along the surface of the
@@ -298,7 +298,7 @@ circle as explicitly shown by [AhrensSpors2009a]_ and is then given as
     D_\text{circular}(\phi_0,\omega) =
         \frac{1}{2{\pi}R_0} \sum_{m=-\infty}^\infty
         \frac{\breve{S}_m(\phi_\text{s},r_\text{s},\omega)}
-        {\breve{G}_m(0,\omega)} \, \Phi_m(\phi_0) \;,
+        {\breve{G}_m(0,\omega)} \, \Phi_m(\phi_0),
 
 where :math:`\breve{S}_m` denotes the circular expansion coefficients for the
 source model, :math:`\phi_\text{s}` its directional dependency, and
@@ -309,7 +309,7 @@ source with
     :label: G_circular
 
     \breve{G}_m(0,\omega) = -\frac{{\mathrm{i}}}{4}
-        {\,H_{m}^{(2)}\!}\left(\frac{\omega}{c}R_0\right) \;,
+        {\,H_{m}^{(2)}\!}\left(\frac{\omega}{c}R_0\right),
 
 where :math:`{\,H_{m}^{(2)}\!}` describes the Hankel function of :math:`m`-th
 order and second kind.
@@ -325,7 +325,7 @@ on the :math:`xz`-plane in :math:`\mathbb{R}^3` are given as
 .. math::
     :label: planar-harmonics
 
-    \Lambda(k_x,k_z,x,z) = {\mathrm{e}}^{-{\mathrm{i}}(k_x x + k_z z)} \;,
+    \Lambda(k_x,k_z,x,z) = {\mathrm{e}}^{-{\mathrm{i}}(k_x x + k_z z)},
 
 where :math:`k_x`, :math:`k_z` are entries in the wave vector :math:`\k` with
 :math:`k^2 = (\frac{\omega}{c})^2`. The complex conjugate is given by negating
@@ -334,7 +334,7 @@ where :math:`k_x`, :math:`k_z` are entries in the wave vector :math:`\k` with
 .. math::
     :label: planar-harmonics-complex-conjugate
 
-    \Lambda(k_x,k_z,x,z)^* = \Lambda(-k_x,-k_z,x,z) \;.
+    \Lambda(k_x,k_z,x,z)^* = \Lambda(-k_x,-k_z,x,z).
 
 For an infinitely long secondary source distribution located on the
 :math:`xz`-plane the driving function can be calculated by a two-dimensional
@@ -346,7 +346,7 @@ convolution along the plane as [Ahrens2012]_, eq. (3.65)
     D_\text{planar}(x_0,\omega) = \frac{1}{4{\pi}^2} \iint_{-\infty}^\infty
        \frac{\breve{S}(k_x,y_\text{s},k_z,\omega)}{\breve{G}(k_x,0,k_z,\omega)}
        \Lambda(k_x,x_0,k_z,z_0) \, {\mathop{\mathrm{d}{k_x}}}
-       {\mathop{\mathrm{d}{k_z}}} \;,
+       {\mathop{\mathrm{d}{k_z}}},
 
 where :math:`\breve{S}` denotes the planar expansion coefficients for the source
 model, :math:`y_\text{s}` its positional dependency, and :math:`\breve{G}` the
@@ -357,7 +357,7 @@ planar expansion coefficients of a secondary point source with
     :label: G_planar
 
     \breve{G}(k_x,0,k_z,\omega) = -\frac{{\mathrm{i}}}{2}
-        \frac{1}{\sqrt{(\frac{\omega}{c})^2-k_x^2-k_z^2}} \;,
+        \frac{1}{\sqrt{(\frac{\omega}{c})^2-k_x^2-k_z^2}},
 
 for :math:`(\frac{\omega}{c})^2 > (k_x^2+k_z^2)`.
 
@@ -377,14 +377,14 @@ The basis functions for a linear secondary source distribution located on the
 .. math::
     :label: linear-harmonics
 
-    \chi(k_x,x) = {\mathrm{e}}^{-{\mathrm{i}}k_x x} \;.
+    \chi(k_x,x) = {\mathrm{e}}^{-{\mathrm{i}}k_x x}.
 
 The complex conjugate is given by negating :math:`k_x` as
 
 .. math::
     :label: linear-harmonics-complex-conjugate
 
-    \chi(k_x,x)^* = \chi(-k_x,x) \;.
+    \chi(k_x,x)^* = \chi(-k_x,x).
 
 For an infinitely long secondary source distribution located on the
 :math:`x`-axis the driving function for :math:`{\mathbb{R}}^2` can be calculated
@@ -395,7 +395,7 @@ by a convolution along this axis as [Ahrens2012]_, eq. (3.73)
 
     D_\text{linear}(x_0,\omega) = \frac{1}{2{\pi}} \int_{-\infty}^\infty
         \frac{\breve{S}(k_x,y_\text{s},\omega)}{\breve{G}(k_x,0,\omega)}
-        \chi(k_x,x_0) \, {\mathop{\mathrm{d}{k_x}}} \;,
+        \chi(k_x,x_0) \, {\mathop{\mathrm{d}{k_x}}},
 
 where :math:`\breve{S}` denotes the linear expansion coefficients for the source
 model, :math:`y_\text{s}`, :math:`z_\text{s}` its positional dependency, and
@@ -406,9 +406,9 @@ with
     :label: G_linear
 
     \breve{G}(k_x,0,\omega) = -\frac{{\mathrm{i}}}{2}
-        \frac{1}{\sqrt{(\frac{\omega}{c})^2-k_x^2}} \;,
+        \frac{1}{\sqrt{(\frac{\omega}{c})^2-k_x^2}},
 
-for :math:`0<|k_x|<|\frac{\omega}{c}|`.
+for :math:`0<|k_x|<|\frac{\omega}{c}|\,`.
 
 
 .. ============================================================================
@@ -421,7 +421,7 @@ High Frequency Approximation: |WFS|
 
 The single-layer potential :eq:`single-layer` satisfies the homogeneous
 Helmholtz equation both in the interior and exterior regions :math:`V` and
-:math:`V^* {\mathrel{\!\mathop:}=}{\mathbb{R}}^n \setminus (V \cup \partial V)`.
+:math:`V^* {\mathrel{\!\mathop:}=}{\mathbb{R}}^n \setminus (V \cup \partial V)\,`.
 If :math:`D(\x_0,\omega)` is continuous, the pressure :math:`P(\x,\omega)` is
 continuous when approaching the surface :math:`\partial V` from the inside and
 outside. Due to the presence of the secondary sources at the surface
@@ -434,7 +434,7 @@ as [FaziNelson2013]_
     :label: D_gradient
 
     D(\x_0,\omega) = \partial_\n P(\x_0,\omega) +
-        \partial_{-\n} P(\x_0,\omega)\;,
+        \partial_{-\n} P(\x_0,\omega),
 
 where :math:`\partial_\n{\mathrel{\mathop:}=}\langle\nabla,\n\rangle` is
 the directional gradient in direction :math:`\n` – see :numref:`fig-geometry`.
@@ -444,7 +444,7 @@ Due to the symmetry of the problem the solution for an infinite planar boundary
 .. math::
     :label: D_wfs
 
-    D(\x_0,\omega) = -2 \partial_\n S(\x_0,\omega) \;,
+    D(\x_0,\omega) = -2 \partial_\n S(\x_0,\omega),
 
 where the pressure in the outside region is the mirrored interior pressure given
 by the source model :math:`S(\x,\omega)` for :math:`\x\in V`. The integral
@@ -474,7 +474,7 @@ into :eq:`D_wfs` as
 
     P(\x,\omega) \approx \oint_{\partial V} \!\!  G(\x|\x_0,\omega) \,
         \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\omega)}_{D(\x_0,\omega)} \;
-        {\mathop{\mathrm{d}{A}}}(\x_0) \;.
+        {\mathop{\mathrm{d}{A}}}(\x_0).
 
 In the |SFS Toolbox| we assume convex secondary source distributions, which
 allows to formulate the window function by a scalar product with the normal
@@ -554,7 +554,7 @@ results in a 2.5D driving function given as [Ahrens2012]_, eq. (3.49)
     D_{\text{circular},\twohalfD}(\phi_0,\omega) = \frac{1}{2{\pi}R_0}
         \sum_{m=-\infty}^\infty \frac{\breve{S}_{|m|}^m
         (\frac{{\pi}}{2},\phi_\text{s},r_\text{s},\omega)}{\breve{G}_{|m|}^m
-       (\frac{{\pi}}{2},0,\omega)} \Phi_m(\phi_0) \;.
+       (\frac{{\pi}}{2},0,\omega)} \Phi_m(\phi_0).
 
 For a linear secondary source distribution with point source characteristics the
 2.5D driving function is derived by introducing the linear expansion
@@ -569,7 +569,7 @@ as [Ahrens2012]_, eq. (3.77)
     D_{\text{linear},\twohalfD}(x_0,\omega) = \frac{1}{2{\pi}}
         \int_{-\infty}^\infty \frac{\breve{S}(k_x,y_\text{ref},0,\omega)}
         {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \,
-        {\mathop{\mathrm{d}{k_x}}} \;.
+        {\mathop{\mathrm{d}{k_x}}}.
 
 A driving function for the 2.5D situation in the context of |WFS| and arbitrary
 2D geometries of the secondary source distribution can be achieved by applying
@@ -590,7 +590,7 @@ can be established.
         \underbrace{
             \frac{1}{4 {\pi}}
             \frac{{\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x-\x_0|}}
-            {|\x-\x_0|}}_{G_\threeD(\x-\x_0,\omega)} \;,
+            {|\x-\x_0|}}_{G_\threeD(\x-\x_0,\omega)},
     \end{gathered}
 
 where :math:`{\,H_{0}^{(2)}\!}` denotes the Hankel function of second kind and
@@ -602,7 +602,7 @@ the 2D case results in
 
     P(\x,\omega) = \oint_S \sqrt{2{\pi}\frac{c}{{\mathrm{i}}\omega}
         |\x-\x_0|} \; D(\x_0,\omega) G_\threeD(\x-\x0,\omega) \,
-        {\mathop{\mathrm{d}{A}}}(\x_0) \;.
+        {\mathop{\mathrm{d}{A}}}(\x_0).
 
 If the amplitude correction is further restricted to one reference point
 :math:`\xref`, 2.5D the driving function for |WFS| can be formulated as
@@ -611,7 +611,7 @@ If the amplitude correction is further restricted to one reference point
     :label: D25D_wfs
 
     D_\twohalfD(\x_0,\omega) = \underbrace{\sqrt{2{\pi}|\xref-\x_0|}}_{g_0}
-        \sqrt{\frac{c}{{\mathrm{i}}\omega}} \, D(\x_0,\omega) \;,
+        \sqrt{\frac{c}{{\mathrm{i}}\omega}} \, D(\x_0,\omega),
 
 where :math:`g_0` is independent of :math:`\x`.
 
@@ -665,8 +665,7 @@ The source model for a plane wave is given as [Williams1999]_, eq. (2.24) [#F5]_
 .. math::
     :label: S.pw
 
-    S(\x,\omega) = A(\omega) {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k \x}
-        \;,
+    S(\x,\omega) = A(\omega) {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k \x},
 
 where :math:`A(\omega)` denotes the frequency spectrum of the source and
 :math:`\n_k` a unit vector pointing into the direction of the plane wave.
@@ -676,7 +675,7 @@ Transformed in the temporal domain this becomes
 .. math::
     :label: s.pw
 
-    s(\x,t) = a(t) * {\,\delta\!\left(t -\frac{\n_k \x}{c}\right)} \;,
+    s(\x,t) = a(t) * {\,\delta\!\left(t -\frac{\n_k \x}{c}\right)},
 
 where :math:`a(t)` is the Fourier transformation of the frequency spectrum
 :math:`A(\omega)`.
@@ -688,7 +687,7 @@ The expansion coefficients for spherical basis functions are given as
     :label: plane-wave-spherical-coefficients
 
     \breve{S}_n^m(\theta_k,\phi_k,\omega) = 4{\pi}{\mathrm{i}}^{-n}
-        Y_n^{-m}(\theta_k,\phi_k) \;,
+        Y_n^{-m}(\theta_k,\phi_k),
 
 where :math:`(\phi_k,\theta_k)` is the radiating direction of the plane wave.
 
@@ -699,7 +698,7 @@ given as
     :label: plane-wave-circular-coefficients
 
     \breve{S}_m(\phi_\text{s},\omega) = {\mathrm{i}}^{-n}
-        \Phi_{-m}(\phi_\text{s}) \;.
+        \Phi_{-m}(\phi_\text{s}).
 
 The expansion coefficients for linear basis functions are given as after
 [Ahrens2012]_, eq. (C.5)
@@ -708,7 +707,7 @@ The expansion coefficients for linear basis functions are given as after
     :label: plane-wave-linear-coefficients
 
     \breve{S}(k_x,y,\omega) = 2{\pi}{\,\delta\!\left(k_x-k_{x,\text{s}}\right)}
-        \chi(k_{y,\text{s}},y) \;,
+        \chi(k_{y,\text{s}},y),
 
 where :math:`(k_{x,\text{s}},k_{y,\text{s}})` points into the radiating
 direction of the plane wave.
@@ -743,7 +742,7 @@ function as [Williams1999]_, eq. (6.73)
     :label: S.ps
 
     S(\x,\omega) = A(\omega) \frac{1}{4{\pi}} \frac{{\mathrm{e}}^{-{\mathrm{i}}
-        \frac{\omega}{c}|\x-\xs|}}{|\x-\xs|} \;,
+        \frac{\omega}{c}|\x-\xs|}}{|\x-\xs|},
 
 where :math:`\xs` describes the position of the point source.
 
@@ -753,7 +752,7 @@ Transformed to the temporal domain this becomes
     :label: s.ps
 
     s(\x,t) = a(t) * \frac{1}{4{\pi}} \frac{1}{|\x-\xs|}
-        {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)} \;.
+        {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)}.
 
 The expansion coefficients for spherical basis functions are given
 as [Ahrens2012]_, eq. (2.37)
@@ -764,7 +763,7 @@ as [Ahrens2012]_, eq. (2.37)
     \breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\omega) =
         -{\mathrm{i}}\frac{\omega}{c}\,
         h_n^{(2)}\!\!\left(\frac{\omega}{c}r_\text{s}\right)
-        Y_n^{-m}(\theta_\text{s},\phi_\text{s}) \;,
+        Y_n^{-m}(\theta_\text{s},\phi_\text{s}),
 
 where :math:`(\phi_\text{s},\theta_\text{s},r_\text{s})` describes the position
 of the point source.
@@ -778,7 +777,7 @@ The expansion coefficients for linear basis functions are given as
     \breve{S}(k_x,y,\omega) =
         -\frac{{\mathrm{i}}}{4} {\,H_{0}^{(2)}\!}
         \left( \sqrt{(\tfrac{\omega}{c})^2-k_x^2} \; |y-y_\text{s}| \right)
-        \chi(-k_x,x_\text{s}) \;,
+        \chi(-k_x,x_\text{s}),
 
 for :math:`|k_x|<|\frac{\omega}{c}|` and with :math:`(x_\text{s},y_\text{s})`
 describing the position of the point source.
@@ -822,7 +821,7 @@ directional derivative of the three dimensional Green’s function with respect 
             A(\omega) \frac{1}{4{\pi}}
             \left( \frac{1}{|\x-\xs|} + {\mathrm{i}}\frac{\omega}{c}\right)
             \frac{(\x-\xs) \n_\text{s}}{|\x-\xs|^2}
-            {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x-\xs|} \;.
+            {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x-\xs|}.
     \end{aligned}
 
 Transformed to the temporal domain this becomes
@@ -834,7 +833,7 @@ Transformed to the temporal domain this becomes
         \left( \frac{1}{|\x-\xs|} + {\mathcal{F}^{-1}\left\{
         \frac{{\mathrm{i}}\omega}{c} \right\}} \right) *
         \frac{(\x-\xs) \n_\text{s}}{4{\pi}|\x-\xs|^2}
-        {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)} \;.
+        {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)}.
 
 .. _sec-line-source:
 
@@ -866,7 +865,7 @@ function as [Williams1999]_, eq. (8.47)
     :label: S.ls
 
     S(\x,\omega) = -A(\omega) \frac{{\mathrm{i}}}{4} {\,H_{0}^{(2)}\!}
-        \left(\frac{\omega}{c}|\x-\xs|\right) \;.
+        \left(\frac{\omega}{c}|\x-\xs|\right).
 
 Applying the large argument approximation of the Hankel function
 [Williams1999]_, eq. (4.23) and transformed to the temporal domain this becomes
@@ -877,7 +876,7 @@ Applying the large argument approximation of the Hankel function
     s(\x,t) = a(t) * {\mathcal{F}^{-1}\left\{\sqrt{
         \frac{c}{{\mathrm{i}}\omega}}\right\}} * \sqrt{\frac{1}{8{\pi}}}
         \frac{1}{\sqrt{|\x-\xs|}}
-        {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)} \;.
+        {\,\delta\!\left(t - \frac{|\x-\xs|}{c}\right)}.
 
 The expansion coefficients for circular basis functions are given as
 
@@ -886,7 +885,7 @@ The expansion coefficients for circular basis functions are given as
 
     \breve{S}_m(\phi_\text{s},r_\text{s},\omega) = -\frac{{\mathrm{i}}}{4}
         {\,H_{m}^{(2)}\!} \left(\frac{\omega}{c}r_\text{s}\right)
-        \Phi_{-m}(\phi_\text{s}) \;.
+        \Phi_{-m}(\phi_\text{s}).
 
 The expansion coefficients for linear basis functions are given as
 
@@ -895,7 +894,7 @@ The expansion coefficients for linear basis functions are given as
 
     \breve{S}(k_x,y_\text{s},\omega) = -\frac{{\mathrm{i}}}{2}
         \frac{1}{\sqrt{(\frac{\omega}{c})^2-k_x^2}}
-        \chi(k_y,y_\text{s})\;.
+        \chi(k_y,y_\text{s}).
 
 
 .. ============================================================================
@@ -961,7 +960,7 @@ point source :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
         \frac{4{\pi}}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
         \frac{{\mathrm{i}}^{-n} Y_n^{-m}(\theta_k,\phi_k)}
         {\mathrm{i}\frac{\omega}{c}h_n^{(2)} \left(\frac{\omega}{c}R_0\right)}
-        Y_n^m(\theta_0,\phi_0) \;.
+        Y_n^m(\theta_0,\phi_0).
 
 For a circular secondary source distribution with radius :math:`R_0` the
 circular expansion coefficients of a plane
@@ -974,7 +973,7 @@ line source :eq:`G_circular` are inserted into :eq:`D_circular` and yield
 
     D_\text{circular}(\phi_0,\omega) = -A(\omega) \frac{2{\mathrm{i}}}{{\pi}R_0}
         \sum_{m=-\infty}^\infty \frac{{\mathrm{i}}^{-m}\Phi_{-m}(\phi_k)}
-        {{\,H_{m}^{(2)}\!}(\frac{\omega}{c}R_0)} \Phi_m(\phi_0) \;.
+        {{\,H_{m}^{(2)}\!}(\frac{\omega}{c}R_0)} \Phi_m(\phi_0).
 
 For a circular secondary source distribution with radius :math:`R_0` and point
 source as Green’s function the 2.5D driving function is given by inserting the
@@ -988,7 +987,7 @@ source :eq:`point-source-spherical-coefficients` into :eq:`D_circular_25D` as
     D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega) \frac{2}{R_0}
         \sum_{m=-\infty}^\infty \frac{{\mathrm{i}}^{-|m|} \Phi_{-m}(\phi_k)}
         {{\mathrm{i}}\frac{\omega}{c}h_{|m|}^{(2)}
-        \left(\frac{\omega}{c}R_0\right)} \Phi_m(\phi_0) \;.
+        \left(\frac{\omega}{c}R_0\right)} \Phi_m(\phi_0).
 
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis the 2.5D driving function is given by inserting the linear
@@ -1004,7 +1003,7 @@ Assuming :math:`0 \le |k_{x_\text{s}}| \le |\frac{\omega}{c}|` this results in
 
     D_{\text{linear},\,\twohalfD}(x_0,\omega) = A(\omega)
         \frac{4{\mathrm{i}}\chi(k_y,y_\text{ref})}
-        {{\,H_{0}^{(2)}\!}(k_y y_\text{ref})} \chi(k_x,x_0) \;.
+        {{\,H_{0}^{(2)}\!}(k_y y_\text{ref})} \chi(k_x,x_0).
 
 Transfered to the temporal domain this results in [AhrensSpors2010]_, eq. (18)
 
@@ -1012,7 +1011,7 @@ Transfered to the temporal domain this results in [AhrensSpors2010]_, eq. (18)
     :label: d.sdm.pw.2.5D
 
     d_{\text{linear},\,\twohalfD}(x_0,t) = h(t) *
-        a(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k) \;,
+        a(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k),
 
 where :math:`\phi_k` denotes the azimuth direction of the plane wave and
 
@@ -1020,7 +1019,7 @@ where :math:`\phi_k` denotes the azimuth direction of the plane wave and
     :label: h.sdm
 
     h(t) = {\mathcal{F}^{-1}\left\{\frac{4{\mathrm{i}}}
-        {{\,H_{0}^{(2)}\!}(k_y y_\text{ref})}\right\}} \;.
+        {{\,H_{0}^{(2)}\!}(k_y y_\text{ref})}\right\}}.
 
 The advantage of this result is that it can be implemented by a simple weighting
 and delaying of the signal, plus one convolution with :math:`h(t)`. The same
@@ -1067,7 +1066,7 @@ function :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
         A(\omega) \frac{1}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
         \frac{h_n^{(2)}(\frac{\omega}{c}r_\text{s})
         Y_n^{-m}(\theta_\text{s},\phi_\text{s})}
-        {h_n^{(2)}(\frac{\omega}{c}R_0)} Y_n^m (\theta_0,\phi_0) \;.
+        {h_n^{(2)}(\frac{\omega}{c}R_0)} Y_n^m (\theta_0,\phi_0).
 
 For a circular secondary source distribution with radius :math:`R_0` and point
 source as secondary sources the 2.5D driving function is given by inserting the
@@ -1080,7 +1079,7 @@ and :eq:`G_spherical` into :eq:`D_circular_25D` as
     D_{\text{circular},\,\twohalfD}(\phi_0,\omega) =
         A(\omega) \frac{1}{2{\pi}R_0} \sum_{m=-\infty}^{\infty}
         \frac{h_{|m|}^{(2)} (\frac{\omega}{c}r_s) \Phi_{-m}(\phi_\text{s})}
-        {h_{|m|}^{(2)} (\frac{\omega}{c}R_0)} \Phi_m(\phi_0) \;.
+        {h_{|m|}^{(2)} (\frac{\omega}{c}R_0)} \Phi_m(\phi_0).
 
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis and point sources as secondary sources the 2.5D driving function
@@ -1097,7 +1096,7 @@ results in [Ahrens2012]_, eq. (4.53)
         {\,H_{0}^{(2)}\!}\left(\sqrt{(\frac{\omega}{c})^2-k_x^2} \;
         (y_\text{ref}-y_\text{s}) \right) \chi(-k_x,x_\text{s})}
         {{\,H_{0}^{(2)}\!}\left(\sqrt{(\frac{\omega}{c})^2-k_x^2} \;
-        y_\text{ref}\right)} \chi(k_x,x_0) \, {\mathop{\mathrm{d}{k_x}}} \;.
+        y_\text{ref}\right)} \chi(k_x,x_0) \, {\mathop{\mathrm{d}{k_x}}}.
 
 .. _sec-driving-functions-nfchoa-sdm-line-source:
 
@@ -1115,7 +1114,7 @@ and :eq:`G_circular` into :eq:`D_circular` as
     D_{\text{circular}}(\phi_0,\omega) = A(\omega) \frac{1}{2{\pi}R_0}
         \sum_{m=-\infty}^{\infty} \frac{{\,H_{m}^{(2)}\!}(\frac{\omega}{c}r_s)
         \Phi_{-m}(\phi_\text{s})} {{\,H_{m}^{(2)}\!}(\frac{\omega}{c}R_0)}
-        \Phi_m(\phi_0) \;.
+        \Phi_m(\phi_0).
 
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis and line sources as secondary sources the driving function is
@@ -1127,7 +1126,7 @@ and :eq:`G_linear` into :eq:`D_linear` as
 
     D_\text{linear}(x_0,\omega) = A(\omega) \frac{1}{2{\pi}}
         \int_{-\infty}^\infty \chi(k_y,y_s) \chi(k_x,x_0) \,
-        {\mathop{\mathrm{d}{k_x}}} \;.
+        {\mathop{\mathrm{d}{k_x}}}.
 
 .. _sec-driving-functions-nfchoa-sdm-focused-source:
 
@@ -1208,14 +1207,14 @@ and :eq:`D25D_wfs` it follows
 
     D(\x_0,\omega) = 2 w(\x_0) A(\omega)
         {\mathrm{i}}\frac{\omega}{c}\n_k\n_{\x_0}
-        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k\x_0} \;,
+        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k\x_0},
 
 .. math::
     :label: D.wfs.pw.2.5D
 
     D_\twohalfD(\x_0,\omega) = 2g_0 w(\x_0) A(\omega)
         \sqrt{{\mathrm{i}}\frac{\omega}{c}} \n_k\n_{\x_0}
-        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k\x_0} \;.
+        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k\x_0}.
 
 Transfered to the temporal domain via an inverse Fourier transform :eq:`ifft`,
 it follows
@@ -1224,20 +1223,20 @@ it follows
     :label: d.wfs.pw
 
     d(\x_0,t) = 2 a(t) * h(t) * w(\x_0) \n_k \n_{\x_0} {\,\delta\!\left(t -
-        \frac{\n_k\x_0}{c}\right)} \;,
+        \frac{\n_k\x_0}{c}\right)},
 
 .. math::
     :label: d.wfs.pw.2.5D
 
     d_\twohalfD(\x_0,t) = 2g_0 a(t) * h_\twohalfD(t) * w(\x_0) \n_k \n_{\x_0}
-        {\,\delta\!\left(t - \frac{\n_k\x_0}{c}\right)} \;,
+        {\,\delta\!\left(t - \frac{\n_k\x_0}{c}\right)},
 
 where
 
 .. math::
     :label: h.wfs
 
-    h(t) = {\mathcal{F}^{-1}\left\{{\mathrm{i}}\frac{\omega}{c}\right\}} \;,
+    h(t) = {\mathcal{F}^{-1}\left\{{\mathrm{i}}\frac{\omega}{c}\right\}},
 
 and
 
@@ -1301,7 +1300,7 @@ and :eq:`D25D_wfs` it follows
     D(\x_0,\omega) =
         \frac{1}{2{\pi}} A(\omega) w(\x_0) \left({\mathrm{i}}\frac{\omega}{c}+
         \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
-        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
+        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|},
 
 .. math::
     :label: D.wfs.ps.woapprox.2.5D
@@ -1310,7 +1309,7 @@ and :eq:`D25D_wfs` it follows
         \frac{g_0}{2{\pi}} A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \left(1 + \frac{1}{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \right)
         \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} {\mathrm{e}}^{-{\mathrm{i}}
-        \frac{\omega}{c}|\x_0-\xs|} \;.
+        \frac{\omega}{c}|\x_0-\xs|}.
 
 Under the assumption of :math:`|\x_0-\xs| \gg 1`, :eq:`D.wfs.ps.woapprox` and
 :eq:`D.wfs.ps.woapprox.2.5D` can be approximated by
@@ -1320,7 +1319,7 @@ Under the assumption of :math:`|\x_0-\xs| \gg 1`, :eq:`D.wfs.ps.woapprox` and
 
     D(\x_0,\omega) = \frac{1}{2{\pi}} A(\omega) w(\x_0) {\mathrm{i}}
         \frac{\omega}{c}\frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
+        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|},
 
 .. math::
     :label: D.wfs.ps.2.5D
@@ -1328,7 +1327,7 @@ Under the assumption of :math:`|\x_0-\xs| \gg 1`, :eq:`D.wfs.ps.woapprox` and
     D_\twohalfD(\x_0,\omega) =
         \frac{g_0}{2{\pi}} A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
+        {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|},
 
 which is the traditional formulation of a point source in |WFS| as given by eq.
 (2.22a) in [Verheijen1997]_ [#F6]_ for the 2.5D. It has the advantage that its
@@ -1344,7 +1343,7 @@ follows
 
     d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)} \;,
+        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)},
 
 .. math::
     :label: d.wfs.ps.2.5D
@@ -1352,7 +1351,7 @@ follows
     d_\twohalfD(\x_0,t) =
         \frac{g_0}{2{\pi}} a(t) * h_\twohalfD(t) * w(\x_0)
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)} \;.
+        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)}.
 
 The window function :math:`w(\x_0)` for a point source as source model can be
 calculated after [Spors2008]_ as
@@ -1405,7 +1404,7 @@ and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq
 
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) {\mathrm{i}}\frac{\omega}{c}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
-        {\,H_{1}^{(2)}\!}\left(\frac{\omega}{c}|\x_0-\xs|\right) \;,
+        {\,H_{1}^{(2)}\!}\left(\frac{\omega}{c}|\x_0-\xs|\right),
 
 .. math::
     :label: D.wfs.ls.2.5D
@@ -1413,7 +1412,7 @@ and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq
     D_\twohalfD(\x_0,\omega) =
         -\frac{1}{2}g_0 A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
-        {\,H_{1}^{(2)}\!}\left(\frac{\omega}{c}|\x_0-\xs|\right) \;.
+        {\,H_{1}^{(2)}\!}\left(\frac{\omega}{c}|\x_0-\xs|\right).
 
 Applying :math:`{\,H_{1}^{(2)}\!}(\zeta) \approx
 -\sqrt{\frac{2}{{\pi}{\mathrm{i}}\zeta}} {\mathrm{e}}^{-{\mathrm{i}}\zeta}` for
@@ -1425,7 +1424,7 @@ domain via an inverse Fourier transform :eq:`ifft` it follows
 
     d(\x_0,t) = \sqrt{\frac{1}{2{\pi}}} a(t) * h(t) *
         w(\x0) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)} \;,
+        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)},
 
 .. math::
     :label: d.wfs.ls.2.5D
@@ -1435,7 +1434,7 @@ domain via an inverse Fourier transform :eq:`ifft` it follows
         {    \mathcal{F}^{-1}\left\{\sqrt{\frac{c}
         {{\mathrm{i}}\omega}}\right\}} * w(\x0)
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)} \;.
+        {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)}.
 
 The window function :math:`w(\x_0)` for a line source as source model can be
 calculated after [Spors2008]_ as
@@ -1497,7 +1496,7 @@ versions of the driving functions for a point source as
     D(\x_0,\omega) =
         \frac{1}{2{\pi}} A(\omega) w(\x_0) \left({\mathrm{i}}\frac{\omega}{c}+
         \frac{1}{|\x_0-\xs|} \right) \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^2}
-        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
+        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|},
 
 .. math::
     :label: D.wfs.fs.woapprox.2.5D
@@ -1506,7 +1505,7 @@ versions of the driving functions for a point source as
         \frac{g_0}{2{\pi}} A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \left(1 + \frac{1}{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \right)
         \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2}
-        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
+        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|},
 
 or by using an approximated point source as
 
@@ -1515,7 +1514,7 @@ or by using an approximated point source as
 
     D(\x_0,\omega) = \frac{1}{2{\pi}} A(\omega) w(\x_0) {\mathrm{i}}
         \frac{\omega}{c}\frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;,
+        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|},
 
 .. math::
     :label: D.wfs.fs.2.5D
@@ -1523,7 +1522,7 @@ or by using an approximated point source as
     D_\twohalfD(\x_0,\omega) = \frac{g_0}{2{\pi}} A(\omega) w(\x_0)
         \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \;.
+        {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|}.
 
 As before for other source types, the approximated versions are the default
 driving functions for a focused source used in the |SFS Toolbox|.
@@ -1536,7 +1535,7 @@ follows
 
     d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\,\delta\!\left(t+\frac{|\x_0-\xs|}{c}\right)} \;,
+        {\,\delta\!\left(t+\frac{|\x_0-\xs|}{c}\right)},
 
 .. math::
     :label: d.wfs.fs.2.5D
@@ -1544,7 +1543,7 @@ follows
     d_\twohalfD(\x_0,t) =
         \frac{g_0}{2{\pi}} a(t) * h_\twohalfD(t) * w(\x_0)
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
-        {\,\delta\!\left(t+\frac{|\x_0-\xs|}{c}\right)} \;.
+        {\,\delta\!\left(t+\frac{|\x_0-\xs|}{c}\right)}.
 
 In this document a focused source always refers to the time-reversed version of a
 point source, but a focused line source can be defined in the same way starting
@@ -1555,7 +1554,7 @@ from :eq:`D.wfs.ls`
 
     D(\x_0,\omega) = -\frac{1}{2}A(\omega) w(\x_0) {\mathrm{i}}\frac{\omega}{c}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
-        {\,H_{1}^{(1)}\!}\left(\frac{\omega}{c}|\x_0-\xs|\right) \;.
+        {\,H_{1}^{(1)}\!}\left(\frac{\omega}{c}|\x_0-\xs|\right).
 
 The window function :math:`w(\x_0)` for a focused source can be calculated as
 
@@ -1600,7 +1599,7 @@ supported. The resulting driving function for a loudspeaker located at
 
     D(\x_0,\omega) = \sum_{{\x_\text{fs}}\in \mathcal{X}_{\mathrm{fs}}}
         D_{\mathrm l}({\x_\text{fs}}, \omega)
-        D_{\mathrm{fs}}(\x_0,{\x_\text{fs}},\omega) \;,
+        D_{\mathrm{fs}}(\x_0,{\x_\text{fs}},\omega),
 
 which is superposition of the driving function
 :math:`D_{\mathrm{fs}}(\x_0,{\x_\text{fs}},\omega)` reproducing a single focused
@@ -1636,7 +1635,7 @@ driving signals
 
     d(\x_0,t) = \sum_{{\x_\text{fs}}\in \mathcal{X}_{\mathrm{fs}}} 
         d_{\mathrm l}({\x_\text{fs}}, t) * 
-        d_{\mathrm{fs}}(\x_0,{\x_\text{fs}}, t) \;,
+        d_{\mathrm{fs}}(\x_0,{\x_\text{fs}}, t),
 
 while :math:`d_{\mathrm{fs}}(\x_0,{\x_\text{fs}}, t)` is derived analogously to
 from or . At the moment :math:`d_{\mathrm l}({\x_\text{fs}}, t)` does only
