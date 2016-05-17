@@ -27,16 +27,3 @@ the [web page repo](https://github.com/sfstoolbox/sfstoolbox.github.io).
 ## License
 [Creative Commons Attribution (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/)
-
-## Credits
-
-This documentation is developed by (in alphabetical order):  
-Jens Ahrens, TU Berlin  
-Vera Erbes, University of Rostock  
-Matthias Geier, University of Rostock  
-Nara Hahn, University of Rostock  
-Till Rettberg, University of Rostock  
-Frank Schultz, University of Rostock  
-Sascha Spors, University of Rostock  
-Hagen Wierstorf, TU Ilmenau  
-Fiete Winter, University of Rostock  
