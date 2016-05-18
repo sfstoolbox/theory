@@ -351,7 +351,7 @@ convolution along the plane as [Ahrens2012]_, eq. (3.65)
 where :math:`\breve{S}` denotes the planar expansion coefficients for the source
 model, :math:`y_\text{s}` its positional dependency, and :math:`\breve{G}` the
 planar expansion coefficients of a secondary point source with
-[SchultzSpors2014]_, eq. (65)
+[SchultzSpors2014]_, eq. (49)
 
 .. math::
     :label: G_planar
