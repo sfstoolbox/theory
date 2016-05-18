@@ -951,7 +951,7 @@ For a spherical secondary source distribution with radius :math:`R_0` the
 spherical expansion coefficients of a plane
 wave :eq:`plane-wave-spherical-coefficients` and of the Green’s function for a
 point source :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
-[SchultzSpors2014]_, eq. (96)
+[SchultzSpors2014]_, eq. (A3)
 
 .. math::
     :label: D.nfchoa.pw.3D
@@ -959,7 +959,7 @@ point source :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
     D_\text{spherical}(\theta_0,\phi_0,\omega) = -A(\omega)
         \frac{4{\pi}}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
         \frac{{\mathrm{i}}^{-n} Y_n^{-m}(\theta_k,\phi_k)}
-        {\mathrm{i}\frac{\omega}{c}h_n^{(2)} \left(\frac{\omega}{c}R_0\right)}
+        {\mathrm{i}\frac{\omega}{c}h_n^{(2)\!} \left(\frac{\omega}{c}R_0\right)}
         Y_n^m(\theta_0,\phi_0).
 
 For a circular secondary source distribution with radius :math:`R_0` the
@@ -984,10 +984,10 @@ source :eq:`point-source-spherical-coefficients` into :eq:`D_circular_25D` as
 .. math::
     :label: D.nfchoa.pw.2.5D
 
-    D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = A(\omega)
-        \frac{2\mathrm{i}}{R_0} \sum_{m=-\infty}^\infty
+    D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega)
+        \frac{2}{R_0} \sum_{m=-\infty}^\infty
         \frac{{\mathrm{i}}^{-|m|} \Phi_{-m}(\phi_k)}
-        {\frac{\omega}{c}h_{|m|}^{(2)}
+        {\mathrm{i}\frac{\omega}{c}h_{|m|}^{(2)}\!
         \left(\frac{\omega}{c}R_0\right)} \Phi_m(\phi_0).
 
 For an infinite linear secondary source distribution located on the
