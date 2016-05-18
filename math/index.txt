@@ -984,9 +984,10 @@ source :eq:`point-source-spherical-coefficients` into :eq:`D_circular_25D` as
 .. math::
     :label: D.nfchoa.pw.2.5D
 
-    D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega) \frac{2}{R_0}
-        \sum_{m=-\infty}^\infty \frac{{\mathrm{i}}^{-|m|} \Phi_{-m}(\phi_k)}
-        {{\mathrm{i}}\frac{\omega}{c}h_{|m|}^{(2)}
+    D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = A(\omega)
+        \frac{2\mathrm{i}}{R_0} \sum_{m=-\infty}^\infty
+        \frac{{\mathrm{i}}^{-|m|} \Phi_{-m}(\phi_k)}
+        {\frac{\omega}{c}h_{|m|}^{(2)}
         \left(\frac{\omega}{c}R_0\right)} \Phi_m(\phi_0).
 
 For an infinite linear secondary source distribution located on the
