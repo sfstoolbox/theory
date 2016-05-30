@@ -65,40 +65,47 @@
   <div id="wrap">
 
   <!-- Navigation (top) -->
-  {% include "navigation.html" %}
-  <div class="navbar navbar-default navbar-shrink navbar-doc">
-    <div class="container">
-      <div class="navbar-left">
-        <div class="search doc">
-          {% include "searchbox.html" %}
+    <nav class="navbar navbar-default navbar-shrink">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://sfstoolbox.org">SFS Toolbox</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="http://sfstoolbox.org">Home</a>
+                    </li>
+                    <li>
+                        <a href="http://sfstoolbox.org/matlab/">Matlab</a>
+                    </li>
+                    <li>
+                        <a href="http://sfstoolbox.org/python/">Python</a>
+                    </li>
+                    <li class="active">
+                        <a href="http://sfstoolbox.org/theory">Theory</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
         </div>
-        {#<span class="navbar-brand">Documentation</span>#}
-      </div>
-      <div class="collapse navbar-collapse" id="documentation-navbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li class="hidden">
-            <a href="#page-top"></a>
-          </li>
-          <li class="page-scroll">
-            <a href="{{ home_url + version + '/matlab' }}">Matlab Toolbox</a>
-          </li>
-          <li class="page-scroll">
-            <a href="{{ home_url + version + '/python' }}">Python Toolbox</a>
-          </li>
-          <li class="page-scroll">
-            <a href="{{ home_url + version + '/math' }}">Mathematical Fundamentals</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
+        <!-- /.container-fluid -->
+    </nav>
 
   <section class="doc">
     <div class="container-fluid">
     <div class="row">
       <nav class="col-lg-2 sidebar">
         <div class="nav nav-sidebar">
-        <ul data-spy="affix" data-offset-top="120" data-offset-bottom="150">
+        <ul data-spy="affix" data-offset-top="60" data-offset-bottom="150">
           {% block menu %}
           {% set toctree = toctree(maxdepth=2, collapse=False, includehidden=True) %}
           {% if toctree %}

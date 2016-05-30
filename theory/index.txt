@@ -1,7 +1,7 @@
 .. _chap-theory:
 
-Mathematical fundamentals of sound field synthesis
-==================================================
+Theory of sound field synthesis
+===============================
 
 .. Latex macros definitions used in this document
 .. container:: hidden
