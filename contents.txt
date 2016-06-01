@@ -7,6 +7,4 @@ SFS Toolbox documentation
 .. toctree::
     :maxdepth: 2
 
-    matlab/index
-    python/index
-    theory/index
+    index
