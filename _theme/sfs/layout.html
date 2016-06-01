@@ -114,6 +114,7 @@
             <!-- Local TOC -->
             <div class="local-toc">{{ toc }}</div>
           {% endif %}
+          {% include "versions.html" %}
           {% endblock %}
         </ul>
         </div>
@@ -168,6 +169,11 @@
 
   <!-- Mathematics -->
   <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  {# RTD hosts this file, so just load on non RTD builds #}
+  {% if not READTHEDOCS %}
+    <script type="text/javascript" src="{{ pathto('_static/js/theme.js', 1) }}"></script>
+  {% endif %}
 
   {% endif %}
 
