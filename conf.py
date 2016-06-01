@@ -10,6 +10,7 @@ import sphinx_rtd_theme
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('./_include'))
+sys.path.insert(0, os.path.abspath('.'))  # temporary, for plot_directive
 
 from acronyms import rst_epilog # This includes things like |HRTF| etc.
 import version
@@ -27,8 +28,11 @@ extensions = [
 	'sphinx.ext.autodoc',
         'mathjax',
 	'sphinx.ext.viewcode',
-	'matplotlib.sphinxext.only_directives',
-	'matplotlib.sphinxext.plot_directive',
+        'plot_directive',  # temporary, for :context:close-figs feature
+        # When matplotlib > 1.4.3 is available on readthedocs, we can use this:
+        #'matplotlib.sphinxext.plot_directive',
+	#'matplotlib.sphinxext.only_directives',
+	#'matplotlib.sphinxext.plot_directive',
 ]
 
 # Enable numbering of figures and tables
