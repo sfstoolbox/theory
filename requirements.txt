@@ -1,0 +1,9 @@
+-e git+https://github.com/sfstoolbox/sfs-documentation-theme.git#egg=SfsDoc
+
+jinja2
+pygments
+sphinx
+
+numpy
+scipy
+matplotlib

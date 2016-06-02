@@ -8,6 +8,3 @@ SFS Toolbox documentation
     :maxdepth: 2
 
     index
-    matlab/index
-    python/index
-    math/index

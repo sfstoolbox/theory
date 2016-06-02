@@ -4,15 +4,15 @@ import sys
 import os
 import shlex
 import sphinx_rtd_theme
+import sfsdoc
 #import subprocess
 
 # If extensions (or modules to document with autodoc) are in another directory,
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('./_include'))
+sys.path.insert(0, os.path.abspath('.'))  # temporary, for plot_directive
 
 from acronyms import rst_epilog # This includes things like |HRTF| etc.
-import version
 
 # -- General configuration ------------------------------------------------
 
@@ -25,10 +25,13 @@ needs_sphinx = '1.3'
 #extensions = ['sphinx.ext.autodoc','nbsphinx','sphinx.ext.mathjax']
 extensions = [
 	'sphinx.ext.autodoc',
-        'mathjax',
+        'sphinx.ext.mathjax',
 	'sphinx.ext.viewcode',
-	'matplotlib.sphinxext.only_directives',
-	'matplotlib.sphinxext.plot_directive',
+        'plot_directive',  # temporary, for :context:close-figs feature
+        # When matplotlib > 1.4.3 is available on readthedocs, we can use this:
+        #'matplotlib.sphinxext.plot_directive',
+	#'matplotlib.sphinxext.only_directives',
+	#'matplotlib.sphinxext.plot_directive',
 ]
 
 # Enable numbering of figures and tables
@@ -40,9 +43,6 @@ plot_html_show_source_link = False
 plot_html_show_formats = False
 plot_formats = ['png']
 plot_rcparams = {'figure.figsize' : [8, 4.5] }
-
-# Add any paths that contain templates here, relative to this directory.
-templates_path = ['./_theme/sfs/static/']
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
@@ -56,28 +56,22 @@ master_doc = 'contents'
 
 # General information about the project. (substitutions)
 project = 'SFS Toolbox - Documentation'
-copyright = '2016, SFS Toolbox Team'
-author = 'SFS Toolbox Team'
-
-# The version info for the project you're documenting, acts as replacement for
-# |version| and |release|, also used in various other places throughout the
-# built documents.
-#
-# The short X.Y version.
-version = version.get_version()
+copyright = '2016, SFS Toolbox Developers'
+author = 'SFS Toolbox Developers'
 
 # The full version, including alpha/beta/rc tags.
-release = version
+#release = version
+try:
+    release = check_output(['git', 'describe', '--tags', '--always'])
+    release = release.decode().strip()
+except Exception:
+    release = '<unknown>'
 
-html_context = {'versions': [('1.0', '1.0/'), ('latest', 'latest/')],
-                'downloads': [('PDF', '/sfs-toolbox-documentation.pdf')],
-                'home_url': 'http://sfstoolbox.org/doc/'}
+# Definition of variables that are used by the versions.html theme file
+html_context = {'active_tab': 'theory',
+                'home_url': 'http://theory.sfstoolbox.org',
+                'github_url': 'http://github.com/sfstoolbox/sfs-documentation'}
 
-# There are two options for replacing |today|: either, you set today to some
-# non-false value, then it is used:
-#today = ''
-# Else, today_fmt is used as the format for a strftime call.
-#today_fmt = '%B %d, %Y'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -101,7 +95,7 @@ todo_include_todos = False
 html_theme = "sfs"
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = ["./_theme",sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [sfsdoc.get_theme_dir(),sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -141,10 +135,6 @@ html_show_sphinx = False
 # Output file base name for HTML help builder.
 htmlhelp_basename = 'sfs-doc'
 
-# Appended to every page
-rst_epilog = rst_epilog + """
-.. |SFS Toolbox|     replace:: SFS Tooblox
-"""
 
 # -- Options for LaTeX output ---------------------------------------------
 
