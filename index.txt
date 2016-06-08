@@ -1,8 +1,13 @@
 Sound Field Synthesis
 =====================
 
-.. .. image:: img/header.png
+.. _fig-header:
 
+.. figure:: img/header.png
+    :align: center
+
+    Sound field synthesis described as a scattering problem [ZotterSpors2013]_.
+ 
 Sound field synthesis (SFS) includes all methods that try to generate a defined
 sound field in an extended area that is surrounded by loudspeakers. The SFS
 Toolbox focuses on those methods that provide analytical solutions to the
