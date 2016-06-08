@@ -4,7 +4,6 @@ import sys
 import os
 import shlex
 import sphinx_rtd_theme
-import sfsdoc
 #import subprocess
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -37,7 +36,7 @@ extensions = [
 # Enable numbering of figures and tables
 numfig = True
 
-# Plot settings ofr matplot
+# Plot settings for matplot
 plot_include_source = True
 plot_html_show_source_link = False
 plot_html_show_formats = False
@@ -55,7 +54,7 @@ source_suffix = '.txt'
 master_doc = 'contents'
 
 # General information about the project. (substitutions)
-project = 'SFS Toolbox - Documentation'
+project = 'SFS Toolbox -- Theory'
 copyright = '2016, SFS Toolbox Developers'
 author = 'SFS Toolbox Developers'
 
@@ -66,12 +65,6 @@ try:
     release = release.decode().strip()
 except Exception:
     release = '<unknown>'
-
-# Definition of variables that are used by the versions.html theme file
-html_context = {'active_tab': 'theory',
-                'home_url': 'http://theory.sfstoolbox.org',
-                'github_url': 'http://github.com/sfstoolbox/sfs-documentation'}
-
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
@@ -92,10 +85,10 @@ todo_include_todos = False
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
-html_theme = "sfs"
+html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom themes here, relative to this directory.
-html_theme_path = [sfsdoc.get_theme_dir(),sphinx_rtd_theme.get_html_theme_path()]
+html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
@@ -156,7 +149,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'sfs-toolbox-documentation.tex', u'SFS Toolbox - Documentation',
+  (master_doc, 'sfs-toolbox-documentation.tex', u'SFS Toolbox -- Theory',
    u'SFS Toolbox team', 'manual'),
 ]
 

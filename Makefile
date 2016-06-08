@@ -16,7 +16,6 @@ SPHINXBUILD   = sphinx-build
 PAPER         =
 SOURCEDIR     = .
 BUILDDIR      = ./_build
-VERSION       = $(shell python ./_include/version.py)
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) >/dev/null 2>&1; echo $$?), 1)
@@ -45,27 +44,27 @@ clean:
 	rm -rf $(BUILDDIR)/*
 
 html-preview:
-	$(SPHINXBUILD) -b html -A web=0 $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/html-preview/$(VERSION)
+	$(SPHINXBUILD) -b html -A web=0 $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/html-preview
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html-preview/$(VERSION)."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html-preview/."
 
 html:
-	$(SPHINXBUILD) -b dirhtml -A web=1 $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/html/$(VERSION)
+	$(SPHINXBUILD) -b dirhtml -A web=1 $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/html
 	@echo
-	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$(VERSION)."
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/."
 
 latex:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/latex/$(VERSION)
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/latex
 	@echo
-	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex/$(VERSION)."
+	@echo "Build finished; the LaTeX files are in $(BUILDDIR)/latex/."
 	@echo "Run \`make' in that directory to run these through (pdf)latex" \
 	      "(use \`make latexpdf' here to do that automatically)."
 
 latexpdf:
-	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/latex/$(VERSION)
+	$(SPHINXBUILD) -b latex $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/latex
 	@echo "Running LaTeX files through pdflatex..."
-	$(MAKE) -C $(BUILDDIR)/latex/$(VERSION) all-pdf
-	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex/$(VERSION)."
+	$(MAKE) -C $(BUILDDIR)/latex all-pdf
+	@echo "pdflatex finished; the PDF files are in $(BUILDDIR)/latex/."
 
 linkcheck:
 	$(SPHINXBUILD) -b linkcheck $(ALLSPHINXOPTS) $(SOURCEDIR) $(BUILDDIR)/linkcheck

@@ -1,7 +1,31 @@
-.. _chap-theory:
+SFS Toolbox -- Theory
+=====================
 
-Theory of sound field synthesis
-===============================
+.. .. image:: img/header.png
+
+Sound field synthesis (SFS) includes all methods that try to generate a defined
+sound field in an extended area that is surrounded by loudspeakers. The SFS
+Toolbox focuses on those methods that provide analytical solutions to the
+underlying mathematical problem, namely |WFS|, |NFC-HOA|, and the |SDM|.
+
+The Toolbox provides you with the implementation of the underlying
+mathematics. You can make numerical simulations of the resulting sound fields
+and can even create binaural simulations of the same sound fields. This enables
+you to listen to large loudspeaker arrays, even if you don’t have one in your
+laboratory or at home. In addition, you can easily plug-in your own algorithms
+in order to test or compare them.
+
+The Toolbox is structured in the following three projects.
+
+Theory:
+    http://sfstoolbox.org/ (current page)
+
+SFS Toolbox for Matlab/Octave:
+    http://matlab.sfstoolbox.org
+
+SFS Toolbox for Python:
+    http://python.sfstoolbox.org
+
 
 .. Latex macros definitions used in this document
 .. container:: hidden
@@ -17,10 +41,10 @@ Theory of sound field synthesis
         \def \twohalfD {{2.5\text{D}}\,}
         \def \threeD {{3\text{D}}\,}
 
-Most of the figures in this chapter are directly created by the python variant
-of the |SFS Toolbox|. All of them display the corresponding code for creating
-them directly before the actual figure. In order to recreate them, you have to
-execute the following code first:
+Most of the figures in this page are directly created by the SFS Toolbox for
+Python. All of them display the corresponding code for creating them directly
+before the actual figure. In order to recreate them, you have to execute the
+following code first:
 
 .. Common plotting settings
 .. plot::
@@ -476,7 +500,7 @@ into :eq:`D_wfs` as
         \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\omega)}_{D(\x_0,\omega)} \;
         {\mathop{\mathrm{d}{A}}}(\x_0).
 
-In the |SFS Toolbox| we assume convex secondary source distributions, which
+In the SFS Toolbox we assume convex secondary source distributions, which
 allows to formulate the window function by a scalar product with the normal
 vector of the secondary source distribution.  In general, also non-convex
 secondary source distributions can be used with |WFS| – compare the appendix in
@@ -635,7 +659,7 @@ This document will consider only model-based rendering.
 
 Frequently applied models in model-based rendering are plane waves, point
 sources, or sources with a prescribed complex directivity. In the following the
-models used within the |SFS Toolbox| are presented.
+models used within the SFS Toolbox are presented.
 
 .. _sec-plane-wave:
 
@@ -1156,7 +1180,7 @@ they can easily be omitted. For corresponding driving functions for focused
 sources without the evanescent part of the sound field see [SporsAhrens2010]_
 for |SDM| and [AhrensSpors2009b]_ for |NFC-HOA|.
 
-In the |SFS Toolbox| only focused sources in |WFS| are considered at the moment.
+In the SFS Toolbox only focused sources in |WFS| are considered at the moment.
 
 
 .. _sec-driving-functions-wfs:
@@ -1337,7 +1361,7 @@ which is the traditional formulation of a point source in |WFS| as given by eq.
 (2.22a) in [Verheijen1997]_ [#F6]_ for the 2.5D. It has the advantage that its
 temporal domain version could again be implemented as a simple weighting- and
 delaying-mechanism. This is the default driving function for a point source in
-the |SFS Toolbox|.
+the SFS Toolbox.
 
 Transfered to the temporal domain via an inverse Fourier transform :eq:`ifft` it
 follows
@@ -1529,7 +1553,7 @@ or by using an approximated point source as
         {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|}.
 
 As before for other source types, the approximated versions are the default
-driving functions for a focused source used in the |SFS Toolbox|.
+driving functions for a focused source used in the SFS Toolbox|.
 
 Transfered to the temporal domain via an inverse Fourier transform :eq:`ifft` it
 follows
