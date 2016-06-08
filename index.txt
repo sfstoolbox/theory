@@ -1,4 +1,4 @@
-SFS Toolbox -- Theory
+Sound Field Synthesis
 =====================
 
 .. .. image:: img/header.png
