@@ -18,7 +18,7 @@ in order to test or compare them.
 The Toolbox is structured in the following three projects.
 
 Theory:
-    http://sfstoolbox.org/ (current page)
+    http://sfstoolbox.org (current page)
 
 SFS Toolbox for Matlab/Octave:
     http://matlab.sfstoolbox.org

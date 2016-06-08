@@ -3,7 +3,7 @@ SFS Toolbox -- Theory
 
 Discussion of the theory of sound field synthesis, see
 
-http://sfstoolbox.org/
+http://sfstoolbox.org
 
 This repository holds the sources in reStructuredText/Sphinx format, from which
 the online version is generated automatically.
