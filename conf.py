@@ -24,8 +24,8 @@ needs_sphinx = '1.3'
 #extensions = ['sphinx.ext.autodoc','nbsphinx','sphinx.ext.mathjax']
 extensions = [
 	'sphinx.ext.autodoc',
-        'sphinx.ext.mathjax',
 	'sphinx.ext.viewcode',
+        'mathjax', # modified version to include clickable eq numbers
         'plot_directive',  # temporary, for :context:close-figs feature
         # When matplotlib > 1.4.3 is available on readthedocs, we can use this:
         #'matplotlib.sphinxext.plot_directive',
