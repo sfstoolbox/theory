@@ -9,20 +9,20 @@ Sound Field Synthesis
     Sound field synthesis described as a scattering problem [ZotterSpors2013]_.
  
 Sound field synthesis (SFS) includes all methods that try to generate a defined
-sound field in an extended area that is surrounded by loudspeakers. The SFS
-Toolbox focuses on those methods that provide analytical solutions to the
-underlying mathematical problem, namely |WFS|, |NFC-HOA|, and the |SDM|.
+sound field in an extended area that is surrounded by loudspeakers. This page
+focuses on those methods that provide analytical solutions to the underlying
+mathematical problem, namely |WFS|, |NFC-HOA|, and the |SDM|.
 
-The Toolbox provides you with the implementation of the underlying
-mathematics. You can make numerical simulations of the resulting sound fields
-and can even create binaural simulations of the same sound fields. This enables
-you to listen to large loudspeaker arrays, even if you don’t have one in your
-laboratory or at home. In addition, you can easily plug-in your own algorithms
-in order to test or compare them.
+The Toolboxes provide you with the implementation of the underlying mathematics.
+You can make numerical simulations of the resulting sound fields and can even
+create binaural simulations of the same sound fields. This enables you to listen
+to large loudspeaker arrays, even if you don’t have one in your laboratory or at
+home. In addition, you can easily plug-in your own algorithms in order to test
+or compare them.
 
-The Toolbox is structured in the following three projects.
+The SFS Toolbox project is structured in the following three sub-projects.
 
-Theory:
+Discussion of Theory:
     http://sfstoolbox.org (current page)
 
 SFS Toolbox for Matlab/Octave:
