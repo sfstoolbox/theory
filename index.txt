@@ -1,12 +1,8 @@
 Sound Field Synthesis
 =====================
 
-.. _fig-header:
-
-.. figure:: img/header.png
+.. image:: img/header.png
     :align: center
-
-    Sound field synthesis described as a scattering problem [ZotterSpors2013]_.
  
 Sound field synthesis (SFS) includes all methods that try to generate a defined
 sound field in an extended area that is surrounded by loudspeakers. This page
@@ -59,6 +55,8 @@ following code first:
     import matplotlib.pyplot as plt
     import sfs
     plt.rcParams['figure.figsize'] = 8, 4.5  # inch
+
+The image at the top of the page is extracted from [ZotterSpors2013]_.
 
 .. _sec-mathematical-definitions:
 
