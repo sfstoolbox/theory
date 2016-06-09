@@ -22,7 +22,7 @@ Alternatively you can use the <code>Makefile</code>:
 $ make html-preview
 ```
 
-The files are then located under `_build/html-preview/latest`.
+The files are then located under `_build/html-preview`.
 
 ## License and feedback
 
