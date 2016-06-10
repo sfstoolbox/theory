@@ -1035,7 +1035,7 @@ Transferred to the temporal domain this results in [AhrensSpors2010]_, eq. (18)
     :label: d.sdm.pw.2.5D
 
     d_{\text{linear},\,\text{2.5D}}(x_0,t) = h(t) *
-        a(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k),
+        a\left(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k\right),
 
 where :math:`\phi_k` denotes the azimuth direction of the plane wave and
 
