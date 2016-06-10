@@ -38,9 +38,6 @@ SFS Toolbox for Python:
         \newcommand{\xref}{\x_\text{ref}}
         \newcommand{\k}{\vec{k}}
         \newcommand{\n}{\vec{n}}
-        \def \twoD {{2\text{D}}\,}
-        \def \twohalfD {{2.5\text{D}}\,}
-        \def \threeD {{3\text{D}}\,}
 
 Most of the figures in this page are directly created by the SFS Toolbox for
 Python. All of them display the corresponding code for creating them directly
@@ -578,7 +575,7 @@ results in a 2.5D driving function given as [Ahrens2012]_, eq. (3.49)
 .. math::
     :label: D_circular_25D
 
-    D_{\text{circular},\twohalfD}(\phi_0,\omega) = \frac{1}{2{\pi}R_0}
+    D_{\text{circular},\text{2.5D}}(\phi_0,\omega) = \frac{1}{2{\pi}R_0}
         \sum_{m=-\infty}^\infty \frac{\breve{S}_{|m|}^m
         (\frac{{\pi}}{2},\phi_\text{s},r_\text{s},\omega)}{\breve{G}_{|m|}^m
        (\frac{{\pi}}{2},0,\omega)} \Phi_m(\phi_0).
@@ -593,7 +590,7 @@ as [Ahrens2012]_, eq. (3.77)
 .. math::
     :label: D_linear_25D
 
-    D_{\text{linear},\twohalfD}(x_0,\omega) = \frac{1}{2{\pi}}
+    D_{\text{linear},\text{2.5D}}(x_0,\omega) = \frac{1}{2{\pi}}
         \int_{-\infty}^\infty \frac{\breve{S}(k_x,y_\text{ref},0,\omega)}
         {\breve{G}(k_x,y_\text{ref},0,\omega)} \chi(k_x,x_0) \,
         {\mathop{\mathrm{d}{k_x}}}.
@@ -611,13 +608,13 @@ can be established.
 
     \begin{gathered}
         \underbrace{-\frac{{\mathrm{i}}}{4} \;{\,H_{0}^{(2)}\!}
-            \left(\frac{\omega}{c}|\x-\x_0|\right)}_{G_\twoD(\x-\x_0,\omega)}
+            \left(\frac{\omega}{c}|\x-\x_0|\right)}_{G_\text{2D}(\x-\x_0,\omega)}
         \approx
         \sqrt{2{\pi}\frac{c}{{\mathrm{i}}\omega} |\x-\x_0|} \;
         \underbrace{
             \frac{1}{4 {\pi}}
             \frac{{\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x-\x_0|}}
-            {|\x-\x_0|}}_{G_\threeD(\x-\x_0,\omega)},
+            {|\x-\x_0|}}_{G_\text{3D}(\x-\x_0,\omega)},
     \end{gathered}
 
 where :math:`{\,H_{0}^{(2)}\!}` denotes the Hankel function of second kind and
@@ -628,7 +625,7 @@ the 2D case results in
     :label: single-layer_25D
 
     P(\x,\omega) = \oint_S \sqrt{2{\pi}\frac{c}{{\mathrm{i}}\omega}
-        |\x-\x_0|} \; D(\x_0,\omega) G_\threeD(\x-\x0,\omega) \,
+        |\x-\x_0|} \; D(\x_0,\omega) G_\text{3D}(\x-\x0,\omega) \,
         {\mathop{\mathrm{d}{A}}}(\x_0).
 
 If the amplitude correction is further restricted to one reference point
@@ -637,7 +634,7 @@ If the amplitude correction is further restricted to one reference point
 .. math::
     :label: D25D_wfs
 
-    D_\twohalfD(\x_0,\omega) = \underbrace{\sqrt{2{\pi}|\xref-\x_0|}}_{g_0}
+    D_\text{2.5D}(\x_0,\omega) = \underbrace{\sqrt{2{\pi}|\xref-\x_0|}}_{g_0}
         \sqrt{\frac{c}{{\mathrm{i}}\omega}} \, D(\x_0,\omega),
 
 where :math:`g_0` is independent of :math:`\x`.
@@ -1011,7 +1008,7 @@ source :eq:`point-source-spherical-coefficients` into :eq:`D_circular_25D` as
 .. math::
     :label: D.nfchoa.pw.2.5D
 
-    D_{\text{circular},\,\twohalfD}(\phi_0,\omega) = -A(\omega)
+    D_{\text{circular},\,\text{2.5D}}(\phi_0,\omega) = -A(\omega)
         \frac{2}{R_0} \sum_{m=-\infty}^\infty
         \frac{{\mathrm{i}}^{-|m|} \Phi_{-m}(\phi_k)}
         {\mathrm{i}\frac{\omega}{c}h_{|m|}^{(2)}\!
@@ -1029,7 +1026,7 @@ Assuming :math:`0 \le |k_{x_\text{s}}| \le |\frac{\omega}{c}|` this results in
 .. math::
     :label: D.sdm.pw.2.5D
 
-    D_{\text{linear},\,\twohalfD}(x_0,\omega) = A(\omega)
+    D_{\text{linear},\,\text{2.5D}}(x_0,\omega) = A(\omega)
         \frac{4{\mathrm{i}}\chi(k_y,y_\text{ref})}
         {{\,H_{0}^{(2)}\!}(k_y y_\text{ref})} \chi(k_x,x_0).
 
@@ -1038,7 +1035,7 @@ Transferred to the temporal domain this results in [AhrensSpors2010]_, eq. (18)
 .. math::
     :label: d.sdm.pw.2.5D
 
-    d_{\text{linear},\,\twohalfD}(x_0,t) = h(t) *
+    d_{\text{linear},\,\text{2.5D}}(x_0,t) = h(t) *
         a(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k),
 
 where :math:`\phi_k` denotes the azimuth direction of the plane wave and
@@ -1106,7 +1103,7 @@ eq. (5.8)
 .. math::
     :label: D.nfchoa.ps.2.5D
 
-    D_{\text{circular},\,\twohalfD}(\phi_0,\omega) =
+    D_{\text{circular},\,\text{2.5D}}(\phi_0,\omega) =
         A(\omega) \frac{1}{2{\pi}R_0} \sum_{m=-\infty}^{\infty}
         \frac{h_{|m|}^{(2)} (\frac{\omega}{c}r_\text{s})
         \Phi_{-m}(\phi_\text{s})}
@@ -1122,7 +1119,7 @@ results in [Ahrens2012]_, eq. (4.53)
 .. math::
     :label: D.sdm.ps.2.5D
 
-    D_{\text{linear},\,\twohalfD}(x_0,\omega) =
+    D_{\text{linear},\,\text{2.5D}}(x_0,\omega) =
         A(\omega) \int_{-\infty}^\infty \frac{
         {\,H_{0}^{(2)}\!}\left(\sqrt{(\frac{\omega}{c})^2-k_x^2} \;
         (y_\text{ref}-y_\text{s}) \right) \chi(-k_x,x_\text{s})}
@@ -1243,7 +1240,7 @@ and :eq:`D25D_wfs` it follows
 .. math::
     :label: D.wfs.pw.2.5D
 
-    D_\twohalfD(\x_0,\omega) = 2g_0 w(\x_0) A(\omega)
+    D_\text{2.5D}(\x_0,\omega) = 2g_0 w(\x_0) A(\omega)
         \sqrt{{\mathrm{i}}\frac{\omega}{c}} \n_k\n_{\x_0}
         {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}\n_k\x_0}.
 
@@ -1259,7 +1256,7 @@ it follows
 .. math::
     :label: d.wfs.pw.2.5D
 
-    d_\twohalfD(\x_0,t) = 2g_0 a(t) * h_\twohalfD(t) * w(\x_0) \n_k \n_{\x_0}
+    d_\text{2.5D}(\x_0,t) = 2g_0 a(t) * h_\text{2.5D}(t) * w(\x_0) \n_k \n_{\x_0}
         {\,\delta\!\left(t - \frac{\n_k\x_0}{c}\right)},
 
 where
@@ -1274,7 +1271,7 @@ and
 .. math::
     :label: h.wfs.2.5D
 
-    h_\twohalfD(t) = \mathcal{F}^{-1}\left\{
+    h_\text{2.5D}(t) = \mathcal{F}^{-1}\left\{
         \sqrt{{\mathrm{i}}\frac{\omega}{c}}\right\}
 
 denote the so called pre-equalization filters in |WFS|.
@@ -1336,7 +1333,7 @@ and :eq:`D25D_wfs` it follows
 .. math::
     :label: D.wfs.ps.woapprox.2.5D
 
-    D_\twohalfD(\x_0,\omega) =
+    D_\text{2.5D}(\x_0,\omega) =
         \frac{g_0}{2{\pi}} A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \left(1 + \frac{1}{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \right)
         \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2} {\mathrm{e}}^{-{\mathrm{i}}
@@ -1355,7 +1352,7 @@ Under the assumption of :math:`|\x_0-\xs| \gg 1`, :eq:`D.wfs.ps.woapprox` and
 .. math::
     :label: D.wfs.ps.2.5D
 
-    D_\twohalfD(\x_0,\omega) =
+    D_\text{2.5D}(\x_0,\omega) =
         \frac{g_0}{2{\pi}} A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
         {\mathrm{e}}^{-{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|},
@@ -1379,8 +1376,8 @@ follows
 .. math::
     :label: d.wfs.ps.2.5D
 
-    d_\twohalfD(\x_0,t) =
-        \frac{g_0}{2{\pi}} a(t) * h_\twohalfD(t) * w(\x_0)
+    d_\text{2.5D}(\x_0,t) =
+        \frac{g_0}{2{\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
         {\,\delta\!\left(t-\frac{|\x_0-\xs|}{c}\right)}.
 
@@ -1440,7 +1437,7 @@ and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq
 .. math::
     :label: D.wfs.ls.2.5D
 
-    D_\twohalfD(\x_0,\omega) =
+    D_\text{2.5D}(\x_0,\omega) =
         -\frac{1}{2}g_0 A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|}
         {\,H_{1}^{(2)}\!}\left(\frac{\omega}{c}|\x_0-\xs|\right).
@@ -1460,7 +1457,7 @@ domain via an inverse Fourier transform :eq:`ifft` it follows
 .. math::
     :label: d.wfs.ls.2.5D
 
-    d_\twohalfD(\x_0,t) =
+    d_\text{2.5D}(\x_0,t) =
         g_0 \sqrt{\frac{1}{2{\pi}}} a(t) *
         {    \mathcal{F}^{-1}\left\{\sqrt{\frac{c}
         {{\mathrm{i}}\omega}}\right\}} * w(\x0)
@@ -1532,7 +1529,7 @@ versions of the driving functions for a point source as
 .. math::
     :label: D.wfs.fs.woapprox.2.5D
 
-    D_\twohalfD(\x_0,\omega) =
+    D_\text{2.5D}(\x_0,\omega) =
         \frac{g_0}{2{\pi}} A(\omega) w(\x_0) \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \left(1 + \frac{1}{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|} \right)
         \frac{(\x_0-\xs) \n_{\x_0}}{|\x_0-\xs|^2}
@@ -1550,7 +1547,7 @@ or by using an approximated point source as
 .. math::
     :label: D.wfs.fs.2.5D
 
-    D_\twohalfD(\x_0,\omega) = \frac{g_0}{2{\pi}} A(\omega) w(\x_0)
+    D_\text{2.5D}(\x_0,\omega) = \frac{g_0}{2{\pi}} A(\omega) w(\x_0)
         \sqrt{{\mathrm{i}}\frac{\omega}{c}}
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
         {\mathrm{e}}^{{\mathrm{i}}\frac{\omega}{c}|\x_0-\xs|}.
@@ -1571,8 +1568,8 @@ follows
 .. math::
     :label: d.wfs.fs.2.5D
 
-    d_\twohalfD(\x_0,t) =
-        \frac{g_0}{2{\pi}} a(t) * h_\twohalfD(t) * w(\x_0)
+    d_\text{2.5D}(\x_0,t) =
+        \frac{g_0}{2{\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
         \frac{(\x_0-\xs)\n_{\x_0}}{|\x_0-\xs|^{\frac{3}{2}}}
         {\,\delta\!\left(t+\frac{|\x_0-\xs|}{c}\right)}.
 
