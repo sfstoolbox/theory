@@ -928,8 +928,6 @@ The expansion coefficients for linear basis functions are given as
 Driving functions for |NFC-HOA| and |SDM|
 -----------------------------------------
 
-.. _sec-driving-functions-nfchoa-sdm-plane-wave:
-
 In the following, driving functions for |NFC-HOA| and |SDM| are derived
 for spherical, circular, and linear secondary source distributions. Among the
 possible combinations of methods and secondary sources not all are meaningful.
@@ -943,6 +941,7 @@ For |NFC-HOA|, temporal-domain implementations for the
 derivation of the implementation is not explicitly shown here, but is described
 in [Spors2011]_.
 
+.. _sec-driving-functions-nfchoa-sdm-plane-wave:
 
 Plane Wave
 ~~~~~~~~~~
@@ -1670,6 +1669,9 @@ driving signals
 while :math:`d_{\mathrm{fs}}(\x_0,{\x_\text{fs}}, t)` is derived analogously to
 from or . At the moment :math:`d_{\mathrm l}({\x_\text{fs}}, t)` does only
 support driving functions from |WFS|.
+
+
+.. _sec-footnotes:
 
 Footnotes
 ---------
