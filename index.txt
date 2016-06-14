@@ -1531,62 +1531,42 @@ to choose the active secondary sources, especially for circular or spherical
 geometries, the focused source also needs a direction :math:`\n_\text{s}`.
 
 The driving function for a focused source are given by the time-reversed
-versions of the driving functions for a point source as
-
-.. math::
-    :label: D.wfs.fs.woapprox
-
-    D(\x_0,\w) =
-        \frac{1}{2\pi} A(\w) w(\x_0)
-        \left(\i\wc  + \frac{1}{|\x_0-\xs|} \right)
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
-        \e{\i\wc |\x_0-\xs|},
-
-.. math::
-    :label: D.wfs.fs.woapprox.2.5D
-
-    D_\text{2.5D}(\x_0,\w) =
-        \frac{g_0}{2\pi} A(\w) w(\x_0) \sqrt{\i\wc }
-        \left(1 + \frac{1}{\i\wc |\x_0-\xs|} \right)
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
-        \e{\i\wc |\x_0-\xs|},
-
-or by using an approximated point source as
+versions of the driving functions for a point source :eq:`d.wfs.ps` and
+:eq:`d.wfs.ps.2.5D` as
 
 .. math::
     :label: D.wfs.fs
 
-    D(\x_0,\w) = \frac{1}{2\pi} A(\w) w(\x_0) \i\wc 
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+    D(\x_0,\w) = \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \e{\i\wc |\x_0-\xs|},
 
 .. math::
     :label: D.wfs.fs.2.5D
 
-    D_\text{2.5D}(\x_0,\w) = \frac{g_0}{2\pi} A(\w) w(\x_0)
-        \sqrt{\i\wc }
+    D_\text{2.5D}(\x_0,\w) =
+        \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
+        \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}}
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
         \e{\i\wc |\x_0-\xs|}.
 
-As before for other source types, the approximated versions are the default
-driving functions for a focused source used in the SFS Toolbox|.
-
-Transfered to the temporal domain via an inverse Fourier transform :eq:`ifft` it
+Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft` it
 follows
 
 .. math::
-    :label: d.wfs.fs
+    :label: d.wfs.ps
 
-    d(\x_0,t) = \frac{1}{2\pi} a(t) * h(t) * w(\x_0)
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+    d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \dirac{t+\frac{|\x_0-\xs|}{c}},
 
 .. math::
-    :label: d.wfs.fs.2.5D
+    :label: d.wfs.ps.2.5D
 
     d_\text{2.5D}(\x_0,t) =
-        \frac{g_0}{2\pi} a(t) * h_\text{2.5D}(t) * w(\x_0)
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+        \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
+        \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}} \\
+        \cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
         \dirac{t+\frac{|\x_0-\xs|}{c}}.
 
 In this document a focused source always refers to the time-reversed version of a
