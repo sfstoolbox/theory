@@ -1424,6 +1424,19 @@ Line Source
     |WFS| :eq:`D.wfs.ls`.  Parameters: :math:`\xs = (0, 2.5, 0)` m,
     :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
+For a line source its orientation :math:`\n_\text{s}` has an influence on the synthesized sound field as well.
+Let :math:`|\vec{v}|` be the distance between :math:`\x_0` and the line source with
+
+.. math::
+    :label: v.ls
+
+    \vec{v} = \x_0-\xs - \scalarprod{\x_0-\xs}{\n_\text{s}} \n_\text{s},
+
+where :math:`|\n_\text{s}| = 1`. For a 2D or 2.5D secondary source setup and
+a line source orientation perpendicular to the plane where the
+secondary sources are located this automatically simplifies to :math:`\vec{v} =
+\x_0 - \xs`.
+
 By inserting the source model for a line source :eq:`S.ls` into :eq:`D_wfs`
 and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq.
 (9.1.20) in [AbramowitzStegun1972]_ it follows
@@ -1431,29 +1444,30 @@ and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq
 .. math::
     :label: D.wfs.ls
 
-    D(\x_0,\w) = -\frac{1}{2}A(\w) w(\x_0) \i\wc 
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}
-        \Hankel{2}{1}{\wc |\x_0-\xs|},
+    D(\x_0,\w) = -\frac{1}{2}A(\w) w(\x_0) \i\wc
+        \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|}
+        \Hankel{2}{1}{\wc |\vec{v}|},
 
 .. math::
     :label: D.wfs.ls.2.5D
 
     D_\text{2.5D}(\x_0,\w) =
-        -\frac{1}{2}g_0 A(\w) w(\x_0) \sqrt{\i\wc }
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}
-        \Hankel{2}{1}{\wc |\x_0-\xs|}.
+        -\frac{1}{2}g_0 A(\w) w(\x_0) \sqrt{\i\wc}
+        \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|}
+        \Hankel{2}{1}{\wc |\vec{v}|}.
 
-Applying :math:`\Hankel{2}{1}{\zeta} \approx
--\sqrt{\frac{2}{\pi\i\zeta}} \e{-\i\zeta}` for
-:math:`z\gg1` after [Williams1999]_, eq. (4.23) and transfered to the temporal
-domain via an inverse Fourier transform :eq:`ifft` it follows
+
+Applying :math:`\Hankel{2}{1}{\zeta} \approx -\sqrt{\frac{2}{\pi\i}\zeta}
+\e{-\i\zeta}` for :math:`z\gg1` after [Williams1999]_, eq. (4.23) and
+transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
+it follows
 
 .. math::
     :label: d.wfs.ls
 
     d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \dirac{t-\frac{|\x_0-\xs|}{c}},
+        \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|^{\frac{3}{2}}}
+        \dirac{t-\frac{|\vec{v}|}{c}},
 
 .. math::
     :label: d.wfs.ls.2.5D
@@ -1462,8 +1476,8 @@ domain via an inverse Fourier transform :eq:`ifft` it follows
         g_0 \sqrt{\frac{1}{2\pi}} a(t) *
         {\mathcal{F}^{-1}\left\{\sqrt{\frac{c}
         {\i\w}}\right\}} * w(\x0)
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \dirac{t-\frac{|\x_0-\xs|}{c}}.
+        \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|^{\frac{3}{2}}}
+        \dirac{t-\frac{|\vec{v}|}{c}},
 
 The window function :math:`w(\x_0)` for a line source as source model can be
 calculated after [Spors2008]_ as
@@ -1473,7 +1487,7 @@ calculated after [Spors2008]_ as
 
     w(\x_0) = 
         \begin{cases}
-            1 & \scalarprod{\x_0-\xs}{\n_{\x_0}} > 0 \\
+            1 & \scalarprod{\vec{v}}{\n_{\x_0}} > 0 \\
             0 & \text{else}
         \end{cases}
 
