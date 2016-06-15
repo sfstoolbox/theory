@@ -280,10 +280,11 @@ function is then given by a simple division as [Ahrens2012]_, eq. (3.21) [#F2]_
     \end{gathered}
 
 where :math:`\breve{S}_n^m` denote the spherical expansion coefficients of the
-source model, :math:`\theta_\text{s}` and :math:`\phi_\text{s}` its directional
-dependency, and :math:`\breve{G}_n^0` the spherical expansion coefficients of a
-secondary point source that is located at the north pole of the sphere with
-:math:`\x_0 = (0,0,R_0)` and is given as [SchultzSpors2014]_, eq. (25)
+source model, :math:`\theta_\text{s}`, :math:`\phi_\text{s}`, and
+:math:`r_\text{s}` its directional dependency, and :math:`\breve{G}_n^0` the
+spherical expansion coefficients of a secondary monopole source located at
+the north pole of the sphere :math:`\x_0 = (\frac{\pi}{2},0,R_0)`. For a point
+source this is given as [SchultzSpors2014]_, eq. (25)
 
 .. math::
     :label: G_spherical
@@ -329,9 +330,10 @@ circle as explicitly shown by [AhrensSpors2009a]_ and is then given as
         {\breve{G}_m(0,\w)} \, \Phi_m(\phi_0),
 
 where :math:`\breve{S}_m` denotes the circular expansion coefficients for the
-source model, :math:`\phi_\text{s}` its directional dependency, and
-:math:`\breve{G}_m` the circular expansion coefficients for a secondary line
-source with
+source model, :math:`\phi_\text{s}`, and :math:`r_\text{s}` its directional
+dependency, and :math:`\breve{G}_m` the circular expansion coefficients for a
+secondary monopole source. For a line source located at :math:`\x_0 = (0,R_0)`
+this is given as
 
 .. math::
     :label: G_circular
@@ -371,7 +373,7 @@ convolution along the plane as [Ahrens2012]_, eq. (3.65)
 .. math::
     :label: D_planar
 
-    D_\text{planar}(x_0,\w) = \frac{1}{4\pi^2} \iint_{-\infty}^\infty
+    D_\text{planar}(x_0,y_0,\w) = \frac{1}{4{\pi}^2} \iint_{-\infty}^\infty
        \frac{\breve{S}(k_x,y_\text{s},k_z,\w)}{\breve{G}(k_x,0,k_z,\w)}
        \Lambda(k_x,x_0,k_z,z_0) \d k_x \d k_z,
 
@@ -902,6 +904,17 @@ Applying the large argument approximation of the Hankel function
         \frac{1}{\sqrt{|\x-\xs|}}
         \dirac{t - \frac{|\x-\xs|}{c}}.
 
+The expansion coefficients for spherical basis functions are given
+as [Hahn2015]_, eq. (15)
+
+.. math::
+    :label: line-source-spherical-coefficients
+
+    \breve{S}_n^m(\phi_\text{s},r_\text{s},\w) =
+        -\pi \i^{m-n+1}
+        \Hankel{2}{m}{\wc r_\text{s}}
+        Y_n^{-m}(0,\phi_\text{s}).
+
 The expansion coefficients for circular basis functions are given as
 
 .. math::
@@ -1129,6 +1142,21 @@ results in [Ahrens2012]_, eq. (4.53)
 Line Source
 ~~~~~~~~~~~
 
+For a spherical secondary source distribution with radius :math:`R_0` the spherical
+coefficients of a line source :eq:`line-source-spherical-coefficients` and of
+the Green's function :eq:`G_spherical` are inserted into :eq:`D_spherical` and
+yield [Hahn2015]_, eq. (20)
+
+.. math::
+    :label: D.nfchoa.ls.3D
+
+    D_{\text{spherical}}(\theta_0,\phi_0,\w) = A(\w) \frac{1}{2 R_0^2}
+        \sum_{n=0}^{\infty} \sum_{m=-n}^{n}
+        \frac{\i^{m-n} \Hankel{2}{m}{\wc r_\text{s}}
+        Y_n^{-m}(0,\phi_\text{s})}
+        {\wc \hankel{2}{n}{\wc R_0}}
+        Y_n^m(\theta_0,\phi_0).
+
 For a circular secondary source distribution with radius :math:`R_0` and line
 sources as secondary sources the driving function is given by inserting the
 circular coefficients :eq:`line-source-circular-coefficients`
@@ -1138,8 +1166,24 @@ and :eq:`G_circular` into :eq:`D_circular` as
     :label: D.nfchoa.ls.2D
 
     D_{\text{circular}}(\phi_0,\w) = A(\w) \frac{1}{2\pi R_0}
-        \sum_{m=-\infty}^{\infty} \frac{\Hankel{2}{m}{\wc r_s}
+        \sum_{m=-\infty}^{\infty}
+        \frac{\Hankel{2}{m}{\wc r_\text{s}}
         \Phi_{-m}(\phi_\text{s})} {\Hankel{2}{m}{\wc R_0}}
+        \Phi_m(\phi_0).
+
+For a circular secondary source distribution with radius :math:`R_0` and point
+sources as secondary sources the 2.5D driving function is given by inserting the
+spherical coefficients :eq:`line-source-spherical-coefficients`
+and :eq:`G_spherical` into :eq:`D_circular_25D` as [Hahn2015]_, eq. (23)
+
+.. math::
+    :label: D.nfchoa.ls.2.5D
+
+    D_{\text{circular},\,\text{2.5D}}(\phi_0,\w) =
+        A(\w) \frac{1}{2 R_0} \sum_{m=-\infty}^{\infty}
+        \frac{\i^{m-|m|} \Hankel{2}{m}{\wc r_\text{s}}
+        \Phi_{-m}(\phi_\text{s})}
+        {\wc \hankel{2}{|m|}{\wc R_0}}
         \Phi_m(\phi_0).
 
 For an infinite linear secondary source distribution located on the
@@ -1710,7 +1754,7 @@ References
 
 .. [AhrensSpors2009a] Ahrens, J. and Spors, S., “On the Secondary Source Type Mismatch in Wave Field Synthesis Employing Circular Distributions of Loudspeakers,” in *127th Conv. Audio Eng. Soc.*, New York, NY (2009), preprint 7952.
 
-.. [AhrensSpors2009b] Ahrens, J. and Spors, S., “Spatial encoding and decoding of focused virtual sound sources,” In *1st Ambisonics S.*, Graz, Austria (2009).
+.. [AhrensSpors2009b] Ahrens, J. and Spors, S., “Spatial encoding and decoding of focused virtual sound sources,” in *1st Ambisonics S.*, Graz, Austria (2009).
 
 .. [AhrensSpors2010] Ahrens, J. and Spors, S., “Sound Field Reproduction Using Planar and Linear Arrays of Loudspeakers,” IEEE Trans. Audio Speech Lang. Processing **18**, 2038–2050 (2010).
 
@@ -1729,6 +1773,8 @@ References
 .. [FaziNelson2013] Fazi, F. M. and Nelson, P. A., “Sound field reproduction as an equivalent acoustical scattering problem,” J. Acoust. Soc. Am. **134**, 3721–3729 (2013).
 
 .. [GumerovDuraiswami2004] Gumerov, N. A. and Duraiswami, R., *Fast Multipole Methods for the Helmholtz Equation in Three Dimensions*. (Elsevier, Amsterdam, 2004).
+
+.. [Hahn2015] Hahn, N. and Spors S., “Sound Field Synthesis of Virtual Cylindrical Waves Using Circular and Spherical Loudspeaker Arrays,” in *138th Conv. Audio Eng. Soc.*, Warsaw, Poland (2015), preprint 9324.
 
 .. [Herrin2003] Herrin, D. W., Martinus, F., Wu, T. W., and Seybert, A. F., “A New Look at the High Frequency Boundary Element and Rayleigh Integral Approximations,” SAE Technical Paper, doi:10.4271/2003-01-1451 (2003).
 
