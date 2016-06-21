@@ -61,7 +61,8 @@ following code first:
     import sfs
     plt.rcParams['figure.figsize'] = 8, 4.5  # inch
 
-The image at the top of the page is extracted from [ZotterSpors2013]_.
+The image at the top of the page is extracted from [ZotterSpors2013]_.  The
+following presentation of the theory is based on Chap. 2 from [Wierstorf2014]_.
 
 .. _sec-mathematical-definitions:
 
@@ -1797,6 +1798,8 @@ References
 .. [Start1997] Start, E. W., *Direct Sound Enhancement by Wave Field Synthesis*, Ph.D. dissertation, Technische Universiteit Delft, Delft, Netherlands, 1997.
 
 .. [Verheijen1997] Verheijen, E., *Sound Reproduction by Wave Field Synthesis*, Ph.D. dissertation, Technische Universiteit Delft, Delft, Netherlands, 1997.
+
+.. [Wierstorf2014] Wierstorf, H., *Perceptual Assessment of Sound Field Synthesis*, Ph.D. dissertation, Technische Universität Berlin, Berlin, Germany, 2014.
 
 .. [Williams1999] Williams, E. G., *Fourier Acoustics*. (Academic Press, San Diego, 1999).
 
