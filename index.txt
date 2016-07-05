@@ -1614,14 +1614,14 @@ Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft` 
 follows
 
 .. math::
-    :label: d.wfs.ps
+    :label: d.wfs.fs
 
     d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \dirac{t+\frac{|\x_0-\xs|}{c}},
 
 .. math::
-    :label: d.wfs.ps.2.5D
+    :label: d.wfs.fs.2.5D
 
     d_\text{2.5D}(\x_0,t) =
         \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
