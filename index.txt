@@ -1785,7 +1785,7 @@ References
 
 .. [SchultzSpors2014] Schultz, F. and Spors, S., “Comparing Approaches to the Spherical and Planar Single Layer Potentials for Interior Sound Field Synthesis,” Acta Acust. **100**, 900–911 (2014), `url <http://dx.doi.org/10.3813/AAA.918769>`__.
 
-.. [Schultz2016] Schultz, F., *Sound Field Synthesis for Line Source Array Applications in Large-Scale Sound Reinforcement*, doctoral thesis, Universität Rostock, Rostock, Germany, 2016, `url <https://www.dropbox.com/s/d1s4cnclxp38f1k/Schultz_SFS_with_LSA_PhDThesis_20160613.pdf?dl=0>`__.
+.. [Schultz2016] Schultz, F., *Sound Field Synthesis for Line Source Array Applications in Large-Scale Sound Reinforcement*, doctoral thesis, Universität Rostock, Rostock, Germany, 2016, `url <http://rosdok.uni-rostock.de/resolve/urn/urn:nbn:de:gbv:28-diss2016-0078-1>`__.
 
 .. [SporsAhrens2010] Spors, S. and Ahrens, J., “Reproduction of Focused Sources by the Spectral Division Method,” in *4th IEEE ISCCSP*, Limassol, Cyprus (2010), doi:10.1109/ISCCSP.2010.5463335, `url <http://dx.doi.org/10.1109/ISCCSP.2010.5463335>`__.
 
