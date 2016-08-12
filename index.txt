@@ -104,7 +104,7 @@ as
     :label: fft
 
     S(\w) = \mathcal{F}\left\{s(t)\right\} =
-        \int^{\infty}_{-\infty} s(t) \e{-\i\w t} \d t.
+        \int\limits^{\infty}_{-\infty} s(t) \e{-\i\w t} \d t.
 
 In the same way the inverse temporal Fourier transform is defined as
 
@@ -112,7 +112,7 @@ In the same way the inverse temporal Fourier transform is defined as
     :label: ifft
 
     s(t) = \mathcal{F}^{-1}\left\{S(\w)\right\} =
-        \frac{1}{2\pi} \int^{\infty}_{-\infty} S(\w)
+        \frac{1}{2\pi} \int\limits^{\infty}_{-\infty} S(\w)
         \e{\i\w t} \d\w.
 
 
