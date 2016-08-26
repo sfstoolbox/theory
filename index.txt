@@ -1399,7 +1399,7 @@ after [Schultz2016]_, (2.146). Under the assumption of :math:`\frac{\omega}{c}
 
     D_\text{2.5D}(\x_0,\w) =
         \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
-        \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}}
+        \sqrt{\frac{|\xref-\x_0|}{|\xref-\x_0|+|\x_0-\xs|}}
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
         \e{-\i\wc |\x_0-\xs|},
 
