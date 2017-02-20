@@ -1640,6 +1640,16 @@ from :eq:`D.wfs.ls`
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}
         \Hankel{1}{1}{\wc |\x_0-\xs|}.
 
+Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
+it follows
+
+.. math::
+    :label: d.wfs.fs.ls
+
+    d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
+        \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|^{\frac{3}{2}}}
+        \dirac{t+\frac{|\vec{v}|}{c}}.
+
 The window function :math:`w(\x_0)` for a focused source can be calculated as
 
 .. math::
