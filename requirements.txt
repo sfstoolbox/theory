@@ -1,8 +1,0 @@
-jinja2
-pygments
-sphinx
-
-sfs
-numpy
-scipy
-matplotlib
