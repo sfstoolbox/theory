@@ -26,11 +26,7 @@ extensions = [
 	'sphinx.ext.autodoc',
 	'sphinx.ext.viewcode',
         'mathjax', # modified version to include clickable eq numbers
-        'plot_directive',  # temporary, for :context:close-figs feature
-        # When matplotlib > 1.4.3 is available on readthedocs, we can use this:
-        #'matplotlib.sphinxext.plot_directive',
-	#'matplotlib.sphinxext.only_directives',
-	#'matplotlib.sphinxext.plot_directive',
+        'matplotlib.sphinxext.plot_directive'
 ]
 
 # Enable numbering of figures and tables
