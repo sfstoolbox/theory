@@ -1684,8 +1684,8 @@ it follows
     :label: d.wfs.fs.ls
 
     d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
-        \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|^{\frac{3}{2}}}
-        \dirac{t+\frac{|\vec{v}|}{c}}.
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+        \dirac{t+\frac{|\x_0-\xs|}{c}}.
 
 The window function :math:`w(\x_0)` for a focused source can be calculated as
 
