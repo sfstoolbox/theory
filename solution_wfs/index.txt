@@ -45,7 +45,7 @@ high frequency boundary element method [Herrin2003]_.  Here, it is assumed that
 a bent surface can be approximated by a set of small planar surfaces for
 which :eq:`D_wfs` holds locally.  In general, this will be the case if the wave
 length is much smaller than the size of a planar surface patch and the position
-of the listener is far away from the secondary sources. [#F3]_ Additionally, only
+of the listener is far away from the secondary sources. [#F1]_ Additionally, only
 one part of the surface is active: the area that is illuminated from the
 incident field of the source model.
 
@@ -64,12 +64,15 @@ In the SFS Toolbox we assume convex secondary source distributions, which
 allows to formulate the window function by a scalar product with the normal
 vector of the secondary source distribution.  In general, also non-convex
 secondary source distributions can be used with |WFS| – compare the appendix in
-[LaxFeshbach1947]_ and [#F4]_.
+[LaxFeshbach1947]_ and [#F2]_.
 
 One of the advantages of the applied approximation is that due to its local
 character the solution of the driving function :eq:`D_wfs` does not depend on
 the geometry of the secondary sources. This dependency applies to the direct
 solutions presented in :ref:`sec-nfchoa`.
 
+.. [#F1] Compare the assumptions made before (15) in [SporsZotter2013]_, which lead to the derivation of the same window function in a more explicit way.
+
+.. [#F2]  The solution mentioned by [LaxFeshbach1947]_ assumes that the listener is far away from the radiator and that the radiator is a physical source not a notional one as the secondary sources. In this case the selection criterion has to be chosen more carefully, incorporating the exact position of the listener and the virtual source. See also the `related discussion <https://github.com/sfstoolbox/sfs-documentation/issues/8>`_.
 
 .. vim: filetype=rst spell:

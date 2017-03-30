@@ -21,7 +21,7 @@ Plane Wave
     Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
     :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
 
-The source model for a plane wave is given as [Williams1999]_, eq. (2.24) [#F5]_
+The source model for a plane wave is given as [Williams1999]_, eq. (2.24) [#F1]_
 
 .. math::
     :label: S.pw
@@ -72,6 +72,8 @@ The expansion coefficients for linear basis functions are given as after
 
 where :math:`(k_{x,\text{s}},k_{y,\text{s}})` points into the radiating
 direction of the plane wave.
+
+.. [#F1] Note that Williams defines the Fourier transform with transposed signs as :math:`F(\w) = \int f(t) \e{\i\w t}`. This leads also to changed signs in his definitions of the Green’s functions and field expansions.
 
 
 .. vim: filetype=rst spell:

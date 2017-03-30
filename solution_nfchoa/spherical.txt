@@ -60,5 +60,8 @@ source this is given as [SchultzSpors2014]_, eq. (25)
 where :math:`\hankel{2}{n}{}` describes the spherical Hankel function of
 :math:`n`-th order and second kind.
 
+.. [#F1] Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due to the use of another coordinate system, compare Figure 2.1 from Gumerov and Duraiswami and :numref:`fig-coordinate-system`.
+
+.. [#F2]  Note the :math:`\frac{1}{2\pi}` term is wrong in [Ahrens2012]_, eq. (3.21) and eq. (5.7) and omitted here, compare the `errata <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq. (24).
 
 .. vim: filetype=rst spell:

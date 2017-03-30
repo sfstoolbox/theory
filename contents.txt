@@ -16,5 +16,4 @@ Contents
     driving_functions_nfchoa/index
     driving_functions_wfs/index
     driving_functions_lsfs/index
-    footnotes
     references
