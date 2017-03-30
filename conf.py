@@ -11,7 +11,10 @@ import sphinx_rtd_theme
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 sys.path.insert(0, os.path.abspath('.'))  # temporary, for plot_directive
 
-from acronyms import rst_epilog # This includes things like |HRTF| etc.
+from definitions import acronyms # This includes things like |HRTF| etc.
+from definitions import latexmacros
+rst_prolog = latexmacros # Append at the beginning of every page
+rst_epilog = acronyms # Append at the end of every page
 
 # -- General configuration ------------------------------------------------
 
