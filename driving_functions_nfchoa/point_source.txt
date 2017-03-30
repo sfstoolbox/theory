@@ -1,0 +1,78 @@
+.. _sec-driving-functions-nfchoa-sdm-point-source:
+
+Point Source
+~~~~~~~~~~~~
+
+.. plot::
+    :context: close-figs
+
+    xs = 0, 2.5, 0  # position of source
+    omega = 2 * np.pi * 1000  # frequency
+    R0 = 1.5  # radius of secondary sources
+    x0, n0, a0 = sfs.array.circular(200, R0)
+    grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
+    d = sfs.mono.drivingfunction.nfchoa_25d_point(omega, x0, R0, xs)
+    p = sfs.mono.synthesized.generic(omega, x0, n0, d * a0 , grid,
+        source=sfs.mono.source.point)
+    normalization = 20
+    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.secondarysource_2d(x0, n0, grid)
+
+.. _fig-nfchoa-25d-point-source:
+
+.. figure:: ../img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic point source synthesized with 2.5D
+    |NFC-HOA| :eq:`D.nfchoa.ps.2.5D`.  Parameters: :math:`\xs = (0, 2.5, 0)` m,
+    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+
+For a spherical secondary source distribution with radius :math:`R_0` the
+spherical coefficients of a point
+source :eq:`point-source-spherical-coefficients` and of the Green’s
+function :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
+[Ahrens2012]_, eq. (5.7) [#F2]_
+
+.. math::
+    :label: D.nfchoa.ps.3D
+
+    D_\text{spherical}(\theta_0,\phi_0,\w) =
+        A(\w) \frac{1}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
+        \frac{\hankel{2}{n}{\wc r_\text{s}}
+        Y_n^{-m}(\theta_\text{s},\phi_\text{s})}
+        {\hankel{2}{n}{\wc R_0}} Y_n^m (\theta_0,\phi_0).
+
+For a circular secondary source distribution with radius :math:`R_0` and point
+source as secondary sources the 2.5D driving function is given by inserting the
+spherical coefficients :eq:`point-source-spherical-coefficients`
+and :eq:`G_spherical` into :eq:`D_circular_25D`. This results in [Ahrens2012]_,
+eq. (5.8)
+
+.. math::
+    :label: D.nfchoa.ps.2.5D
+
+    D_{\text{circular},\,\text{2.5D}}(\phi_0,\w) =
+        A(\w) \frac{1}{2\pi R_0} \sum_{m=-\infty}^{\infty}
+        \frac{\hankel{2}{|m|}{\wc r_\text{s}}
+        \Phi_{-m}(\phi_\text{s})}
+        {\hankel{2}{|m|}{\wc R_0}} \Phi_m(\phi_0).
+
+For an infinite linear secondary source distribution located on the
+:math:`x`-axis and point sources as secondary sources the 2.5D driving function
+for a point source is given by inserting the corresponding linear expansion
+coefficients :eq:`point-source-linear-coefficients` and :eq:`G_linear`
+into :eq:`D_linear_25D`.  Assuming :math:`0 \le |k_x| < |\wc |` this
+results in [Ahrens2012]_, eq. (4.53)
+
+.. math::
+    :label: D.sdm.ps.2.5D
+
+    D_{\text{linear},\,\text{2.5D}}(x_0,\w) =
+        A(\w) \int_{-\infty}^\infty \frac{
+        \Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
+        (y_\text{ref}-y_\text{s})} \chi(-k_x,x_\text{s})}
+        {\Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
+        y_\text{ref}}} \chi(k_x,x_0) \d k_x.
+
+
+.. vim: filetype=rst spell:

@@ -1,0 +1,24 @@
+.. _sec-driving-functions-wfs:
+
+Driving functions for |WFS|
+---------------------------
+
+In the following, the driving functions for |WFS| in the frequency and temporal
+domain for selected source models are presented. The temporal domain functions
+consist of a filtering of the source signal and a weighting and delaying of the
+individual secondary source signals. This property allows for a very efficient
+implementation of |WFS| driving functions in the temporal domain. It is one of the
+main advantages of |WFS| in comparison to most of the |NFC-HOA|, |SDM| solutions
+discussed above.
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    plane_wave
+    point_source
+    line_source
+    focused_source
+
+
+.. vim: filetype=rst spell:

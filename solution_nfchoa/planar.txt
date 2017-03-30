@@ -1,0 +1,53 @@
+.. _sec-planar-goemetries:
+
+Planar Geometries
+~~~~~~~~~~~~~~~~~
+
+The basis functions for a planar secondary source distribution located
+on the :math:`xz`-plane in :math:`\mathbb{R}^3` are given as
+
+.. math::
+    :label: planar-harmonics
+
+    \Lambda(k_x,k_z,x,z) = \e{-\i(k_x x + k_z z)},
+
+where :math:`k_x`, :math:`k_z` are entries in the wave vector :math:`\k` with
+:math:`k^2 = (\wc )^2`. The complex conjugate is given by negating
+:math:`k_x` and :math:`k_z` as
+
+.. math::
+    :label: planar-harmonics-complex-conjugate
+
+    \Lambda(k_x,k_z,x,z)^* = \Lambda(-k_x,-k_z,x,z).
+
+For an infinitely long secondary source distribution located on the
+:math:`xz`-plane the driving function can be calculated by a two-dimensional
+convolution along the plane as [Ahrens2012]_, eq. (3.65)
+
+.. math::
+    :label: D_planar
+
+    D_\text{planar}(x_0,y_0,\w) = \frac{1}{4{\pi}^2} \iint_{-\infty}^\infty
+       \frac{\breve{S}(k_x,y_\text{s},k_z,\w)}{\breve{G}(k_x,0,k_z,\w)}
+       \Lambda(k_x,x_0,k_z,z_0) \d k_x \d k_z,
+
+where :math:`\breve{S}` denotes the planar expansion coefficients for the source
+model, :math:`y_\text{s}` its positional dependency, and :math:`\breve{G}` the
+planar expansion coefficients of a secondary point source with
+[SchultzSpors2014]_, eq. (49)
+
+.. math::
+    :label: G_planar
+
+    \breve{G}(k_x,0,k_z,\w) = -\frac{\i}{2}
+        \frac{1}{\sqrt{(\wc )^2-k_x^2-k_z^2}},
+
+for :math:`(\wc )^2 > (k_x^2+k_z^2)`.
+
+For the planar and the following linear geometries the Fredholm equation is
+solved for a non compact space :math:`V`, which leads to an infinite and
+non-denumerable number of basis functions as opposed to the denumerable case for
+compact spaces [SchultzSpors2014]_.
+
+
+.. vim: filetype=rst spell:

@@ -1,0 +1,140 @@
+.. _sec-driving-functions-wfs-focused-source:
+
+Focused Source
+~~~~~~~~~~~~~~
+
+.. plot::
+    :context: close-figs
+
+    xs = 0, 0.5, 0  # position of source
+    ns = 0, -1, 0  # direction of source
+    omega = 2 * np.pi * 1000  # frequency
+    xref = 0, 0, 0  # 2.5D reference point
+    x0, n0, a0 = sfs.array.circular(200, 1.5)
+    grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
+    d = sfs.mono.drivingfunction.wfs_25d_focused(omega, x0, n0, xs, xref)
+    a = sfs.mono.drivingfunction.source_selection_focused(ns, x0, xs)
+    twin = sfs.tapering.tukey(a,.3)
+    p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
+        source=sfs.mono.source.point)
+    normalization = 1
+    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.secondarysource_2d(x0, n0, grid)
+
+.. _fig-wfs-25d-focused-source:
+
+.. figure:: ../img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic focused source synthesized with 2.5D
+    |WFS| :eq:`D.wfs.fs.2.5D`.  Parameters: :math:`\xs = (0, 0.5, 0)` m,
+    :math:`\n_\text{s} = (0, -1, 0)`, :math:`\xref = (0, 0, 0)`, :math:`f = 1`
+    kHz.
+
+As mentioned before, focused sources exhibit a field that converges in a focal
+point inside the audience area. After passing the focal point, the field becomes
+a diverging one as can be seen in :numref:`fig-wfs-25d-focused-source`. In order
+to choose the active secondary sources, especially for circular or spherical
+geometries, the focused source also needs a direction :math:`\n_\text{s}`.
+
+The driving function for a focused source is given by the time-reversed
+versions of the driving function for a point source :eq:`d.wfs.ps` and
+:eq:`d.wfs.ps.2.5D` as
+
+.. math::
+    :label: D.wfs.fs
+
+    D(\x_0,\w) = \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
+        \e{\i\wc |\x_0-\xs|}.
+
+The 2.5D driving functions are given by the time-reversed version of
+:eq:`d.wfs.ps.2.5D` for a reference point [Verheijen1997]_, eq. (A.14)
+
+.. math::
+    :label: D.wfs.fs.2.5D
+
+    D_\text{2.5D}(\x_0,\w) =
+        \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
+        \sqrt{\frac{|\xref-\x_0|}{| |\x_0-\xs|-|\xref-\x_0| |}}
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+        \e{\i\wc |\x_0-\xs|},
+
+and the time reversed version of :eq:`d.wfs.ps.2.5D.refline` for a reference
+line, compare [Start1997]_, eq. (3.16)
+
+.. math::
+    :label: D.wfs.fs.2.5D.refline
+
+    D_\text{2.5D}(\x_0,\w) =
+        \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
+        \sqrt{\frac{d_\text{ref}}{d_\text{ref}-d_\text{s}}}
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+        \e{\i\wc |\x_0-\xs|},
+
+where :math:`d_\text{ref}` is the distance of a line parallel to the secondary
+source distribution and :math:`d_\text{s}` the shortest possible distance from
+the focused source to the linear secondary source distribution.
+
+Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft` it
+follows
+
+.. math::
+    :label: d.wfs.fs
+
+    d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
+        \dirac{t+\frac{|\x_0-\xs|}{c}},
+
+.. math::
+    :label: d.wfs.fs.2.5D
+
+    d_\text{2.5D}(\x_0,t) =
+        \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
+        \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}} \\
+        \cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+        \dirac{t+\frac{|\x_0-\xs|}{c}},
+
+.. math::
+    :label: d.wfs.fs.2.5D.refline
+
+    d_\text{2.5D}(\x_0,t) =
+        \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
+        \sqrt{\frac{d_\text{ref}}{d_\text{ref}-d_\text{s}}}
+        \cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+        \dirac{t+\frac{|\x_0-\xs|}{c}}.
+
+In this document a focused source always refers to the time-reversed version of a
+point source, but a focused line source can be defined in the same way starting
+from :eq:`D.wfs.ls`
+
+.. math::
+    :label: D.wfs.fs.ls
+
+    D(\x_0,\w) = -\frac{1}{2}A(\w) w(\x_0) \i\wc 
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}
+        \Hankel{1}{1}{\wc |\x_0-\xs|}.
+
+Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
+it follows
+
+.. math::
+    :label: d.wfs.fs.ls
+
+    d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
+        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+        \dirac{t+\frac{|\x_0-\xs|}{c}}.
+
+The window function :math:`w(\x_0)` for a focused source can be calculated as
+
+.. math::
+    :label: wfs.fs.selection
+
+    w(\x_0) = 
+        \begin{cases}
+            1 & \scalarprod{\n_\text{s}}{\xs-\x_0} > 0 \\
+            0 & \text{else}
+        \end{cases}
+
+
+.. vim: filetype=rst spell:

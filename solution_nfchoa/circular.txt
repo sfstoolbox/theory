@@ -1,0 +1,50 @@
+.. _sec-circular-geometries:
+
+Circular Geometries
+~~~~~~~~~~~~~~~~~~~
+
+The following functions build a basis in :math:`\mathbb{R}^2` for a circular
+secondary source distribution [Williams1999]_
+
+.. math::
+    :label: circular-harmonics
+
+    \Phi_m(\phi) = \e{\i m\phi}.
+
+The complex conjugate of :math:`\Phi_m` is given by negating the degree
+:math:`m` as
+
+.. math::
+    :label: circular-harmonics-complex-conjugate
+
+    \Phi_m(\phi)^* = \Phi_{-m}(\phi).
+
+For a circular secondary source distribution with a radius of :math:`R_0` the
+driving function can be calculated by a convolution along the surface of the
+circle as explicitly shown by [AhrensSpors2009a]_ and is then given as
+
+.. math::
+    :label: D_circular
+
+    D_\text{circular}(\phi_0,\w) =
+        \frac{1}{2\pi R_0} \sum_{m=-\infty}^\infty
+        \frac{\breve{S}_m(\phi_\text{s},r_\text{s},\w)}
+        {\breve{G}_m(0,\w)} \, \Phi_m(\phi_0),
+
+where :math:`\breve{S}_m` denotes the circular expansion coefficients for the
+source model, :math:`\phi_\text{s}`, and :math:`r_\text{s}` its directional
+dependency, and :math:`\breve{G}_m` the circular expansion coefficients for a
+secondary monopole source. For a line source located at :math:`\x_0 = (0,R_0)`
+this is given as
+
+.. math::
+    :label: G_circular
+
+    \breve{G}_m(0,\w) = -\frac{\i}{4}
+        \Hankel{2}{m}{\wc R_0},
+
+where :math:`\Hankel{2}{m}{}` describes the Hankel function of :math:`m`-th
+order and second kind.
+
+
+.. vim: filetype=rst spell:

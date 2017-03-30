@@ -1,0 +1,28 @@
+.. _sec-driving-functions-nfchoa-sdm:
+
+Driving functions for |NFC-HOA| and |SDM|
+-----------------------------------------
+
+In the following, driving functions for |NFC-HOA| and |SDM| are derived
+for spherical, circular, and linear secondary source distributions. Among the
+possible combinations of methods and secondary sources not all are meaningful.
+Hence, only the relevant ones will be presented. The same holds for the
+introduced source models of plane waves, point sources, line sources and focused
+sources. [AhrensSpors2010]_ in addition have considered |SDM|
+driving functions for planar secondary source distributions.
+
+For |NFC-HOA|, temporal-domain implementations for the
+2.5D cases are available for a plane wave and a point source as source models. The
+derivation of the implementation is not explicitly shown here, but is described
+in [Spors2011]_.
+
+.. toctree::
+    :hidden:
+
+    plane_wave
+    point_source
+    line_source
+    focused_source
+
+
+.. vim: filetype=rst spell:

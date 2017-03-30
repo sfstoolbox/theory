@@ -1,0 +1,101 @@
+.. _sec-25d-synthesis:
+
+2.5D Synthesis
+~~~~~~~~~~~~~~
+
+.. _fig-sound-field-dimensionality:
+
+.. figure:: ../img/sound_field_dimensionality.png
+    :align: center
+
+    Sound pressure in decibel for secondary source distributions with different
+    dimensionality all driven by the same signals. The sound pressure is color
+    coded, lighter color corresponds to lower pressure. In the 3D case a planar
+    distribution of point sources is applied, in the 2.5D case a linear
+    distribution of point sources, and in the 2D case a linear distribution of
+    line sources.
+
+In practice, the most common setups of secondary sources are 2D setups,
+employing cabinet loudspeakers. A cabinet loudspeaker does not show the
+characteristics of a line source, but of a point source. This dimensionality
+mismatch prevents perfect synthesis within the desired plane. The combination of
+a 2D secondary source setup with secondary sources that exhibit 3D
+characteristics has led to naming such configurations *2.5D synthesis*
+[Start1997]_. Such scenarios are associated with a wrong amplitude decay due to
+the inherent mismatch of secondary sources as is highlighted in
+:numref:`fig-sound-field-dimensionality`. In general, the amplitude is only
+correct at a given reference point :math:`\xref`.
+
+For a circular secondary source distribution with point source characteristic
+the 2.5D driving function can be derived by introducing expansion coefficients
+for the spherical case into the driving function :eq:`D_circular`. The equation
+is than solved for :math:`\theta = 0{^\circ}` and :math:`r_\text{ref} = 0`. This
+results in a 2.5D driving function given as [Ahrens2012]_, eq. (3.49)
+
+.. math::
+    :label: D_circular_25D
+
+    D_{\text{circular},\text{2.5D}}(\phi_0,\w) = \frac{1}{2\pi R_0}
+        \sum_{m=-\infty}^\infty \frac{\breve{S}_{|m|}^m
+        (\frac{\pi}{2},\phi_\text{s},r_\text{s},\w)}{\breve{G}_{|m|}^m
+       (\frac{\pi}{2},0,\w)} \Phi_m(\phi_0).
+
+For a linear secondary source distribution with point source characteristics the
+2.5D driving function is derived by introducing the linear expansion
+coefficients for a monopole source :eq:`point-source-linear-coefficients` into
+the driving function :eq:`D_linear` and solving the equation for :math:`y =
+y_\text{ref}` and :math:`z = 0`. This results in a 2.5D driving function given
+as [Ahrens2012]_, eq. (3.77)
+
+.. math::
+    :label: D_linear_25D
+
+    D_{\text{linear},\text{2.5D}}(x_0,\w) = \frac{1}{2\pi}
+        \int_{-\infty}^\infty \frac{\breve{S}(k_x,y_\text{ref},0,\w)}
+        {\breve{G}(k_x,y_\text{ref},0,\w)} \chi(k_x,x_0) \d k_x.
+
+A driving function for the 2.5D situation in the context of |WFS| and arbitrary
+2D geometries of the secondary source distribution can be achieved by applying
+the far-field approximation  :math:`\Hankel{2}{0}{\zeta} \approx
+\sqrt{\frac{2\i}{\pi\zeta}} \e{-\i\zeta}` for
+:math:`\zeta \gg 1` to the 2D Green’s function [Williams1999]_, eq. (4.23).
+Using this the following relationship between the 2D and 3D Green’s functions
+can be established.
+
+.. math::
+    :label: 25D_approximation
+
+    \begin{gathered}
+        \underbrace{-\frac{\i}{4} \;
+            \Hankel{2}{0}{\wc |\x-\x_0|}}_{G_\text{2D}(\x-\x_0,\w)}
+        \approx
+        \sqrt{2\pi\frac{c}{\i\w} |\x-\x_0|} \;
+        \underbrace{
+            \frac{1}{4 \pi}
+            \frac{\e{-\i\wc |\x-\x_0|}}
+            {|\x-\x_0|}}_{G_\text{3D}(\x-\x_0,\w)},
+    \end{gathered}
+
+where :math:`\Hankel{2}{0}{}` denotes the Hankel function of second kind and
+zeroth order. Inserting this approximation into the single-layer potential for
+the 2D case results in
+
+.. math::
+    :label: single-layer_25D
+
+    P(\x,\w) = \oint_S \sqrt{2\pi\frac{c}{\i\w}
+        |\x-\x_0|} \; D(\x_0,\w) G_\text{3D}(\x-\x0,\w) \d A(\x_0).
+
+If the amplitude correction is further restricted to one reference point
+:math:`\xref`, 2.5D the driving function for |WFS| can be formulated as
+
+.. math::
+    :label: D25D_wfs
+
+    D_\text{2.5D}(\x_0,\w) = \underbrace{\sqrt{2\pi|\xref-\x_0|}}_{g_0}
+        \sqrt{\frac{c}{\i\w}} \, D(\x_0,\w),
+
+where :math:`g_0` is independent of :math:`\x`.
+
+
+.. vim: filetype=rst spell:

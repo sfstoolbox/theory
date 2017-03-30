@@ -1,0 +1,75 @@
+.. _sec-wfs:
+
+High Frequency Approximation: |WFS|
+-----------------------------------
+
+The single-layer potential :eq:`single-layer` satisfies the homogeneous
+Helmholtz equation both in the interior and exterior regions :math:`V` and
+:math:`V^* {\mathrel{\!\mathop:}=}{\mathbb{R}}^n \setminus (V \cup \partial V)\,`.
+If :math:`D(\x_0,\w)` is continuous, the pressure :math:`P(\x,\w)` is
+continuous when approaching the surface :math:`\partial V` from the inside and
+outside. Due to the presence of the secondary sources at the surface
+:math:`\partial V`, the gradient of :math:`P(\x,\w)` is discontinuous when
+approaching the surface.  The strength of the secondary sources is then given by
+the differences of the gradients approaching :math:`\partial V` from both sides
+as [FaziNelson2013]_
+
+.. math::
+    :label: D_gradient
+
+    D(\x_0,\w) = \partial_\n P(\x_0,\w) +
+        \partial_{-\n} P(\x_0,\w),
+
+where :math:`\partial_\n{\mathrel{\mathop:}=}\scalarprod{\nabla}{\n}` is
+the directional gradient in direction :math:`\n` – see :numref:`fig-geometry`.
+Due to the symmetry of the problem the solution for an infinite planar boundary
+:math:`\partial V` is given as
+
+.. math::
+    :label: D_wfs
+
+    D(\x_0,\w) = -2 \partial_\n S(\x_0,\w),
+
+where the pressure in the outside region is the mirrored interior pressure given
+by the source model :math:`S(\x,\w)` for :math:`\x\in V`. The integral
+equation resulting from introducing :eq:`D_wfs` into :eq:`single-layer` for a
+planar boundary :math:`\partial V` is known as *Rayleigh’s first integral
+equation*. This solution is identical to the explicit solution for planar
+geometries :eq:`D_planar` in :math:`{\mathbb{R}}^3` and for linear
+geometries :eq:`D_linear` in :math:`{\mathbb{R}}^2`.
+
+A solution of :eq:`D_gradient` for arbitrary boundaries can be found by applying
+the *Kirchhoff* or *physical optics approximation* [ColtonKress1983]_, p. 53–54.
+In acoustics this is also known as *determining the visible elements* for the
+high frequency boundary element method [Herrin2003]_.  Here, it is assumed that
+a bent surface can be approximated by a set of small planar surfaces for
+which :eq:`D_wfs` holds locally.  In general, this will be the case if the wave
+length is much smaller than the size of a planar surface patch and the position
+of the listener is far away from the secondary sources. [#F3]_ Additionally, only
+one part of the surface is active: the area that is illuminated from the
+incident field of the source model.
+
+The outlined approximation can be formulated by introducing a window function
+:math:`w(\x_0)` for the selection of the active secondary sources
+into :eq:`D_wfs` as
+
+.. math::
+    :label: P_wfs
+
+    P(\x,\w) \approx \oint_{\partial V} \!\!  G(\x|\x_0,\w) \,
+        \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\w)}_{D(\x_0,\w)}
+        \d A(\x_0).
+
+In the SFS Toolbox we assume convex secondary source distributions, which
+allows to formulate the window function by a scalar product with the normal
+vector of the secondary source distribution.  In general, also non-convex
+secondary source distributions can be used with |WFS| – compare the appendix in
+[LaxFeshbach1947]_ and [#F4]_.
+
+One of the advantages of the applied approximation is that due to its local
+character the solution of the driving function :eq:`D_wfs` does not depend on
+the geometry of the secondary sources. This dependency applies to the direct
+solutions presented in :ref:`sec-nfchoa`.
+
+
+.. vim: filetype=rst spell:

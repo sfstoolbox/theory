@@ -1,0 +1,30 @@
+.. _model-based-rendering:
+
+Model-Based Rendering
+---------------------
+
+Knowing the pressure field of the desired source :math:`S(\x,\w)` is
+required in order to derive the driving signal for the secondary source
+distribution. It can either be measured, i.e. recorded, or modeled. While the
+former is known as *data-based rendering*, the latter is known as *model-based
+rendering*.  For data-based rendering, the problem of how to capture a complete
+sound field still has to be solved. [Avni2013]_ et al. discuss some influences
+of the recording limitations on the perception of the reproduced sound field.
+This document will consider only model-based rendering.
+
+Frequently applied models in model-based rendering are plane waves, point
+sources, or sources with a prescribed complex directivity. In the following the
+models used within the SFS Toolbox are presented.
+
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    plane_wave
+    point_source
+    dipole_point_source
+    line_source
+
+
+.. vim: filetype=rst spell:

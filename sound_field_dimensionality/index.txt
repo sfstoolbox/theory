@@ -1,0 +1,31 @@
+.. _sec-dimensionality:
+
+Sound Field Dimensionality
+--------------------------
+
+The single-layer potential :eq:`single-layer` is valid for all :math:`V \subset
+{\mathbb{R}}^n`.  Consequentially, for practical applications a two-dimensional
+(2D) as well as a three-dimensional (3D) synthesis is possible. Two-dimensional
+is not referring to a synthesis in a plane only, but describes a setup that is
+independent of one dimension. For example, an infinite cylinder is independent
+of the dimension along its axis. The same is true for secondary source
+distributions in 2D synthesis.  They exhibit line source characteristics and are
+aligned in parallel to the independent dimension. Typical arrangements of such
+secondary sources are a circular or a linear setup.
+
+The characteristics of the secondary sources limit the set of possible sources
+which can be synthesized. For example, when using a 2D secondary source setup it
+is not possible to synthesize the amplitude decay of a point source.
+
+For a 3D synthesis the involved secondary sources depend on all dimensions and
+exhibit point source characteristics. In this scenario classical secondary
+sources setups would be a sphere or a plane.
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    25d
+
+    
+.. vim: filetype=rst spell:

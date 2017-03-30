@@ -1,0 +1,28 @@
+.. _sec-driving-functions-nfchoa-sdm-focused-source:
+
+Focused Source
+~~~~~~~~~~~~~~
+
+Focused sources mimic point or line sources that are located inside the audience
+area. For the single-layer potential the assumption is that the audience area is
+free from sources and sinks. However, a focused source is neither of them. It
+represents a sound field that converges towards a focal point and diverges
+afterwards. This can be achieved by reversing the driving function of a point or
+line source in time which is known as time reversal focusing [Yon2003]_.
+
+Nonetheless, the single-layer potential should not be solved for focused sources
+without any approximation. In the near field of a source, evanescent waves
+appear for spatial frequencies :math:`k_x > |\wc |` [Williams1999]_,
+eq. (24). They decay exponentially with the distance from the source.  An exact
+solution for a focused source is supposed to include these evanescent waves
+around the focal point. That is only possible by applying very large amplitudes
+to the secondary sources, compare Fig. 2a in [SporsAhrens2010]_. Since the
+evanescent waves decay rapidly and are hence not influencing the perception,
+they can easily be omitted. For corresponding driving functions for focused
+sources without the evanescent part of the sound field see [SporsAhrens2010]_
+for |SDM| and [AhrensSpors2009b]_ for |NFC-HOA|.
+
+In the SFS Toolbox only focused sources in |WFS| are considered at the moment.
+
+
+.. vim: filetype=rst spell:

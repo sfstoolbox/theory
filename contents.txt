@@ -7,3 +7,14 @@ Contents
     :maxdepth: 3
 
     index
+    mathematical_definitions/index
+    problem_statement/index
+    solution_nfchoa/index
+    solution_wfs/index
+    sound_field_dimensionality/index
+    model_based_rendering/index
+    driving_functions_nfchoa/index
+    driving_functions_wfs/index
+    driving_functions_lsfs/index
+    footnotes
+    references

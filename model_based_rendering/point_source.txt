@@ -1,0 +1,72 @@
+.. _sec-point-source:
+
+Point Source
+~~~~~~~~~~~~
+
+.. plot::
+    :context: close-figs
+
+    xs = 0, 0, 0  # position of source
+    omega = 2 * np.pi * 800  # frequency
+    grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
+    p = sfs.mono.source.point(omega, xs, [], grid)
+    normalization = 4 * np.pi
+    sfs.plot.soundfield(normalization * p, grid);
+
+.. _fig-point-source:
+
+.. figure:: ../img/placeholder.png
+    :align: center
+
+    Sound pressure for a monochromatic point source :eq:`S.ps` placed at :math:`(0, 0, 0)`.
+    Parameters: :math:`f = 800` Hz.
+
+The source model for a point source is given by the three dimensional Green’s
+function as [Williams1999]_, eq. (6.73)
+
+.. math::
+    :label: S.ps
+
+    S(\x,\w) = A(\w) \frac{1}{4\pi} \frac{\e{-\i
+        \wc |\x-\xs|}}{|\x-\xs|},
+
+where :math:`\xs` describes the position of the point source.
+
+Transformed to the temporal domain this becomes
+
+.. math::
+    :label: s.ps
+
+    s(\x,t) = a(t) * \frac{1}{4\pi} \frac{1}{|\x-\xs|}
+        \dirac{t - \frac{|\x-\xs|}{c}}.
+
+The expansion coefficients for spherical basis functions are given
+as [Ahrens2012]_, eq. (2.37)
+
+.. math::
+    :label: point-source-spherical-coefficients
+
+    \breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\w) =
+        -\i\wc
+        \hankel{2}{n}{\wc r_\text{s}}
+        Y_n^{-m}(\theta_\text{s},\phi_\text{s}),
+
+where :math:`(\phi_\text{s},\theta_\text{s},r_\text{s})` describes the position
+of the point source.
+
+The expansion coefficients for linear basis functions are given as
+[Ahrens2012]_, eq. (C.10)
+
+.. math::
+    :label: point-source-linear-coefficients
+
+    \breve{S}(k_x,y,\w) =
+        -\frac{\i}{4}
+        \Hankel{2}{0}{\sqrt{(\tfrac{\w}{c})^2-k_x^2} \; |y-y_\text{s}|}
+        \chi(-k_x,x_\text{s}),
+
+for :math:`|k_x|<|\wc |` and with :math:`(x_\text{s},y_\text{s})`
+describing the position of the point source.
+
+
+.. vim: filetype=rst spell:

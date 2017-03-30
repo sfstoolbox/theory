@@ -1,0 +1,83 @@
+.. _sec-nfchoa:
+
+Solution for Special Geometries: |NFC-HOA| and |SDM|
+----------------------------------------------------
+
+The integral equation :eq:`single-layer` states a Fredholm equation of first
+kind with a Green’s function as kernel. This type of equation can be solved in a
+straightforward manner for geometries that have a complete set of orthogonal
+basis functions.  Then the involved functions are expanded into the basis
+functions :math:`\psi_n` as [MorseFeshbach1981]_, p. (940)
+
+.. math::
+    :label: G_expansion
+
+    G(\x-\x_0, \w) = \sum_{n} \tilde{G}_n(\w) \psi_n^*(\x_0) \psi_n(\x)
+
+.. math::
+    :label: D_expansion
+
+    D(\x_0, \w) = \sum_n \tilde{D}_n(\w) \psi_n(\x_0)
+
+.. math::
+    :label: S_expansion
+
+    S(\x, \w) = \sum_n \tilde{S}_n(\w) \psi_n(\x),
+
+where :math:`\tilde{G}_n, \tilde{D}_n, \tilde{S}_n` denote the series expansion
+coefficients, :math:`n \in \mathbb{Z}`, and \ :math:`\langle\psi_n,
+\psi_{n'}\rangle = 0\,` for :math:`n \ne n'`.
+If the underlying space is not compact the equations will involve an integration
+instead of a summation
+
+.. math::
+    :label: G_expansion_non_compact
+
+    G(\x-\x_0, \w) = \int \tilde{G}(\mu, \w) \psi^*(\mu, \x_0)
+        \psi(\mu, \x) \d\mu
+
+.. math::
+    :label: D_expansion_non_compact
+
+    D(\x_0, \w) = \int \tilde{D}(\mu, \w) \psi(\mu, \x_0) \d\mu
+
+.. math::
+    :label: S_expansion_non_compact
+
+    S(\x, \w) = \int \tilde{S}(\mu, \w) \psi(\mu, \x) \d\mu,
+
+where :math:`\d\mu` is the measure in the underlying space.
+Introducing these equations into :eq:`single-layer` one gets
+
+.. math::
+    :label: D_HOA
+
+    \tilde{D}_n(\w) =
+        \frac{\tilde{S}_n(\w)}{\tilde{G}_n(\w)}.
+
+This means that the Fredholm equation :eq:`single-layer` states a convolution.
+For geometries where the required orthogonal basis functions exist, :eq:`D_HOA`
+follows directly via the convolution theorem [ArfkenWeber2005]_, eq. (1013).
+Due to the division of the desired sound field by the spectrum of the Green’s
+function this kind of approach has been named |SDM| [AhrensSpors2010]_.  For
+circular and spherical geometries the term |NFC-HOA| is more common due to the
+corresponding basis functions. “Near-field compensated” highlights the usage of
+point sources as secondary sources in contrast to Ambisonics and |HOA| that
+assume plane waves as secondary sources.
+
+The challenge is to find a set of basis functions for a given geometry.
+In the following paragraphs three simple geometries and their widely
+known sets of basis functions will be discussed.
+
+
+.. toctree::
+    :maxdepth: 1
+    :hidden:
+
+    spherical
+    circular
+    planar
+    linear
+
+
+.. vim: filetype=rst spell:
