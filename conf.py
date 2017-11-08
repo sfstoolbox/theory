@@ -28,12 +28,14 @@ needs_sphinx = '1.3'
 extensions = [
 	'sphinx.ext.autodoc',
 	'sphinx.ext.viewcode',
-        'mathjax', # modified version to include clickable eq numbers
+        # mathjax', # modified version to include clickable eq numbers
+        'sphinx.ext.mathjax',
         'matplotlib.sphinxext.plot_directive'
 ]
 
 # Enable numbering of figures and tables
 numfig = True
+math_numfig = True
 
 # Plot settings for matplot
 plot_include_source = True
