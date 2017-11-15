@@ -1,4 +1,1 @@
-conda:
-    file: readthedocs-environment.yml
-python:
-    setup_py_install: true
+requirements_file: requirements.txt

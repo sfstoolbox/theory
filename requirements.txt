@@ -1,0 +1,8 @@
+jinja2
+pygments
+git+https://github.com/hagenw/sphinx.git@math_numfig
+sphinx_rtd_theme
+numpy
+scipy
+matplotlib>=1.5
+sfs
