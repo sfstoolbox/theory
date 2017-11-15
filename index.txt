@@ -41,8 +41,11 @@ have to execute the following code first:
     import sfs
     plt.rcParams['figure.figsize'] = 8, 4.5  # inch
 
-The image at the top of the page is extracted from [ZotterSpors2013]_.  The
-following presentation of the theory is based on Chap. 2 from [Wierstorf2014]_.
+The image at the top of the page is extracted from [ZotterSpors2013]_.
+
+----
+
+The following presentation of the theory is based on Chap. 2 from [Wierstorf2014]_.
 
 .. _theory:
 
@@ -50,15 +53,15 @@ following presentation of the theory is based on Chap. 2 from [Wierstorf2014]_.
     :maxdepth: 3
     :caption: Theory
 
-    mathematical_definitions/index
-    problem_statement/index
-    solution_nfchoa/index
-    solution_wfs/index
-    sound_field_dimensionality/index
-    model_based_rendering/index
-    driving_functions_nfchoa/index
-    driving_functions_wfs/index
-    driving_functions_lsfs/index
+    defs/index
+    problem/index
+    nfchoa/index
+    wfs/index
+    dims/index
+    sources/index
+    d_nfchoa/index
+    d_wfs/index
+    d_lsfs/index
     references
     
 .. vim: filetype=rst spell:
