@@ -28,8 +28,8 @@ needs_sphinx = '1.3'
 extensions = [
 	'sphinx.ext.autodoc',
 	'sphinx.ext.viewcode',
-        # mathjax', # modified version to include clickable eq numbers
-        'sphinx.ext.mathjax',
+        'mathjax', # modified version to include clickable eq numbers
+        #'sphinx.ext.mathjax',
         'matplotlib.sphinxext.plot_directive'
 ]
 
