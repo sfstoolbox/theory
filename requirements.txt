@@ -3,6 +3,6 @@ pygments
 git+https://github.com/hagenw/sphinx.git@math_numfig
 sphinx_rtd_theme
 numpy
-scipy
+scipy<=0.18
 matplotlib>=1.5
 sfs
