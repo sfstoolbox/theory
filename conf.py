@@ -13,6 +13,11 @@ sys.path.insert(0, os.path.abspath('.'))  # temporary, for plot_directive
 
 from acronyms import rst_epilog # This includes things like |HRTF| etc.
 
+def setup(app):
+    """Include custom theme files to sphinx HTML header"""
+    app.add_stylesheet('css/abbr.css')
+
+
 # -- General configuration ------------------------------------------------
 
 # If your documentation needs a minimal Sphinx version, state it here.
@@ -104,6 +109,9 @@ html_theme = "sphinx_rtd_theme"
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 
+# Include custom files from _static folder
+html_static_path = ['_static']
+
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
 html_title = "SFS Toolbox"
@@ -113,8 +121,6 @@ html_short_title = ""
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
-
-html_static_path = ['_static']
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
