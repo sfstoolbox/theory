@@ -55,7 +55,7 @@ source_suffix = '.txt'
 master_doc = 'index'
 
 # General information about the project. (substitutions)
-project = 'Sound Field Synthesis'
+project = 'SFS Toolbox'
 copyright = '2016, SFS Toolbox Developers'
 author = 'SFS Toolbox Developers'
 
