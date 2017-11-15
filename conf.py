@@ -56,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project. (substitutions)
 project = 'SFS Toolbox'
-copyright = '2016, SFS Toolbox Developers'
+copyright = '2016-2017, SFS Toolbox Developers'
 author = 'SFS Toolbox Developers'
 
 # The full version, including alpha/beta/rc tags.
