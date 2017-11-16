@@ -62,6 +62,6 @@ The following presentation of the theory is based on Chap. 2 from [Wierstorf2014
     d_nfchoa/index
     d_wfs/index
     d_lsfs/index
-    references
+    refs/index
     
 .. vim: filetype=rst spell:
