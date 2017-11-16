@@ -11,7 +11,7 @@ mathematical problem, namely |WFS|, |NFC-HOA|, and the |SDM|.
 
 The SFS Toolbox project is structured in the following three sub-projects.
 
-Welcome and Theory:
+Overview and Theory:
     http://sfstoolbox.org (current page)
 
 SFS Toolbox for Matlab/Octave:
