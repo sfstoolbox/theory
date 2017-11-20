@@ -28,7 +28,7 @@ extensions = [
         'matplotlib.sphinxext.plot_directive'
 ]
 master_doc = 'index'
-source_suffix = '.txt'  # not rst to force raw text on github
+source_suffix = '.rst'
 exclude_patterns = ['_build']
 # The full version, including alpha/beta/rc tags.
 #release = version
