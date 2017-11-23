@@ -2,8 +2,11 @@
 
 import sys
 import os
+import re
 import subprocess
+
 import sphinx_rtd_theme
+
 # Allow import/extensions from current path
 sys.path.insert(0, os.path.abspath('.'))
 from definitions import acronyms     # This includes things like |HRTF|
@@ -20,7 +23,7 @@ needs_sphinx = '1.3'  # minimal sphinx version
 extensions = [
         'sphinx.ext.autodoc',
         'sphinx.ext.viewcode',
-        'mathjax',  # Modified version to include clickable eq numbers and
+        'sphinxcontrib.katex',  # Modified version to include clickable eq numbers and
                     # avoid the ugly looking standard result. There is also
                     # a pull request for this:
                     # https://github.com/rtfd/sphinx_rtd_theme/pull/383
@@ -57,19 +60,35 @@ pygments_style = 'trac'
 
 # -- ACRONYMS AND MATH ---------------------------------------------------
 
-def rst2tex(rst_macros):
-    """Converts a rst math definition to a LaTeX preamble"""
-    macros = [line.lstrip() for line in rst_macros.split('\n')[3:-2]]
-    macros = '\n'.join(macros) + '\n'
+def latex_to_katex(macros):
+    "Converts LaTeX \def statements to KaTeX macros"
+    # Remove empty lines
+    macros = macros.strip()
+    tmp = []
+    for line in macros.splitlines():
+        # Remove spaces from every line
+        line = line.strip()
+        # Remove "\def" at the beginning of line
+        line = re.sub(r'^\\def[ ]?', '', line)
+        # Remove parameter before {} command definition
+        line = re.sub(r'(#[0-9])+', '', line, 1)
+        # Remove outer {} command brackets with ""
+        line = re.sub(r'( {)|(}$)', '"', line)
+        # Add "": to the new command
+        line = re.sub(r'(^\\[A-Za-z]+)', r'"\1":', line, 1)
+        # Add , at end of line
+        line = re.sub(r'$', ',', line, 1)
+        # Duplicate all \
+        line = re.sub(r'\\', r'\\\\', line)
+        tmp.append(line)
+    macros = '\n'.join(tmp)
     return macros
+
 
 # Append acronyms at the end of every pag
 rst_epilog = acronyms
-# Append at the beginning of every page ofr mathjax
-# This is a workaround as there is now mathjax preamble yet:
-# https://github.com/sphinx-doc/sphinx/issues/726
-rst_prolog = latexmacros
-LATEX_PREAMBLE = rst2tex(latexmacros)  # for LaTeX preamble, see bottom
+
+katex_macros = latex_to_katex(latexmacros)
 
 
 # -- HTML ----------------------------------------------------------------
@@ -93,7 +112,7 @@ htmlhelp_basename = 'sfs-doc'
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
-    'preamble': LATEX_PREAMBLE,  # command definitions
+    'preamble': latexmacros,  # command definitions
     'figure_align': 'htbp',
 }
 # Grouping the document tree into LaTeX files. List of tuples
