@@ -203,7 +203,7 @@ directional derivative of the three dimensional Green’s function with respect 
             A(\w) \frac{1}{4\pi}
             \left( \frac{1}{|\x-\xs|} + \i\wc \right)
             \frac{\scalarprod{\x-\xs}{\n_\text{s}}}{|\x-\xs|^2}
-            \e{-\i\wc |\x-\xs|}.
+            \e{-\i\wc |\x-\xs|}. \\
     \end{aligned}
 
 Transformed to the temporal domain this becomes
