@@ -25,7 +25,7 @@ needs_sphinx = '1.3'
 extensions = [
 	'sphinx.ext.autodoc',
 	'sphinx.ext.viewcode',
-        'mathjax', # modified version to include clickable eq numbers
+        'katex', # modified version to include clickable eq numbers
         'matplotlib.sphinxext.plot_directive'
 ]
 
@@ -78,6 +78,24 @@ todo_include_todos = False
 
 
 # -- Options for HTML output ----------------------------------------------
+
+katex_macros = r'''
+  "\\i": "\\mathrm{i}",
+  "\\e": "\\mathrm{e}^{#1}",
+  "\\w": "\\omega",
+  "\\wc": "\\frac{\\omega}{c}",
+  "\\vec": "\\mathbf{#1}",
+  "\\x": "\\vec{x}",
+  "\\xs": "\\x_\\text{s}",
+  "\\xref": "\\x_\\text{ref}",
+  "\\k": "\\vec{k}",
+  "\\n": "\\vec{n}",
+  "\\d": "\\operatorname{d}\\!{}",
+  "\\dirac": "\\operatorname{\\delta}\\left(#1\\right)",
+  "\\scalarprod":   "\\left\\langle#1,#2\\right\\rangle",
+  "\\Hankel": "\\mathop{{}H_{#2}^{(#1)}}\\!\\left(#3\\right)",
+  "\\hankel": "\\mathop{{}h_{#2}^{(#1)}}\\!\\left(#3\\right)"
+'''
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
