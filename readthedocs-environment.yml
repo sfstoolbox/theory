@@ -8,3 +8,4 @@ dependencies:
   - matplotlib>=1.5
   - pip:
     - sfs
+    - git+https://github.com/hagenw/sphinxcontrib-katex@3.0

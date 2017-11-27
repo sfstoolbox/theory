@@ -25,7 +25,7 @@ needs_sphinx = '1.3'
 extensions = [
 	'sphinx.ext.autodoc',
 	'sphinx.ext.viewcode',
-        'katex', # modified version to include clickable eq numbers
+        'sphinxcontrib.katex',
         'matplotlib.sphinxext.plot_directive'
 ]
 
@@ -113,6 +113,8 @@ html_short_title = ""
 
 # If true, "Created using Sphinx" is shown in the HTML footer. Default is True.
 html_show_sphinx = False
+
+html_static_path = ['_static']
 
 # If true, "(C) Copyright ..." is shown in the HTML footer. Default is True.
 #html_show_copyright = True
