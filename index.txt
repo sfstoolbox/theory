@@ -27,26 +27,6 @@ SFS Toolbox for Matlab/Octave:
 SFS Toolbox for Python:
     http://python.sfstoolbox.org
 
-
-.. Latex macros definitions used in this document
-.. rst-class:: hidden
-.. math::
-    \newcommand{\i}{\mathrm{i}}
-    \newcommand{\e}[1]{\mathrm{e}^{#1}}
-    \newcommand{\w}{\omega}
-    \newcommand{\wc}{\frac{\w}{c}}
-    \renewcommand{\vec}[1]{\mathbf{#1}}
-    \newcommand{\x}{\vec{x}}
-    \newcommand{\xs}{\x_\text{s}}
-    \newcommand{\xref}{\x_\text{ref}}
-    \newcommand{\k}{\vec{k}}
-    \newcommand{\n}{\vec{n}}
-    \newcommand{\d}{\operatorname{d\!}{}}
-    \newcommand{\dirac}[1]{\operatorname{\delta}\left(#1\right)}
-    \newcommand{\scalarprod}[2]{\left\langle#1,#2\right\rangle}
-    \newcommand{\Hankel}[3]{\mathop{{}H_{#2}^{(#1)}}\!\left(#3\right)}
-    \newcommand{\hankel}[3]{\mathop{{}h_{#2}^{(#1)}}\!\left(#3\right)}
-
 Most of the figures in this page are directly created by the SFS Toolbox for
 Python. All of them display the corresponding code for creating them directly
 before the actual figure. In order to recreate them, you have to execute the
@@ -1436,11 +1416,13 @@ domain via an inverse Fourier transform :eq:`ifft` it follows
 .. math::
     :label: d.wfs.ps.2.5D
 
-    d_\text{2.5D}(\x_0,t) =
-        \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
-        \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}} \\
-        \cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \dirac{t-\frac{|\x_0-\xs|}{c}},
+    \begin{aligned}
+        d_\text{2.5D}(\x_0,t) =&
+            \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
+            \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}} \\
+            &\cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \dirac{t-\frac{|\x_0-\xs|}{c}}, \\
+    \end{aligned}
 
 .. math::
     :label: d.wfs.ps.2.5D.refline
@@ -1651,11 +1633,13 @@ follows
 .. math::
     :label: d.wfs.fs.2.5D
 
-    d_\text{2.5D}(\x_0,t) =
-        \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
-        \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}} \\
-        \cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \dirac{t+\frac{|\x_0-\xs|}{c}},
+    \begin{aligned}
+        d_\text{2.5D}(\x_0,t) =&
+            \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
+            \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}} \\
+            &\cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \dirac{t+\frac{|\x_0-\xs|}{c}}, \\
+    \end{aligned}
 
 .. math::
     :label: d.wfs.fs.2.5D.refline
