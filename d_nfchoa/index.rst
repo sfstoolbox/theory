@@ -16,6 +16,15 @@ For |NFC-HOA|, temporal-domain implementations for the
 derivation of the implementation is not explicitly shown here, but is described
 in [Spors2011]_.
 
+.. plot::
+    :context: reset
+    :include-source: false
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import sfs
+    plt.rcParams['figure.figsize'] = 8, 4.5  # inch
+
 
 .. _sec-driving-functions-nfchoa-sdm-plane-wave:
 

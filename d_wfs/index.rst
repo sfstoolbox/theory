@@ -11,6 +11,15 @@ implementation of |WFS| driving functions in the temporal domain. It is one of t
 main advantages of |WFS| in comparison to most of the |NFC-HOA|, |SDM| solutions
 discussed above.
 
+.. plot::
+    :context: reset
+    :include-source: false
+
+    import numpy as np
+    import matplotlib.pyplot as plt
+    import sfs
+    plt.rcParams['figure.figsize'] = 8, 4.5  # inch
+
 
 .. _sec-driving-functions-wfs-plane-wave:
 
