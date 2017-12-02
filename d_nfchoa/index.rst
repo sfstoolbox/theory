@@ -203,12 +203,14 @@ results in [Ahrens2012]_, eq. (4.53)
 .. math::
     :label: D.sdm.ps.2.5D
 
-    D_{\text{linear},\,\text{2.5D}}(x_0,\w) =
-        A(\w) \int_{-\infty}^\infty \frac{
-        \Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
-        (y_\text{ref}-y_\text{s})} \chi(-k_x,x_\text{s})}
-        {\Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
-        y_\text{ref}}} \chi(k_x,x_0) \d k_x.
+    \begin{aligned}
+        D_{\text{linear},\,\text{2.5D}}(x_0,\w) =&
+            A(\w) \int_{-\infty}^\infty
+            \frac{\Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
+            (y_\text{ref}-y_\text{s})} \chi(-k_x,x_\text{s})}
+            {\Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \; y_\text{ref}}} \\
+            &\cdot \chi(k_x,x_0) \d k_x.
+    \end{aligned}
 
 
 .. _sec-driving-functions-nfchoa-sdm-line-source:
