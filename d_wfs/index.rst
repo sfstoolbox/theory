@@ -461,7 +461,7 @@ follows
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =&
             \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
-            \sqrt{\frac{|\xref-\x_0|}{|\x_0-\xs|+|\xref-\x_0|}} \\
+            \sqrt{\frac{|\xref-\x_0|}{||\x_0-\xs|-|\xref-\x_0||}} \\
             &\cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}
                         {|\x_0-\xs|^{\frac{3}{2}}}
             \dirac{t+\frac{|\x_0-\xs|}{c}}, \\
