@@ -52,7 +52,7 @@ math_numfig = True
 plot_include_source = True
 plot_html_show_source_link = False
 plot_html_show_formats = False
-plot_formats = ['png']
+plot_formats = ['png', 'pdf']
 plot_rcparams = {'figure.figsize': [8, 4.5]}
 # Code syntax highlighting style
 pygments_style = 'trac'
@@ -120,8 +120,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'sfs-toolbox-documentation.tex', u'SFS Toolbox -- Theory',
-   u'SFS Toolbox team', 'manual'),
+    (master_doc, 'sfs-toolbox-documentation.tex', u'SFS Toolbox -- Theory',
+     u'SFS Toolbox team', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
