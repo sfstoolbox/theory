@@ -15,7 +15,7 @@ from definitions import latexmacros  # Math definitions like \x
 
 # -- GENERAL -------------------------------------------------------------
 
-project = 'SFS Toolbox'
+project = 'Sound Field Synthesis Toolbox'
 copyright = '2016-2017, SFS Toolbox Developers'
 author = 'SFS Toolbox Developers'
 
