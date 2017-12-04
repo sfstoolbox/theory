@@ -1,0 +1,8 @@
+.icon-home::before {
+    display: none;
+}
+.wy-side-nav-search>a, .wy-side-nav-search .wy-dropdown>a {
+    font-family: "Roboto Slab","ff-tisa-web-pro","Georgia",Arial,sans-serif;
+    font-size: 200%;
+    margin-bottom: .404em;
+}
