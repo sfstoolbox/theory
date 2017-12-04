@@ -101,7 +101,7 @@ def setup(app):
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
-html_theme_options = {'display_version': False}
+html_theme_options = {'display_version': True}
 html_title = "SFS Toolbox"
 html_short_title = ""
 html_show_sphinx = False
