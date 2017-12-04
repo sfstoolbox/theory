@@ -2,129 +2,100 @@
 
 import sys
 import os
+import subprocess
 import sphinx_rtd_theme
-
-
-# Add current path to allow python modules and extensions to be loaded
-sys.path.insert(0, os.path.abspath('.'))  # for mathjax
-
-
-# -- Include acronyms and math definitions -------------------------------
+# Allow import/extensions from current path
+sys.path.insert(0, os.path.abspath('.'))
 from definitions import acronyms     # This includes things like |HRTF|
 from definitions import latexmacros  # Math definitions like \x
 
-def rst2tex(rst_macros):
-    """Converts a rst math definition to a LaTeX preamble"""
-    macros = [line.lstrip() for line in rst_macros.split('\n')[3:-2]] 
-    macros = '\n'.join(macros) + '\n'
-    return macros
 
-rst_epilog = acronyms     # Append acronyms at the end of every page
-rst_prolog = latexmacros  # Append at the beginning of every page ofr mathjax
-                          # This is a workaround as there is now mathjax
-                          # preamble yet:
-                          # https://github.com/sphinx-doc/sphinx/issues/726
+# -- GENERAL -------------------------------------------------------------
 
-LATEX_PREAMBLE = rst2tex(latexmacros) # for LaTeX preamble, see bottom
+project = 'SFS Toolbox'
+copyright = '2016-2017, SFS Toolbox Developers'
+author = 'SFS Toolbox Developers'
 
-
-# -- General configuration ------------------------------------------------
-
-# If your documentation needs a minimal Sphinx version, state it here.
-needs_sphinx = '1.3'
-
-# Add any Sphinx extension module names here, as strings. They can be
-# extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
-# ones.
-#extensions = ['sphinx.ext.autodoc','nbsphinx','sphinx.ext.mathjax']
+needs_sphinx = '1.3'  # minimal sphinx version
 extensions = [
-	'sphinx.ext.autodoc',
-	'sphinx.ext.viewcode',
-        'mathjax', # modified version to include clickable eq numbers
+        'sphinx.ext.autodoc',
+        'sphinx.ext.viewcode',
+        'mathjax',  # Modified version to include clickable eq numbers and
+                    # avoid the ugly looking standard result. There is also
+                    # a pull request for this:
+                    # https://github.com/rtfd/sphinx_rtd_theme/pull/383
         #'sphinx.ext.mathjax',
         'matplotlib.sphinxext.plot_directive'
 ]
+master_doc = 'index'
+source_suffix = '.txt'  # not rst to force raw text on github
+exclude_patterns = ['_build']
+# The full version, including alpha/beta/rc tags.
+#release = version
+try:
+    release = subprocess.check_output(
+            ('git', 'describe', '--tags', '--always'))
+    release = release.decode().strip()
+except Exception:
+    release = '<unknown>'
+
+
+# -- FIGURES AND CODE ----------------------------------------------------
 
 # Enable numbering of figures and tables
 numfig = True
 math_numfig = True
-
 # Plot settings for matplot
 plot_include_source = True
 plot_html_show_source_link = False
 plot_html_show_formats = False
 plot_formats = ['png']
-plot_rcparams = {'figure.figsize' : [8, 4.5] }
-
-# The suffix(es) of source filenames.
-# You can specify multiple suffix as a list of string:
-source_suffix = '.txt'
-
-# The encoding of source files.
-#source_encoding = 'utf-8-sig'
-
-# The master toctree document.
-master_doc = 'index'
-
-# General information about the project. (substitutions)
-project = 'SFS Toolbox'
-copyright = '2016-2017, SFS Toolbox Developers'
-author = 'SFS Toolbox Developers'
-
-# The full version, including alpha/beta/rc tags.
-#release = version
-try:
-    release = check_output(['git', 'describe', '--tags', '--always'])
-    release = release.decode().strip()
-except Exception:
-    release = '<unknown>'
-
-# List of patterns, relative to source directory, that match files and
-# directories to ignore when looking for source files.
-exclude_patterns = ['_build']
-
-# If true, '()' will be appended to :func: etc. cross-reference text.
-add_function_parentheses = True
-
-# The name of the Pygments (syntax highlighting) style to use.
-#pygments_style = 'sphinx'
+plot_rcparams = {'figure.figsize': [8, 4.5]}
+# Code syntax highlighting style
 pygments_style = 'trac'
 
-# If true, `todo` and `todoList` produce output, else they produce nothing.
-todo_include_todos = False
+
+# -- ACRONYMS AND MATH ---------------------------------------------------
+
+def rst2tex(rst_macros):
+    """Converts a rst math definition to a LaTeX preamble"""
+    macros = [line.lstrip() for line in rst_macros.split('\n')[3:-2]]
+    macros = '\n'.join(macros) + '\n'
+    return macros
+
+# Append acronyms at the end of every pag
+rst_epilog = acronyms
+# Append at the beginning of every page ofr mathjax
+# This is a workaround as there is now mathjax preamble yet:
+# https://github.com/sphinx-doc/sphinx/issues/726
+rst_prolog = latexmacros
+LATEX_PREAMBLE = rst2tex(latexmacros)  # for LaTeX preamble, see bottom
 
 
-# -- Options for HTML output ----------------------------------------------
+# -- HTML ----------------------------------------------------------------
+
 def setup(app):
     """Include custom theme files to sphinx HTML header"""
     app.add_stylesheet('css/abbr.css')
 
-
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+html_theme_options = {'display_version': False}
 html_title = "SFS Toolbox"
 html_short_title = ""
 html_show_sphinx = False
 htmlhelp_basename = 'sfs-doc'
 
 
-# -- Options for LaTeX output ---------------------------------------------
+# -- LATEX ---------------------------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-    'preamble': LATEX_PREAMBLE,
-
-# Latex figure (float) alignment
-#'figure_align': 'htbp',
+    'papersize': 'a4paper',
+    'pointsize': '10pt',
+    'preamble': LATEX_PREAMBLE,  # command definitions
+    'figure_align': 'htbp',
 }
-
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
@@ -136,21 +107,3 @@ latex_documents = [
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-#latex_use_parts = False
-
-# If true, show page references after internal links.
-#latex_show_pagerefs = False
-
-# If true, show URL addresses after external links.
-#latex_show_urls = False
-
-# Documents to append as an appendix to all manuals.
-#latex_appendices = []
-
-# If false, no module index is generated.
-#latex_domain_indices = True
-
-
