@@ -2,23 +2,30 @@
 
 import sys
 import os
-import shlex
 import sphinx_rtd_theme
-#import subprocess
 
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('.'))  # temporary, for plot_directive
 
-from definitions import acronyms # This includes things like |HRTF| etc.
-from definitions import latexmacros
-rst_prolog = latexmacros # Append at the beginning of every page
-rst_epilog = acronyms # Append at the end of every page
+# Add current path to allow python modules and extensions to be loaded
+sys.path.insert(0, os.path.abspath('.'))  # for mathjax
 
-def setup(app):
-    """Include custom theme files to sphinx HTML header"""
-    app.add_stylesheet('css/abbr.css')
+
+# -- Include acronyms and math definitions -------------------------------
+from definitions import acronyms     # This includes things like |HRTF|
+from definitions import latexmacros  # Math definitions like \x
+
+def rst2tex(rst_macros):
+    """Converts a rst math definition to a LaTeX preamble"""
+    macros = [line.lstrip() for line in rst_macros.split('\n')[3:-2]] 
+    macros = '\n'.join(macros) + '\n'
+    return macros
+
+rst_epilog = acronyms     # Append acronyms at the end of every page
+rst_prolog = latexmacros  # Append at the beginning of every page ofr mathjax
+                          # This is a workaround as there is now mathjax
+                          # preamble yet:
+                          # https://github.com/sphinx-doc/sphinx/issues/726
+
+LATEX_PREAMBLE = rst2tex(latexmacros) # for LaTeX preamble, see bottom
 
 
 # -- General configuration ------------------------------------------------
@@ -88,6 +95,10 @@ todo_include_todos = False
 
 
 # -- Options for HTML output ----------------------------------------------
+def setup(app):
+    """Include custom theme files to sphinx HTML header"""
+    app.add_stylesheet('css/abbr.css')
+
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
@@ -108,7 +119,7 @@ latex_elements = {
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+    'preamble': LATEX_PREAMBLE,
 
 # Latex figure (float) alignment
 #'figure_align': 'htbp',
