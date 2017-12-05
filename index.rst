@@ -41,11 +41,12 @@ have to execute the following code first:
     import sfs
     plt.rcParams['figure.figsize'] = 8, 4.5  # inch
 
-The image at the top of the page is extracted from [ZotterSpors2013]_.
+The image at the top of the page is extracted from :cite:`Zotter2013`.
 
 ----
 
-The following presentation of the theory is based on Chap. 2 from [Wierstorf2014]_.
+The following presentation of the theory is based on Chap. 2 from
+:cite:`Wierstorf2014`.
 
 .. _theory:
 

@@ -12,7 +12,7 @@ outside. Due to the presence of the secondary sources at the surface
 :math:`\partial V`, the gradient of :math:`P(\x,\w)` is discontinuous when
 approaching the surface.  The strength of the secondary sources is then given by
 the differences of the gradients approaching :math:`\partial V` from both sides
-after [FaziNelson2013]_ as
+after :cite:`Fazi2013` as
 
 .. math::
     :label: D_gradient
@@ -39,14 +39,14 @@ geometries :eq:`D_planar` in :math:`{\mathbb{R}}^3` and for linear
 geometries :eq:`D_linear` in :math:`{\mathbb{R}}^2`.
 
 A solution of :eq:`D_gradient` for arbitrary boundaries can be found by applying
-the *Kirchhoff* or *physical optics approximation* [ColtonKress1983]_, p. 53–54.
+the *Kirchhoff* or *physical optics approximation* :cite:`Colton1983`, p. 53–54.
 In acoustics this is also known as *determining the visible elements* for the
-high frequency boundary element method [Herrin2003]_.  Here, it is assumed that
-a bent surface can be approximated by a set of small planar surfaces for
+high frequency boundary element method :cite:`Herrin2003`.  Here, it is assumed
+that a bent surface can be approximated by a set of small planar surfaces for
 which :eq:`D_wfs` holds locally.  In general, this will be the case if the wave
 length is much smaller than the size of a planar surface patch and the position
-of the listener is far away from the secondary sources. [#F1]_ Additionally, only
-one part of the surface is active: the area that is illuminated from the
+of the listener is far away from the secondary sources. [#F1]_ Additionally,
+only one part of the surface is active: the area that is illuminated from the
 incident field of the source model.
 
 The outlined approximation can be formulated by introducing a window function
@@ -64,7 +64,7 @@ In the SFS Toolbox we assume convex secondary source distributions, which
 allows to formulate the window function by a scalar product with the normal
 vector of the secondary source distribution.  In general, also non-convex
 secondary source distributions can be used with |WFS| – compare the appendix in
-[LaxFeshbach1947]_ [#F2]_.
+:cite:`Lax1947` [#F2]_.
 
 One of the advantages of the applied approximation is that due to its local
 character the solution of the driving function :eq:`D_wfs` does not depend on
@@ -72,11 +72,11 @@ the geometry of the secondary sources. This dependency applies to the direct
 solutions presented in :ref:`sec-nfchoa`.
 
 .. [#F1]
-    Compare the assumptions made before (15) in [SporsZotter2013]_, which lead
+    Compare the assumptions made before (15) in :cite:`Spors2013`, which lead
     to the derivation of the same window function in a more explicit way.
 
 .. [#F2]
-    The solution mentioned by [LaxFeshbach1947]_ assumes that the listener is
+    The solution mentioned by :cite:`Lax1947` assumes that the listener is
     far away from the radiator and that the radiator is a physical source not a
     notional one as the secondary sources. In this case the selection criterion
     has to be chosen more carefully, incorporating the exact position of the

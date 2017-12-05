@@ -28,7 +28,8 @@ extensions = [
                     # a pull request for this:
                     # https://github.com/rtfd/sphinx_rtd_theme/pull/383
         #'sphinx.ext.mathjax',
-        'matplotlib.sphinxext.plot_directive'
+        'matplotlib.sphinxext.plot_directive',
+        'sphinxcontrib.bibtex'
 ]
 master_doc = 'index'
 source_suffix = '.rst'

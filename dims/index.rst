@@ -45,8 +45,8 @@ characteristics of a line source, but of a point source. This dimensionality
 mismatch prevents perfect synthesis within the desired plane. The combination of
 a 2D secondary source setup with secondary sources that exhibit 3D
 characteristics has led to naming such configurations *2.5D synthesis*
-[Start1997]_. Such scenarios are associated with a wrong amplitude decay due to
-the inherent mismatch of secondary sources as is highlighted in
+:cite:`Start1997`. Such scenarios are associated with a wrong amplitude decay
+due to the inherent mismatch of secondary sources as is highlighted in
 :numref:`fig-sound-field-dimensionality`. In general, the amplitude is only
 correct at a given reference point :math:`\xref`.
 
@@ -54,7 +54,7 @@ For a circular secondary source distribution with point source characteristic
 the 2.5D driving function can be derived by introducing expansion coefficients
 for the spherical case into the driving function :eq:`D_circular`. The equation
 is than solved for :math:`\theta = 0{^\circ}` and :math:`r_\text{ref} = 0`. This
-results in a 2.5D driving function given after [Ahrens2012]_, eq. (3.49) as
+results in a 2.5D driving function given after :cite:`Ahrens2012`, eq. (3.49) as
 
 .. math::
     :label: D_circular_25D
@@ -69,7 +69,7 @@ For a linear secondary source distribution with point source characteristics the
 coefficients for a monopole source :eq:`point-source-linear-coefficients` into
 the driving function :eq:`D_linear` and solving the equation for :math:`y =
 y_\text{ref}` and :math:`z = 0`. This results in a 2.5D driving function given
-after [Ahrens2012]_, eq. (3.77) as
+after :cite:`Ahrens2012`, eq. (3.77) as
 
 .. math::
     :label: D_linear_25D
@@ -82,7 +82,7 @@ A driving function for the 2.5D situation in the context of |WFS| and arbitrary
 2D geometries of the secondary source distribution can be achieved by applying
 the far-field approximation  :math:`\Hankel{2}{0}{\zeta} \approx
 \sqrt{\frac{2\i}{\pi\zeta}} \e{-\i\zeta}` for
-:math:`\zeta \gg 1` to the 2D Green’s function [Williams1999]_, eq. (4.23).
+:math:`\zeta \gg 1` to the 2D Green’s function :cite:`Williams1999`, eq. (4.23).
 Using this the following relationship between the 2D and 3D Green’s functions
 can be established.
 

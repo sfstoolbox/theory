@@ -31,8 +31,8 @@ Fourier transformation
 ~~~~~~~~~~~~~~~~~~~~~~
 
 Let :math:`s` be an absolute integrable function, :math:`t,\w` real
-numbers, then the temporal Fourier transform is defined after [Bracewell2000]_
-as
+numbers, then the temporal Fourier transform is defined after
+:cite:`Bracewell2000` as
 
 .. math::
     :label: fft

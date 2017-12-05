@@ -8,7 +8,7 @@ order to derive the driving signal for the secondary source distribution. It can
 either be measured, i.e. recorded, or modeled. While the former is known as
 *data-based rendering*, the latter is known as *model-based rendering*.  For
 data-based rendering, the problem of how to capture a complete sound field still
-has to be solved. Avni et al. [Avni2013]_ discuss some influences of the
+has to be solved. Avni et al. :cite:`Avni2013` discuss some influences of the
 recording limitations on the perception of the reproduced sound field.  This
 document will consider only model-based rendering.
 
@@ -49,8 +49,8 @@ Plane Wave
     Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
     :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
 
-The source model for a plane wave is given after [Williams1999]_, eq. (2.24)
-[#F1]_ as
+The source model for a plane wave is given after :cite:`Williams1999`,
+eq. (2.24) [#F1]_ as
 
 .. math::
     :label: S.pw
@@ -71,7 +71,7 @@ where :math:`a(t)` is the Fourier transformation of the frequency spectrum
 :math:`A(\w)`.
 
 The expansion coefficients for spherical basis functions are given after
-[Ahrens2012]_, eq. (2.38) as
+:cite:`Ahrens2012`, eq. (2.38) as
 
 .. math::
     :label: plane-wave-spherical-coefficients
@@ -91,7 +91,7 @@ given as
         \Phi_{-m}(\phi_\text{s}).
 
 The expansion coefficients for linear basis functions are given after
-[Ahrens2012]_, eq. (C.5) as
+:cite:`Ahrens2012`, eq. (C.5) as
 
 .. math::
     :label: plane-wave-linear-coefficients
@@ -127,7 +127,7 @@ Point Source
     Parameters: :math:`f = 800` Hz.
 
 The source model for a point source is given by the three dimensional Green’s
-function after [Williams1999]_, eq. (6.73) as
+function after :cite:`Williams1999`, eq. (6.73) as
 
 .. math::
     :label: S.ps
@@ -146,7 +146,7 @@ Transformed to the temporal domain this becomes
         \dirac{t - \frac{|\x-\xs|}{c}}.
 
 The expansion coefficients for spherical basis functions are given
-after [Ahrens2012]_, eq. (2.37) as
+after :cite:`Ahrens2012`, eq. (2.37) as
 
 .. math::
     :label: point-source-spherical-coefficients
@@ -160,7 +160,7 @@ where :math:`(\phi_\text{s},\theta_\text{s},r_\text{s})` describes the position
 of the point source.
 
 The expansion coefficients for linear basis functions are given after
-[Ahrens2012]_, eq. (C.10) as
+:cite:`Ahrens2012`, eq. (C.10) as
 
 .. math::
     :label: point-source-linear-coefficients
@@ -252,7 +252,7 @@ Line Source
     Parameters: :math:`f = 800` Hz.
 
 The source model for a line source is given by the two dimensional Green’s
-function after [Williams1999]_, eq. (8.47) as
+function after :cite:`Williams1999`, eq. (8.47) as
 
 .. math::
     :label: S.ls
@@ -260,7 +260,8 @@ function after [Williams1999]_, eq. (8.47) as
     S(\x,\w) = -A(\w) \frac{\i}{4} \Hankel{2}{0}{\wc |\x-\xs|}.
 
 Applying the large argument approximation of the Hankel function
-[Williams1999]_, eq. (4.23) and transformed to the temporal domain this becomes
+:cite:`Williams1999`, eq. (4.23) and transformed to the temporal domain this
+becomes
 
 .. math::
     :label: s.ls
@@ -271,7 +272,7 @@ Applying the large argument approximation of the Hankel function
         \dirac{t - \frac{|\x-\xs|}{c}}.
 
 The expansion coefficients for spherical basis functions are given
-after [Hahn2015]_, eq. (15) as
+after :cite:`Hahn2015`, eq. (15) as
 
 .. math::
     :label: line-source-spherical-coefficients
@@ -301,7 +302,7 @@ The expansion coefficients for linear basis functions are given as
 
 
 .. [#F1]
-    Note that [Williams1999]_ defines the Fourier transform with transposed signs
+    Note that :cite:`Williams1999` defines the Fourier transform with transposed signs
     as :math:`F(\w) = \int f(t) \e{\i\w t}`. This leads also to changed signs in
     his definitions of the Green’s functions and field expansions.
 

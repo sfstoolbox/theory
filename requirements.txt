@@ -1,6 +1,7 @@
 git+https://github.com/hagenw/sphinx.git@math_numfig
 git+https://github.com/hagenw/sphinxcontrib-katex@math_numfig
 sphinx_rtd_theme
+sphinxcontrib-bibtex
 numpy
 scipy<=0.18
 matplotlib>=1.5

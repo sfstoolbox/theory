@@ -107,7 +107,7 @@ and
 denote the so called pre-equalization filters in |WFS|.
 
 The window function :math:`w(\x_0)` for a plane wave as source model can be
-calculated after [Spors2008]_ as
+calculated after :cite:`Spors2008` as
 
 .. math::
     :label: wfs.pw.selection
@@ -163,7 +163,7 @@ it follows
         \e{-\i\wc |\x_0-\xs|}.
 
 Under the assumption of :math:`\wc |\x_0-\xs| \gg 1`,
-:eq:`D.wfs.ps.woapprox` can be approximated by [Schultz2016]_, eq. (2.118)
+:eq:`D.wfs.ps.woapprox` can be approximated by :cite:`Schultz2016`, eq. (2.118)
 
 .. math::
     :label: D.wfs.ps
@@ -177,9 +177,9 @@ as a simple weighting- and delaying-mechanism.
 
 To reach at 2.5D for a point source, we will start in 3D and apply stationary
 phase approximations instead of directly using :eq:`D25D_wfs` -- see discussion
-after [Schultz2016]_, (2.146). Under the assumption of :math:`\frac{\omega}{c}
-(|\x_0-\xs| + |\x-\x_0|) \gg 1` it then follows [Schultz2016]_, eq.
-(2.137), [Start1997]_, eq. (3.10, 3.11)
+after :cite:`Schultz2016`, (2.146). Under the assumption of :math:`\frac{\omega}{c}
+(|\x_0-\xs| + |\x-\x_0|) \gg 1` it then follows :cite:`Schultz2016`, eq.
+(2.137), :cite:`Start1997`, eq. (3.10, 3.11)
 
 .. math::
     :label: D.wfs.ps.2.5D
@@ -195,7 +195,7 @@ after [Schultz2016]_, (2.146). Under the assumption of :math:`\frac{\omega}{c}
 
 whereby :math:`\xref` is a reference point at which the synthesis is correct.
 A second stationary phase approximation can be applied to reach at
-[Schultz2016]_, eq. (2.131, 2.141), [Start1997]_, eq. (3.16, 3.17)
+:cite:`Schultz2016`, eq. (2.131, 2.141), :cite:`Start1997`, eq. (3.16, 3.17)
 
 .. math::
     :label: D.wfs.ps.2.5D.refline
@@ -210,10 +210,10 @@ A second stationary phase approximation can be applied to reach at
     \end{aligned}
 
 which is the traditional formulation of a point source in |WFS| as given by eq.
-(2.27) in [Verheijen1997]_ [#F1]_. Now :math:`d_\text{ref}` is the distance of a
-line parallel to the secondary source distribution and :math:`d_\text{s}` the
-shortest possible distance from the point source to the linear secondary source
-distribution.
+(2.27) in :cite:`Verheijen1997` [#F1]_. Now :math:`d_\text{ref}` is the distance
+of a line parallel to the secondary source distribution and :math:`d_\text{s}`
+the shortest possible distance from the point source to the linear secondary
+source distribution.
 
 The default |WFS| driving functions for a point source in the SFS Toolbox are
 :eq:`D.wfs.ps` and :eq:`D.wfs.ps.2.5D`.  Transferring both to the temporal
@@ -251,7 +251,7 @@ domain via an inverse Fourier transform :eq:`ifft` it follows
     \end{aligned}
 
 The window function :math:`w(\x_0)` for a point source as source model can be
-calculated after [Spors2008]_ as
+calculated after :cite:`Spors2008` as
 
 .. math::
     :label: wfs.ps.selection
@@ -309,7 +309,7 @@ secondary sources are located this automatically simplifies to :math:`\vec{v} =
 
 By inserting the source model for a line source :eq:`S.ls` into :eq:`D_wfs`
 and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq.
-(9.1.20) in [AbramowitzStegun1972]_ it follows
+(9.1.20) in :cite:`Abramowitz1972` it follows
 
 .. math::
     :label: D.wfs.ls
@@ -328,7 +328,7 @@ and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq
 
 
 Applying :math:`\Hankel{2}{1}{\zeta} \approx -\sqrt{\frac{2}{\pi\i}\zeta}
-\e{-\i\zeta}` for :math:`z\gg1` after [Williams1999]_, eq. (4.23) and
+\e{-\i\zeta}` for :math:`z\gg1` after :cite:`Williams1999`, eq. (4.23) and
 transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
 it follows
 
@@ -350,7 +350,7 @@ it follows
         \dirac{t-\frac{|\vec{v}|}{c}},
 
 The window function :math:`w(\x_0)` for a line source as source model can be
-calculated after [Spors2008]_ as
+calculated after :cite:`Spors2008` as
 
 .. math::
     :label: wfs.ls.selection
@@ -413,7 +413,8 @@ versions of the driving function for a point source :eq:`d.wfs.ps` and
         \e{\i\wc |\x_0-\xs|}.
 
 The 2.5D driving functions are given by the time-reversed version of
-:eq:`d.wfs.ps.2.5D` for a reference point after [Verheijen1997]_, eq. (A.14) as
+:eq:`d.wfs.ps.2.5D` for a reference point after :cite:`Verheijen1997`,
+eq. (A.14) as
 
 .. math::
     :label: D.wfs.fs.2.5D
@@ -428,7 +429,7 @@ The 2.5D driving functions are given by the time-reversed version of
     \end{aligned}
 
 and the time reversed version of :eq:`d.wfs.ps.2.5D.refline` for a reference
-line, compare [Start1997]_, eq. (3.16)
+line, compare :cite:`Start1997`, eq. (3.16)
 
 .. math::
     :label: D.wfs.fs.2.5D.refline

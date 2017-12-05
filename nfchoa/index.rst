@@ -7,7 +7,7 @@ The integral equation :eq:`single-layer` states a Fredholm equation of first
 kind with a Green’s function as kernel. This type of equation can be solved in a
 straightforward manner for geometries that have a complete set of orthogonal
 basis functions.  Then the involved functions are expanded into the basis
-functions :math:`\psi_n` after [MorseFeshbach1981]_, p. (940) as
+functions :math:`\psi_n` after :cite:`Morse1981`, p. (940) as
 
 .. math::
     :label: G_expansion
@@ -57,9 +57,9 @@ Introducing these equations into :eq:`single-layer` one gets
 
 This means that the Fredholm equation :eq:`single-layer` states a convolution.
 For geometries where the required orthogonal basis functions exist, :eq:`D_HOA`
-follows directly via the convolution theorem [ArfkenWeber2005]_, eq. (1013).
+follows directly via the convolution theorem :cite:`Arfken2005`, eq. (1013).
 Due to the division of the desired sound field by the spectrum of the Green’s
-function this kind of approach has been named |SDM| [AhrensSpors2010]_.  For
+function this kind of approach has been named |SDM| :cite:`Ahrens2010`.  For
 circular and spherical geometries the term |NFC-HOA| is more common due to the
 corresponding basis functions. “Near-field compensated” highlights the usage of
 point sources as secondary sources in contrast to Ambisonics and |HOA| that
@@ -77,7 +77,7 @@ Spherical Geometries
 
 The spherical harmonic functions constitute a basis for a spherical secondary
 source distribution in :math:`{\mathbb{R}}^3` and can be defined after
-[GumerovDuraiswami2004]_, eq. (12.153) [#F1]_ as
+:cite:`Gumerov2004`, eq. (12.153) [#F1]_ as
 
 .. math::
     :label: spherical-harmonics
@@ -90,7 +90,7 @@ source distribution in :math:`{\mathbb{R}}^3` and can be defined after
 
 where :math:`P_n^{|m|}` are the associated Legendre functions. Note that
 this function may also be defined in a slightly different way, omitting
-the :math:`(-1)^m` factor, see for example [Williams1999]_, eq. (6.20).
+the :math:`(-1)^m` factor, see for example :cite:`Williams1999`, eq. (6.20).
 
 The complex conjugate of :math:`Y_n^m` is given by negating the degree
 :math:`m` as
@@ -102,7 +102,7 @@ The complex conjugate of :math:`Y_n^m` is given by negating the degree
 
 For a spherical secondary source distribution with a radius of :math:`R_0` the
 sound field can be calculated by a convolution along the surface. The driving
-function is then given by a simple division after [Ahrens2012]_, eq. (3.21)
+function is then given by a simple division after :cite:`Ahrens2012`, eq. (3.21)
 [#F2]_ as
 
 .. math::
@@ -121,7 +121,7 @@ source model, :math:`\theta_\text{s}`, :math:`\phi_\text{s}`, and
 :math:`r_\text{s}` its directional dependency, and :math:`\breve{G}_n^0` the
 spherical expansion coefficients of a secondary monopole source located at
 the north pole of the sphere :math:`\x_0 = (\frac{\pi}{2},0,R_0)`. For a point
-source this is given after [SchultzSpors2014]_, eq. (25) as
+source this is given after :cite:`Schultz2014`, eq. (25) as
 
 .. math::
     :label: G_spherical
@@ -140,7 +140,7 @@ Circular Geometries
 ~~~~~~~~~~~~~~~~~~~
 
 The following functions build a basis in :math:`\mathbb{R}^2` for a circular
-secondary source distribution, compare [Williams1999]_
+secondary source distribution, compare :cite:`Williams1999`
 
 .. math::
     :label: circular-harmonics
@@ -157,7 +157,7 @@ The complex conjugate of :math:`\Phi_m` is given by negating the degree
 
 For a circular secondary source distribution with a radius of :math:`R_0` the
 driving function can be calculated by a convolution along the surface of the
-circle as explicitly shown by [AhrensSpors2009a]_ and is then given as
+circle as explicitly shown by :cite:`Ahrens2009a` and is then given as
 
 .. math::
     :label: D_circular
@@ -207,7 +207,7 @@ where :math:`k_x`, :math:`k_z` are entries in the wave vector :math:`\k` with
 
 For an infinitely long secondary source distribution located on the
 :math:`xz`-plane the driving function can be calculated by a two-dimensional
-convolution along the plane after [Ahrens2012]_, eq. (3.65) as
+convolution along the plane after :cite:`Ahrens2012`, eq. (3.65) as
 
 .. math::
     :label: D_planar
@@ -219,7 +219,7 @@ convolution along the plane after [Ahrens2012]_, eq. (3.65) as
 where :math:`\breve{S}` denotes the planar expansion coefficients for the source
 model, :math:`y_\text{s}` its positional dependency, and :math:`\breve{G}` the
 planar expansion coefficients of a secondary point source after
-[SchultzSpors2014]_, eq. (49) with
+:cite:`Schultz2014`, eq. (49) with
 
 .. math::
     :label: G_planar
@@ -232,7 +232,7 @@ for :math:`(\wc )^2 > (k_x^2+k_z^2)`.
 For the planar and the following linear geometries the Fredholm equation is
 solved for a non compact space :math:`V`, which leads to an infinite and
 non-denumerable number of basis functions as opposed to the denumerable case for
-compact spaces [SchultzSpors2014]_.
+compact spaces :cite:`Schultz2014`.
 
 
 .. _sec-linear_geometries:
@@ -257,7 +257,7 @@ The complex conjugate is given by negating :math:`k_x` as
 
 For an infinitely long secondary source distribution located on the
 :math:`x`-axis the driving function for :math:`{\mathbb{R}}^2` can be calculated
-by a convolution along this axis after [Ahrens2012]_, eq. (3.73) as
+by a convolution along this axis after :cite:`Ahrens2012`, eq. (3.73) as
 
 .. math::
     :label: D_linear
@@ -283,13 +283,13 @@ for :math:`0<|k_x|<|\wc |\,`.
 .. [#F1]
     Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due
     to the use of another coordinate system, compare Figure 2.1 from
-    [GumerovDuraiswami2004]_ and :numref:`fig-coordinate-system`.
+    :cite:`Gumerov2004` and :numref:`fig-coordinate-system`.
 
 .. [#F2]
-    Note the :math:`\frac{1}{2\pi}` term is wrong in [Ahrens2012]_, eq. (3.21)
+    Note the :math:`\frac{1}{2\pi}` term is wrong in :cite:`Ahrens2012`, eq. (3.21)
     and eq. (5.7) and omitted here, compare the `errata
-    <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq.
-    (24).
+    <http://www.soundfieldsynthesis.org/errata/>`_ and :cite:`Schultz2014`,
+    eq. (24).
 
 
 .. vim: filetype=rst spell:
