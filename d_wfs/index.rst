@@ -107,7 +107,7 @@ and
 denote the so called pre-equalization filters in |WFS|.
 
 The window function :math:`w(\x_0)` for a plane wave as source model can be
-calculated after [Spors2008]_
+calculated after [Spors2008]_ as
 
 .. math::
     :label: wfs.pw.selection
@@ -178,8 +178,8 @@ as a simple weighting- and delaying-mechanism.
 To reach at 2.5D for a point source, we will start in 3D and apply stationary
 phase approximations instead of directly using :eq:`D25D_wfs` -- see discussion
 after [Schultz2016]_, (2.146). Under the assumption of :math:`\frac{\omega}{c}
-(|\x_0-\xs| + |\x-\x_0|) \gg 1` it then follows [Schultz2016]_, eq. (2.137),
-[Start1997]_, eq. (3.10, 3.11)
+(|\x_0-\xs| + |\x-\x_0|) \gg 1` it then follows [Schultz2016]_, eq.
+(2.137), [Start1997]_, eq. (3.10, 3.11)
 
 .. math::
     :label: D.wfs.ps.2.5D
@@ -293,8 +293,9 @@ Line Source
     |WFS| :eq:`D.wfs.ls`.  Parameters: :math:`\xs = (0, 2.5, 0)` m,
     :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
-For a line source its orientation :math:`\n_\text{s}` has an influence on the synthesized sound field as well.
-Let :math:`|\vec{v}|` be the distance between :math:`\x_0` and the line source with
+For a line source its orientation :math:`\n_\text{s}` has an influence on the
+synthesized sound field as well.  Let :math:`|\vec{v}|` be the distance between
+:math:`\x_0` and the line source with
 
 .. math::
     :label: v.ls
@@ -412,7 +413,7 @@ versions of the driving function for a point source :eq:`d.wfs.ps` and
         \e{\i\wc |\x_0-\xs|}.
 
 The 2.5D driving functions are given by the time-reversed version of
-:eq:`d.wfs.ps.2.5D` for a reference point [Verheijen1997]_, eq. (A.14)
+:eq:`d.wfs.ps.2.5D` for a reference point after [Verheijen1997]_, eq. (A.14) as
 
 .. math::
     :label: D.wfs.fs.2.5D
@@ -512,6 +513,8 @@ The window function :math:`w(\x_0)` for a focused source can be calculated as
         \end{cases}
 
 
-.. [#F1] Whereby :math:`r` corresponds to :math:`|\x_0-\xs|` and :math:`\cos\varphi` to :math:`\frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}`.
+.. [#F1]
+    Whereby :math:`r` corresponds to :math:`|\x_0-\xs|` and :math:`\cos\varphi`
+    to :math:`\frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}`.
 
 .. vim: filetype=rst spell:

@@ -3,14 +3,14 @@
 Model-Based Rendering
 ---------------------
 
-Knowing the pressure field of the desired source :math:`S(\x,\w)` is
-required in order to derive the driving signal for the secondary source
-distribution. It can either be measured, i.e. recorded, or modeled. While the
-former is known as *data-based rendering*, the latter is known as *model-based
-rendering*.  For data-based rendering, the problem of how to capture a complete
-sound field still has to be solved. [Avni2013]_ et al. discuss some influences
-of the recording limitations on the perception of the reproduced sound field.
-This document will consider only model-based rendering.
+Knowing the pressure field of the desired source :math:`S(\x,\w)` is required in
+order to derive the driving signal for the secondary source distribution. It can
+either be measured, i.e. recorded, or modeled. While the former is known as
+*data-based rendering*, the latter is known as *model-based rendering*.  For
+data-based rendering, the problem of how to capture a complete sound field still
+has to be solved. Avni et al. [Avni2013]_ discuss some influences of the
+recording limitations on the perception of the reproduced sound field.  This
+document will consider only model-based rendering.
 
 Frequently applied models in model-based rendering are plane waves, point
 sources, or sources with a prescribed complex directivity. In the following the
@@ -49,7 +49,8 @@ Plane Wave
     Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
     :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
 
-The source model for a plane wave is given as [Williams1999]_, eq. (2.24) [#F1]_
+The source model for a plane wave is given after [Williams1999]_, eq. (2.24)
+[#F1]_ as
 
 .. math::
     :label: S.pw
@@ -69,8 +70,8 @@ Transformed in the temporal domain this becomes
 where :math:`a(t)` is the Fourier transformation of the frequency spectrum
 :math:`A(\w)`.
 
-The expansion coefficients for spherical basis functions are given as
-[Ahrens2012]_, eq. (2.38)
+The expansion coefficients for spherical basis functions are given after
+[Ahrens2012]_, eq. (2.38) as
 
 .. math::
     :label: plane-wave-spherical-coefficients
@@ -89,8 +90,8 @@ given as
     \breve{S}_m(\phi_\text{s},\w) = \i^{-n}
         \Phi_{-m}(\phi_\text{s}).
 
-The expansion coefficients for linear basis functions are given as after
-[Ahrens2012]_, eq. (C.5)
+The expansion coefficients for linear basis functions are given after
+[Ahrens2012]_, eq. (C.5) as
 
 .. math::
     :label: plane-wave-linear-coefficients
@@ -126,7 +127,7 @@ Point Source
     Parameters: :math:`f = 800` Hz.
 
 The source model for a point source is given by the three dimensional Green’s
-function as [Williams1999]_, eq. (6.73)
+function after [Williams1999]_, eq. (6.73) as
 
 .. math::
     :label: S.ps
@@ -145,7 +146,7 @@ Transformed to the temporal domain this becomes
         \dirac{t - \frac{|\x-\xs|}{c}}.
 
 The expansion coefficients for spherical basis functions are given
-as [Ahrens2012]_, eq. (2.37)
+after [Ahrens2012]_, eq. (2.37) as
 
 .. math::
     :label: point-source-spherical-coefficients
@@ -158,8 +159,8 @@ as [Ahrens2012]_, eq. (2.37)
 where :math:`(\phi_\text{s},\theta_\text{s},r_\text{s})` describes the position
 of the point source.
 
-The expansion coefficients for linear basis functions are given as
-[Ahrens2012]_, eq. (C.10)
+The expansion coefficients for linear basis functions are given after
+[Ahrens2012]_, eq. (C.10) as
 
 .. math::
     :label: point-source-linear-coefficients
@@ -251,7 +252,7 @@ Line Source
     Parameters: :math:`f = 800` Hz.
 
 The source model for a line source is given by the two dimensional Green’s
-function as [Williams1999]_, eq. (8.47)
+function after [Williams1999]_, eq. (8.47) as
 
 .. math::
     :label: S.ls
@@ -270,7 +271,7 @@ Applying the large argument approximation of the Hankel function
         \dirac{t - \frac{|\x-\xs|}{c}}.
 
 The expansion coefficients for spherical basis functions are given
-as [Hahn2015]_, eq. (15)
+after [Hahn2015]_, eq. (15) as
 
 .. math::
     :label: line-source-spherical-coefficients
@@ -299,6 +300,9 @@ The expansion coefficients for linear basis functions are given as
         \chi(k_y,y_\text{s}).
 
 
-.. [#F1] Note that Williams defines the Fourier transform with transposed signs as :math:`F(\w) = \int f(t) \e{\i\w t}`. This leads also to changed signs in his definitions of the Green’s functions and field expansions.
+.. [#F1]
+    Note that [Williams1999]_ defines the Fourier transform with transposed signs
+    as :math:`F(\w) = \int f(t) \e{\i\w t}`. This leads also to changed signs in
+    his definitions of the Green’s functions and field expansions.
 
 .. vim: filetype=rst spell:

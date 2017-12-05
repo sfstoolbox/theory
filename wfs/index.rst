@@ -12,7 +12,7 @@ outside. Due to the presence of the secondary sources at the surface
 :math:`\partial V`, the gradient of :math:`P(\x,\w)` is discontinuous when
 approaching the surface.  The strength of the secondary sources is then given by
 the differences of the gradients approaching :math:`\partial V` from both sides
-as [FaziNelson2013]_
+after [FaziNelson2013]_ as
 
 .. math::
     :label: D_gradient
@@ -64,15 +64,23 @@ In the SFS Toolbox we assume convex secondary source distributions, which
 allows to formulate the window function by a scalar product with the normal
 vector of the secondary source distribution.  In general, also non-convex
 secondary source distributions can be used with |WFS| – compare the appendix in
-[LaxFeshbach1947]_ and [#F2]_.
+[LaxFeshbach1947]_ [#F2]_.
 
 One of the advantages of the applied approximation is that due to its local
 character the solution of the driving function :eq:`D_wfs` does not depend on
 the geometry of the secondary sources. This dependency applies to the direct
 solutions presented in :ref:`sec-nfchoa`.
 
-.. [#F1] Compare the assumptions made before (15) in [SporsZotter2013]_, which lead to the derivation of the same window function in a more explicit way.
+.. [#F1]
+    Compare the assumptions made before (15) in [SporsZotter2013]_, which lead
+    to the derivation of the same window function in a more explicit way.
 
-.. [#F2]  The solution mentioned by [LaxFeshbach1947]_ assumes that the listener is far away from the radiator and that the radiator is a physical source not a notional one as the secondary sources. In this case the selection criterion has to be chosen more carefully, incorporating the exact position of the listener and the virtual source. See also the `related discussion <https://github.com/sfstoolbox/sfs-documentation/issues/8>`_.
+.. [#F2]
+    The solution mentioned by [LaxFeshbach1947]_ assumes that the listener is
+    far away from the radiator and that the radiator is a physical source not a
+    notional one as the secondary sources. In this case the selection criterion
+    has to be chosen more carefully, incorporating the exact position of the
+    listener and the virtual source. See also the `related discussion
+    <https://github.com/sfstoolbox/sfs-documentation/issues/8>`_.
 
 .. vim: filetype=rst spell:

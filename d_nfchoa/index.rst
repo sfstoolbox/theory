@@ -8,7 +8,7 @@ for spherical, circular, and linear secondary source distributions. Among the
 possible combinations of methods and secondary sources not all are meaningful.
 Hence, only the relevant ones will be presented. The same holds for the
 introduced source models of plane waves, point sources, line sources and focused
-sources. [AhrensSpors2010]_ in addition have considered |SDM|
+sources. Ahrens and Spors [AhrensSpors2010]_ in addition have considered |SDM|
 driving functions for planar secondary source distributions.
 
 For |NFC-HOA|, temporal-domain implementations for the
@@ -250,7 +250,7 @@ and :eq:`G_circular` into :eq:`D_circular` as
 For a circular secondary source distribution with radius :math:`R_0` and point
 sources as secondary sources the 2.5D driving function is given by inserting the
 spherical coefficients :eq:`line-source-spherical-coefficients`
-and :eq:`G_spherical` into :eq:`D_circular_25D` as [Hahn2015]_, eq. (23)
+and :eq:`G_spherical` into :eq:`D_circular_25D` after [Hahn2015]_, eq. (23) as
 
 .. math::
     :label: D.nfchoa.ls.2.5D
@@ -301,6 +301,10 @@ for |SDM| and [AhrensSpors2009b]_ for |NFC-HOA|.
 In the SFS Toolbox only focused sources in |WFS| are considered at the moment.
 
 
-.. [#F1]  Note the :math:`\frac{1}{2\pi}` term is wrong in [Ahrens2012]_, eq. (3.21) and eq. (5.7) and omitted here, compare the `errata <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq. (24).
+.. [#F1]
+    Note the :math:`\frac{1}{2\pi}` term is wrong in [Ahrens2012]_, eq. (3.21)
+    and eq. (5.7) and omitted here, compare the `errata
+    <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq.
+    (24).
 
 .. vim: filetype=rst spell:

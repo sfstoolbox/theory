@@ -54,7 +54,7 @@ For a circular secondary source distribution with point source characteristic
 the 2.5D driving function can be derived by introducing expansion coefficients
 for the spherical case into the driving function :eq:`D_circular`. The equation
 is than solved for :math:`\theta = 0{^\circ}` and :math:`r_\text{ref} = 0`. This
-results in a 2.5D driving function given as [Ahrens2012]_, eq. (3.49)
+results in a 2.5D driving function given after [Ahrens2012]_, eq. (3.49) as
 
 .. math::
     :label: D_circular_25D
@@ -69,7 +69,7 @@ For a linear secondary source distribution with point source characteristics the
 coefficients for a monopole source :eq:`point-source-linear-coefficients` into
 the driving function :eq:`D_linear` and solving the equation for :math:`y =
 y_\text{ref}` and :math:`z = 0`. This results in a 2.5D driving function given
-as [Ahrens2012]_, eq. (3.77)
+after [Ahrens2012]_, eq. (3.77) as
 
 .. math::
     :label: D_linear_25D

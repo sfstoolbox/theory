@@ -7,7 +7,7 @@ The integral equation :eq:`single-layer` states a Fredholm equation of first
 kind with a Green’s function as kernel. This type of equation can be solved in a
 straightforward manner for geometries that have a complete set of orthogonal
 basis functions.  Then the involved functions are expanded into the basis
-functions :math:`\psi_n` as [MorseFeshbach1981]_, p. (940)
+functions :math:`\psi_n` after [MorseFeshbach1981]_, p. (940) as
 
 .. math::
     :label: G_expansion
@@ -76,8 +76,8 @@ Spherical Geometries
 ~~~~~~~~~~~~~~~~~~~~
 
 The spherical harmonic functions constitute a basis for a spherical secondary
-source distribution in :math:`{\mathbb{R}}^3` and can be defined as
-[GumerovDuraiswami2004]_, eq. (12.153) [#F1]_
+source distribution in :math:`{\mathbb{R}}^3` and can be defined after
+[GumerovDuraiswami2004]_, eq. (12.153) [#F1]_ as
 
 .. math::
     :label: spherical-harmonics
@@ -102,7 +102,8 @@ The complex conjugate of :math:`Y_n^m` is given by negating the degree
 
 For a spherical secondary source distribution with a radius of :math:`R_0` the
 sound field can be calculated by a convolution along the surface. The driving
-function is then given by a simple division as [Ahrens2012]_, eq. (3.21) [#F2]_
+function is then given by a simple division after [Ahrens2012]_, eq. (3.21)
+[#F2]_ as
 
 .. math::
     :label: D_spherical
@@ -120,7 +121,7 @@ source model, :math:`\theta_\text{s}`, :math:`\phi_\text{s}`, and
 :math:`r_\text{s}` its directional dependency, and :math:`\breve{G}_n^0` the
 spherical expansion coefficients of a secondary monopole source located at
 the north pole of the sphere :math:`\x_0 = (\frac{\pi}{2},0,R_0)`. For a point
-source this is given as [SchultzSpors2014]_, eq. (25)
+source this is given after [SchultzSpors2014]_, eq. (25) as
 
 .. math::
     :label: G_spherical
@@ -139,7 +140,7 @@ Circular Geometries
 ~~~~~~~~~~~~~~~~~~~
 
 The following functions build a basis in :math:`\mathbb{R}^2` for a circular
-secondary source distribution [Williams1999]_
+secondary source distribution, compare [Williams1999]_
 
 .. math::
     :label: circular-harmonics
@@ -206,7 +207,7 @@ where :math:`k_x`, :math:`k_z` are entries in the wave vector :math:`\k` with
 
 For an infinitely long secondary source distribution located on the
 :math:`xz`-plane the driving function can be calculated by a two-dimensional
-convolution along the plane as [Ahrens2012]_, eq. (3.65)
+convolution along the plane after [Ahrens2012]_, eq. (3.65) as
 
 .. math::
     :label: D_planar
@@ -217,8 +218,8 @@ convolution along the plane as [Ahrens2012]_, eq. (3.65)
 
 where :math:`\breve{S}` denotes the planar expansion coefficients for the source
 model, :math:`y_\text{s}` its positional dependency, and :math:`\breve{G}` the
-planar expansion coefficients of a secondary point source with
-[SchultzSpors2014]_, eq. (49)
+planar expansion coefficients of a secondary point source after
+[SchultzSpors2014]_, eq. (49) with
 
 .. math::
     :label: G_planar
@@ -256,7 +257,7 @@ The complex conjugate is given by negating :math:`k_x` as
 
 For an infinitely long secondary source distribution located on the
 :math:`x`-axis the driving function for :math:`{\mathbb{R}}^2` can be calculated
-by a convolution along this axis as [Ahrens2012]_, eq. (3.73)
+by a convolution along this axis after [Ahrens2012]_, eq. (3.73) as
 
 .. math::
     :label: D_linear
@@ -279,9 +280,16 @@ with
 for :math:`0<|k_x|<|\wc |\,`.
 
 
-.. [#F1] Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due to the use of another coordinate system, compare Figure 2.1 from Gumerov and Duraiswami and :numref:`fig-coordinate-system`.
+.. [#F1]
+    Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due
+    to the use of another coordinate system, compare Figure 2.1 from
+    [GumerovDuraiswami2004]_ and :numref:`fig-coordinate-system`.
 
-.. [#F2]  Note the :math:`\frac{1}{2\pi}` term is wrong in [Ahrens2012]_, eq. (3.21) and eq. (5.7) and omitted here, compare the `errata <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq. (24).
+.. [#F2]
+    Note the :math:`\frac{1}{2\pi}` term is wrong in [Ahrens2012]_, eq. (3.21)
+    and eq. (5.7) and omitted here, compare the `errata
+    <http://www.soundfieldsynthesis.org/errata/>`_ and [SchultzSpors2014]_, eq.
+    (24).
 
 
 .. vim: filetype=rst spell:
