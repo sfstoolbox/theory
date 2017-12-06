@@ -308,8 +308,8 @@ secondary sources are located this automatically simplifies to :math:`\vec{v} =
 \x_0 - \xs`.
 
 By inserting the source model for a line source :eq:`S.ls` into :eq:`D_wfs`
-and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after eq.
-(9.1.20) in :cite:`Abramowitz1972` it follows
+and :eq:`D25D_wfs` and calculating the derivate of the Hankel function after
+`<http://dlmf.nist.gov/10.6.E6>`_ it follows
 
 .. math::
     :label: D.wfs.ls
