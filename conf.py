@@ -105,7 +105,6 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_theme_options = {'display_version': True}
 html_title = "SFS Toolbox"
 html_short_title = ""
-html_show_sphinx = False
 htmlhelp_basename = 'sfs-doc'
 
 
