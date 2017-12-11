@@ -1,7 +1,7 @@
 .. _sec-driving-functions-wfs:
 
-Driving functions for |WFS|
----------------------------
+Driving functions for WFS
+-------------------------
 
 In the following, the driving functions for |WFS| in the frequency and temporal
 domain for selected source models are presented. The temporal domain functions

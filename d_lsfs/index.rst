@@ -1,20 +1,22 @@
 .. _sec-driving-functions-local-sfs:
 
-Driving functions for |LSFS|
-----------------------------
+Driving functions for LSFS
+--------------------------
 
 The reproduction accuracy of |WFS| is limited due to practical aspects.  For the
 audible frequency range the desired sound field can not be synthesized
 aliasing-free over an extended listening area, which is surrounded by a discrete
 ensemble of individually driven loudspeakers.  However, it is suitable for
 certain applications to increase reproduction accuracy inside a smaller (local)
-listening region while stronger artifacts outside are permitted. The implemented
-Local Wave Field Synthesis method utilizes focused sources as a distribution of
-virtual loudspeakers which are placed more densely around the local listening
-area. These virtual loudspeakers can be driven by conventional SFS techniques,
-like e.g. |WFS| or |NFC-HOA|. The results are similar to band-limited |NFC-HOA|, with
-the difference that the form and position of the enhanced area can freely be
-chosen within the listening area.
+listening region while stronger artifacts outside are permitted. This approach
+is termed |LSFS| in general.
+
+The implemented Local Wave Field Synthesis method utilizes focused sources as a
+distribution of virtual loudspeakers which are placed more densely around the
+local listening area. These virtual loudspeakers can be driven by conventional
+SFS techniques, like e.g. |WFS| or |NFC-HOA|. The results are similar to
+band-limited |NFC-HOA|, with the difference that the form and position of the
+enhanced area can freely be chosen within the listening area.
 
 The set of focused sources is treated as a virtual loudspeaker distribution and
 their positions :math:`{\x_\text{fs}}` are subsumed under

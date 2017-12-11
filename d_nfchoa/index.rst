@@ -1,7 +1,7 @@
 .. _sec-driving-functions-nfchoa-sdm:
 
-Driving functions for |NFC-HOA| and |SDM|
------------------------------------------
+Driving functions for NFC-HOA and SDM
+-------------------------------------
 
 In the following, driving functions for |NFC-HOA| and |SDM| are derived
 for spherical, circular, and linear secondary source distributions. Among the

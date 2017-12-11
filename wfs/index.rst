@@ -1,7 +1,7 @@
 .. _sec-wfs:
 
-High Frequency Approximation: |WFS|
------------------------------------
+High Frequency Approximation: WFS
+---------------------------------
 
 The single-layer potential :eq:`single-layer` satisfies the homogeneous
 Helmholtz equation both in the interior and exterior regions :math:`V` and
