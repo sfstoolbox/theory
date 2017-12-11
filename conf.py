@@ -120,6 +120,7 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': latexmacros,  # command definitions
     'figure_align': 'htbp',
+    'sphinxsetup': 'TitleColor={rgb}{0,0,0}',
 }
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
