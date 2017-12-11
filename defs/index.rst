@@ -8,13 +8,12 @@ Mathematical Definitions
 Coordinate system
 ~~~~~~~~~~~~~~~~~
 
-Figure shows the coordinate system that is used in the following
-chapters. A vector :math:`\x` can be described by its position
-:math:`(x,y,z)` in space or by its length, azimuth angle
-:math:`\phi \in [0,2\pi[`, and elevation
-:math:`\theta \in \left[-\frac{\pi}{2},\frac{\pi}{2}\right]`.
-The azimuth is measured counterclockwise and elevation is positive for
-positive :math:`z`-values.
+:numref:`fig-coordinate-system` shows the coordinate system that is used in the
+following chapters. A vector :math:`\x` can be described by its position
+:math:`(x,y,z)` in space or by its length, azimuth angle :math:`\phi \in
+[0,2\pi[`, and elevation :math:`\theta \in
+\left[-\frac{\pi}{2},\frac{\pi}{2}\right]`.  The azimuth is measured
+counterclockwise and elevation is positive for positive :math:`z`-values.
 
 .. _fig-coordinate-system:
 
