@@ -123,12 +123,16 @@ latex_elements = {
 }
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
-#  author, documentclass [howto, manual, or own class]).
+#  author, documentclass, toctree_only).
 latex_documents = [
-    (master_doc, 'sfs-toolbox-documentation.tex', u'SFS Toolbox -- Theory',
-     u'SFS Toolbox team', 'manual'),
+    (master_doc,
+     'sfs-toolbox-documentation.tex',
+     u'Theory of Sound Field Synthesis',
+     u'SFS Toolbox Developers',
+     'manual',
+     True),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+#latex_logo = 'img/header.png'
