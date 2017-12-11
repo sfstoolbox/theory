@@ -1,7 +1,9 @@
 .. _sec-references:
 
-References
-----------
+.. only:: html
+
+    References
+    ----------
 
 .. bibliography:: index.bib
     :style: alpha
