@@ -167,7 +167,7 @@ latex_documents = [
     (master_doc,
      'sfs-toolbox-documentation.tex',
      u'Theory of Sound Field Synthesis',
-     u'SFS Toolbox Developers',
+     u'H. Wierstorf, F. Winter, F. Schultz, N. Hahn,\\\\T. Rettberg, C. Hohnerlein, and S. Spors',
      'manual',
      True),
 ]
