@@ -157,7 +157,7 @@ latex_elements = {
     'pointsize': '10pt',
     'preamble': latexmacros,  # command definitions
     'figure_align': 'htbp',
-    'sphinxsetup': 'TitleColor={rgb}{0,0,0}',
+    'sphinxsetup': 'TitleColor={rgb}{0,0,0}, verbatimwithframe=false, VerbatimColor={rgb}{.96,.96,.96}',
     'releasename': '\href{https://doi.org/10.5281/zenodo.1112452}{\color{black}doi:10.5281/zenodo.1112452}',
 }
 # Grouping the document tree into LaTeX files. List of tuples
