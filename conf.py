@@ -54,7 +54,12 @@ plot_include_source = True
 plot_html_show_source_link = False
 plot_html_show_formats = False
 plot_formats = ['png', 'pdf']
-plot_rcparams = {'figure.figsize': [8, 4.5]}
+plot_pre_code = '''
+import numpy as np
+from matplotlib import pyplot as plt
+import sfs
+plt.rcParams['figure.figsize'] = 8, 4.5  # inch'''
+
 # Code syntax highlighting style
 pygments_style = 'trac'
 

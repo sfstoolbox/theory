@@ -16,15 +16,6 @@ Frequently applied models in model-based rendering are plane waves, point
 sources, or sources with a prescribed complex directivity. In the following the
 models used within the SFS Toolbox are presented.
 
-.. plot::
-    :context: reset
-    :include-source: false
-
-    import numpy as np
-    import matplotlib.pyplot as plt
-    import sfs
-    plt.rcParams['figure.figsize'] = 8, 4.5  # inch
-
 
 .. _sec-plane-wave:
 
