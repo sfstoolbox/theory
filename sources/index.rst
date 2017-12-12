@@ -24,6 +24,7 @@ Plane Wave
 
 .. plot::
     :context: close-figs
+    :nofigs:
 
     nk = sfs.util.direction_vector(np.radians(45))  # direction of plane wave
     xs = 0, 0, 0  # center of plane wave
@@ -32,9 +33,16 @@ Plane Wave
     p = sfs.mono.source.plane(omega, xs, nk, grid)
     sfs.plot.soundfield(p, grid);
 
+.. plot::
+    :context:
+    :include-source: false
+    :nofigs:
+
+    save_fig('plane-wave')
+
 .. _fig-plane-wave:
 
-.. figure:: ../img/placeholder.png
+.. figure:: plane-wave.*
     :align: center
 
     Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
@@ -101,6 +109,7 @@ Point Source
 
 .. plot::
     :context: close-figs
+    :nofigs:
 
     xs = 0, 0, 0  # position of source
     omega = 2 * np.pi * 800  # frequency
@@ -109,9 +118,16 @@ Point Source
     normalization = 4 * np.pi
     sfs.plot.soundfield(normalization * p, grid);
 
+.. plot::
+    :context:
+    :include-source: false
+    :nofigs:
+
+    save_fig('point-source')
+
 .. _fig-point-source:
 
-.. figure:: ../img/placeholder.png
+.. figure:: point-source.*
     :align: center
 
     Sound pressure for a monochromatic point source :eq:`S.ps` placed at :math:`(0, 0, 0)`.
@@ -172,6 +188,7 @@ Dipole Point Source
 
 .. plot::
     :context: close-figs
+    :nofigs:
 
     xs = 0, 0, 0  # position of source
     ns = sfs.util.direction_vector(0)  # direction of source
@@ -180,9 +197,16 @@ Dipole Point Source
     p = sfs.mono.source.point_dipole(omega, xs, ns, grid)
     sfs.plot.soundfield(p, grid);
 
+.. plot::
+    :context:
+    :include-source: false
+    :nofigs:
+
+    save_fig('dipole-point-source')
+
 .. _fig-dipole-point-source:
 
-.. figure:: ../img/placeholder.png
+.. figure:: dipole-point-source.*
     :align: center
 
     Sound pressure for a monochromatic dipole point source :eq:`S.dps` placed at
@@ -226,6 +250,7 @@ Line Source
 
 .. plot::
     :context: close-figs
+    :nofigs:
 
     xs = 0, 0, 0  # position of source
     omega = 2 * np.pi * 800  # frequency
@@ -234,9 +259,16 @@ Line Source
     normalization = np.sqrt(8 * np.pi * omega / sfs.defs.c) * np.exp(1j * np.pi / 4)
     sfs.plot.soundfield(normalization * p, grid);
 
+.. plot::
+    :context:
+    :include-source: false
+    :nofigs:
+
+    save_fig('line-source')
+
 .. _fig-line-source:
 
-.. figure:: ../img/placeholder.png
+.. figure:: line-source.*
     :align: center
 
     Sound pressure for a monochromatic line source :eq:`S.ls` placed at :math:`(0, 0, 0)`.

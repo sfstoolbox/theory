@@ -24,6 +24,7 @@ Plane Wave
 
 .. plot::
     :context: close-figs
+    :nofigs:
 
     nk = 0, -1, 0  # direction of plane wave
     omega = 2 * np.pi * 1000  # frequency
@@ -37,9 +38,16 @@ Plane Wave
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
+.. plot::
+    :context:
+    :include-source: false
+    :nofigs:
+
+    save_fig('nfchoa-25d-plane-wave')
+
 .. _fig-nfchoa-25d-plane-wave:
 
-.. figure:: ../img/placeholder.png
+.. figure:: nfchoa-25d-plane-wave.*
     :align: center
 
     Sound pressure for a monochromatic plane wave synthesized with 2.5D
@@ -132,6 +140,7 @@ Point Source
 
 .. plot::
     :context: close-figs
+    :nofigs:
 
     xs = 0, 2.5, 0  # position of source
     omega = 2 * np.pi * 1000  # frequency
@@ -145,9 +154,16 @@ Point Source
     sfs.plot.soundfield(normalization * p, grid);
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
+.. plot::
+    :context:
+    :include-source: false
+    :nofigs:
+
+    save_fig('nfchoa-25d-point-source')
+
 .. _fig-nfchoa-25d-point-source:
 
-.. figure:: ../img/placeholder.png
+.. figure:: nfchoa-25d-point-source.*
     :align: center
 
     Sound pressure for a monochromatic point source synthesized with 2.5D

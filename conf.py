@@ -59,7 +59,12 @@ plot_pre_code = '''
 import numpy as np
 from matplotlib import pyplot as plt
 import sfs
-plt.rcParams['figure.figsize'] = 8, 4.5  # inch'''
+plt.rcParams['figure.figsize'] = 8, 4.5  # inch
+def save_fig(file_name):
+    dpi = 80
+    plt.savefig(file_name + '.png', dpi=dpi)
+    plt.savefig(file_name + '.pdf', dpi=dpi)
+'''
 
 # Code syntax highlighting style
 pygments_style = 'trac'
