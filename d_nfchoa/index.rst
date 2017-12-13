@@ -35,7 +35,7 @@ Plane Wave
     p = sfs.mono.synthesized.generic(omega, x0, n0, d * a0 , grid,
         source=sfs.mono.source.point)
     normalization = 0.05
-    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
 .. plot::
@@ -151,7 +151,7 @@ Point Source
     p = sfs.mono.synthesized.generic(omega, x0, n0, d * a0 , grid,
         source=sfs.mono.source.point)
     normalization = 20
-    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
 .. plot::

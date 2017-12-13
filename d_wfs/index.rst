@@ -28,11 +28,11 @@ Plane Wave
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_plane(omega, x0, n0, nk, xref)
     a = sfs.mono.drivingfunction.source_selection_plane(n0, nk)
-    twin = sfs.tapering.tukey(a,.3)
+    twin = sfs.tapering.tukey(a, .3)
     p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
         source=sfs.mono.source.point)
     normalization = 0.5
-    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
 .. plot::
@@ -134,11 +134,11 @@ Point Source
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_point(omega, x0, n0, xs, xref)
     a = sfs.mono.drivingfunction.source_selection_point(n0, x0, xs)
-    twin = sfs.tapering.tukey(a,.3)
+    twin = sfs.tapering.tukey(a, .3)
     p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
         source=sfs.mono.source.point)
     normalization = 1.3
-    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
 .. plot::
@@ -285,11 +285,11 @@ Line Source
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_2d_line(omega, x0, n0, xs)
     a = sfs.mono.drivingfunction.source_selection_line(n0, x0, xs)
-    twin = sfs.tapering.tukey(a,.3)
+    twin = sfs.tapering.tukey(a, .3)
     p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
         source=sfs.mono.source.point)
     normalization = 7
-    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
 .. plot::
@@ -394,11 +394,11 @@ Focused Source
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d = sfs.mono.drivingfunction.wfs_25d_focused(omega, x0, n0, xs, xref)
     a = sfs.mono.drivingfunction.source_selection_focused(ns, x0, xs)
-    twin = sfs.tapering.tukey(a,.3)
+    twin = sfs.tapering.tukey(a, .3)
     p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
         source=sfs.mono.source.point)
     normalization = 1
-    sfs.plot.soundfield(normalization * p, grid);
+    sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(x0, n0, grid)
 
 .. plot::
