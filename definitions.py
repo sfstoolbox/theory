@@ -1,6 +1,7 @@
 # Definitions of all acronyms used in the document
 acronyms = """
 .. |BRIR|            replace:: :abbr:`BRIR (Binaural Room Impulse Response)`
+.. |DOI|             replace:: :abbr:`DOI (Digital Object Identifier)`
 .. |FFT|             replace:: :abbr:`FFT (Fast Fourier Transform)`
 .. |HOA|             replace:: :abbr:`HOA (Higher Order Ambisonics)`
 .. |HRIR|            replace:: :abbr:`HRIR (Head-Related Impulse Response)`
