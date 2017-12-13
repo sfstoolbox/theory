@@ -61,11 +61,11 @@ If you prefer to reference an equation from the `pdf document
 <http://readthedocs.org/projects/sfs/downloads/pdf/3.0/>`_ instead, please cite
 the document with "H. Wierstorf, F. Winter, F. Schultz, N. Hahn, T. Rettberg, C.
 Hohnerlein, and S. Spors. *Theory of Sound Field Synthesis*.
-doi:10.5281/zenodo.1112452 |release|." Whereby it is important that you mention
+doi:10.5281/zenodo.1112451 |release|." Whereby it is important that you mention
 "|release|" as the provided |DOI| is a general one. All future document updates
 will also be available under that one. If you prefer to use the |DOI|
 corresponding to the used document version, you can look it up on `zenodo
-<https://doi.org/10.5281/zenodo.1112452>`_.
+<https://doi.org/10.5281/zenodo.1112451>`_.
 
 .. toctree::
     :maxdepth: 3
