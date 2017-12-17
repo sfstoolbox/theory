@@ -67,6 +67,11 @@ will also be available under that one. If you prefer to use the |DOI|
 corresponding to the used document version, you can look it up on `zenodo
 <https://doi.org/10.5281/zenodo.1112451>`_.
 
+.. warning::
+
+    Don't use the permalinks yet. This version is still in beta, and they will
+    most probably change during the next days.
+
 .. toctree::
     :maxdepth: 3
 
