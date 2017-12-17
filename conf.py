@@ -6,11 +6,12 @@ import re
 import subprocess
 
 import sphinx_rtd_theme
+import sphinxcontrib.katex as katex
 
 # Allow import/extensions from current path
 sys.path.insert(0, os.path.abspath('.'))
-from definitions import acronyms     # This includes things like |HRTF|
-from definitions import latexmacros  # Math definitions like \x
+from definitions import acronyms      # This includes things like |HRTF|
+from definitions import latex_macros  # Math definitions like \x
 
 
 # -- GENERAL -------------------------------------------------------------
@@ -50,6 +51,7 @@ except Exception:
 # Enable numbering of figures and tables
 numfig = True
 math_numfig = True
+numfig_secnum_depth = 1
 # Plot settings for matplot
 plot_include_source = True
 plot_html_show_source_link = False
@@ -72,35 +74,8 @@ pygments_style = 'trac'
 
 # -- ACRONYMS AND MATH ---------------------------------------------------
 
-def latex_to_katex(macros):
-    "Converts LaTeX \def statements to KaTeX macros"
-    # Remove empty lines
-    macros = macros.strip()
-    tmp = []
-    for line in macros.splitlines():
-        # Remove spaces from every line
-        line = line.strip()
-        # Remove "\def" at the beginning of line
-        line = re.sub(r'^\\def[ ]?', '', line)
-        # Remove parameter before {} command definition
-        line = re.sub(r'(#[0-9])+', '', line, 1)
-        # Remove outer {} command brackets with ""
-        line = re.sub(r'( {)|(}$)', '"', line)
-        # Add "": to the new command
-        line = re.sub(r'(^\\[A-Za-z]+)', r'"\1":', line, 1)
-        # Add , at end of line
-        line = re.sub(r'$', ',', line, 1)
-        # Duplicate all \
-        line = re.sub(r'\\', r'\\\\', line)
-        tmp.append(line)
-    macros = '\n'.join(tmp)
-    return macros
-
-
-# Append acronyms at the end of every pag
-rst_epilog = acronyms
-
-katex_macros = latex_to_katex(latexmacros)
+rst_epilog = acronyms  # append acronyms to every page
+katex_macros = katex.latex_defs_to_katex_macros(latex_macros)
 
 
 # -- HTML ----------------------------------------------------------------
@@ -121,7 +96,7 @@ htmlhelp_basename = 'sfs-doc'
 
 # -- LATEX ---------------------------------------------------------------
 
-latexmacros += r'''
+latex_macros += r'''
 \makeatletter
 \ltx@ifundefined{fancyhf}{}{
   % Use \pagestyle{normal} as the primary pagestyle for text.
@@ -155,7 +130,7 @@ latexmacros += r'''
 latex_elements = {
     'papersize': 'a4paper',
     'pointsize': '10pt',
-    'preamble': latexmacros,  # command definitions
+    'preamble': latex_macros,  # command definitions
     'figure_align': 'htbp',
     'sphinxsetup': 'TitleColor={rgb}{0,0,0}, verbatimwithframe=false, VerbatimColor={rgb}{.96,.96,.96}',
     'releasename': '\href{https://doi.org/10.5281/zenodo.1112451}{\color{black}doi:10.5281/zenodo.1112451}',

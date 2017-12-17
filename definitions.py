@@ -16,7 +16,7 @@ acronyms = """
 """
 
 # Definitions of LaTeX macros used in the document
-latexmacros = r"""
+latex_macros = r"""
     \def \i                {\mathrm{i}}
     \def \e              #1{\mathrm{e}^{#1}}
     \def \w                {\omega}
