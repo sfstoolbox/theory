@@ -111,7 +111,7 @@ the 2D case results in
         |\x-\x_0|} \; D(\x_0,\w) G_\text{3D}(\x-\x0,\w) \d A(\x_0).
 
 If the amplitude correction is further restricted to one reference point
-:math:`\xref`, 2.5D the driving function for |WFS| can be formulated as
+:math:`\xref`, the 2.5D driving function for |WFS| can be formulated as
 
 .. math::
     :label: D25D_wfs
