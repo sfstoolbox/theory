@@ -46,7 +46,7 @@ plot_rcparams = {'figure.figsize' : [8, 4.5] }
 
 # The suffix(es) of source filenames.
 # You can specify multiple suffix as a list of string:
-source_suffix = '.txt'
+source_suffix = '.rst'
 
 # The encoding of source files.
 #source_encoding = 'utf-8-sig'
