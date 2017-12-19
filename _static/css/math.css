@@ -1,0 +1,17 @@
+/* Hack to get the same permalink symbol as the RTD theme */
+.eqno .headerlink {
+    display: none;
+    visibility: hidden;
+    font-size: 14px;
+}
+.eqno .headerlink:after {
+    visibility: visible;
+    content: "\f0c1";
+    font-family: FontAwesome;
+    display: inline-block;
+    margin-left: -.9em;
+}
+.eqno:hover .headerlink {
+    display: inline-block;
+    visibility: hidden !important;
+}

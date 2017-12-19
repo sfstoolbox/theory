@@ -65,6 +65,7 @@ katex_macros = katex.latex_defs_to_katex_macros(latex_macros)
 def setup(app):
     """Include custom theme files to sphinx HTML header"""
     app.add_stylesheet('css/abbr.css')
+    app.add_stylesheet('css/math.css')
 
 html_theme = "sphinx_rtd_theme"
 html_static_path = ['_static']
