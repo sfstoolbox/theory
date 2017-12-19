@@ -4,13 +4,6 @@ Sound Field Synthesis
 .. image:: img/header.png
     :align: center
  
-.. toctree::
-    :maxdepth: 3
-    :hidden:
-
-    index
-
-
 Sound field synthesis (SFS) includes all methods that try to generate a defined
 sound field in an extended area that is surrounded by loudspeakers. This page
 focuses on those methods that provide analytical solutions to the underlying
@@ -1768,8 +1761,10 @@ support driving functions from |WFS|.
 
 .. _sec-footnotes:
 
-Footnotes
----------
+.. only:: html
+
+    Footnotes
+    ---------
 
 .. [#F1]
     Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due
@@ -1806,8 +1801,10 @@ Footnotes
 
 .. _sec-references:
 
-References
-----------
+.. only:: html
+
+    References
+    ----------
 
 .. [AbramowitzStegun1972]
     Abramowitz, M. and Stegun, I. A.,

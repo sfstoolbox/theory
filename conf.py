@@ -26,7 +26,7 @@ extensions = [
         'sphinxcontrib.katex',
         'matplotlib.sphinxext.plot_directive'
 ]
-master_doc = 'index'
+master_doc = 'contents'
 source_suffix = '.rst'
 exclude_patterns = ['_build']
 
