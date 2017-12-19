@@ -4,6 +4,13 @@ Sound Field Synthesis
 .. image:: img/header.png
     :align: center
  
+.. toctree::
+    :maxdepth: 3
+    :hidden:
+
+    index
+
+
 Sound field synthesis (SFS) includes all methods that try to generate a defined
 sound field in an extended area that is surrounded by loudspeakers. This page
 focuses on those methods that provide analytical solutions to the underlying
