@@ -153,8 +153,8 @@ described and finally it is shown how to derive the driving function
 
 .. _sec-nfchoa:
 
-Solution for Special Geometries: |NFC-HOA| and |SDM|
-----------------------------------------------------
+Solution for Special Geometries: NFC-HOA and SDM
+------------------------------------------------
 
 The integral equation :eq:`single-layer` states a Fredholm equation of first
 kind with a Green’s function as kernel. This type of equation can be solved in a
@@ -433,8 +433,8 @@ for :math:`0<|k_x|<|\wc |\,`.
 
 .. _sec-wfs:
 
-High Frequency Approximation: |WFS|
------------------------------------
+High Frequency Approximation: WFS
+---------------------------------
 
 The single-layer potential :eq:`single-layer` satisfies the homogeneous
 Helmholtz equation both in the interior and exterior regions :math:`V` and
@@ -926,8 +926,8 @@ The expansion coefficients for linear basis functions are given as
 
 .. _sec-driving-functions-nfchoa-sdm:
 
-Driving functions for |NFC-HOA| and |SDM|
------------------------------------------
+Driving functions for NFC-HOA and SDM
+-------------------------------------
 
 In the following, driving functions for |NFC-HOA| and |SDM| are derived
 for spherical, circular, and linear secondary source distributions. Among the
@@ -1214,8 +1214,8 @@ In the SFS Toolbox only focused sources in |WFS| are considered at the moment.
 
 .. _sec-driving-functions-wfs:
 
-Driving functions for |WFS|
----------------------------
+Driving functions for WFS
+-------------------------
 
 In the following, the driving functions for |WFS| in the frequency and temporal
 domain for selected source models are presented. The temporal domain functions
@@ -1691,21 +1691,23 @@ The window function :math:`w(\x_0)` for a focused source can be calculated as
 
 .. _sec-driving-functions-local-sfs:
 
-Driving functions for |LSFS|
-----------------------------
+Driving functions for LSFS
+--------------------------
 
 The reproduction accuracy of |WFS| is limited due to practical aspects.  For the
 audible frequency range the desired sound field can not be synthesized
 aliasing-free over an extended listening area, which is surrounded by a discrete
 ensemble of individually driven loudspeakers.  However, it is suitable for
 certain applications to increase reproduction accuracy inside a smaller (local)
-listening region while stronger artifacts outside are permitted. The implemented
-Local Wave Field Synthesis method utilizes focused sources as a distribution of
-virtual loudspeakers which are placed more densely around the local listening
-area. These virtual loudspeakers can be driven by conventional SFS techniques,
-like e.g. |WFS| or |NFC-HOA|. The results are similar to band-limited |NFC-HOA|, with
-the difference that the form and position of the enhanced area can freely be
-chosen within the listening area.
+listening region while stronger artifacts outside are permitted. This approach
+is termed |LSFS| in general.
+
+The implemented Local Wave Field Synthesis method utilizes focused sources as a
+distribution of virtual loudspeakers which are placed more densely around the
+local listening area. These virtual loudspeakers can be driven by conventional
+SFS techniques, like e.g. |WFS| or |NFC-HOA|. The results are similar to
+band-limited |NFC-HOA|, with the difference that the form and position of the
+enhanced area can freely be chosen within the listening area.
 
 The set of focused sources is treated as a virtual loudspeaker distribution and
 their positions :math:`{\x_\text{fs}}` are subsumed under
