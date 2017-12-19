@@ -6,12 +6,12 @@ import shlex
 import sphinx_rtd_theme
 #import subprocess
 
-# If extensions (or modules to document with autodoc) are in another directory,
-# add these directories to sys.path here. If the directory is relative to the
-# documentation root, use os.path.abspath to make it absolute, like shown here.
-sys.path.insert(0, os.path.abspath('.'))  # temporary, for plot_directive
+import sphinxcontrib.katex as katex
 
-from acronyms import rst_epilog # This includes things like |HRTF| etc.
+# Allow import/extensions from current path
+sys.path.insert(0, os.path.abspath('.'))
+from definitions import acronyms      # This includes things like |HRTF|
+from definitions import latex_macros  # Math definitions like \x
 
 def setup(app):
     """Include custom theme files to sphinx HTML header"""
@@ -82,25 +82,9 @@ pygments_style = 'trac'
 todo_include_todos = False
 
 
-# -- Options for HTML output ----------------------------------------------
-
-katex_macros = r'''
-  "\\i": "\\mathrm{i}",
-  "\\e": "\\mathrm{e}^{#1}",
-  "\\w": "\\omega",
-  "\\wc": "\\frac{\\omega}{c}",
-  "\\vec": "\\mathbf{#1}",
-  "\\x": "\\vec{x}",
-  "\\xs": "\\x_\\text{s}",
-  "\\xref": "\\x_\\text{ref}",
-  "\\k": "\\vec{k}",
-  "\\n": "\\vec{n}",
-  "\\d": "\\operatorname{d}\\!{}",
-  "\\dirac": "\\operatorname{\\delta}\\left(#1\\right)",
-  "\\scalarprod":   "\\left\\langle#1,#2\\right\\rangle",
-  "\\Hankel": "\\mathop{{}H_{#2}^{(#1)}}\\!\\left(#3\\right)",
-  "\\hankel": "\\mathop{{}h_{#2}^{(#1)}}\\!\\left(#3\\right)"
-'''
+# -- ACRONYMS AND MATH ---------------------------------------------------
+rst_epilog = acronyms  # append acronyms to every page
+katex_macros = katex.latex_defs_to_katex_macros(latex_macros)
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
@@ -154,45 +138,25 @@ htmlhelp_basename = 'sfs-doc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
-# The paper size ('letterpaper' or 'a4paper').
-#'papersize': 'letterpaper',
-
-# The font size ('10pt', '11pt' or '12pt').
-#'pointsize': '10pt',
-
-# Additional stuff for the LaTeX preamble.
-#'preamble': '',
-
-# Latex figure (float) alignment
-#'figure_align': 'htbp',
+        'papersize': 'a4paper',
+        'pointsize': '10pt',
+        'preamble': latex_macros,  # command definitions
+        'figure_align': 'htbp',
+        'sphinxsetup': 'TitleColor={rgb}{0,0,0}, verbatimwithframe=false, VerbatimColor={rgb}{.96,.96,.96}',
 }
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  (master_doc, 'sfs-toolbox-documentation.tex', u'SFS Toolbox -- Theory',
-   u'SFS Toolbox team', 'manual'),
+  (master_doc,
+   'sfs-toolbox-documentation.tex',
+   u'Theory of Sound Field Synthesis',
+   u'SFS Toolbox Developers',
+   'manual',
+   True),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
 #latex_logo = None
-
-# For "manual" documents, if this is true, then toplevel headings are parts,
-# not chapters.
-#latex_use_parts = False
-
-# If true, show page references after internal links.
-#latex_show_pagerefs = False
-
-# If true, show URL addresses after external links.
-#latex_show_urls = False
-
-# Documents to append as an appendix to all manuals.
-#latex_appendices = []
-
-# If false, no module index is generated.
-#latex_domain_indices = True
-
-
