@@ -1159,12 +1159,15 @@ results in [Ahrens2012]_, eq. (4.53)
 .. math::
     :label: D.sdm.ps.2.5D
 
-    D_{\text{linear},\,\text{2.5D}}(x_0,\w) =
-        A(\w) \int_{-\infty}^\infty \frac{
-        \Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
-        (y_\text{ref}-y_\text{s})} \chi(-k_x,x_\text{s})}
-        {\Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
-        y_\text{ref}}} \chi(k_x,x_0) \d k_x.
+    \begin{aligned}
+        D_{\text{linear},\,\text{2.5D}}(x_0,\w) =&
+            A(\w) \int_{-\infty}^\infty \frac{
+            \Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
+            (y_\text{ref}-y_\text{s})} \chi(-k_x,x_\text{s})}
+            {\Hankel{2}{0}{\sqrt{(\wc )^2-k_x^2} \;
+            y_\text{ref}}} \\
+            &\cdot \chi(k_x,x_0) \d k_x.
+    \end{aligned}
 
 .. _sec-driving-functions-nfchoa-sdm-line-source:
 
@@ -1441,11 +1444,14 @@ after [Schultz2016]_, (2.146). Under the assumption of :math:`\frac{\omega}{c}
 .. math::
     :label: D.wfs.ps.2.5D
 
-    D_\text{2.5D}(\x_0,\w) =
-        \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
-        \sqrt{\frac{|\xref-\x_0|}{|\xref-\x_0|+|\x_0-\xs|}}
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \e{-\i\wc |\x_0-\xs|},
+    \begin{aligned}
+        D_\text{2.5D}(\x_0,\w) =&
+            \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
+            \sqrt{\frac{|\xref-\x_0|}{|\xref-\x_0|+|\x_0-\xs|}} \\
+            &\cdot
+            \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \e{-\i\wc |\x_0-\xs|},
+    \end{aligned}
 
 whereby :math:`\xref` is a reference point at which the synthesis is correct.
 A second stationary phase approximation can be applied to reach at
@@ -1454,11 +1460,14 @@ A second stationary phase approximation can be applied to reach at
 .. math::
     :label: D.wfs.ps.2.5D.refline
 
-    D_\text{2.5D}(\x_0,\w) =
-        \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
-        \sqrt{\frac{d_\text{ref}}{d_\text{ref}+d_\text{s}}}
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \e{-\i\wc |\x_0-\xs|},
+    \begin{aligned}
+        D_\text{2.5D}(\x_0,\w) =&
+            \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
+            \sqrt{\frac{d_\text{ref}}{d_\text{ref}+d_\text{s}}} \\
+            &\cdot
+            \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \e{-\i\wc |\x_0-\xs|},
+    \end{aligned}
 
 which is the traditional formulation of a point source in |WFS| as given by eq.
 (2.27) in [Verheijen1997]_ [#F6]_. Now :math:`d_\text{ref}` is the distance of a
@@ -1491,11 +1500,14 @@ domain via an inverse Fourier transform :eq:`ifft` it follows
 .. math::
     :label: d.wfs.ps.2.5D.refline
 
-    d_\text{2.5D}(\x_0,t) =
-        \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
-        \sqrt{\frac{d_\text{ref}}{d_\text{ref}+d_\text{s}}}
-        \cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \dirac{t-\frac{|\x_0-\xs|}{c}}.
+    \begin{aligned}
+        d_\text{2.5D}(\x_0,t) =&
+            \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
+            \sqrt{\frac{d_\text{ref}}{d_\text{ref}+d_\text{s}}} \\
+            &\cdot
+            \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \dirac{t-\frac{|\x_0-\xs|}{c}}.
+    \end{aligned}
 
 The window function :math:`w(\x_0)` for a point source as source model can be
 calculated after [Spors2008]_ as
@@ -1678,11 +1690,14 @@ The 2.5D driving functions are given by the time-reversed version of
 .. math::
     :label: D.wfs.fs.2.5D
 
-    D_\text{2.5D}(\x_0,\w) =
-        \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
-        \sqrt{\frac{|\xref-\x_0|}{| |\x_0-\xs|-|\xref-\x_0| |}}
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \e{\i\wc |\x_0-\xs|},
+    \begin{aligned}
+        D_\text{2.5D}(\x_0,\w) =&
+            \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
+            \sqrt{\frac{|\xref-\x_0|}{| |\x_0-\xs|-|\xref-\x_0| |}} \\
+            &\cdot
+            \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \e{\i\wc |\x_0-\xs|},
+    \end{aligned}
 
 and the time reversed version of :eq:`d.wfs.ps.2.5D.refline` for a reference
 line, compare [Start1997]_, eq. (3.16)
@@ -1690,11 +1705,14 @@ line, compare [Start1997]_, eq. (3.16)
 .. math::
     :label: D.wfs.fs.2.5D.refline
 
-    D_\text{2.5D}(\x_0,\w) =
-        \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
-        \sqrt{\frac{d_\text{ref}}{d_\text{ref}-d_\text{s}}}
-        \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \e{\i\wc |\x_0-\xs|},
+    \begin{aligned}
+        D_\text{2.5D}(\x_0,\w) =&
+            \frac{1}{\sqrt{2\pi}} A(\w) w(\x_0) \sqrt{\i\wc}
+            \sqrt{\frac{d_\text{ref}}{d_\text{ref}-d_\text{s}}} \\
+            &\cdot
+            \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \e{\i\wc |\x_0-\xs|},
+    \end{aligned}
 
 where :math:`d_\text{ref}` is the distance of a line parallel to the secondary
 source distribution and :math:`d_\text{s}` the shortest possible distance from
@@ -1724,11 +1742,14 @@ follows
 .. math::
     :label: d.wfs.fs.2.5D.refline
 
-    d_\text{2.5D}(\x_0,t) =
-        \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
-        \sqrt{\frac{d_\text{ref}}{d_\text{ref}-d_\text{s}}}
-        \cdot \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
-        \dirac{t+\frac{|\x_0-\xs|}{c}}.
+    \begin{aligned}
+        d_\text{2.5D}(\x_0,t) =&
+            \frac{1}{\sqrt{2\pi}} a(t) * h_\text{2.5D}(t) * w(\x_0)
+            \sqrt{\frac{d_\text{ref}}{d_\text{ref}-d_\text{s}}} \\
+            &\cdot
+            \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
+            \dirac{t+\frac{|\x_0-\xs|}{c}}.
+    \end{aligned}
 
 In this document a focused source always refers to the time-reversed version of a
 point source, but a focused line source can be defined in the same way starting
