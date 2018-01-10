@@ -1841,10 +1841,8 @@ support driving functions from |WFS|.
 
 .. _sec-footnotes:
 
-.. only:: html
-
-    Footnotes
-    ---------
+Footnotes
+---------
 
 .. [#F1]
     Note that :math:`\sin\theta` is used here instead of :math:`\cos\theta` due
@@ -1881,10 +1879,8 @@ support driving functions from |WFS|.
 
 .. _sec-references:
 
-.. only:: html
-
-    References
-    ----------
+References
+----------
 
 .. [AbramowitzStegun1972]
     Abramowitz, M. and Stegun, I. A.,
