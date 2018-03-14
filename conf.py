@@ -16,7 +16,7 @@ from definitions import latex_macros  # Math definitions like \x
 # -- GENERAL -------------------------------------------------------------
 
 project = 'SFS Toolbox'
-copyright = '2016-2017, SFS Toolbox Developers'
+copyright = '2016-2018, SFS Toolbox Developers'
 author = 'SFS Toolbox Developers'
 
 needs_sphinx = '1.3'   # minimal sphinx version
