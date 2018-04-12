@@ -28,7 +28,7 @@ supported. The resulting driving function for a loudspeaker located at
 :math:`\x_0` reads
 
 .. math::
-    :label: D.localwfs
+    :label: freq-drivingfunction-localwfs
 
     D(\x_0,\w) = \sum_{{\x_\text{fs}}\in \mathcal{X}_{\mathrm{fs}}}
         D_{\mathrm l}({\x_\text{fs}}, \w)
@@ -42,7 +42,7 @@ source at :math:`{\x_\text{fs}}` weighted by :math:`D_\text{l}({\x_\text{fs}},
 This yields
 
 .. math::
-    :label: D.localwfs.fs
+    :label: freq-drivingfunction-localwfs-focused-source
 
     D_{\mathrm{fs}}(\x_0,{\x_\text{fs}},\w) =
         \frac{1}{2\pi} A(\w) w(\x_0) \i\wc 
@@ -53,7 +53,7 @@ This yields
 and
 
 .. math::
-    :label: D.localwfs.fs.2.5D
+    :label: freq-drivingfunction-localwfs-focused-source-25d
 
     D_{\mathrm{fs,2.5D}}(\x_0,{\x_\text{fs}},\w) = 
        \frac{g_0}{2\pi} A(\w) w(\x_0) \sqrt{\i\wc }
@@ -64,7 +64,7 @@ for the 2.5D case. For the temporal domain, inverse Fourier transform yields the
 driving signals
 
 .. math::
-    :label: d.localwfs
+    :label: time-drivingfunction-localwfs-focused-source
 
     d(\x_0,t) = \sum_{{\x_\text{fs}}\in \mathcal{X}_{\mathrm{fs}}} 
         d_{\mathrm l}({\x_\text{fs}}, t) * 
