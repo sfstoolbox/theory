@@ -76,6 +76,7 @@ Table of Contents
 .. toctree::
     :maxdepth: 3
 
+    contributors
     defs/index
     problem/index
     nfchoa/index
