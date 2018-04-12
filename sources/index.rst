@@ -45,14 +45,15 @@ Plane Wave
 .. figure:: plane-wave.*
     :align: center
 
-    Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
-    :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
+    Sound pressure for a monochromatic plane wave
+    :eq:`plane-wave-frequency-domain` going into the direction :math:`(1, 1,
+    0)`. Parameters: :math:`f = 800` Hz.
 
 The source model for a plane wave is given after :cite:`Williams1999`,
 eq. (2.24) [#F1]_ as
 
 .. math::
-    :label: S.pw
+    :label: plane-wave-frequency-domain
 
     S(\x,\w) = A(\w) \e{-\i\wc \scalarprod{\n_k}{\x}},
 
@@ -62,7 +63,7 @@ where :math:`A(\w)` denotes the frequency spectrum of the source and
 Transformed in the temporal domain this becomes
 
 .. math::
-    :label: s.pw
+    :label: plane-wave-time-domain
 
     s(\x,t) = a(t) * \dirac{t -\frac{\scalarprod{\n_k}{\x}}{c}},
 
@@ -130,14 +131,15 @@ Point Source
 .. figure:: point-source.*
     :align: center
 
-    Sound pressure for a monochromatic point source :eq:`S.ps` placed at :math:`(0, 0, 0)`.
+    Sound pressure for a monochromatic point source
+    :eq:`point-source-frequency-domain` placed at :math:`(0, 0, 0)`.
     Parameters: :math:`f = 800` Hz.
 
 The source model for a point source is given by the three dimensional Green’s
 function after :cite:`Williams1999`, eq. (6.73) as
 
 .. math::
-    :label: S.ps
+    :label: point-source-frequency-domain
 
     S(\x,\w) = A(\w) \frac{1}{4\pi} \frac{\e{-\i
         \wc |\x-\xs|}}{|\x-\xs|},
@@ -147,7 +149,7 @@ where :math:`\xs` describes the position of the point source.
 Transformed to the temporal domain this becomes
 
 .. math::
-    :label: s.ps
+    :label: point-source-time-domain
 
     s(\x,t) = a(t) * \frac{1}{4\pi} \frac{1}{|\x-\xs|}
         \dirac{t - \frac{|\x-\xs|}{c}}.
@@ -209,7 +211,8 @@ Dipole Point Source
 .. figure:: dipole-point-source.*
     :align: center
 
-    Sound pressure for a monochromatic dipole point source :eq:`S.dps` placed at
+    Sound pressure for a monochromatic dipole point source
+    :eq:`dipole-point-source-frequency-domain` placed at
     :math:`(0, 0, 0)` and pointing towards :math:`(1, 0, 0)`.  Parameters:
     :math:`f = 800` Hz.
 
@@ -218,7 +221,7 @@ directional derivative of the three dimensional Green’s function with respect 
 :math:`{\n_\text{s}}` defining the orientation of the dipole source.
 
 .. math::
-    :label: S.dps
+    :label: dipole-point-source-frequency-domain
 
     \begin{aligned}
         S(\x,\w) &= A(\w) \frac{1}{4\pi}
@@ -234,7 +237,7 @@ directional derivative of the three dimensional Green’s function with respect 
 Transformed to the temporal domain this becomes
 
 .. math::
-    :label: s.dps
+    :label: dipole-point-source-time-domain
 
     s(\x,t) = a(t) *
         \left( \frac{1}{|\x-\xs|} + {\mathcal{F}^{-1}\left\{
@@ -271,14 +274,15 @@ Line Source
 .. figure:: line-source.*
     :align: center
 
-    Sound pressure for a monochromatic line source :eq:`S.ls` placed at :math:`(0, 0, 0)`.
-    Parameters: :math:`f = 800` Hz.
+    Sound pressure for a monochromatic line source
+    :eq:`line-source-frequency-domain` placed at :math:`(0, 0, 0)`.  Parameters:
+    :math:`f = 800` Hz.
 
 The source model for a line source is given by the two dimensional Green’s
 function after :cite:`Williams1999`, eq. (8.47) as
 
 .. math::
-    :label: S.ls
+    :label: line-source-frequency-domain
 
     S(\x,\w) = -A(\w) \frac{\i}{4} \Hankel{2}{0}{\wc |\x-\xs|}.
 
@@ -287,7 +291,7 @@ Applying the large argument approximation of the Hankel function
 becomes
 
 .. math::
-    :label: s.ls
+    :label: line-source-time-domain
 
     s(\x,t) = a(t) * \mathcal{F}^{-1}\left\{\sqrt{
         \frac{c}{\i\w}}\right\} * \sqrt{\frac{1}{8\pi}}
