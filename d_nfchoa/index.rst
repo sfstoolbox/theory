@@ -51,17 +51,18 @@ Plane Wave
     :align: center
 
     Sound pressure for a monochromatic plane wave synthesized with 2.5D
-    |NFC-HOA| :eq:`D.nfchoa.pw.2.5D`.  Parameters: :math:`\n_k = (0, -1, 0)`,
-    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+    |NFC-HOA| :eq:`freq-drivingfunction-nfchoa-25d-plane`.  Parameters:
+    :math:`\n_k = (0, -1, 0)`, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 For a spherical secondary source distribution with radius :math:`R_0` the
 spherical expansion coefficients of a plane
-wave :eq:`plane-wave-spherical-coefficients` and of the Green’s function for a
-point source :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
-:cite:`Schultz2014`, eq. (A3)
+wave :eq:`plane-spherical-coefficients` and of the Green’s function for a
+point source :eq:`freq-greens-function-spherical` are inserted
+into :eq:`freq-drivingfunction-spherical` and yield :cite:`Schultz2014`,
+eq. (A3)
 
 .. math::
-    :label: D.nfchoa.pw.3D
+    :label: freq-drivingfunction-nfchoa-3d-plane
 
     D_\text{spherical}(\theta_0,\phi_0,\w) = -A(\w)
         \frac{4\pi}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
@@ -71,12 +72,12 @@ point source :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
 
 For a circular secondary source distribution with radius :math:`R_0` the
 circular expansion coefficients of a plane
-wave :eq:`plane-wave-circular-coefficients` and of the Green’s function for a
-line source :eq:`G_circular` are inserted into :eq:`D_circular` and yield
-:cite:`Ahrens2009a`, eq. (16)
+wave :eq:`plane-circular-coefficients` and of the Green’s function for a
+line source :eq:`freq-greens-function-circular` are inserted
+into :eq:`freq-drivingfunction-circular` and yield :cite:`Ahrens2009a`, eq. (16)
 
 .. math::
-    :label: D.nfchoa.pw.2D
+    :label: freq-drivingfunction-nfchoa-2d-plane
 
     D_\text{circular}(\phi_0,\w) = -A(\w) \frac{2\i}{\pi R_0}
         \sum_{m=-\infty}^\infty \frac{\i^{-m}\Phi_{-m}(\phi_k)}
@@ -85,11 +86,12 @@ line source :eq:`G_circular` are inserted into :eq:`D_circular` and yield
 For a circular secondary source distribution with radius :math:`R_0` and point
 source as Green’s function the 2.5D driving function is given by inserting the
 spherical expansion coefficients for a plane
-wave :eq:`plane-wave-spherical-coefficients` and a point
-source :eq:`point-source-spherical-coefficients` into :eq:`D_circular_25D` as
+wave :eq:`plane-spherical-coefficients` and a point
+source :eq:`point-spherical-coefficients`
+into :eq:`freq-drivingfunction-circular-25d` as
 
 .. math::
-    :label: D.nfchoa.pw.2.5D
+    :label: freq-drivingfunction-nfchoa-25d-plane
 
     D_{\text{circular},\,\text{2.5D}}(\phi_0,\w) = -A(\w)
         \frac{2}{R_0} \sum_{m=-\infty}^\infty
@@ -99,14 +101,14 @@ source :eq:`point-source-spherical-coefficients` into :eq:`D_circular_25D` as
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis the 2.5D driving function is given by inserting the linear
 expansion coefficients for a point source as Green’s
-function :eq:`point-source-linear-coefficients` and a plane
-wave :eq:`plane-wave-linear-coefficients` into :eq:`D_linear_25D` and exploiting
-the fact that :math:`(\wc )^2 - k_{x_\text{s}}` is constant.
-Assuming :math:`0 \le |k_{x_\text{s}}| \le |\wc |` this results in
-:cite:`Ahrens2010`, eq. (17)
+function :eq:`point-linear-coefficients` and a plane
+wave :eq:`plane-linear-coefficients`
+into :eq:`freq-drivingfunction-linear-25d` and exploiting the fact that
+:math:`(\wc )^2 - k_{x_\text{s}}` is constant.  Assuming :math:`0 \le
+|k_{x_\text{s}}| \le |\wc |` this results in :cite:`Ahrens2010`, eq. (17)
 
 .. math::
-    :label: D.sdm.pw.2.5D
+    :label: freq-drivingfunction-sdm-25d-plane
 
     D_{\text{linear},\,\text{2.5D}}(x_0,\w) = A(\w)
         \frac{4\i\chi(k_y,y_\text{ref})}
@@ -115,7 +117,7 @@ Assuming :math:`0 \le |k_{x_\text{s}}| \le |\wc |` this results in
 Transferred to the temporal domain this results in :cite:`Ahrens2010`, eq. (18)
 
 .. math::
-    :label: d.sdm.pw.2.5D
+    :label: time-drivingfunction-sdm-25d-plane
 
     d_{\text{linear},\,\text{2.5D}}(x_0,t) = h(t) *
         a\left(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k\right),
@@ -123,7 +125,7 @@ Transferred to the temporal domain this results in :cite:`Ahrens2010`, eq. (18)
 where :math:`\phi_k` denotes the azimuth direction of the plane wave and
 
 .. math::
-    :label: h.sdm
+    :label: time-prefilter-sdm
 
     h(t) = {\mathcal{F}^{-1}\left\{\frac{4\i}
         {\Hankel{2}{0}{k_y y_\text{ref}}}\right\}}.
@@ -167,17 +169,18 @@ Point Source
     :align: center
 
     Sound pressure for a monochromatic point source synthesized with 2.5D
-    |NFC-HOA| :eq:`D.nfchoa.ps.2.5D`.  Parameters: :math:`\xs = (0, 2.5, 0)` m,
-    :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
+    |NFC-HOA| :eq:`freq-drivingfunction-nfchoa-25d-point`.  Parameters:
+    :math:`\xs = (0, 2.5, 0)` m, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 For a spherical secondary source distribution with radius :math:`R_0` the
 spherical coefficients of a point
-source :eq:`point-source-spherical-coefficients` and of the Green’s
-function :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
-:cite:`Ahrens2012`, eq. (5.7) [#F1]_
+source :eq:`point-spherical-coefficients` and of the Green’s
+function :eq:`freq-greens-function-spherical` are inserted
+into :eq:`freq-drivingfunction-spherical` and yield :cite:`Ahrens2012`,
+eq. (5.7) [#F1]_
 
 .. math::
-    :label: D.nfchoa.ps.3D
+    :label: freq-drivingfunction-nfchoa-3d-point
 
     D_\text{spherical}(\theta_0,\phi_0,\w) =
         A(\w) \frac{1}{R_0^{\,2}} \sum_{n=0}^\infty \sum_{m=-n}^n
@@ -187,12 +190,13 @@ function :eq:`G_spherical` are inserted into :eq:`D_spherical` and yield
 
 For a circular secondary source distribution with radius :math:`R_0` and point
 source as secondary sources the 2.5D driving function is given by inserting the
-spherical coefficients :eq:`point-source-spherical-coefficients`
-and :eq:`G_spherical` into :eq:`D_circular_25D`. This results in
-:cite:`Ahrens2012`, eq. (5.8)
+spherical coefficients :eq:`point-spherical-coefficients`
+and :eq:`freq-greens-function-spherical` into
+:eq:`freq-drivingfunction-circular-25d`. This results in :cite:`Ahrens2012`,
+eq. (5.8)
 
 .. math::
-    :label: D.nfchoa.ps.2.5D
+    :label: freq-drivingfunction-nfchoa-25d-point
 
     D_{\text{circular},\,\text{2.5D}}(\phi_0,\w) =
         A(\w) \frac{1}{2\pi R_0} \sum_{m=-\infty}^{\infty}
@@ -203,12 +207,13 @@ and :eq:`G_spherical` into :eq:`D_circular_25D`. This results in
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis and point sources as secondary sources the 2.5D driving function
 for a point source is given by inserting the corresponding linear expansion
-coefficients :eq:`point-source-linear-coefficients` and :eq:`G_linear`
-into :eq:`D_linear_25D`.  Assuming :math:`0 \le |k_x| < |\wc |` this
-results in :cite:`Ahrens2012`, eq. (4.53)
+coefficients :eq:`point-linear-coefficients`
+and :eq:`freq-greens-function-linear` into
+:eq:`freq-drivingfunction-linear-25d`. Assuming :math:`0 \le |k_x| < |\wc |`
+this results in :cite:`Ahrens2012`, eq. (4.53)
 
 .. math::
-    :label: D.sdm.ps.2.5D
+    :label: freq-drivingfunction-sdm-25d-point
 
     \begin{aligned}
         D_{\text{linear},\,\text{2.5D}}(x_0,\w) =&
@@ -225,13 +230,13 @@ results in :cite:`Ahrens2012`, eq. (4.53)
 Line Source
 ~~~~~~~~~~~
 
-For a spherical secondary source distribution with radius :math:`R_0` the spherical
-coefficients of a line source :eq:`line-source-spherical-coefficients` and of
-the Green's function :eq:`G_spherical` are inserted into :eq:`D_spherical` and
-yield :cite:`Hahn2015`, eq. (20)
+For a spherical secondary source distribution with radius :math:`R_0` the
+spherical coefficients of a line source :eq:`line-spherical-coefficients` and of
+the Green's function :eq:`freq-greens-function-spherical` are inserted into
+:eq:`freq-drivingfunction-spherical` and yield :cite:`Hahn2015`, eq. (20)
 
 .. math::
-    :label: D.nfchoa.ls.3D
+    :label: freq-drivingfunction-nfchoa-3d-line
 
     D_{\text{spherical}}(\theta_0,\phi_0,\w) = A(\w) \frac{1}{2 R_0^2}
         \sum_{n=0}^{\infty} \sum_{m=-n}^{n}
@@ -242,11 +247,12 @@ yield :cite:`Hahn2015`, eq. (20)
 
 For a circular secondary source distribution with radius :math:`R_0` and line
 sources as secondary sources the driving function is given by inserting the
-circular coefficients :eq:`line-source-circular-coefficients`
-and :eq:`G_circular` into :eq:`D_circular` as
+circular coefficients :eq:`line-circular-coefficients`
+and :eq:`freq-greens-function-circular` into
+:eq:`freq-drivingfunction-circular` as
 
 .. math::
-    :label: D.nfchoa.ls.2D
+    :label: freq-drivingfunction-nfchoa-2d-line
 
     D_{\text{circular}}(\phi_0,\w) = A(\w) \frac{1}{2\pi R_0}
         \sum_{m=-\infty}^{\infty}
@@ -256,12 +262,12 @@ and :eq:`G_circular` into :eq:`D_circular` as
 
 For a circular secondary source distribution with radius :math:`R_0` and point
 sources as secondary sources the 2.5D driving function is given by inserting the
-spherical coefficients :eq:`line-source-spherical-coefficients`
-and :eq:`G_spherical` into :eq:`D_circular_25D` after :cite:`Hahn2015`, eq. (23)
-as
+spherical coefficients :eq:`line-spherical-coefficients`
+and :eq:`freq-greens-function-spherical` into
+:eq:`freq-drivingfunction-circular-25d` after :cite:`Hahn2015`, eq. (23) as
 
 .. math::
-    :label: D.nfchoa.ls.2.5D
+    :label: freq-drivingfunction-nfchoa-25d-line
 
     D_{\text{circular},\,\text{2.5D}}(\phi_0,\w) =
         A(\w) \frac{1}{2 R_0} \sum_{m=-\infty}^{\infty}
@@ -272,11 +278,11 @@ as
 
 For an infinite linear secondary source distribution located on the
 :math:`x`-axis and line sources as secondary sources the driving function is
-given by inserting the linear coefficients :eq:`line-source-linear-coefficients`
-and :eq:`G_linear` into :eq:`D_linear` as
+given by inserting the linear coefficients :eq:`line-linear-coefficients`
+and :eq:`freq-greens-function-linear` into :eq:`freq-drivingfunction-linear` as
 
 .. math::
-    :label: D.sdm.ls.2D
+    :label: freq-drivingfunction-sdm-line-source-2d
 
     D_\text{linear}(x_0,\w) = A(\w) \frac{1}{2\pi}
         \int_{-\infty}^\infty \chi(k_y,y_s) \chi(k_x,x_0) \d k_x.

@@ -10,17 +10,17 @@ basis functions.  Then the involved functions are expanded into the basis
 functions :math:`\psi_n` after :cite:`Morse1981`, p. (940) as
 
 .. math::
-    :label: G_expansion
+    :label: freq-greens-function-expansion
 
     G(\x-\x_0, \w) = \sum_{n} \tilde{G}_n(\w) \psi_n^*(\x_0) \psi_n(\x)
 
 .. math::
-    :label: D_expansion
+    :label: freq-drivingfunction-expansion
 
     D(\x_0, \w) = \sum_n \tilde{D}_n(\w) \psi_n(\x_0)
 
 .. math::
-    :label: S_expansion
+    :label: freq-source-expansion
 
     S(\x, \w) = \sum_n \tilde{S}_n(\w) \psi_n(\x),
 
@@ -31,18 +31,18 @@ If the underlying space is not compact the equations will involve an integration
 instead of a summation
 
 .. math::
-    :label: G_expansion_non_compact
+    :label: freq-greens-function-expansion-non-compact
 
     G(\x-\x_0, \w) = \int \tilde{G}(\mu, \w) \psi^*(\mu, \x_0)
         \psi(\mu, \x) \d\mu
 
 .. math::
-    :label: D_expansion_non_compact
+    :label: freq-drivingfunction-expansion-non-compact
 
     D(\x_0, \w) = \int \tilde{D}(\mu, \w) \psi(\mu, \x_0) \d\mu
 
 .. math::
-    :label: S_expansion_non_compact
+    :label: freq-source-expansion-non-compact
 
     S(\x, \w) = \int \tilde{S}(\mu, \w) \psi(\mu, \x) \d\mu,
 
@@ -50,20 +50,20 @@ where :math:`\d\mu` is the measure in the underlying space.
 Introducing these equations into :eq:`single-layer` one gets
 
 .. math::
-    :label: D_HOA
+    :label: freq-drivingfunction-hoa
 
     \tilde{D}_n(\w) =
         \frac{\tilde{S}_n(\w)}{\tilde{G}_n(\w)}.
 
 This means that the Fredholm equation :eq:`single-layer` states a convolution.
-For geometries where the required orthogonal basis functions exist, :eq:`D_HOA`
-follows directly via the convolution theorem :cite:`Arfken2005`, eq. (1013).
-Due to the division of the desired sound field by the spectrum of the Green’s
-function this kind of approach has been named |SDM| :cite:`Ahrens2010`.  For
-circular and spherical geometries the term |NFC-HOA| is more common due to the
-corresponding basis functions. “Near-field compensated” highlights the usage of
-point sources as secondary sources in contrast to Ambisonics and |HOA| that
-assume plane waves as secondary sources.
+For geometries where the required orthogonal basis functions exist,
+:eq:`freq-drivingfunction-hoa` follows directly via the convolution theorem
+:cite:`Arfken2005`, eq. (1013).  Due to the division of the desired sound field
+by the spectrum of the Green’s function this kind of approach has been named
+|SDM| :cite:`Ahrens2010`.  For circular and spherical geometries the term
+|NFC-HOA| is more common due to the corresponding basis functions. “Near-field
+compensated” highlights the usage of point sources as secondary sources in
+contrast to Ambisonics and |HOA| that assume plane waves as secondary sources.
 
 The challenge is to find a set of basis functions for a given geometry.
 In the following paragraphs three simple geometries and their widely
@@ -106,7 +106,7 @@ function is then given by a simple division after :cite:`Ahrens2012`, eq. (3.21)
 [#F2]_ as
 
 .. math::
-    :label: D_spherical
+    :label: freq-drivingfunction-spherical
 
     \begin{gathered}
         D_\text{spherical}(\theta_0,\phi_0,\w) = \\
@@ -124,7 +124,7 @@ the north pole of the sphere :math:`\x_0 = (\frac{\pi}{2},0,R_0)`. For a point
 source this is given after :cite:`Schultz2014`, eq. (25) as
 
 .. math::
-    :label: G_spherical
+    :label: freq-greens-function-spherical
 
     \breve{G}_n^0(\tfrac{\pi}{2},0,\w) =
         -\i\wc \sqrt{\frac{2n+1}{4\pi}}
@@ -160,7 +160,7 @@ driving function can be calculated by a convolution along the surface of the
 circle as explicitly shown by :cite:`Ahrens2009a` and is then given as
 
 .. math::
-    :label: D_circular
+    :label: freq-drivingfunction-circular
 
     D_\text{circular}(\phi_0,\w) =
         \frac{1}{2\pi R_0} \sum_{m=-\infty}^\infty
@@ -174,7 +174,7 @@ secondary monopole source. For a line source located at :math:`\x_0 = (0,R_0)`
 this is given as
 
 .. math::
-    :label: G_circular
+    :label: freq-greens-function-circular
 
     \breve{G}_m(0,\w) = -\frac{\i}{4}
         \Hankel{2}{m}{\wc R_0},
@@ -210,7 +210,7 @@ For an infinitely long secondary source distribution located on the
 convolution along the plane after :cite:`Ahrens2012`, eq. (3.65) as
 
 .. math::
-    :label: D_planar
+    :label: freq-drivingfunction-planar
 
     D_\text{planar}(x_0,y_0,\w) = \frac{1}{4{\pi}^2} \iint_{-\infty}^\infty
        \frac{\breve{S}(k_x,y_\text{s},k_z,\w)}{\breve{G}(k_x,0,k_z,\w)}
@@ -222,7 +222,7 @@ planar expansion coefficients of a secondary point source after
 :cite:`Schultz2014`, eq. (49) with
 
 .. math::
-    :label: G_planar
+    :label: freq-greens-function-planar
 
     \breve{G}(k_x,0,k_z,\w) = -\frac{\i}{2}
         \frac{1}{\sqrt{(\wc )^2-k_x^2-k_z^2}},
@@ -260,7 +260,7 @@ For an infinitely long secondary source distribution located on the
 by a convolution along this axis after :cite:`Ahrens2012`, eq. (3.73) as
 
 .. math::
-    :label: D_linear
+    :label: freq-drivingfunction-linear
 
     D_\text{linear}(x_0,\w) = \frac{1}{2\pi} \int_{-\infty}^\infty
         \frac{\breve{S}(k_x,y_\text{s},\w)}{\breve{G}(k_x,0,\w)}
@@ -272,7 +272,7 @@ model, :math:`y_\text{s}`, :math:`z_\text{s}` its positional dependency, and
 with
 
 .. math::
-    :label: G_linear
+    :label: freq-greens-function-linear
 
     \breve{G}(k_x,0,\w) = -\frac{\i}{2}
         \frac{1}{\sqrt{(\wc )^2-k_x^2}},

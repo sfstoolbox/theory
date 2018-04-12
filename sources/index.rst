@@ -45,14 +45,15 @@ Plane Wave
 .. figure:: plane-wave.*
     :align: center
 
-    Sound pressure for a monochromatic plane wave :eq:`S.pw` going into the direction
-    :math:`(1, 1, 0)`. Parameters: :math:`f = 800` Hz.
+    Sound pressure for a monochromatic plane wave
+    :eq:`freq-plane` going into the direction :math:`(1, 1, 0)`.
+    Parameters: :math:`f = 800` Hz.
 
 The source model for a plane wave is given after :cite:`Williams1999`,
 eq. (2.24) [#F1]_ as
 
 .. math::
-    :label: S.pw
+    :label: freq-plane
 
     S(\x,\w) = A(\w) \e{-\i\wc \scalarprod{\n_k}{\x}},
 
@@ -62,7 +63,7 @@ where :math:`A(\w)` denotes the frequency spectrum of the source and
 Transformed in the temporal domain this becomes
 
 .. math::
-    :label: s.pw
+    :label: time-plane
 
     s(\x,t) = a(t) * \dirac{t -\frac{\scalarprod{\n_k}{\x}}{c}},
 
@@ -73,7 +74,7 @@ The expansion coefficients for spherical basis functions are given after
 :cite:`Ahrens2012`, eq. (2.38) as
 
 .. math::
-    :label: plane-wave-spherical-coefficients
+    :label: plane-spherical-coefficients
 
     \breve{S}_n^m(\theta_k,\phi_k,\w) = 4\pi\i^{-n}
         Y_n^{-m}(\theta_k,\phi_k),
@@ -84,7 +85,7 @@ In a similar manner the expansion coefficients for circular basis functions are
 given as
 
 .. math::
-    :label: plane-wave-circular-coefficients
+    :label: plane-circular-coefficients
 
     \breve{S}_m(\phi_\text{s},\w) = \i^{-n}
         \Phi_{-m}(\phi_\text{s}).
@@ -93,7 +94,7 @@ The expansion coefficients for linear basis functions are given after
 :cite:`Ahrens2012`, eq. (C.5) as
 
 .. math::
-    :label: plane-wave-linear-coefficients
+    :label: plane-linear-coefficients
 
     \breve{S}(k_x,y,\w) = 2\pi\dirac{k_x-k_{x,\text{s}}}
         \chi(k_{y,\text{s}},y),
@@ -130,14 +131,15 @@ Point Source
 .. figure:: point-source.*
     :align: center
 
-    Sound pressure for a monochromatic point source :eq:`S.ps` placed at :math:`(0, 0, 0)`.
+    Sound pressure for a monochromatic point source
+    :eq:`freq-point` placed at :math:`(0, 0, 0)`.
     Parameters: :math:`f = 800` Hz.
 
 The source model for a point source is given by the three dimensional Green’s
 function after :cite:`Williams1999`, eq. (6.73) as
 
 .. math::
-    :label: S.ps
+    :label: freq-point
 
     S(\x,\w) = A(\w) \frac{1}{4\pi} \frac{\e{-\i
         \wc |\x-\xs|}}{|\x-\xs|},
@@ -147,7 +149,7 @@ where :math:`\xs` describes the position of the point source.
 Transformed to the temporal domain this becomes
 
 .. math::
-    :label: s.ps
+    :label: time-point
 
     s(\x,t) = a(t) * \frac{1}{4\pi} \frac{1}{|\x-\xs|}
         \dirac{t - \frac{|\x-\xs|}{c}}.
@@ -156,7 +158,7 @@ The expansion coefficients for spherical basis functions are given
 after :cite:`Ahrens2012`, eq. (2.37) as
 
 .. math::
-    :label: point-source-spherical-coefficients
+    :label: point-spherical-coefficients
 
     \breve{S}_n^m(\theta_\text{s},\phi_\text{s},r_\text{s},\w) =
         -\i\wc
@@ -170,7 +172,7 @@ The expansion coefficients for linear basis functions are given after
 :cite:`Ahrens2012`, eq. (C.10) as
 
 .. math::
-    :label: point-source-linear-coefficients
+    :label: point-linear-coefficients
 
     \breve{S}(k_x,y,\w) =
         -\frac{\i}{4}
@@ -209,7 +211,8 @@ Dipole Point Source
 .. figure:: dipole-point-source.*
     :align: center
 
-    Sound pressure for a monochromatic dipole point source :eq:`S.dps` placed at
+    Sound pressure for a monochromatic dipole point source
+    :eq:`freq-dipole-point` placed at
     :math:`(0, 0, 0)` and pointing towards :math:`(1, 0, 0)`.  Parameters:
     :math:`f = 800` Hz.
 
@@ -218,7 +221,7 @@ directional derivative of the three dimensional Green’s function with respect 
 :math:`{\n_\text{s}}` defining the orientation of the dipole source.
 
 .. math::
-    :label: S.dps
+    :label: freq-dipole-point
 
     \begin{aligned}
         S(\x,\w) &= A(\w) \frac{1}{4\pi}
@@ -234,7 +237,7 @@ directional derivative of the three dimensional Green’s function with respect 
 Transformed to the temporal domain this becomes
 
 .. math::
-    :label: s.dps
+    :label: time-dipole-point
 
     s(\x,t) = a(t) *
         \left( \frac{1}{|\x-\xs|} + {\mathcal{F}^{-1}\left\{
@@ -271,14 +274,15 @@ Line Source
 .. figure:: line-source.*
     :align: center
 
-    Sound pressure for a monochromatic line source :eq:`S.ls` placed at :math:`(0, 0, 0)`.
-    Parameters: :math:`f = 800` Hz.
+    Sound pressure for a monochromatic line source
+    :eq:`freq-line` placed at :math:`(0, 0, 0)`.  Parameters:
+    :math:`f = 800` Hz.
 
 The source model for a line source is given by the two dimensional Green’s
 function after :cite:`Williams1999`, eq. (8.47) as
 
 .. math::
-    :label: S.ls
+    :label: freq-line
 
     S(\x,\w) = -A(\w) \frac{\i}{4} \Hankel{2}{0}{\wc |\x-\xs|}.
 
@@ -287,7 +291,7 @@ Applying the large argument approximation of the Hankel function
 becomes
 
 .. math::
-    :label: s.ls
+    :label: time-line
 
     s(\x,t) = a(t) * \mathcal{F}^{-1}\left\{\sqrt{
         \frac{c}{\i\w}}\right\} * \sqrt{\frac{1}{8\pi}}
@@ -298,7 +302,7 @@ The expansion coefficients for spherical basis functions are given
 after :cite:`Hahn2015`, eq. (15) as
 
 .. math::
-    :label: line-source-spherical-coefficients
+    :label: line-spherical-coefficients
 
     \breve{S}_n^m(\phi_\text{s},r_\text{s},\w) =
         -\pi \i^{m-n+1}
@@ -308,7 +312,7 @@ after :cite:`Hahn2015`, eq. (15) as
 The expansion coefficients for circular basis functions are given as
 
 .. math::
-    :label: line-source-circular-coefficients
+    :label: line-circular-coefficients
 
     \breve{S}_m(\phi_\text{s},r_\text{s},\w) = -\frac{\i}{4}
         \Hankel{2}{m}{\wc r_\text{s}}
@@ -317,7 +321,7 @@ The expansion coefficients for circular basis functions are given as
 The expansion coefficients for linear basis functions are given as
 
 .. math::
-    :label: line-source-linear-coefficients
+    :label: line-linear-coefficients
 
     \breve{S}(k_x,y_\text{s},\w) = -\frac{\i}{2}
         \frac{1}{\sqrt{(\wc )^2-k_x^2}}
@@ -325,8 +329,8 @@ The expansion coefficients for linear basis functions are given as
 
 
 .. [#F1]
-    Note that :cite:`Williams1999` defines the Fourier transform with transposed signs
-    as :math:`F(\w) = \int f(t) \e{\i\w t}`. This leads also to changed signs in
-    his definitions of the Green’s functions and field expansions.
+    Note that :cite:`Williams1999` defines the Fourier transform with transposed
+    signs as :math:`F(\w) = \int f(t) \e{\i\w t}`. This leads also to changed
+    signs in his definitions of the Green’s functions and field expansions.
 
 .. vim: filetype=rst spell:
