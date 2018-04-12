@@ -28,7 +28,6 @@ extensions = [
                     # avoid the ugly looking standard result. There is also
                     # a pull request for this:
                     # https://github.com/rtfd/sphinx_rtd_theme/pull/383
-        #'sphinx.ext.mathjax',
         'matplotlib.sphinxext.plot_directive',
         'sphinxcontrib.bibtex'
 ]
