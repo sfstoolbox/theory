@@ -63,8 +63,7 @@ You can link to any equation within it by the permalink that becomes visible by
 hovering over the corresponding equation number, e.g.
 :sfs:`wfs/#equation-D_wfs`. Those links will always work.
 If you prefer to reference an equation from the :get:`pdf` instead, please cite
-the document with "H. Wierstorf, F. Winter, F. Schultz, N. Hahn, T. Rettberg, C.
-Hohnerlein, and S. Spors. *Theory of Sound Field Synthesis*.
+the document with "H. Wierstorf et al. *Theory of Sound Field Synthesis*.
 `doi:10.5281/zenodo.1112451`_."
 
 .. _`doi:10.5281/zenodo.1112451`: https://doi.org/10.5281/zenodo.1112451
