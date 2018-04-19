@@ -61,9 +61,9 @@ also available as a `pdf document
 
 You can link to any equation within it by the permalink that becomes visible by
 hovering over the corresponding equation number, e.g.
-http://sfstoolbox.org/en/3.0/wfs/#equation-D_wfs. Those links will always work.
+http://sfstoolbox.org/en/v3/wfs/#equation-D_wfs. Those links will always work.
 If you prefer to reference an equation from the `pdf document
-<http://readthedocs.org/projects/sfs/downloads/pdf/3.0/>`_ instead, please cite
+<http://readthedocs.org/projects/sfs/downloads/pdf/v3/>`_ instead, please cite
 the document with "H. Wierstorf, F. Winter, F. Schultz, N. Hahn, T. Rettberg, C.
 Hohnerlein, and S. Spors. *Theory of Sound Field Synthesis*.
 doi:10.5281/zenodo.1112451 |release|." Whereby it is important that you mention
