@@ -54,8 +54,9 @@ The image at the top of the page is extracted from :cite:`Zotter2013`.
 Theory
 ------
 
-The theory is an extended and corrected version of Chap. 2 from
-:cite:`Wierstorf2014`. It is also available as a `pdf document
+The theory is based on Chap. 2 from :cite:`Wierstorf2014`. It is extended and
+corrected by the contributions from :cite:`Schultz2016`. The complete section is
+also available as a `pdf document
 <http://readthedocs.org/projects/sfs/downloads/pdf/3.0/>`_.
 
 You can link to any equation within it by the permalink that becomes visible by
