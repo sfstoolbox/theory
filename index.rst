@@ -27,7 +27,11 @@ to large loudspeaker arrays, even if you don’t have one in your laboratory or 
 home. In addition, you can easily plug-in your own algorithms in order to test
 or compare them.
 
-Most of the figures in the :ref:`theory section <theory>` are directly created
+The :ref:`theory section <theory>` introduces the underlying physical principles
+of sound field synthesis and derives all of the so called driving functions that
+determine the actual loudspeaker signals. Most of them are implemented in the
+Toolboxes and comments in the code link back to the corresponding equations.
+A lot of the figures in the :ref:`theory section <theory>` are directly created
 by the SFS Toolbox for Python. All of them display the corresponding code for
 creating them directly before the actual figure. In order to recreate them, you
 have to execute the following code first:
