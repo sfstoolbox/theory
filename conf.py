@@ -4,6 +4,7 @@ import sys
 import os
 import re
 import subprocess
+from datetime import datetime
 
 import sphinx_rtd_theme
 import sphinxcontrib.katex as katex
@@ -17,8 +18,8 @@ from definitions import latex_macros  # Math definitions like \x
 # -- GENERAL -------------------------------------------------------------
 
 project = 'SFS Toolbox'
-copyright = '2016-2017, SFS Toolbox Developers'
 author = 'SFS Toolbox Developers'
+copyright = '2016-{}, {}'.format(datetime.now().year, author)
 
 needs_sphinx = '1.3'  # minimal sphinx version
 extensions = [
