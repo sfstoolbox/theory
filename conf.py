@@ -76,6 +76,7 @@ pygments_style = 'trac'
 
 rst_epilog = acronyms  # append acronyms to every page
 katex_macros = katex.latex_defs_to_katex_macros(latex_macros)
+katex_options = 'macros: {' + katex_macros + '}'
 
 
 # -- HTML ----------------------------------------------------------------
