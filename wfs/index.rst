@@ -15,7 +15,7 @@ the differences of the gradients approaching :math:`\partial V` from both sides
 after :cite:`Fazi2013` as
 
 .. math::
-    :label: d-gradient-frequency-domain
+    :label: freq-drivingfunction-gradient
 
     D(\x_0,\w) = \partial_\n P(\x_0,\w) +
         \partial_{-\n} P(\x_0,\w),
@@ -26,24 +26,25 @@ Due to the symmetry of the problem the solution for an infinite planar boundary
 :math:`\partial V` is given as
 
 .. math::
-    :label: d-wfs-frequency-domain
+    :label: freq-drivingfunction-wfs
 
     D(\x_0,\w) = -2 \partial_\n S(\x_0,\w),
 
 where the pressure in the outside region is the mirrored interior pressure given
 by the source model :math:`S(\x,\w)` for :math:`\x\in V`. The integral equation
-resulting from introducing :eq:`d-wfs-frequency-domain` into :eq:`single-layer`
-for a planar boundary :math:`\partial V` is known as *Rayleigh’s first integral
-equation*. This solution is identical to the explicit solution for planar
-geometries :eq:`d-planar-frequency-domain` in :math:`{\mathbb{R}}^3` and for
-linear geometries :eq:`d-linear-frequency-domain` in :math:`{\mathbb{R}}^2`.
+resulting from introducing :eq:`freq-drivingfunction-wfs`
+into :eq:`single-layer` for a planar boundary :math:`\partial V` is known as
+*Rayleigh’s first integral equation*. This solution is identical to the explicit
+solution for planar geometries :eq:`freq-drivingfunction-planar` in
+:math:`{\mathbb{R}}^3` and for linear
+geometries :eq:`freq-drivingfunction-linear` in :math:`{\mathbb{R}}^2`.
 
-A solution of :eq:`d-gradient-frequency-domain` for arbitrary boundaries can be
-found by applying the *Kirchhoff* or *physical optics approximation*
+A solution of :eq:`freq-drivingfunction-gradient` for arbitrary boundaries can
+be found by applying the *Kirchhoff* or *physical optics approximation*
 :cite:`Colton1983`, p. 53–54.  In acoustics this is also known as *determining
 the visible elements* for the high frequency boundary element method
 :cite:`Herrin2003`.  Here, it is assumed that a bent surface can be approximated
-by a set of small planar surfaces for which :eq:`d-wfs-frequency-domain` holds
+by a set of small planar surfaces for which :eq:`freq-drivingfunction-wfs` holds
 locally.  In general, this will be the case if the wave length is much smaller
 than the size of a planar surface patch and the position of the listener is far
 away from the secondary sources. [#F1]_ Additionally, only one part of the
@@ -52,10 +53,10 @@ source model.
 
 The outlined approximation can be formulated by introducing a window function
 :math:`w(\x_0)` for the selection of the active secondary sources
-into :eq:`d-wfs-frequency-domain` as
+into :eq:`freq-drivingfunction-wfs` as
 
 .. math::
-    :label: p-wfs-frequency-domain
+    :label: freq-wfs
 
     P(\x,\w) \approx \oint_{\partial V} \!\!  G(\x|\x_0,\w) \,
         \underbrace{-2 w(\x_0) \partial_\n S(\x_0,\w)}_{D(\x_0,\w)}
@@ -68,9 +69,9 @@ secondary source distributions can be used with |WFS| – compare the appendix i
 :cite:`Lax1947` [#F2]_.
 
 One of the advantages of the applied approximation is that due to its local
-character the solution of the driving function :eq:`d-wfs-frequency-domain` does
-not depend on the geometry of the secondary sources. This dependency applies to
-the direct solutions presented in :ref:`sec-nfchoa`.
+character the solution of the driving function :eq:`freq-drivingfunction-wfs`
+does not depend on the geometry of the secondary sources. This dependency
+applies to the direct solutions presented in :ref:`sec-nfchoa`.
 
 .. [#F1]
     Compare the assumptions made before (15) in :cite:`Spors2013`, which lead
