@@ -3,6 +3,6 @@ sphinxcontrib-katex>=0.1.6
 sphinx_rtd_theme
 sphinxcontrib-bibtex
 numpy
-scipy<=0.18
+scipy
 matplotlib>=1.5
 sfs
