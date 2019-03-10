@@ -55,8 +55,9 @@ Theory
 ------
 
 The theory is based on Chap. 2 from :cite:`Wierstorf2014`. It is extended and
-corrected by the contributions from :cite:`Schultz2016`. The complete section is
-also available as a :get:`pdf`.
+corrected by the contributions from :cite:`Schultz2016` and should be improved
+by further contributions from the community. The complete theory section is also
+available as a :get:`pdf`.
 
 You can link to any equation within it by the permalink that becomes visible by
 hovering over the corresponding equation number, e.g.
@@ -67,6 +68,10 @@ Hohnerlein, and S. Spors. *Theory of Sound Field Synthesis*.
 `doi:10.5281/zenodo.1112451`_."
 
 .. _`doi:10.5281/zenodo.1112451`: https://doi.org/10.5281/zenodo.1112451
+
+
+Table of Contents
+^^^^^^^^^^^^^^^^^
 
 .. toctree::
     :maxdepth: 3
