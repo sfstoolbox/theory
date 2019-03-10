@@ -64,9 +64,9 @@ hovering over the corresponding equation number, e.g.
 :sfs:`wfs/#equation-D_wfs`. Those links will always work.
 If you prefer to reference an equation from the :get:`pdf` instead, please cite
 the document with "H. Wierstorf et al. *Theory of Sound Field Synthesis*.
-`doi:10.5281/zenodo.1112451`_."
+`doi:10.5281/zenodo.2589179`_."
 
-.. _`doi:10.5281/zenodo.1112451`: https://doi.org/10.5281/zenodo.1112451
+.. _`doi:10.5281/zenodo.2589179`: https://doi.org/10.5281/zenodo.2589179
 
 
 Table of Contents
