@@ -61,7 +61,7 @@ available as a :get:`pdf`.
 
 You can link to any equation within it by the permalink that becomes visible by
 hovering over the corresponding equation number, e.g.
-:sfs:`wfs/#equation-D_wfs`. Those links will always work.
+:sfs:`sources/#equation-freq-point`. Those links will always work.
 If you prefer to reference an equation from the :get:`pdf` instead, please cite
 the document with "H. Wierstorf et al. *Theory of Sound Field Synthesis*.
 `doi:10.5281/zenodo.2589179`_."
