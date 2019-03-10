@@ -2,7 +2,6 @@
     "title": "Theory of Sound Field Synthesis",
     "creators": [{ "name": "Wierstorf et al., Hagen" }],
     "description": "Discussion of the theory of sound field synthesis, see https://sfs.readthedocs.io",
-    "doi": "10.5281/zenodo.1112451",
     "license": "Creative Commons Attribution 4.0",
     "keywords": [
         "sound field synthesis",
