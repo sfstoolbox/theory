@@ -3,7 +3,7 @@ SFS Toolbox -- Theory
 
 Discussion of the theory of sound field synthesis, see
 
-http://sfstoolbox.org
+https://sfs.readthedocs.io
 
 This repository holds the sources in reStructuredText/Sphinx format, from which
 the online version is generated automatically.
@@ -27,7 +27,7 @@ The files are then located under `_build/html-preview`.
 ## License and feedback
 
 If you have questions, bug reports or feature requests, please use the [Issue
-Section](https://github.com/sfstoolbox/sfs-documentation/issues) to report them.
+Section](https://github.com/sfstoolbox/theory/issues) to report them.
 
 [Creative Commons Attribution (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/)

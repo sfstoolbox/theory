@@ -25,6 +25,7 @@ needs_sphinx = '1.3'  # minimal sphinx version
 extensions = [
         'sphinx.ext.autodoc',
         'sphinx.ext.viewcode',
+        'sphinx.ext.extlinks',
         'sphinxcontrib.katex',  # Modified version to include clickable eq numbers and
                     # avoid the ugly looking standard result. There is also
                     # a pull request for this:
@@ -41,9 +42,13 @@ try:
     release = subprocess.check_output(
             ('git', 'describe', '--tags', '--always', '--abbrev=0'))
     release = release.decode().strip()
-    release = '(v' + release.rsplit('.')[-1] + ')'  # 1.0.3 -> (v3)
 except Exception:
     release = '<unknown>'
+extlinks = {
+    'sfs': ('https://sfs.readthedocs.io/en/{}/%s'.format(release), None),
+    'get': ('https://readthedocs.org/projects/sfs/downloads/%s/{}/'
+            .format(release), '')
+}
 
 
 # -- FIGURES AND CODE ----------------------------------------------------
@@ -110,7 +115,7 @@ latex_macros += r'''
     \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
     \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
     \fancyhead[LE,RO]{{\py@HeaderFamily
-    \href{http://sfstoolbox.org/}{\color{black}http://sfstoolbox.org/} \hfill \py@release}}
+    \href{https://sfs.readthedocs.io/}{\color{black}https://sfs.readthedocs.io/} \hfill (\py@release)}}
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0.4pt}
     % define chaptermark with \@chappos when \@chappos is available for Japanese
