@@ -103,6 +103,8 @@ htmlhelp_basename = 'sfs-doc'
 
 
 # -- LATEX ---------------------------------------------------------------
+# Workaround to add some brackets around the release for PDF output
+release = '({})'.format(release)
 
 latex_macros += r'''
 \makeatletter
@@ -115,7 +117,7 @@ latex_macros += r'''
     \fancyfoot[LO]{{\py@HeaderFamily\nouppercase{\rightmark}}}
     \fancyfoot[RE]{{\py@HeaderFamily\nouppercase{\leftmark}}}
     \fancyhead[LE,RO]{{\py@HeaderFamily
-    \href{https://sfs.readthedocs.io/}{\color{black}https://sfs.readthedocs.io/} \hfill (\py@release)}}
+    \href{https://sfs.readthedocs.io/}{\color{black}https://sfs.readthedocs.io/} \hfill \py@release}}
     \renewcommand{\headrulewidth}{0.4pt}
     \renewcommand{\footrulewidth}{0.4pt}
     % define chaptermark with \@chappos when \@chappos is available for Japanese
@@ -141,7 +143,7 @@ latex_elements = {
     'preamble': latex_macros,  # command definitions
     'figure_align': 'htbp',
     'sphinxsetup': 'TitleColor={rgb}{0,0,0}, verbatimwithframe=false, VerbatimColor={rgb}{.96,.96,.96}',
-    'releasename': '\href{https://doi.org/10.5281/zenodo.1112451}{\color{black}doi:10.5281/zenodo.1112451}',
+    'releasename': '\href{https://doi.org/10.5281/zenodo.2589179}{\color{black}doi:10.5281/zenodo.2589179}',
 }
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
