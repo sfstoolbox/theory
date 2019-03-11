@@ -12,13 +12,13 @@ mathematical problem, namely |WFS|, |NFC-HOA|, and the |SDM|.
 The SFS Toolbox project is structured in the following three sub-projects.
 
 Overview and Theory:
-    https://sfs.readthedocs.io (current page)
+    https://sfs.readthedocs.io/ (current page)
 
 SFS Toolbox for Matlab/Octave:
-    https://sfs-matlab.readthedocs.io
+    https://sfs-matlab.readthedocs.io/
 
 SFS Toolbox for Python:
-    https://sfs-python.readthedocs.io
+    https://sfs-python.readthedocs.io/
 
 The Toolboxes provide you with the implementation of the underlying mathematics.
 You can make numerical simulations of the resulting sound fields and can even
