@@ -18,7 +18,7 @@ with::
 
    git clone https://github.com/sfstoolbox/theory.git
    cd theory
-   python3 -m pip install --user -e .
+   python3 -m pip install --user -r requirements.txt
 
 .. _Github: https://github.com/sfstoolbox/theory/
 
