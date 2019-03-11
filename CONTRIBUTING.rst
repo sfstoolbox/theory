@@ -37,12 +37,12 @@ To create the HTML pages, use::
    make html-preview
 
 The generated files will be available in the directory
-``build/sphinx/html-preview/``.
+``_build/sphinx/html-preview/``.
 To create the PDF pages, use::
 
     make latexpdf
 
-The generated files will be available in the directory ``build/sphinx/latex/``.
+The generated files will be available in the directory ``_build/sphinx/latex/``.
 
 .. _Sphinx: http://sphinx-doc.org/
 
