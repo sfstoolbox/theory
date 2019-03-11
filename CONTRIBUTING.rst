@@ -57,8 +57,8 @@ New releases are made using the following steps:
 #. Create an (annotated) tag with ``git tag -a x.y.z``
 #. Push the commit and the tag to Github and `add release notes`_ containing
    the bullet points from ``NEWS.rst``
-#. Check that the new release was built correctly on RTD_, delete the "stable"
-   version and select the new release as default version
+#. Check that the new release was built correctly on RTD_, and select the new
+   release as default version
 
 .. _add release notes: https://github.com/sfstoolbox/theory/releases/
 .. _RTD: https://readthedocs.org/projects/sfs/builds/
