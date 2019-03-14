@@ -46,7 +46,7 @@ Plane Wave
     :align: center
 
     Sound pressure for a monochromatic plane wave synthesized with 2.5D |WFS|
-    :eq:`freq-drivingfunction-wfs-25d-point`.  Parameters: :math:`\n_k =
+    :eq:`freq-wfs-point-25d`.  Parameters: :math:`\n_k =
     (0, -1, 0)`, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 By inserting the source model of a plane
@@ -54,14 +54,14 @@ wave :eq:`freq-plane` into :eq:`freq-drivingfunction-wfs`
 and :eq:`freq-drivingfunction-wfs-25d` it follows
 
 .. math::
-    :label: freq-drivingfunction-wfs-plane
+    :label: freq-wfs-plane
 
     D(\x_0,\w) = 2 w(\x_0) A(\w)
         \i\wc  \scalarprod{\n_k}{\n_{\x_0}}
         \e{-\i\wc  \scalarprod{\n_k}{\x_0}},
 
 .. math::
-    :label: freq-drivingfunction-wfs-25d-plane
+    :label: freq-wfs-plane-25d
 
     D_\text{2.5D}(\x_0,\w) = 2 w(\x_0) A(\w)
         \sqrt{2\pi|\xref-x_0|}
@@ -72,13 +72,13 @@ Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`,
 it follows
 
 .. math::
-    :label: time-drivingfunction-wfs-plane
+    :label: time-wfs-plane
 
     d(\x_0,t) = 2 a(t) * h(t) * w(\x_0) \scalarprod{\n_k}{\n_{\x_0}}
         \dirac{t - \frac{\scalarprod{\n_k}{\x_0}}{c}},
 
 .. math::
-    :label: time-drivingfunction-wfs-25d-plane
+    :label: time-wfs-plane-25d
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =& 2 a(t) * h_\text{2.5D}(t) * w(\x_0)
@@ -97,7 +97,7 @@ where
 and
 
 .. math::
-    :label: time-wfs-25d-prefilter
+    :label: time-wfs-prefilter-25d
 
     h_\text{2.5D}(t) = \mathcal{F}^{-1}\left\{
         \sqrt{\i\wc }\right\}
@@ -151,7 +151,7 @@ Point Source
     :align: center
 
     Sound pressure for a monochromatic point source synthesized with 2.5D |WFS|
-    :eq:`freq-drivingfunction-wfs-25d-point`.  Parameters:
+    :eq:`freq-wfs-point-25d`.  Parameters:
     :math:`\xs = (0, 2.5, 0)` m, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 By inserting the source model for a point
@@ -159,7 +159,7 @@ source :eq:`freq-point` into :eq:`freq-drivingfunction-wfs`
 it follows
 
 .. math::
-    :label: freq-drivingfunction-wfs-point-woapprox
+    :label: freq-wfs-point-woapprox
 
     D(\x_0,\w) =
         \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
@@ -168,11 +168,11 @@ it follows
         \e{-\i\wc |\x_0-\xs|}.
 
 Under the assumption of :math:`\wc |\x_0-\xs| \gg 1`,
-:eq:`freq-drivingfunction-wfs-point-woapprox` can be approximated by
+:eq:`freq-wfs-point-woapprox` can be approximated by
 :cite:`Schultz2016`, eq. (2.118)
 
 .. math::
-    :label: freq-drivingfunction-wfs-point
+    :label: freq-wfs-point
 
     D(\x_0,\w) = \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
@@ -189,7 +189,7 @@ phase approximations instead of directly using
 :cite:`Start1997`, eq. (3.10, 3.11)
 
 .. math::
-    :label: freq-drivingfunction-wfs-25d-point
+    :label: freq-wfs-point-25d
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -205,7 +205,7 @@ A second stationary phase approximation can be applied to reach at
 :cite:`Schultz2016`, eq. (2.131, 2.141), :cite:`Start1997`, eq. (3.16, 3.17)
 
 .. math::
-    :label: freq-drivingfunction-wfs-25d-point-refline
+    :label: freq-wfs-point-25d-refline
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -223,19 +223,19 @@ the shortest possible distance from the point source to the linear secondary
 source distribution.
 
 The default |WFS| driving functions for a point source in the SFS Toolbox are
-:eq:`freq-drivingfunction-wfs-point` and
-:eq:`freq-drivingfunction-wfs-25d-point`.  Transferring both to the
+:eq:`freq-wfs-point` and
+:eq:`freq-wfs-point-25d`.  Transferring both to the
 temporal domain via an inverse Fourier transform :eq:`ifft` it follows
 
 .. math::
-    :label: time-drivingfunction-wfs-point
+    :label: time-wfs-point
 
     d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \dirac{t-\frac{|\x_0-\xs|}{c}},
 
 .. math::
-    :label: time-drivingfunction-wfs-25d-point
+    :label: time-wfs-point-25d
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =&
@@ -247,7 +247,7 @@ temporal domain via an inverse Fourier transform :eq:`ifft` it follows
     \end{aligned}
 
 .. math::
-    :label: time-drivingfunction-wfs-25d-point-refline
+    :label: time-wfs-point-25d-refline
 
     \begin{aligned}
     d_\text{2.5D}(\x_0,t) =&
@@ -305,7 +305,7 @@ Line Source
     :align: center
 
     Sound pressure for a monochromatic line source synthesized with 2D |WFS|
-    :eq:`freq-drivingfunction-wfs-line`.  Parameters:
+    :eq:`freq-wfs-line`.  Parameters:
     :math:`\xs = (0, 2.5, 0)` m, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 For a line source its orientation :math:`\n_\text{s}` has an influence on the
@@ -328,14 +328,14 @@ calculating the derivate of the Hankel function after
 `<http://dlmf.nist.gov/10.6.E6>`_ it follows
 
 .. math::
-    :label: freq-drivingfunction-wfs-line
+    :label: freq-wfs-line
 
     D(\x_0,\w) = -\frac{1}{2}A(\w) w(\x_0) \i\wc
         \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|}
         \Hankel{2}{1}{\wc |\vec{v}|},
 
 .. math::
-    :label: freq-drivingfunction-wfs-25d-line
+    :label: freq-wfs-line-25d
 
     D_\text{2.5D}(\x_0,\w) =
         -\frac{1}{2}g_0 A(\w) w(\x_0) \sqrt{\i\wc}
@@ -349,14 +349,14 @@ transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
 it follows
 
 .. math::
-    :label: time-drivingfunction-wfs-line
+    :label: time-wfs-line
 
     d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
         \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|^{\frac{3}{2}}}
         \dirac{t-\frac{|\vec{v}|}{c}},
 
 .. math::
-    :label: time-drivingfunction-wfs-25d-line
+    :label: time-wfs-line-25d
 
     d_\text{2.5D}(\x_0,t) =
         g_0 \sqrt{\frac{1}{2\pi}} a(t) *
@@ -413,7 +413,7 @@ Focused Source
     :align: center
 
     Sound pressure for a monochromatic focused source synthesized with 2.5D
-    |WFS| :eq:`freq-drivingfunction-wfs-25d-focused`.  Parameters:
+    |WFS| :eq:`freq-wfs-focused-25d`.  Parameters:
     :math:`\xs = (0, 0.5, 0)` m, :math:`\n_\text{s} = (0, -1, 0)`, :math:`\xref
     = (0, 0, 0)`, :math:`f = 1` kHz.
 
@@ -425,22 +425,22 @@ geometries, the focused source also needs a direction :math:`\n_\text{s}`.
 
 The driving function for a focused source is given by the time-reversed
 versions of the driving function for a point source
-:eq:`time-drivingfunction-wfs-point` and
-:eq:`time-drivingfunction-wfs-25d-point` as
+:eq:`time-wfs-point` and
+:eq:`time-wfs-point-25d` as
 
 .. math::
-    :label: freq-drivingfunction-wfs-3d-focused
+    :label: freq-wfs-focused-3d
 
     D(\x_0,\w) = \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \e{\i\wc |\x_0-\xs|}.
 
 The 2.5D driving functions are given by the time-reversed version of
-:eq:`time-drivingfunction-wfs-25d-point` for a reference point after
+:eq:`time-wfs-point-25d` for a reference point after
 :cite:`Verheijen1997`, eq. (A.14) as
 
 .. math::
-    :label: freq-drivingfunction-wfs-25d-focused
+    :label: freq-wfs-focused-25d
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -452,11 +452,11 @@ The 2.5D driving functions are given by the time-reversed version of
     \end{aligned}
 
 and the time reversed version of
-:eq:`time-drivingfunction-wfs-25d-point-refline` for a reference line,
+:eq:`time-wfs-point-25d-refline` for a reference line,
 compare :cite:`Start1997`, eq. (3.16)
 
 .. math::
-    :label: freq-drivingfunction-wfs-25d-focused-refline
+    :label: freq-wfs-focused-25d-refline
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -475,14 +475,14 @@ Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
 it follows
 
 .. math::
-    :label: time-drivingfunction-wfs-3d-focused
+    :label: time-wfs-focused-3d
 
     d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \dirac{t+\frac{|\x_0-\xs|}{c}},
 
 .. math::
-    :label: time-drivingfunction-wfs-25d-focused
+    :label: time-wfs-focused-25d
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =&
@@ -494,7 +494,7 @@ it follows
     \end{aligned}
 
 .. math::
-    :label: time-drivingfunction-wfs-25d-focused-refline
+    :label: time-wfs-focused-25d-refline
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =&
@@ -507,10 +507,10 @@ it follows
 
 In this document a focused source always refers to the time-reversed version of a
 point source, but a focused line source can be defined in the same way starting
-from :eq:`freq-drivingfunction-wfs-line`
+from :eq:`freq-wfs-line`
 
 .. math::
-    :label: freq-drivingfunction-wfs-2d-focused
+    :label: freq-wfs-focused-2d
 
     D(\x_0,\w) = -\frac{1}{2}A(\w) w(\x_0) \i\wc 
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}
@@ -520,7 +520,7 @@ Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
 it follows
 
 .. math::
-    :label: time-drivingfunction-wfs-2d-focused
+    :label: time-wfs-focused-2d
 
     d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}
