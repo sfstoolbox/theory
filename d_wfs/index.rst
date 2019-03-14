@@ -394,7 +394,7 @@ Focused Source
     array= sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.mono.wfs.focused_25d(omega, array.x, array.n, xs, xref)
+        sfs.mono.wfs.focused_25d(omega, array.x, array.n, xs, ns, xref)
     twin = sfs.tapering.tukey(selection, .3)
     p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
     sfs.plot.soundfield(p, grid)
