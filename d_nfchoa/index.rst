@@ -29,14 +29,14 @@ Plane Wave
     nk = 0, -1, 0  # direction of plane wave
     omega = 2 * np.pi * 1000  # frequency
     R0 = 1.5  # radius of secondary sources
-    x0, n0, a0 = sfs.array.circular(200, R0)
+    array = sfs.array.circular(200, R0)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    d = sfs.mono.drivingfunction.nfchoa_25d_plane(omega, x0, R0, nk)
-    p = sfs.mono.synthesized.generic(omega, x0, n0, d * a0 , grid,
-        source=sfs.mono.source.point)
-    normalization = 0.05
-    sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(x0, n0, grid)
+    d, selection, secondary_source = \
+        sfs.mono.nfchoa.plane_25d(omega, array.x, R0, nk)
+    twin = sfs.tapering.none(selection)
+    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    sfs.plot.soundfield(p, grid)
+    sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -147,14 +147,15 @@ Point Source
     xs = 0, 2.5, 0  # position of source
     omega = 2 * np.pi * 1000  # frequency
     R0 = 1.5  # radius of secondary sources
-    x0, n0, a0 = sfs.array.circular(200, R0)
+    array = sfs.array.circular(200, R0)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    d = sfs.mono.drivingfunction.nfchoa_25d_point(omega, x0, R0, xs)
-    p = sfs.mono.synthesized.generic(omega, x0, n0, d * a0 , grid,
-        source=sfs.mono.source.point)
+    d, selection, secondary_source = \
+        sfs.mono.nfchoa.point_25d(omega, array.x, R0, xs)
+    twin = sfs.tapering.none(selection)
+    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 20
     sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(x0, n0, grid)
+    sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
 .. plot::
     :context:

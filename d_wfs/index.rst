@@ -21,19 +21,17 @@ Plane Wave
     :context: close-figs
     :nofigs:
 
-    nk = 0, -1, 0  # direction of plane wave
+    npw = 0, -1, 0  # direction of plane wave
     omega = 2 * np.pi * 1000  # frequency
     xref = 0, 0, 0  # 2.5D reference point
-    x0, n0, a0 = sfs.array.circular(200, 1.5)
+    array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    d = sfs.mono.drivingfunction.wfs_25d_plane(omega, x0, n0, nk, xref)
-    a = sfs.mono.drivingfunction.source_selection_plane(n0, nk)
-    twin = sfs.tapering.tukey(a, .3)
-    p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
-        source=sfs.mono.source.point)
-    normalization = 0.5
-    sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(x0, n0, grid)
+    d, selection, secondary_source = \
+        sfs.mono.wfs.plane_25d(omega, array.x, array.n, npw, xref)
+    twin = sfs.tapering.tukey(selection, .3)
+    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    sfs.plot.soundfield(p, grid, xref)
+    sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -131,16 +129,14 @@ Point Source
     xs = 0, 2.5, 0  # position of source
     omega = 2 * np.pi * 1000  # frequency
     xref = 0, 0, 0  # 2.5D reference point
-    x0, n0, a0 = sfs.array.circular(200, 1.5)
+    array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    d = sfs.mono.drivingfunction.wfs_25d_point(omega, x0, n0, xs, xref)
-    a = sfs.mono.drivingfunction.source_selection_point(n0, x0, xs)
-    twin = sfs.tapering.tukey(a, .3)
-    p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
-        source=sfs.mono.source.point)
-    normalization = 1.3
-    sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(x0, n0, grid)
+    d, selection, secondary_source = \
+        sfs.mono.wfs.point_25d(omega, array.x, array.n, xs, xref)
+    twin = sfs.tapering.tukey(selection, .3)
+    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    sfs.plot.soundfield(p, grid)
+    sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -286,16 +282,15 @@ Line Source
 
     xs = 0, 2.5, 0  # position of source
     omega = 2 * np.pi * 1000  # frequency
-    x0, n0, a0 = sfs.array.circular(200, 1.5)
+    array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    d = sfs.mono.drivingfunction.wfs_2d_line(omega, x0, n0, xs)
-    a = sfs.mono.drivingfunction.source_selection_line(n0, x0, xs)
-    twin = sfs.tapering.tukey(a, .3)
-    p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
-        source=sfs.mono.source.point)
+    d, selection, secondary_source = \
+        sfs.mono.wfs.line_2d(omega, array.x, array.n, xs)
+    twin = sfs.tapering.tukey(selection, .3)
+    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 7
     sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(x0, n0, grid)
+    sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -396,16 +391,14 @@ Focused Source
     ns = 0, -1, 0  # direction of source
     omega = 2 * np.pi * 1000  # frequency
     xref = 0, 0, 0  # 2.5D reference point
-    x0, n0, a0 = sfs.array.circular(200, 1.5)
+    array= sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    d = sfs.mono.drivingfunction.wfs_25d_focused(omega, x0, n0, xs, xref)
-    a = sfs.mono.drivingfunction.source_selection_focused(ns, x0, xs)
-    twin = sfs.tapering.tukey(a, .3)
-    p = sfs.mono.synthesized.generic(omega, x0, n0, d * twin * a0 , grid,
-        source=sfs.mono.source.point)
-    normalization = 1
-    sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(x0, n0, grid)
+    d, selection, secondary_source = \
+        sfs.mono.wfs.focused_25d(omega, array.x, array.n, xs, xref)
+    twin = sfs.tapering.tukey(selection, .3)
+    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    sfs.plot.soundfield(p, grid)
+    sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
 .. plot::
     :context:
