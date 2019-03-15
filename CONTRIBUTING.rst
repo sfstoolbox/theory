@@ -9,8 +9,8 @@ https://github.com/sfstoolbox/theory/.
 Contributions are always welcome!
 
 
-Installation
-^^^^^^^^^^^^
+Installation of Requirements
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 In order to build the theory section locally you should get the
 newest development version from Github_ and install the needed dependencies
