@@ -76,7 +76,7 @@ Table of Contents
     :maxdepth: 3
     :numbered:
 
-    contributors
+    CONTRIBUTING
     defs/index
     problem/index
     nfchoa/index
@@ -87,5 +87,6 @@ Table of Contents
     d_wfs/index
     d_lsfs/index
     refs/index
+    NEWS
     
 .. vim: filetype=rst spell:
