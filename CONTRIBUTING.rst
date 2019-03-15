@@ -20,9 +20,6 @@ with::
 
 .. _Github: https://github.com/sfstoolbox/theory/
 
-This way, your installation always stays up-to-date, even if you pull new
-changes from the Github repository.
-
 
 Building the Documentation
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
