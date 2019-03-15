@@ -64,7 +64,6 @@ plot_html_show_formats = False
 plot_rcparams = {
     'savefig.bbox': 'tight',
 }
-plot_formats = ['svg', 'pdf']
 # Custom figure saving command to allow for figure caption, see
 # https://github.com/sfstoolbox/theory/issues/5
 plot_pre_code = '''
