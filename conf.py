@@ -61,18 +61,20 @@ numfig_secnum_depth = 1
 plot_include_source = True
 plot_html_show_source_link = False
 plot_html_show_formats = False
-plot_formats = ['png', 'pdf']
 plot_rcparams = {
     'savefig.bbox': 'tight',
 }
+plot_formats = ['svg', 'pdf']
+# Custom figure saving command to allow for figure caption, see
+# https://github.com/sfstoolbox/theory/issues/5
 plot_pre_code = '''
 import numpy as np
 from matplotlib import pyplot as plt
 import sfs
 plt.rcParams['figure.figsize'] = 8, 4.5  # inch
 def save_fig(file_name):
-    dpi = 80
-    plt.savefig(file_name + '.png', dpi=dpi)
+    dpi = 150
+    plt.savefig(file_name + '.svg', dpi=dpi)
     plt.savefig(file_name + '.pdf', dpi=dpi)
 '''
 
