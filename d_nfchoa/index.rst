@@ -35,8 +35,8 @@ Plane Wave
         sfs.fd.nfchoa.plane_25d(omega, array.x, R0, nk)
     twin = sfs.tapering.none(selection)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
-    sfs.plot.soundfield(p, grid)
-    sfs.plot.secondarysource_2d(array.x, array.n, grid)
+    sfs.plot2d.amplitude(p, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -154,8 +154,8 @@ Point Source
     twin = sfs.tapering.none(selection)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 20
-    sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(array.x, array.n, grid)
+    sfs.plot2d.amplitude(normalization * p, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
 .. plot::
     :context:

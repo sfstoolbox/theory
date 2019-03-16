@@ -30,8 +30,8 @@ Plane Wave
         sfs.fd.wfs.plane_25d(omega, array.x, array.n, npw, xref)
     twin = sfs.tapering.tukey(selection, .3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
-    sfs.plot.soundfield(p, grid, xref)
-    sfs.plot.secondarysource_2d(array.x, array.n, grid)
+    sfs.plot2d.amplitude(p, grid, xref)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -135,8 +135,8 @@ Point Source
         sfs.fd.wfs.point_25d(omega, array.x, array.n, xs, xref)
     twin = sfs.tapering.tukey(selection, .3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
-    sfs.plot.soundfield(p, grid)
-    sfs.plot.secondarysource_2d(array.x, array.n, grid)
+    sfs.plot2d.amplitude(p, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -289,8 +289,8 @@ Line Source
     twin = sfs.tapering.tukey(selection, .3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 7
-    sfs.plot.soundfield(normalization * p, grid)
-    sfs.plot.secondarysource_2d(array.x, array.n, grid)
+    sfs.plot2d.amplitude(normalization * p, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
 .. plot::
     :context:
@@ -397,8 +397,8 @@ Focused Source
         sfs.fd.wfs.focused_25d(omega, array.x, array.n, xs, ns, xref)
     twin = sfs.tapering.tukey(selection, .3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
-    sfs.plot.soundfield(p, grid)
-    sfs.plot.secondarysource_2d(array.x, array.n, grid)
+    sfs.plot2d.amplitude(p, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
 .. plot::
     :context:

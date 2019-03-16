@@ -31,7 +31,7 @@ Plane Wave
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     p = sfs.fd.source.plane(omega, xs, nk, grid)
-    sfs.plot.soundfield(p, grid)
+    sfs.plot2d.amplitude(p, grid)
 
 .. plot::
     :context:
@@ -117,7 +117,7 @@ Point Source
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     p = sfs.fd.source.point(omega, xs, grid)
     normalization = 4 * np.pi
-    sfs.plot.soundfield(normalization * p, grid)
+    sfs.plot2d.amplitude(normalization * p, grid)
 
 .. plot::
     :context:
@@ -197,7 +197,7 @@ Dipole Point Source
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     p = sfs.fd.source.point_dipole(omega, xs, ns, grid)
-    sfs.plot.soundfield(p, grid)
+    sfs.plot2d.amplitude(p, grid)
 
 .. plot::
     :context:
@@ -261,7 +261,7 @@ Line Source
     p = sfs.fd.source.line(omega, xs, grid)
     normalization = (np.sqrt(8 * np.pi * omega / sfs.default.c)
                      * np.exp(1j * np.pi / 4))
-    sfs.plot.soundfield(normalization * p, grid)
+    sfs.plot2d.amplitude(normalization * p, grid)
 
 .. plot::
     :context:
