@@ -30,7 +30,7 @@ Plane Wave
     xs = 0, 0, 0  # center of plane wave
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    p = sfs.mono.source.plane(omega, xs, nk, grid)
+    p = sfs.fd.source.plane(omega, xs, nk, grid)
     sfs.plot.soundfield(p, grid)
 
 .. plot::
@@ -115,7 +115,7 @@ Point Source
     xs = 0, 0, 0  # position of source
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    p = sfs.mono.source.point(omega, xs, grid)
+    p = sfs.fd.source.point(omega, xs, grid)
     normalization = 4 * np.pi
     sfs.plot.soundfield(normalization * p, grid)
 
@@ -196,7 +196,7 @@ Dipole Point Source
     ns = sfs.util.direction_vector(0)  # direction of source
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    p = sfs.mono.source.point_dipole(omega, xs, ns, grid)
+    p = sfs.fd.source.point_dipole(omega, xs, ns, grid)
     sfs.plot.soundfield(p, grid)
 
 .. plot::
@@ -258,7 +258,7 @@ Line Source
     xs = 0, 0, 0  # position of source
     omega = 2 * np.pi * 800  # frequency
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
-    p = sfs.mono.source.line(omega, xs, grid)
+    p = sfs.fd.source.line(omega, xs, grid)
     normalization = (np.sqrt(8 * np.pi * omega / sfs.default.c)
                      * np.exp(1j * np.pi / 4))
     sfs.plot.soundfield(normalization * p, grid)

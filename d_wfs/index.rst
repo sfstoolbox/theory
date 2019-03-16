@@ -27,9 +27,9 @@ Plane Wave
     array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.mono.wfs.plane_25d(omega, array.x, array.n, npw, xref)
+        sfs.fd.wfs.plane_25d(omega, array.x, array.n, npw, xref)
     twin = sfs.tapering.tukey(selection, .3)
-    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     sfs.plot.soundfield(p, grid, xref)
     sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
@@ -132,9 +132,9 @@ Point Source
     array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.mono.wfs.point_25d(omega, array.x, array.n, xs, xref)
+        sfs.fd.wfs.point_25d(omega, array.x, array.n, xs, xref)
     twin = sfs.tapering.tukey(selection, .3)
-    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     sfs.plot.soundfield(p, grid)
     sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
@@ -285,9 +285,9 @@ Line Source
     array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.mono.wfs.line_2d(omega, array.x, array.n, xs)
+        sfs.fd.wfs.line_2d(omega, array.x, array.n, xs)
     twin = sfs.tapering.tukey(selection, .3)
-    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 7
     sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(array.x, array.n, grid)
@@ -394,9 +394,9 @@ Focused Source
     array= sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.mono.wfs.focused_25d(omega, array.x, array.n, xs, ns, xref)
+        sfs.fd.wfs.focused_25d(omega, array.x, array.n, xs, ns, xref)
     twin = sfs.tapering.tukey(selection, .3)
-    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     sfs.plot.soundfield(p, grid)
     sfs.plot.secondarysource_2d(array.x, array.n, grid)
 

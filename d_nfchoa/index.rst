@@ -32,9 +32,9 @@ Plane Wave
     array = sfs.array.circular(200, R0)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.mono.nfchoa.plane_25d(omega, array.x, R0, nk)
+        sfs.fd.nfchoa.plane_25d(omega, array.x, R0, nk)
     twin = sfs.tapering.none(selection)
-    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     sfs.plot.soundfield(p, grid)
     sfs.plot.secondarysource_2d(array.x, array.n, grid)
 
@@ -150,9 +150,9 @@ Point Source
     array = sfs.array.circular(200, R0)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.mono.nfchoa.point_25d(omega, array.x, R0, xs)
+        sfs.fd.nfchoa.point_25d(omega, array.x, R0, xs)
     twin = sfs.tapering.none(selection)
-    p = sfs.mono.synthesize(d, twin, array, secondary_source, grid=grid)
+    p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 20
     sfs.plot.soundfield(normalization * p, grid)
     sfs.plot.secondarysource_2d(array.x, array.n, grid)
