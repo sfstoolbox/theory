@@ -53,12 +53,12 @@ correct at a given reference point :math:`\xref`.
 For a circular secondary source distribution with point source characteristic
 the 2.5D driving function can be derived by introducing expansion coefficients
 for the spherical case into the driving
-function :eq:`freq-drivingfunction-circular`. The equation is than solved for
+function :eq:`fd-drivingfunction-circular`. The equation is than solved for
 :math:`\theta = 0{^\circ}` and :math:`r_\text{ref} = 0`. This results in a 2.5D
 driving function given after :cite:`Ahrens2012`, eq. (3.49) as
 
 .. math::
-    :label: freq-drivingfunction-circular-25d
+    :label: fd-drivingfunction-circular-25d
 
     D_{\text{circular},\text{2.5D}}(\phi_0,\w) = \frac{1}{2\pi R_0}
         \sum_{m=-\infty}^\infty \frac{\breve{S}_{|m|}^m
@@ -68,12 +68,12 @@ driving function given after :cite:`Ahrens2012`, eq. (3.49) as
 For a linear secondary source distribution with point source characteristics the
 2.5D driving function is derived by introducing the linear expansion
 coefficients for a monopole source :eq:`point-linear-coefficients` into
-the driving function :eq:`freq-drivingfunction-linear` and solving the equation
+the driving function :eq:`fd-drivingfunction-linear` and solving the equation
 for :math:`y = y_\text{ref}` and :math:`z = 0`. This results in a 2.5D driving
 function given after :cite:`Ahrens2012`, eq. (3.77) as
 
 .. math::
-    :label: freq-drivingfunction-linear-25d
+    :label: fd-drivingfunction-linear-25d
 
     D_{\text{linear},\text{2.5D}}(x_0,\w) = \frac{1}{2\pi}
         \int_{-\infty}^\infty \frac{\breve{S}(k_x,y_\text{ref},0,\w)}
@@ -115,7 +115,7 @@ If the amplitude correction is further restricted to one reference point
 :math:`\xref`, the 2.5D driving function for |WFS| can be formulated as
 
 .. math::
-    :label: freq-drivingfunction-wfs-25d
+    :label: fd-drivingfunction-wfs-25d
 
     D_\text{2.5D}(\x_0,\w) = \underbrace{\sqrt{2\pi|\xref-\x_0|}}_{g_0}
         \sqrt{\frac{c}{\i\w}} \, D(\x_0,\w),

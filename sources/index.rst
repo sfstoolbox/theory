@@ -46,14 +46,14 @@ Plane Wave
     :align: center
 
     Sound pressure for a monochromatic plane wave
-    :eq:`freq-plane` going into the direction :math:`(1, 1, 0)`.
+    :eq:`fd-plane` going into the direction :math:`(1, 1, 0)`.
     Parameters: :math:`f = 800` Hz.
 
 The source model for a plane wave is given after :cite:`Williams1999`,
 eq. (2.24) [#F1]_ as
 
 .. math::
-    :label: freq-plane
+    :label: fd-plane
 
     S(\x,\w) = A(\w) \e{-\i\wc \scalarprod{\n_k}{\x}},
 
@@ -132,14 +132,14 @@ Point Source
     :align: center
 
     Sound pressure for a monochromatic point source
-    :eq:`freq-point` placed at :math:`(0, 0, 0)`.
+    :eq:`fd-point` placed at :math:`(0, 0, 0)`.
     Parameters: :math:`f = 800` Hz.
 
 The source model for a point source is given by the three dimensional Green’s
 function after :cite:`Williams1999`, eq. (6.73) as
 
 .. math::
-    :label: freq-point
+    :label: fd-point
 
     S(\x,\w) = A(\w) \frac{1}{4\pi} \frac{\e{-\i
         \wc |\x-\xs|}}{|\x-\xs|},
@@ -212,7 +212,7 @@ Dipole Point Source
     :align: center
 
     Sound pressure for a monochromatic dipole point source
-    :eq:`freq-dipole-point` placed at
+    :eq:`fd-dipole-point` placed at
     :math:`(0, 0, 0)` and pointing towards :math:`(1, 0, 0)`.  Parameters:
     :math:`f = 800` Hz.
 
@@ -221,7 +221,7 @@ directional derivative of the three dimensional Green’s function with respect 
 :math:`{\n_\text{s}}` defining the orientation of the dipole source.
 
 .. math::
-    :label: freq-dipole-point
+    :label: fd-dipole-point
 
     \begin{aligned}
         S(\x,\w) &= A(\w) \frac{1}{4\pi}
@@ -276,14 +276,14 @@ Line Source
     :align: center
 
     Sound pressure for a monochromatic line source
-    :eq:`freq-line` placed at :math:`(0, 0, 0)`.  Parameters:
+    :eq:`fd-line` placed at :math:`(0, 0, 0)`.  Parameters:
     :math:`f = 800` Hz.
 
 The source model for a line source is given by the two dimensional Green’s
 function after :cite:`Williams1999`, eq. (8.47) as
 
 .. math::
-    :label: freq-line
+    :label: fd-line
 
     S(\x,\w) = -A(\w) \frac{\i}{4} \Hankel{2}{0}{\wc |\x-\xs|}.
 

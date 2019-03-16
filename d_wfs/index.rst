@@ -46,22 +46,22 @@ Plane Wave
     :align: center
 
     Sound pressure for a monochromatic plane wave synthesized with 2.5D |WFS|
-    :eq:`freq-wfs-point-25d`.  Parameters: :math:`\n_k =
+    :eq:`fd-wfs-point-25d`.  Parameters: :math:`\n_k =
     (0, -1, 0)`, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 By inserting the source model of a plane
-wave :eq:`freq-plane` into :eq:`freq-drivingfunction-wfs`
-and :eq:`freq-drivingfunction-wfs-25d` it follows
+wave :eq:`fd-plane` into :eq:`fd-drivingfunction-wfs`
+and :eq:`fd-drivingfunction-wfs-25d` it follows
 
 .. math::
-    :label: freq-wfs-plane
+    :label: fd-wfs-plane
 
     D(\x_0,\w) = 2 w(\x_0) A(\w)
         \i\wc  \scalarprod{\n_k}{\n_{\x_0}}
         \e{-\i\wc  \scalarprod{\n_k}{\x_0}},
 
 .. math::
-    :label: freq-wfs-plane-25d
+    :label: fd-wfs-plane-25d
 
     D_\text{2.5D}(\x_0,\w) = 2 w(\x_0) A(\w)
         \sqrt{2\pi|\xref-x_0|}
@@ -151,15 +151,15 @@ Point Source
     :align: center
 
     Sound pressure for a monochromatic point source synthesized with 2.5D |WFS|
-    :eq:`freq-wfs-point-25d`.  Parameters:
+    :eq:`fd-wfs-point-25d`.  Parameters:
     :math:`\xs = (0, 2.5, 0)` m, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 By inserting the source model for a point
-source :eq:`freq-point` into :eq:`freq-drivingfunction-wfs`
+source :eq:`fd-point` into :eq:`fd-drivingfunction-wfs`
 it follows
 
 .. math::
-    :label: freq-wfs-point-woapprox
+    :label: fd-wfs-point-woapprox
 
     D(\x_0,\w) =
         \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
@@ -168,11 +168,11 @@ it follows
         \e{-\i\wc |\x_0-\xs|}.
 
 Under the assumption of :math:`\wc |\x_0-\xs| \gg 1`,
-:eq:`freq-wfs-point-woapprox` can be approximated by
+:eq:`fd-wfs-point-woapprox` can be approximated by
 :cite:`Schultz2016`, eq. (2.118)
 
 .. math::
-    :label: freq-wfs-point
+    :label: fd-wfs-point
 
     D(\x_0,\w) = \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
@@ -183,13 +183,13 @@ as a simple weighting- and delaying-mechanism.
 
 To reach at 2.5D for a point source, we will start in 3D and apply stationary
 phase approximations instead of directly using
-:eq:`freq-drivingfunction-wfs-25d` -- see discussion after :cite:`Schultz2016`,
+:eq:`fd-drivingfunction-wfs-25d` -- see discussion after :cite:`Schultz2016`,
 (2.146). Under the assumption of :math:`\frac{\omega}{c} (|\x_0-\xs| +
 |\x-\x_0|) \gg 1` it then follows :cite:`Schultz2016`, eq.  (2.137),
 :cite:`Start1997`, eq. (3.10, 3.11)
 
 .. math::
-    :label: freq-wfs-point-25d
+    :label: fd-wfs-point-25d
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -205,7 +205,7 @@ A second stationary phase approximation can be applied to reach at
 :cite:`Schultz2016`, eq. (2.131, 2.141), :cite:`Start1997`, eq. (3.16, 3.17)
 
 .. math::
-    :label: freq-wfs-point-25d-refline
+    :label: fd-wfs-point-25d-refline
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -223,8 +223,8 @@ the shortest possible distance from the point source to the linear secondary
 source distribution.
 
 The default |WFS| driving functions for a point source in the SFS Toolbox are
-:eq:`freq-wfs-point` and
-:eq:`freq-wfs-point-25d`.  Transferring both to the
+:eq:`fd-wfs-point` and
+:eq:`fd-wfs-point-25d`.  Transferring both to the
 temporal domain via an inverse Fourier transform :eq:`ifft` it follows
 
 .. math::
@@ -305,7 +305,7 @@ Line Source
     :align: center
 
     Sound pressure for a monochromatic line source synthesized with 2D |WFS|
-    :eq:`freq-wfs-line`.  Parameters:
+    :eq:`fd-wfs-line`.  Parameters:
     :math:`\xs = (0, 2.5, 0)` m, :math:`\xref = (0, 0, 0)`, :math:`f = 1` kHz.
 
 For a line source its orientation :math:`\n_\text{s}` has an influence on the
@@ -322,20 +322,20 @@ a line source orientation perpendicular to the plane where the
 secondary sources are located this automatically simplifies to :math:`\vec{v} =
 \x_0 - \xs`.
 
-By inserting the source model for a line source :eq:`freq-line`
-into :eq:`freq-drivingfunction-wfs` and :eq:`freq-drivingfunction-wfs-25d` and
+By inserting the source model for a line source :eq:`fd-line`
+into :eq:`fd-drivingfunction-wfs` and :eq:`fd-drivingfunction-wfs-25d` and
 calculating the derivate of the Hankel function after
 `<http://dlmf.nist.gov/10.6.E6>`_ it follows
 
 .. math::
-    :label: freq-wfs-line
+    :label: fd-wfs-line
 
     D(\x_0,\w) = -\frac{1}{2}A(\w) w(\x_0) \i\wc
         \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|}
         \Hankel{2}{1}{\wc |\vec{v}|},
 
 .. math::
-    :label: freq-wfs-line-25d
+    :label: fd-wfs-line-25d
 
     D_\text{2.5D}(\x_0,\w) =
         -\frac{1}{2}g_0 A(\w) w(\x_0) \sqrt{\i\wc}
@@ -413,7 +413,7 @@ Focused Source
     :align: center
 
     Sound pressure for a monochromatic focused source synthesized with 2.5D
-    |WFS| :eq:`freq-wfs-focused-25d`.  Parameters:
+    |WFS| :eq:`fd-wfs-focused-25d`.  Parameters:
     :math:`\xs = (0, 0.5, 0)` m, :math:`\n_\text{s} = (0, -1, 0)`, :math:`\xref
     = (0, 0, 0)`, :math:`f = 1` kHz.
 
@@ -429,7 +429,7 @@ versions of the driving function for a point source
 :eq:`time-wfs-point-25d` as
 
 .. math::
-    :label: freq-wfs-focused-3d
+    :label: fd-wfs-focused-3d
 
     D(\x_0,\w) = \frac{1}{2\pi} A(\w) w(\x_0) \i\wc
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
@@ -440,7 +440,7 @@ The 2.5D driving functions are given by the time-reversed version of
 :cite:`Verheijen1997`, eq. (A.14) as
 
 .. math::
-    :label: freq-wfs-focused-25d
+    :label: fd-wfs-focused-25d
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -456,7 +456,7 @@ and the time reversed version of
 compare :cite:`Start1997`, eq. (3.16)
 
 .. math::
-    :label: freq-wfs-focused-25d-refline
+    :label: fd-wfs-focused-25d-refline
 
     \begin{aligned}
         D_\text{2.5D}(\x_0,\w) =&
@@ -507,10 +507,10 @@ it follows
 
 In this document a focused source always refers to the time-reversed version of a
 point source, but a focused line source can be defined in the same way starting
-from :eq:`freq-wfs-line`
+from :eq:`fd-wfs-line`
 
 .. math::
-    :label: freq-wfs-focused-2d
+    :label: fd-wfs-focused-2d
 
     D(\x_0,\w) = -\frac{1}{2}A(\w) w(\x_0) \i\wc 
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|}
