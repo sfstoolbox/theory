@@ -135,7 +135,8 @@ Point Source
         sfs.fd.wfs.point_25d(omega, array.x, array.n, xs, xref)
     twin = sfs.tapering.tukey(selection, .3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
-    sfs.plot2d.amplitude(p, grid)
+    normalization = 4 * np.pi
+    sfs.plot2d.amplitude(normalization * p, grid)
     sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
 .. plot::
@@ -288,7 +289,8 @@ Line Source
         sfs.fd.wfs.line_2d(omega, array.x, array.n, xs)
     twin = sfs.tapering.tukey(selection, .3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
-    normalization = 7
+    normalization = (np.sqrt(8 * np.pi * omega / sfs.default.c)
+                     * np.exp(1j * np.pi / 4))
     sfs.plot2d.amplitude(normalization * p, grid)
     sfs.plot2d.secondary_sources(array.x, array.n, grid)
 
