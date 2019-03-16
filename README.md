@@ -32,4 +32,4 @@ Section](https://github.com/sfstoolbox/theory/issues) to report them.
 [Creative Commons Attribution (CC BY
 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
-Copyright (c) 2016-2018 SFS Toolbox Developers
+Copyright (c) 2016-2019 SFS Toolbox Developers
