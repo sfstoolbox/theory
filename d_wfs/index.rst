@@ -72,13 +72,13 @@ Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`,
 it follows
 
 .. math::
-    :label: time-wfs-plane
+    :label: td-wfs-plane
 
     d(\x_0,t) = 2 a(t) * h(t) * w(\x_0) \scalarprod{\n_k}{\n_{\x_0}}
         \dirac{t - \frac{\scalarprod{\n_k}{\x_0}}{c}},
 
 .. math::
-    :label: time-wfs-plane-25d
+    :label: td-wfs-plane-25d
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =& 2 a(t) * h_\text{2.5D}(t) * w(\x_0)
@@ -90,14 +90,14 @@ it follows
 where
 
 .. math::
-    :label: time-wfs-prefilter
+    :label: td-wfs-prefilter
 
     h(t) = \mathcal{F}^{-1}\left\{\i\wc \right\},
 
 and
 
 .. math::
-    :label: time-wfs-prefilter-25d
+    :label: td-wfs-prefilter-25d
 
     h_\text{2.5D}(t) = \mathcal{F}^{-1}\left\{
         \sqrt{\i\wc }\right\}
@@ -228,14 +228,14 @@ The default |WFS| driving functions for a point source in the SFS Toolbox are
 temporal domain via an inverse Fourier transform :eq:`ifft` it follows
 
 .. math::
-    :label: time-wfs-point
+    :label: td-wfs-point
 
     d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \dirac{t-\frac{|\x_0-\xs|}{c}},
 
 .. math::
-    :label: time-wfs-point-25d
+    :label: td-wfs-point-25d
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =&
@@ -247,7 +247,7 @@ temporal domain via an inverse Fourier transform :eq:`ifft` it follows
     \end{aligned}
 
 .. math::
-    :label: time-wfs-point-25d-refline
+    :label: td-wfs-point-25d-refline
 
     \begin{aligned}
     d_\text{2.5D}(\x_0,t) =&
@@ -349,14 +349,14 @@ transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
 it follows
 
 .. math::
-    :label: time-wfs-line
+    :label: td-wfs-line
 
     d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
         \frac{\scalarprod{\vec{v}}{\n_{\x_0}}}{|\vec{v}|^{\frac{3}{2}}}
         \dirac{t-\frac{|\vec{v}|}{c}},
 
 .. math::
-    :label: time-wfs-line-25d
+    :label: td-wfs-line-25d
 
     d_\text{2.5D}(\x_0,t) =
         g_0 \sqrt{\frac{1}{2\pi}} a(t) *
@@ -423,10 +423,10 @@ a diverging one as can be seen in :numref:`fig-wfs-25d-focused-source`. In order
 to choose the active secondary sources, especially for circular or spherical
 geometries, the focused source also needs a direction :math:`\n_\text{s}`.
 
-The driving function for a focused source is given by the time-reversed
+The driving function for a focused source is given by the td-reversed
 versions of the driving function for a point source
-:eq:`time-wfs-point` and
-:eq:`time-wfs-point-25d` as
+:eq:`td-wfs-point` and
+:eq:`td-wfs-point-25d` as
 
 .. math::
     :label: fd-wfs-focused-3d
@@ -435,8 +435,8 @@ versions of the driving function for a point source
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \e{\i\wc |\x_0-\xs|}.
 
-The 2.5D driving functions are given by the time-reversed version of
-:eq:`time-wfs-point-25d` for a reference point after
+The 2.5D driving functions are given by the td-reversed version of
+:eq:`td-wfs-point-25d` for a reference point after
 :cite:`Verheijen1997`, eq. (A.14) as
 
 .. math::
@@ -452,7 +452,7 @@ The 2.5D driving functions are given by the time-reversed version of
     \end{aligned}
 
 and the time reversed version of
-:eq:`time-wfs-point-25d-refline` for a reference line,
+:eq:`td-wfs-point-25d-refline` for a reference line,
 compare :cite:`Start1997`, eq. (3.16)
 
 .. math::
@@ -475,14 +475,14 @@ Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
 it follows
 
 .. math::
-    :label: time-wfs-focused-3d
+    :label: td-wfs-focused-3d
 
     d(\x_0,t) = \frac{1}{2{\pi}} a(t) * h(t) * w(\x_0)
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^2}
         \dirac{t+\frac{|\x_0-\xs|}{c}},
 
 .. math::
-    :label: time-wfs-focused-25d
+    :label: td-wfs-focused-25d
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =&
@@ -494,7 +494,7 @@ it follows
     \end{aligned}
 
 .. math::
-    :label: time-wfs-focused-25d-refline
+    :label: td-wfs-focused-25d-refline
 
     \begin{aligned}
         d_\text{2.5D}(\x_0,t) =&
@@ -505,7 +505,7 @@ it follows
             \dirac{t+\frac{|\x_0-\xs|}{c}}.
     \end{aligned}
 
-In this document a focused source always refers to the time-reversed version of a
+In this document a focused source always refers to the td-reversed version of a
 point source, but a focused line source can be defined in the same way starting
 from :eq:`fd-wfs-line`
 
@@ -520,7 +520,7 @@ Transferred to the temporal domain via an inverse Fourier transform :eq:`ifft`
 it follows
 
 .. math::
-    :label: time-wfs-focused-2d
+    :label: td-wfs-focused-2d
 
     d(\x_0,t) = \sqrt{\frac{1}{2\pi}} a(t) * h(t) * w(\x0)
         \frac{\scalarprod{\x_0-\xs}{\n_{\x_0}}}{|\x_0-\xs|^{\frac{3}{2}}}

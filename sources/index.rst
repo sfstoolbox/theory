@@ -63,7 +63,7 @@ where :math:`A(\w)` denotes the frequency spectrum of the source and
 Transformed in the temporal domain this becomes
 
 .. math::
-    :label: time-plane
+    :label: td-plane
 
     s(\x,t) = a(t) * \dirac{t -\frac{\scalarprod{\n_k}{\x}}{c}},
 
@@ -149,7 +149,7 @@ where :math:`\xs` describes the position of the point source.
 Transformed to the temporal domain this becomes
 
 .. math::
-    :label: time-point
+    :label: td-point
 
     s(\x,t) = a(t) * \frac{1}{4\pi} \frac{1}{|\x-\xs|}
         \dirac{t - \frac{|\x-\xs|}{c}}.
@@ -237,7 +237,7 @@ directional derivative of the three dimensional Green’s function with respect 
 Transformed to the temporal domain this becomes
 
 .. math::
-    :label: time-dipole-point
+    :label: td-dipole-point
 
     s(\x,t) = a(t) *
         \left( \frac{1}{|\x-\xs|} + {\mathcal{F}^{-1}\left\{
@@ -292,7 +292,7 @@ Applying the large argument approximation of the Hankel function
 becomes
 
 .. math::
-    :label: time-line
+    :label: td-line
 
     s(\x,t) = a(t) * \mathcal{F}^{-1}\left\{\sqrt{
         \frac{c}{\i\w}}\right\} * \sqrt{\frac{1}{8\pi}}

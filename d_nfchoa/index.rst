@@ -117,7 +117,7 @@ into :eq:`fd-drivingfunction-linear-25d` and exploiting the fact that
 Transferred to the temporal domain this results in :cite:`Ahrens2010`, eq. (18)
 
 .. math::
-    :label: time-sdm-plane-25d
+    :label: td-sdm-plane-25d
 
     d_{\text{linear},\,\text{2.5D}}(x_0,t) = h(t) *
         a\left(t-\frac{x_0}{c}\sin\phi_k-\frac{y_\text{ref}}{c}\sin\phi_k\right),
@@ -125,7 +125,7 @@ Transferred to the temporal domain this results in :cite:`Ahrens2010`, eq. (18)
 where :math:`\phi_k` denotes the azimuth direction of the plane wave and
 
 .. math::
-    :label: time-sdm-prefilter
+    :label: td-sdm-prefilter
 
     h(t) = {\mathcal{F}^{-1}\left\{\frac{4\i}
         {\Hankel{2}{0}{k_y y_\text{ref}}}\right\}}.
