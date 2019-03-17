@@ -27,11 +27,11 @@ Plane Wave
     array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.fd.wfs.plane_25d(omega, array.x, array.n, npw, xref)
-    twin = sfs.tapering.tukey(selection, .3)
+        sfs.fd.wfs.plane_25d(omega, array.x, array.n, npw, xref=xref)
+    twin = sfs.tapering.tukey(selection, alpha=.3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
-    sfs.plot2d.amplitude(p, grid, xref)
-    sfs.plot2d.secondary_sources(array.x, array.n, grid)
+    sfs.plot2d.amplitude(p, grid, xnorm=xref)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid=grid)
 
 .. plot::
     :context:
@@ -132,12 +132,12 @@ Point Source
     array = sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.fd.wfs.point_25d(omega, array.x, array.n, xs, xref)
-    twin = sfs.tapering.tukey(selection, .3)
+        sfs.fd.wfs.point_25d(omega, array.x, array.n, xs, xref=xref)
+    twin = sfs.tapering.tukey(selection, alpha=.3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 4 * np.pi
     sfs.plot2d.amplitude(normalization * p, grid)
-    sfs.plot2d.secondary_sources(array.x, array.n, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid=grid)
 
 .. plot::
     :context:
@@ -287,12 +287,12 @@ Line Source
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
         sfs.fd.wfs.line_2d(omega, array.x, array.n, xs)
-    twin = sfs.tapering.tukey(selection, .3)
+    twin = sfs.tapering.tukey(selection, alpha=.3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = (np.sqrt(8 * np.pi * omega / sfs.default.c)
                      * np.exp(1j * np.pi / 4))
     sfs.plot2d.amplitude(normalization * p, grid)
-    sfs.plot2d.secondary_sources(array.x, array.n, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid=grid)
 
 .. plot::
     :context:
@@ -396,11 +396,11 @@ Focused Source
     array= sfs.array.circular(200, 1.5)
     grid = sfs.util.xyz_grid([-1.75, 1.75], [-1.75, 1.75], 0, spacing=0.02)
     d, selection, secondary_source = \
-        sfs.fd.wfs.focused_25d(omega, array.x, array.n, xs, ns, xref)
-    twin = sfs.tapering.tukey(selection, .3)
+        sfs.fd.wfs.focused_25d(omega, array.x, array.n, xs, ns, xref=xref)
+    twin = sfs.tapering.tukey(selection, alpha=.3)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     sfs.plot2d.amplitude(p, grid)
-    sfs.plot2d.secondary_sources(array.x, array.n, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid=grid)
 
 .. plot::
     :context:
