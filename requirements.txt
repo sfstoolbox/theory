@@ -5,4 +5,4 @@ sphinxcontrib-bibtex
 numpy
 scipy
 matplotlib>=1.5
-sfs>=0.5.0
+sfs==0.5.*
