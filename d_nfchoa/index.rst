@@ -36,7 +36,7 @@ Plane Wave
     twin = sfs.tapering.none(selection)
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     sfs.plot2d.amplitude(p, grid)
-    sfs.plot2d.secondary_sources(array.x, array.n, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid=grid)
 
 .. plot::
     :context:
@@ -155,7 +155,7 @@ Point Source
     p = sfs.fd.synthesize(d, twin, array, secondary_source, grid=grid)
     normalization = 20
     sfs.plot2d.amplitude(normalization * p, grid)
-    sfs.plot2d.secondary_sources(array.x, array.n, grid)
+    sfs.plot2d.secondary_sources(array.x, array.n, grid=grid)
 
 .. plot::
     :context:
